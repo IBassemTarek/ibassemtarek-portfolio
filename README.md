@@ -1,42 +1,32 @@
-# Next.Js Website Tutorial: Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
+# Bassem Tarek Mahrous - Software Engineer🌟
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/Next.js-ibassemtarek-portfolio?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/Next.js-ibassemtarek-portfolio?style=social&logo=KashFlow&maxAge=3600)&nbsp;&nbsp;
-![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow)&nbsp;&nbsp;<br />
+### Summary
 
-This repository contains starter code for Portfolio website created using NextJs. <br />
+I'm Bassem Tarek Mahrous, an experienced software engineer with a strong track record of delivering successful projects, valued at up to $100K, over the past 3 years. I thrive in collaborative, cross-functional teams, and my skills are centered around turning innovative ideas into Minimum Viable Products (MVPs) using strategic methodologies.<br />
 
-For Demo and Final Code checkout following link👇: <br />
-[Nextjs Portfolio Website](https://devdreaming.com//videos/nextjs-tutorial-build-portfolio-tailwind-css-framer-motion#code-links) <br />
+### Expertise
 
-If you want to learn how to create it please follow below tutorial👇: <br />
-https://youtu.be/Yw7yWHigGKI <br />
-[![YouTube Video Views](https://img.shields.io/youtube/views/Yw7yWHigGKI?style=social)](https://youtu.be/Yw7yWHigGKI)<br />
+Software Development: I bring 3 years of hands-on experience in software development to the table. My work spans various domains and technologies, allowing me to adapt to diverse project requirements.<br />
 
-<h3 align="left">▶ Support me via:</h3><br />
-<p><a href="https://www.buymeacoffee.com/CodeBucks" target="_blank"> <img  src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" height="50" width="210" alt="CodeBucks" ></img></a></p><br />
+Project Collaboration: I excel in working with cross-functional teams comprising approximately 20 professionals. Effective communication and teamwork are key drivers for project success.
 
-### Images of The Portfolio Website:
+Project Value: I have a proven track record of delivering projects with significant value, including those valued at up to $100K. I am committed to ensuring that my work contributes to the overall success of the projects I'm involved in.<br />
 
-![Nextjs Portfolio Website](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/home-light-desktop.png)
-![Nextjs Portfolio Website Dark Mode](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/home-dark-desktop.png)
-![Next.js Portfolio Website](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/about-light-desktop.png)
-![Next js Portfolio Website](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/projects-dark-desktop.png)
-![Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/articles-light-desktop.png)
-![Responsive Portfolio Website In Nextjs](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/about-light-mobile.png)
-![Responsive Portfolio Website In Next js](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/projects-light-mobile.png)
-![Mobile Responsive Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-ibassemtarek-portfolio/blob/main/website%20images/articles-light-mobile.png)
+Strategic Methodologies: My approach to software development is grounded in strategic methodologies. I prioritize transforming innovative concepts into Minimum Viable Products (MVPs), ensuring rapid and effective development cycles.<br />
 
-### Resources Used in This Project
+### Continuous Improvement
 
-- Profile image in the home page created by using https://www.midjourney.com/ tool.
-- Profile image in the about page by [Albert Dera](https://unsplash.com/@albertdera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
-- Fonts from https://fonts.google.com/ <br />
-- Icons from https://iconify.design/ <br />
-- LightBulb Svg from https://lukaszadam.com/illustrations <br />
+I am dedicated to continuously improving my skills and knowledge to drive impactful outcomes. In the ever-evolving field of software development, staying up-to-date with the latest technologies and best practices is essential to remain competitive and deliver the highest quality work.<br />
+
+### Collaboration and Contribution
+
+I am ready and eager to contribute my expertise to drive successful project outcomes. Whether it's coding, problem-solving, or collaborating with team members, I am committed to delivering results and adding value to the projects I am a part of.<br />
+
+Feel free to modify this README to better suit your needs or add any additional information that you find relevant. It should serve as a concise introduction to who you are as a software engineer and what you bring to the table in terms of skills and experience.<br />
 
 ### External Libraries used in this project:
 
 - [framer-motion](https://www.framer.com/motion/) <br />
 - [Tailwind css](https://tailwindcss.com/) <br />
+
+Feel free to explore this repository, follow the tutorial, and customize your own stunning portfolio website! If you have any questions or need assistance, don't hesitate to reach out. Happy coding! 🚀
