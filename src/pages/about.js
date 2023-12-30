@@ -57,7 +57,7 @@ const About = () => {
             text={"Passion Fuels Purpose!"}
             className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
-          <div className="grid w-full grid-cols-8 gap-16 sm:8">
+          <div className="grid w-full grid-cols-8 gap-16 sm:8 sm:flex sm:flex-col">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Biography
