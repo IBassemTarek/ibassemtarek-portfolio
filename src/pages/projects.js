@@ -5,9 +5,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Project1Img from "../../public/images/projects/crypto-screener-cover-image.jpg";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
+import { featureProject, projectData } from "./projectsData";
 
 const FramerImage = motion(Image);
 const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
@@ -99,6 +99,7 @@ const Project = ({ type, title, img, link, githubLink }) => {
           priority
           sizes="(max-width: 768px) 100vw, 
           (max-width: 1200px) 50vw,
+          (max-height: 768px) 100vh,
           50vw"
           whileHover={{
             scale: 1.05,
@@ -151,48 +152,33 @@ const Projects = () => {
       <main className="flex flex-col w-full mb-16 items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text={"Imagination Trumps Knowledge!"}
+            text={"Imagination My Knowledge!"}
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
           <div className="grid grid-cols-12 gap-24 gap-y-20 xl:gap-x-16 lg:gap-x-8 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProjects
-                title={"Crypto Screener Application"}
-                summary={
-                  "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                }
-                link={"/"}
+                title={featureProject.title}
+                summary={featureProject.summary}
+                link={featureProject.link}
                 type={"Featured Project"}
-                img={Project1Img}
-                githubLink={"/"}
+                img={featureProject.img}
               />
             </div>
 
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title={"Crypto Screener Application"}
-                summary={
-                  "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                }
-                link={"/"}
-                type={"Featured Project"}
-                img={Project1Img}
-                githubLink={"/"}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title={"Crypto Screener Application"}
-                summary={
-                  "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                }
-                link={"/"}
-                type={"Featured Project"}
-                img={Project1Img}
-                githubLink={"/"}
-              />
-            </div>
+            {projectData.map((project, index) => (
+              <div key={index} className="col-span-6 sm:col-span-12">
+                <Project
+                  type={project.isFeatured}
+                  title={project.title}
+                  summary={project.summary}
+                  link={project.link}
+                  img={project.img}
+                  githubLink={project.githubLink}
+                />
+              </div>
+            ))}
           </div>
         </Layout>
       </main>
