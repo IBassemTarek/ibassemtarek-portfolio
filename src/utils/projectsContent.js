@@ -41,10 +41,32 @@ export const gulfCoinContent = `<h2><strong>Project description</strong></h2>
 <h2>Preview</h2>
 
 <p><a href="https://ibassemtarek.vercel.app/images/projects/GulfCoin.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/GulfCoin.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/4.png" /></a></p>
 <p><a href="https://ibassemtarek.vercel.app/images/gulf/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/1.png" /></a></p>
 <p><a href="https://ibassemtarek.vercel.app/images/gulf/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/2.png" /></a></p>
 <p><a href="https://ibassemtarek.vercel.app/images/gulf/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/3.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/4.png" /></a></p>
+
+<p>&nbsp;</p>
+`;
+
+export const alawfarContent = `<h2><strong>Project description</strong></h2>
+
+<p>The rise of technology has brought about many changes in the way we live and do business. E-commerce has become a norm, with people all over the world shopping online and having their purchases delivered right to their doorsteps. But, not everyone is comfortable with online transactions and the use of credit cards. This is where the new e-commerce application comes in, designed specifically for people in the Philistine region.</p>
+<hr />
+
+<p>The app offers a convenient way for individuals in the area to purchase products online and pay for them upon delivery. This is made possible through its cash-on-delivery (COD) feature, which eliminates the need for advance payment or online transactions. With COD, users can receive their orders and pay for them in cash when they arrive. This is especially useful for people who prefer not to use credit cards or engage in online transactions.&nbsp;<a href="https://alawfar.ps/">View project</a></p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>Dart -&nbsp;Git -&nbsp;Flutter</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="https://ibassemtarek.vercel.app/images/alawfar/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/3.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/alawfar/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/1.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/alawfar/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/2.png" /></a></p>
 
 <p>&nbsp;</p>
 `;

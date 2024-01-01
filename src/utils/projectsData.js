@@ -7,7 +7,11 @@ import APlusImg from "../../public/images/projects/a-plus.png";
 import saryAcademyImg from "../../public/images/projects/sary-academy.png";
 import yanabeeAcademyImg from "../../public/images/projects/yanabee-academy.png";
 import rosewellEnergyImg from "../../public/images/projects/rosewell-energy.png";
-import { gulfCoinContent, montuContent } from "./projectsContent";
+import {
+  alawfarContent,
+  gulfCoinContent,
+  montuContent,
+} from "./projectsContent";
 
 export const projectData = [
   {
@@ -34,6 +38,7 @@ export const projectData = [
     summary:
       "The rise of technology has brought about many changes in the way we live and do business. E-commerce has become a norm, with people all over the world shopping online and having their purchases delivered right to their doorsteps",
     img: alawfarImg,
+    content: alawfarContent,
     id: 3,
   },
   {
