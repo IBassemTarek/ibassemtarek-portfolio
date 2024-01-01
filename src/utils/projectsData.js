@@ -11,6 +11,7 @@ import {
   alawfarContent,
   gulfCoinContent,
   montuContent,
+  webPlazaContent,
 } from "./projectsContent";
 
 export const projectData = [
@@ -47,6 +48,7 @@ export const projectData = [
     summary:
       "I developed this website to enhance my skills in creating full-stack applications using Next.js 13.4 and MongoDB. It served as a valuable training ground for honing my abilities and allowed me to leverage its components and logic in my freelance projects.",
     img: webPlazaImg,
+    content: webPlazaContent,
     id: 4,
     githubLink: "https://github.com/IBassemTarek/web-plaza",
   },

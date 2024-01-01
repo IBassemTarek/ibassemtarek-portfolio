@@ -70,3 +70,28 @@ export const alawfarContent = `<h2><strong>Project description</strong></h2>
 
 <p>&nbsp;</p>
 `;
+
+export const webPlazaContent = `<h2><strong>Project description</strong></h2>
+
+<p>I developed this website to enhance my skills in creating full-stack applications using Next.js 13.4 and MongoDB. It served as a valuable training ground for honing my abilities and allowed me to leverage its components and logic in my freelance projects.&nbsp;<a href="https://github.com/IBassemTarek/web-plaza/">View code</a></p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>MongoDB -&nbsp;Mongoose -&nbsp;Next.js -&nbsp;ExpressJS -&nbsp;JavaScript -&nbsp;Tailwind CSS</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/1.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/2.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/3.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/4.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/5.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/6.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/7.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/7.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/8.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/8.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/9.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/9.png" /></a></p>
+
+<p>&nbsp;</p>
+`;
