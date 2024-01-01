@@ -152,8 +152,8 @@ const Projects = () => {
       <main className="flex flex-col w-full mb-16 items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text={"Imagination My Knowledge!"}
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            text={"Knowledge Fuels Imagination!"}
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl leading-snug"
           />
 
           <div className="grid grid-cols-12 gap-24 gap-y-20 xl:gap-x-16 lg:gap-x-8 sm:gap-x-0">

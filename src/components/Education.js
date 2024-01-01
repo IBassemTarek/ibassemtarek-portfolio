@@ -54,11 +54,13 @@ const Education = () => {
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
             info={
-              "Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
+              "Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, IoT and Artificial Intelligence."
             }
-            place={"Massachusetts Institute Of Technology (MIT)"}
-            time={"2016-2020"}
-            type={"Bachelor Of Science In Computer Science"}
+            place={"Mansoura University"}
+            time={"September 2022 - April 2023"}
+            type={
+              "Preparatory studies for Master of Science in Computer and Systems Engineering"
+            }
           />
 
           <Details
@@ -66,7 +68,7 @@ const Education = () => {
               "Relevant courses included Data Structures and electronics, graduation project is a 3D printer and scanner with excellent grades."
             }
             place={"Alexandria Higher Institute of Engineering and Technology"}
-            time={"2015-2020"}
+            time={"November 2015 - June 2020"}
             type={
               "bachelor of science, electronics and communications engineering"
             }

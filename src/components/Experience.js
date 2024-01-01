@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import { LiIcon } from "./LiIcon";
+import experienceData from "@/utils/experienceData";
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
@@ -59,38 +60,17 @@ const Experience = () => {
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-          <Details
-            position={"Software Engineer"}
-            company={"Google"}
-            time={"2022-Present"}
-            address={"Mountain View, CA"}
-            companyLink={"www.google.com"}
-            work={
-              "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and  developing new tools for data analysis and visualization."
-            }
-          />
-
-          <Details
-            position={"Software Engineer"}
-            company={"Google"}
-            time={"2022-Present"}
-            address={"Mountain View, CA"}
-            companyLink={"www.google.com"}
-            work={
-              "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and  developing new tools for data analysis and visualization."
-            }
-          />
-
-          <Details
-            position={"Software Engineer"}
-            company={"Google"}
-            time={"2022-Present"}
-            address={"Mountain View, CA"}
-            companyLink={"www.google.com"}
-            work={
-              "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and  developing new tools for data analysis and visualization."
-            }
-          />
+          {experienceData.map((experience, index) => (
+            <Details
+              key={index}
+              position={experience.position}
+              company={experience.company}
+              time={experience.time}
+              address={experience.address}
+              companyLink={experience.companyLink}
+              work={experience.work}
+            />
+          ))}
         </ul>
       </div>
     </div>

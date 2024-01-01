@@ -12,13 +12,13 @@ import TransitionEffect from "@/components/TransitionEffect";
 
 const About = () => {
   const text1 =
-    "Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, and user-centered digital experiences. With 4 years of experience in the field. I am always looking for new and innovative ways to bring my clients' visions to life.";
+    "Hi, I'm Bassem Tarek, bringing over half a decade of experience in engineering and software development. I've played a pivotal role in delivering high-value projects, showcasing my collaborative efforts through close collaboration with cross-functional teams of professionals.";
 
   const text2 =
-    "I believe that design is about more than just making things look pretty – it's about solving problems and creating intuitive, enjoyable experiences for users.";
+    "Proficient in the skillful transformation of conceptual ideas into Minimum Viable Products (MVPs) through strategic methodologies, I am committed to a continuous improvement mindset, aiming to consistently drive impactful outcomes.";
 
   const text3 =
-    "Whether I'm working on a website, mobile app, or other digital product, I bring my commitment to design excellence and user-centered thinking to every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.";
+    "Eager to contribute my well-honed expertise to ensure the success of future projects.";
 
   const AnimatedNo = ({ value }) => {
     const ref = useRef(null);
@@ -54,8 +54,8 @@ const About = () => {
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text={"Passion Fuels Purpose!"}
-            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            text={"Dream Big, Achieve Bigger!"}
+            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8 leading-snug"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:8 sm:flex sm:flex-col">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
@@ -84,7 +84,7 @@ const About = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNo value={50} /> +
+                  <AnimatedNo value={10} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Satisfied Clients
@@ -93,7 +93,7 @@ const About = () => {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNo value={40} />+
+                  <AnimatedNo value={12} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Projects Completed
@@ -102,7 +102,7 @@ const About = () => {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNo value={4} />+
+                  <AnimatedNo value={5} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Years Of Experience
