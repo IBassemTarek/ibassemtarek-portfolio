@@ -3,6 +3,10 @@ import gulfCoinImg from "../../public/images/projects/GulfCoin.png";
 import alawfarImg from "../../public/images/projects/alawfar.png";
 import webPlazaImg from "../../public/images/projects/web_plaza.png";
 import kindergarten_worldImg from "../../public/images/projects/kindergarten-world.png";
+import APlusImg from "../../public/images/projects/a-plus.png";
+import saryAcademyImg from "../../public/images/projects/sary-academy.png";
+import yanabeeAcademyImg from "../../public/images/projects/yanabee-academy.png";
+import rosewellEnergyImg from "../../public/images/projects/rosewell-energy.png";
 
 export const projectData = [
   {
@@ -37,6 +41,41 @@ export const projectData = [
       "The application is a cutting-edge tool designed specifically for kindergarten teachers and students",
     img: kindergarten_worldImg,
     githubLink: "https://github.com/IBassemTarek/Kindergarten",
+    link: "/projects",
+  },
+  {
+    title: "A-plus Studio",
+    isFeatured: false,
+    summary:
+      "The aim of Studio is to deliver top-notch services and solutions to its clients and help them reach their full potential.",
+    img: APlusImg,
+    link: "/projects",
+  },
+
+  {
+    title: "Sary Academy",
+    isFeatured: false,
+    summary:
+      "Sary Academy is an innovative nursery school that provides young children with a unique educational experience.",
+    img: saryAcademyImg,
+    link: "/projects",
+  },
+
+  {
+    title: "Yanabee Academy",
+    isFeatured: false,
+    summary:
+      "The Quranic platform and electronic academy project is an exciting and innovative initiative aimed at making the teachings of the Holy Quran more accessible and convenient for students around the world.",
+    img: yanabeeAcademyImg,
+    link: "/projects",
+  },
+
+  {
+    title: "Rosewell energy",
+    isFeatured: false,
+    summary:
+      "Rosewell Energy is a company that is dedicated to providing top-notch chemical treatment and engineering services to the oilfield industry.",
+    img: rosewellEnergyImg,
     link: "/projects",
   },
 ];
