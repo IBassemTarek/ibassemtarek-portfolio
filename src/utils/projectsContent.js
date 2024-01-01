@@ -1,6 +1,6 @@
 export const montuContent = `<h2><strong>Project description</strong></h2>
 
-<p>I work as a Backend Developer and Mobile App Developer at Montu. I build and maintain scalable infrastructure using NestJS, integrate services, write clean code, and troubleshoot issues. I also develop and enhance Montu&rsquo;s mobile app, implementing new features and improving user experience. <a href="https://www.montuapps.com/">view project</a></p>
+<p>I work as a Backend Developer and Mobile App Developer at Montu. I build and maintain scalable infrastructure using NestJS, integrate services, write clean code, and troubleshoot issues. I also develop and enhance Montu&rsquo;s mobile app, implementing new features and improving user experience. <a href="https://www.montuapps.com/">View project</a></p>
 
 <hr />
 <h2>Skills and deliverables</h2>
@@ -30,7 +30,7 @@ export const gulfCoinContent = `<h2><strong>Project description</strong></h2>
 <p>GulfCoin is a revolutionary cryptocurrency that is poised to play a leading role in shaping the future of digital finance. By providing an easy-to-use platform and a range of educational resources, GulfCoin aims to educate and empower people to embrace the digital financial revolution and make the transition from traditional finance to the world of cryptocurrency and digital payments.</p>
 <hr />
 
-<p>Whether you are an experienced cryptocurrency investor or just starting out, the GulfCoin Transaction Management Application is the perfect tool to help you manage your investments and make the most of the opportunities in the cryptocurrency market. So if you are looking to get involved with GulfCoin and the exciting world of cryptocurrency, download the application today and start your journey toward a more secure and convenient financial future.&nbsp;<a href="https://gulfofficial.com/">view project</a></p>
+<p>Whether you are an experienced cryptocurrency investor or just starting out, the GulfCoin Transaction Management Application is the perfect tool to help you manage your investments and make the most of the opportunities in the cryptocurrency market. So if you are looking to get involved with GulfCoin and the exciting world of cryptocurrency, download the application today and start your journey toward a more secure and convenient financial future.&nbsp;<a href="https://gulfofficial.com/">View project</a></p>
 
 <hr />
 <h2>Skills and deliverables</h2>
@@ -98,25 +98,61 @@ export const webPlazaContent = `<h2><strong>Project description</strong></h2>
 
 export const kindergartenContent = `<h2><strong>Project description</strong></h2>
 
-<p>I developed this website to enhance my skills in creating full-stack applications using Next.js 13.4 and MongoDB. It served as a valuable training ground for honing my abilities and allowed me to leverage its components and logic in my freelance projects.&nbsp;<a href="https://github.com/IBassemTarek/web-plaza/">View code</a></p>
+<p>The application is a cutting-edge tool designed specifically for kindergarten teachers and students, to simplify the learning process. It offers a range of features that make it user-friendly and effective for both teachers and students, ensuring success in the classroom</p>
+<hr />
+
+<p>For teachers, the application offers a comprehensive class management system. This includes features such as assignment creation, progress tracking, and attendance management. Teachers can easily create and distribute assignments to their students, and track their progress in real-time. This helps them to identify areas where their students may need additional support, and provide targeted interventions to help them succeed.</p>
+<hr />
+
+<p>In addition, the application provides teachers with access to educational materials and resources, including interactive activities and lessons. These resources are designed to help teachers engage their students in a fun and interactive way, while also promoting their learning and development.</p>
+<hr />
+
+<p>For students, the application provides access to educational materials and tools to track their progress. This includes interactive activities, games, and lessons that are designed to help students learn in a fun and engaging way. The progress tracking feature allows students to see their progress and how they are performing in each subject. This can be a great motivator for students, as they see their improvement and can feel proud of their accomplishments.</p>
+<hr />
+
+<p>The application is designed to be both user-friendly and accessible. The intuitive interface makes it easy for both teachers and students to use, even those who are not tech-savvy. The application is also available on multiple platforms, including desktop, tablet, and mobile devices, making it accessible from anywhere, at any time.&nbsp;<a href="https://github.com/IBassemTarek/Kindergarten">View code</a></p>
 
 <hr />
 <h2>Skills and deliverables</h2>
 
-<p>MongoDB -&nbsp;Mongoose -&nbsp;Next.js -&nbsp;ExpressJS -&nbsp;JavaScript -&nbsp;Tailwind CSS</p>
+<p>Git -&nbsp;Flutter -Firebase -&nbsp;Dart</p>
 
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/3.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/4.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/5.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/6.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/7.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/7.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/8.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/8.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/9.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/9.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.png" /></a></p>
+
+<p>&nbsp;</p>
+`;
+
+export const aPlusContent = `<h2><strong>Project description</strong></h2>
+
+<p>The studio aims to deliver top-notch services and solutions to its clients and help them reach their full potential. The company was established with a vision to change the face of its sector and provide an exceptional experience to its clients. With its innovative approach and exceptional quality of work, Studio is on the path to becoming one of the leading companies in its field.</p>
+<hr />
+
+<p>Ahmed Nassar, the founder of Studio, brings a wealth of experience and expertise to the company. His passion for innovation and drive to succeed have inspired the team at Studio to work hard and continuously strive for excellence. The company&rsquo;s mission is to provide a level of service that exceeds the expectations of its clients and helps them reach their goals.</p>
+<hr />
+
+<p>In just a short period, Studio has managed to make a name for itself in its industry. The company&rsquo;s hard work and dedication to quality have earned it the respect and trust of its clients, and its reputation for excellence continues to grow. The company&rsquo;s commitment to innovation, combined with its exceptional quality of work, sets it apart from its competitors and ensures that it remains at the forefront of its sector.</p>
+<hr />
+
+<p>The website project for Studio is aimed at showcasing the company&rsquo;s offerings, services, and approach to helping clients achieve their goals. The website will serve as an online platform for the company to reach a wider audience and connect with potential clients. The website will be professional, visually appealing, user-friendly, and optimized for search engines, making it easier for clients to find and connect with Studio.</p>
+<hr />
+
+<p>In conclusion, Studio is a company that is poised for success and is dedicated to providing its clients with the best possible experience. With its innovative approach, exceptional quality of work, and a team of experienced professionals, Studio is set to change the face of its sector and make a lasting impact.</p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>Git -&nbsp;WordPress</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="https://ibassemtarek.vercel.app/images/aplus/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/1.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/aplus/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/2.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/aplus/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/3.png" /></a></p>
 
 <p>&nbsp;</p>
 `;

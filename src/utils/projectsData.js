@@ -8,8 +8,10 @@ import saryAcademyImg from "../../public/images/projects/sary-academy.png";
 import yanabeeAcademyImg from "../../public/images/projects/yanabee-academy.png";
 import rosewellEnergyImg from "../../public/images/projects/rosewell-energy.png";
 import {
+  aPlusContent,
   alawfarContent,
   gulfCoinContent,
+  kindergartenContent,
   montuContent,
   webPlazaContent,
 } from "./projectsContent";
@@ -56,7 +58,7 @@ export const projectData = [
     title: "Kindergarten World",
     isFeatured: false,
     id: 5,
-
+    content: kindergartenContent,
     summary:
       "The application is a cutting-edge tool designed specifically for kindergarten teachers and students",
     img: kindergarten_worldImg,
@@ -66,7 +68,7 @@ export const projectData = [
     title: "A-plus Studio",
     isFeatured: false,
     id: 6,
-
+    content: aPlusContent,
     summary:
       "The aim of Studio is to deliver top-notch services and solutions to its clients and help them reach their full potential.",
     img: APlusImg,
