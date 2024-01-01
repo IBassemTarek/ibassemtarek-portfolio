@@ -13,6 +13,7 @@ import {
   gulfCoinContent,
   kindergartenContent,
   montuContent,
+  saryAcademyContent,
   webPlazaContent,
 } from "./projectsContent";
 
@@ -78,7 +79,7 @@ export const projectData = [
     title: "Sary Academy",
     isFeatured: false,
     id: 7,
-
+    content: saryAcademyContent,
     summary:
       "Sary Academy is an innovative nursery school that provides young children with a unique educational experience.",
     img: saryAcademyImg,

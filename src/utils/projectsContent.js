@@ -156,3 +156,25 @@ export const aPlusContent = `<h2><strong>Project description</strong></h2>
 
 <p>&nbsp;</p>
 `;
+
+export const saryAcademyContent = `<h2><strong>Project description</strong></h2>
+
+<p>Sary Academy is an innovative nursery school that provides young children with a unique educational experience. The academy combines the benefits of learning and plays to enhance the development of children in various stages of childhood. By doing so, Sary Academy helps children develop key skills, foster a love of learning, and create a safe and supportive environment for growth and socialization. The educational programs and activities offered at Sary Academy are designed specifically for different stages of childhood development. The curriculum is structured in a way that helps children acquire important skills, such as problem-solving, critical thinking, and communication. The academy also recognizes the importance of play and incorporates it into its curriculum. Children are encouraged to be creative and imaginative, as well as to explore their environment and learn through hands-on experiences.</p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>Git -&nbsp;WordPress -&nbsp;Dart -&nbsp;Firebase -&nbsp;Flutter</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="https://ibassemtarek.vercel.app/images/sary/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/1.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/2.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/3.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/4.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/5.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/6.png" /></a></p>
+
+<p>&nbsp;</p>
+`;
