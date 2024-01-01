@@ -178,3 +178,31 @@ export const saryAcademyContent = `<h2><strong>Project description</strong></h2>
 
 <p>&nbsp;</p>
 `;
+
+const yanabeeContent = `<h2><strong>Project description</strong></h2>
+
+<p>The Quranic platform and electronic academy project is an exciting and innovative initiative aimed at making the teachings of the Holy Quran more accessible and convenient for students around the world. The website that is being developed as part of this project will provide a user-friendly platform for students to learn from skilled reciters, with a focus on helping them learn correct recitation, memorized reading, and Quranic sciences.</p>
+
+<p>The website will be designed to provide an easy-to-use interface for both male and female students to access the classes and track their progress. This means that students will be able to log in to the website from anywhere, at any time, and receive the support they need to succeed in their studies. The platform will also provide information about the academy, its services, and how to enroll, making it easy for students to get started.</p>
+
+<p>One of the key objectives of the project is to make it easier for students to learn the Quranic sciences and obtain licenses. The website will be designed to help students to review and adjust their readings, intonation, and Quranic sciences. This will be facilitated by providing students with access to interactive lessons, audio and video materials, and other educational resources that are specifically designed to support their learning journey.</p>
+
+<p>The website will also feature a robust and secure system for tracking students&rsquo; progress. This will allow students to see how they are performing in each subject and track their progress over time. The progress tracking system will also allow students to review their previous classes and assignments, making it easier for them to stay on top of their studies and continue to make progress</p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>Git -&nbsp;WordPress</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/1.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/2.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/3.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/4.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/5.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/6.png" /></a></p>
+
+<p>&nbsp;</p>
+`;
