@@ -16,6 +16,7 @@ import {
   saryAcademyContent,
   webPlazaContent,
   yanabeeContent,
+  rosewellContent,
 } from "./projectsContent";
 
 export const projectData = [
@@ -102,6 +103,7 @@ export const projectData = [
     summary:
       "Rosewell Energy is a company that is dedicated to providing top-notch chemical treatment and engineering services to the oilfield industry.",
     img: rosewellEnergyImg,
+    content: rosewellContent,
     id: 9,
   },
 ];

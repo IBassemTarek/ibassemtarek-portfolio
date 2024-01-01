@@ -182,10 +182,13 @@ export const saryAcademyContent = `<h2><strong>Project description</strong></h2>
 export const yanabeeContent = `<h2><strong>Project description</strong></h2>
 
 <p>The Quranic platform and electronic academy project is an exciting and innovative initiative aimed at making the teachings of the Holy Quran more accessible and convenient for students around the world. The website that is being developed as part of this project will provide a user-friendly platform for students to learn from skilled reciters, with a focus on helping them learn correct recitation, memorized reading, and Quranic sciences.</p>
+<hr />
 
 <p>The website will be designed to provide an easy-to-use interface for both male and female students to access the classes and track their progress. This means that students will be able to log in to the website from anywhere, at any time, and receive the support they need to succeed in their studies. The platform will also provide information about the academy, its services, and how to enroll, making it easy for students to get started.</p>
+<hr />
 
 <p>One of the key objectives of the project is to make it easier for students to learn the Quranic sciences and obtain licenses. The website will be designed to help students to review and adjust their readings, intonation, and Quranic sciences. This will be facilitated by providing students with access to interactive lessons, audio and video materials, and other educational resources that are specifically designed to support their learning journey.</p>
+<hr />
 
 <p>The website will also feature a robust and secure system for tracking students&rsquo; progress. This will allow students to see how they are performing in each subject and track their progress over time. The progress tracking system will also allow students to review their previous classes and assignments, making it easier for them to stay on top of their studies and continue to make progress</p>
 
@@ -203,6 +206,32 @@ export const yanabeeContent = `<h2><strong>Project description</strong></h2>
 <p><a href="https://ibassemtarek.vercel.app/images/yanabee/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/4.png" /></a></p>
 <p><a href="https://ibassemtarek.vercel.app/images/yanabee/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/5.png" /></a></p>
 <p><a href="https://ibassemtarek.vercel.app/images/yanabee/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/6.png" /></a></p>
+
+<p>&nbsp;</p>
+`;
+
+export const rosewellContent = `<h2><strong>Project description</strong></h2>
+
+<p>Rosewell Energy is a company that is dedicated to providing top-notch chemical treatment and engineering services to the oilfield industry. Their focus is on delivering high-quality solutions to their customers and providing a personalized approach to every project they undertake.</p>
+<hr />
+
+<p>The website project for Rosewell Energy is a critical component of their overall marketing strategy. The goal of the website is to effectively communicate their expertise and highlight the quality of their services to potential customers. The website should showcase the range of services offered, including chemical treatment and engineering services, and provide a clear message about their commitment to delivering outstanding results for their clients.</p>
+<hr />
+
+<p>The website should also be user-friendly, providing easy access to information about the company, its team, and the services it offers. It should also provide a platform for customers to contact the company for further assistance, making it simple for them to get in touch with the experts at Rosewell Energy.</p>
+<hr />
+
+<p>In addition to providing a wealth of information about Rosewell Energy and its services, the website should also be visually appealing, using high-quality images and graphics to showcase the company&rsquo;s professionalism and commitment to excellence <a href="https://rosewellenergy.com/">View Project</a></p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>Git -&nbsp;WordPress</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="" rel="Montu Client Login" target="_blank"><img src="" /></a></p>
 
 <p>&nbsp;</p>
 `;
