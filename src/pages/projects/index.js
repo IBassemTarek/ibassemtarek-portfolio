@@ -10,7 +10,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import { featureProject, projectData } from "@/utils/projectsData";
 
 const FramerImage = motion(Image);
-const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
+const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
   return (
     <article
       className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light
@@ -21,7 +21,7 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
 
       <Link
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
-        href={link}
+        href={`/projects/${id}`}
         target="_blank"
       >
         <FramerImage
@@ -45,7 +45,7 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
           {type}
         </span>
         <Link
-          href={link}
+          href={`/projects/${id}`}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
@@ -68,7 +68,7 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
             dark:hover:bg-dark dark:hover:text-light dark:hover:border-light
             sm:px-4 sm:text-base
             "
-            href={link}
+            href={`/projects/${id}`}
             target="_blank"
           >
             Visit The Project
@@ -79,7 +79,7 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
   );
 };
 
-const Project = ({ type, title, img, link, githubLink }) => {
+const Project = ({ type, title, img, link, githubLink, id }) => {
   return (
     <article
       className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:border-light dark:bg-dark
@@ -89,7 +89,7 @@ const Project = ({ type, title, img, link, githubLink }) => {
       <div className="absolute top-0 -right-2 -z-10 w-[101%] h-[102%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded[1.5rem]" />
       <Link
         className="w-full cursor-pointer overflow-hidden rounded-lg"
-        href={link}
+        href={`/projects/${id}`}
         target="_blank"
       >
         <FramerImage
@@ -114,7 +114,7 @@ const Project = ({ type, title, img, link, githubLink }) => {
           {type}
         </span>
         <Link
-          href={link}
+          href={`/projects/${id}`}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
@@ -125,7 +125,7 @@ const Project = ({ type, title, img, link, githubLink }) => {
         <div className="mt-2 flex items-center justify-between w-full">
           <Link
             className="text-lg font-semibold md:text-base"
-            href={link}
+            href={`/projects/${id}`}
             target="_blank"
           >
             Visit
@@ -164,21 +164,26 @@ const Projects = () => {
                 link={featureProject.link}
                 type={"Featured Project"}
                 img={featureProject.img}
+                id={featureProject.id}
               />
             </div>
 
-            {projectData.map((project, index) => (
-              <div key={index} className="col-span-6 sm:col-span-12">
-                <Project
-                  type={project.isFeatured}
-                  title={project.title}
-                  summary={project.summary}
-                  link={project.link}
-                  img={project.img}
-                  githubLink={project.githubLink}
-                />
-              </div>
-            ))}
+            {projectData.map((project, index) => {
+              if (project.isFeatured === false)
+                return (
+                  <div key={index} className="col-span-6 sm:col-span-12">
+                    <Project
+                      type={project.isFeatured}
+                      title={project.title}
+                      summary={project.summary}
+                      link={project.link}
+                      img={project.img}
+                      githubLink={project.githubLink}
+                      id={project.id}
+                    />
+                  </div>
+                );
+            })}
           </div>
         </Layout>
       </main>
