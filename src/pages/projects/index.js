@@ -7,7 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
-import { featureProject, projectData } from "../utils/projectsData";
+import { featureProject, projectData } from "@/utils/projectsData";
 
 const FramerImage = motion(Image);
 const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
