@@ -15,6 +15,7 @@ import {
   montuContent,
   saryAcademyContent,
   webPlazaContent,
+  yanabeeContent,
 } from "./projectsContent";
 
 export const projectData = [
@@ -89,7 +90,7 @@ export const projectData = [
     title: "Yanabee Academy",
     isFeatured: false,
     id: 8,
-
+    content: yanabeeContent,
     summary:
       "The Quranic platform and electronic academy project is an exciting and innovative initiative aimed at making the teachings of the Holy Quran more accessible and convenient for students around the world.",
     img: yanabeeAcademyImg,

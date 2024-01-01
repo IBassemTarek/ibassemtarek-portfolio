@@ -179,7 +179,7 @@ export const saryAcademyContent = `<h2><strong>Project description</strong></h2>
 <p>&nbsp;</p>
 `;
 
-const yanabeeContent = `<h2><strong>Project description</strong></h2>
+export const yanabeeContent = `<h2><strong>Project description</strong></h2>
 
 <p>The Quranic platform and electronic academy project is an exciting and innovative initiative aimed at making the teachings of the Holy Quran more accessible and convenient for students around the world. The website that is being developed as part of this project will provide a user-friendly platform for students to learn from skilled reciters, with a focus on helping them learn correct recitation, memorized reading, and Quranic sciences.</p>
 
