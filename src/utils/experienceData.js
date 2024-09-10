@@ -1,8 +1,17 @@
 const experienceData = [
   {
+    position: "Backend Developer",
+    company: "GiveBrite LLC",
+    time: "March 2024 - September 2024",
+    address: "Remote",
+    companyLink: "https://lockers.sa/",
+    work: "Boosted engagement and retention by 20% and 15% through AI-powered matching, integrated third-party services, and optimized backend architecture, demonstrating strong technical skills.",
+  },
+
+  {
     position: "Flutter Developer",
     company: "Lockers LLC",
-    time: "November 2023 - Present",
+    time: "November 2023 - March 2024",
     address: "Remote",
     companyLink: "https://lockers.sa/",
     work: "I crafted and managed the Lockers client and driver mobile app, boosting user engagement by 11% and enhancing in-app functionality. Integrated REST-based and third-party APIs to expand features and improve the user experience, resulting in an 8% increase in retention.",
@@ -11,7 +20,7 @@ const experienceData = [
   {
     position: "React Native Developer",
     company: "blthanih LLC",
-    time: "September 2023 - Present",
+    time: "September 2023 - March 2024",
     address: "Remote",
     companyLink: "https://blthanih.sa/",
     work: "I crafted and managed the blthanih client and employee mobile app, boosting user engagement by 15% and enhancing in-app functionality. Integrated REST-based and third-party APIs to expand features and improved the user experience, resulting in a 30% increase in retention.",
@@ -20,7 +29,7 @@ const experienceData = [
   {
     position: "Full-stack Mobile Developer",
     company: "Montu LLC",
-    time: "September 2022 - Present",
+    time: "September 2022 - January 2024",
     address: "Remote",
     companyLink: "https://www.montuapps.com/",
     work: "I crafted a scalable backend with NestJS, cutting response time by 30%. Integrated front-end systems for seamless functionality, elevating user engagement by 20%. Teamed up for high-quality solutions, increasing customer satisfaction by 25%. Active in code reviews and discussions.",
