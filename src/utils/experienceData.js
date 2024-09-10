@@ -2,7 +2,7 @@ const experienceData = [
   {
     position: "Backend Developer",
     company: "GiveBrite LLC",
-    time: "March 2024 - September 2024",
+    time: "March 2024 - Present",
     address: "Remote",
     companyLink: "https://givebrite.com/",
     work: "Boosted engagement and retention by 20% and 15% through AI-powered matching, integrated third-party services, and optimized backend architecture, demonstrating strong technical skills.",
