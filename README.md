@@ -2,7 +2,7 @@
 
 ### Summary
 
-I'm Bassem Tarek Mahrous, an experienced software engineer with a strong track record of delivering successful projects, valued at up to $100K, over the past 3 years. I thrive in collaborative, cross-functional teams, and my skills are centered around turning innovative ideas into Minimum Viable Products (MVPs) using strategic methodologies.<br />
+I'm Bassem Tarek Mahrous, an experienced software engineer with a strong track record of delivering successful projects, valued at up to $100K, over the past 3 years. I thrive in collaborative, cross-functional teams, and my skills are centered around turning innovative ideas into Minimum Viable Products (MVPs) using strategic methodologies<br />
 
 ### Expertise
 
