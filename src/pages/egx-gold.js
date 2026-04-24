@@ -105,6 +105,8 @@ function StoreCard({ card, priority = false }) {
   return (
     <motion.a
       href={card.href}
+      target="_blank"
+      rel="noreferrer"
       whileHover={{ y: -6, scale: 1.01 }}
       whileTap={{ scale: 0.99 }}
       className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br ${card.accent} p-[1px] shadow-[0_24px_80px_rgba(0,0,0,0.35)]`}
@@ -165,7 +167,11 @@ export default function EgxGoldPage() {
 
     const destination = nextPlatform === "ios" ? IOS_URL : ANDROID_URL;
     const redirectTimer = window.setTimeout(() => {
-      window.location.replace(destination);
+      const redirectWindow = window.open(destination, "_blank", "noopener,noreferrer");
+
+      if (!redirectWindow) {
+        window.location.assign(destination);
+      }
     }, prefersReducedMotion ? 250 : 900);
 
     return () => window.clearTimeout(redirectTimer);
