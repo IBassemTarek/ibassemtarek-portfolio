@@ -1,7 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { Cormorant_Garamond, Tajawal } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Noto_Naskh_Arabic,
+  Tajawal,
+} from "next/font/google";
 import { useEffect, useState } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -15,6 +19,12 @@ const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
   weight: ["400", "500", "700"],
   variable: "--font-egx-body",
+});
+
+const notoNaskhArabic = Noto_Naskh_Arabic({
+  subsets: ["arabic"],
+  weight: ["500", "600", "700"],
+  variable: "--font-egx-arabic",
 });
 
 const ANDROID_URL =
@@ -99,23 +109,23 @@ function StoreCard({ card, priority = false }) {
       whileTap={{ scale: 0.99 }}
       className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br ${card.accent} p-[1px] shadow-[0_24px_80px_rgba(0,0,0,0.35)]`}
     >
-      <div className="relative h-full rounded-[calc(2rem-1px)] bg-[#09090c]/90 p-7 backdrop-blur-xl">
+      <div className="relative h-full rounded-[calc(2rem-1px)] bg-[#09090c]/90 p-7 backdrop-blur-xl md:p-6 sm:p-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,210,84,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(36,211,238,0.16),transparent_30%)] opacity-80" />
         <div
-          className={`absolute right-5 top-5 h-20 w-20 rounded-full bg-white/5 blur-2xl ring-1 ${card.ring}`}
+          className={`absolute right-5 top-5 h-20 w-20 rounded-full bg-white/5 blur-2xl ring-1 ${card.ring} sm:h-16 sm:w-16`}
         />
 
         <div className="relative z-10 flex h-full flex-col">
-          <div className="mb-6 flex items-center justify-between gap-4">
+          <div className="mb-6 flex items-center justify-between gap-4 sm:mb-5 sm:flex-col sm:items-start">
             <div>
-              <p className="text-xs uppercase tracking-[0.32em] text-white/55">
+              <p className="text-xs uppercase tracking-[0.32em] text-white/55 sm:text-[11px] sm:tracking-[0.24em]">
                 {card.label}
               </p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">
+              <h3 className="mt-3 max-w-xs text-2xl font-semibold leading-tight text-white md:text-[1.7rem] sm:max-w-none sm:text-[1.55rem]">
                 {card.title}
               </h3>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/95 p-3 shadow-[0_16px_32px_rgba(255,255,255,0.12)]">
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/95 p-3 shadow-[0_16px_32px_rgba(255,255,255,0.12)] sm:h-14 sm:w-14 sm:self-end sm:rounded-xl sm:p-2.5">
               <Image
                 src={card.icon}
                 alt={card.alt}
@@ -127,11 +137,11 @@ function StoreCard({ card, priority = false }) {
             </div>
           </div>
 
-          <p className="max-w-sm text-sm leading-7 text-white/70">
+          <p className="max-w-sm text-sm leading-7 text-white/70 sm:max-w-none sm:text-[15px] sm:leading-7">
             {card.subtitle}
           </p>
 
-          <div className="mt-8 flex items-center gap-3 text-sm font-medium text-amber-200 transition-transform duration-300 group-hover:translate-x-1">
+          <div className="mt-8 flex items-center gap-3 text-sm font-medium text-amber-200 transition-transform duration-300 group-hover:translate-x-1 sm:mt-6">
             <span>Open store</span>
             <span aria-hidden="true">-&gt;</span>
           </div>
@@ -182,7 +192,7 @@ export default function EgxGoldPage() {
       <TransitionEffect />
 
       <main
-        className={`${cormorant.variable} ${tajawal.variable} w-full px-10 pb-20 pt-6 text-white lg:px-8 md:px-6 sm:px-4`}
+        className={`${cormorant.variable} ${tajawal.variable} ${notoNaskhArabic.variable} w-full px-10 pb-20 pt-6 text-white lg:px-8 md:px-6 sm:px-4`}
       >
         <section className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.75rem] border border-black/10 bg-[#040506] shadow-[0_40px_120px_rgba(0,0,0,0.35)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,212,99,0.22),transparent_24%),radial-gradient(circle_at_80%_28%,rgba(72,224,255,0.14),transparent_22%),linear-gradient(135deg,rgba(14,14,18,0.92),rgba(3,3,4,1))]" />
@@ -225,10 +235,10 @@ export default function EgxGoldPage() {
                     </h1>
                     <p
                       dir="rtl"
-                      className="mt-4 max-w-3xl font-[var(--font-egx-body)] text-xl leading-9 text-amber-100/80 md:text-lg md:leading-8"
+                      className="mt-5 max-w-3xl font-[var(--font-egx-arabic)] text-[2rem] font-semibold leading-[3.1rem] text-[#f7e3a4] [text-wrap:balance] md:text-[1.7rem] md:leading-[2.7rem] sm:text-[1.35rem] sm:leading-10"
                     >
                       تابع سعر الذهب لحظة بلحظة في السوق المصري، واتخذ قرارات
-                      أذكى للاستثمار والزواج والتخطيط للمستقبل.
+                      أذكى للاستثمار.
                     </p>
                     <p className="mt-6 max-w-3xl font-[var(--font-egx-body)] text-base leading-8 text-white/72 md:text-[15px]">
                       Track 24k, 21k, and 18k gold, see live buying and selling
@@ -352,7 +362,7 @@ export default function EgxGoldPage() {
                         </>
                       )}
 
-                      <div className="mt-8 grid gap-4 lg:grid-cols-2">
+                      <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-1">
                         {storeCards.map((card, index) => (
                           <StoreCard
                             key={card.href}
