@@ -9,6 +9,8 @@ import {
 import { useEffect, useState } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
 
+const AUTO_REDIRECT_SESSION_KEY = "egx-gold-auto-redirected";
+
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
@@ -156,14 +158,26 @@ function StoreCard({ card, priority = false }) {
 export default function EgxGoldPage() {
   const prefersReducedMotion = useReducedMotion();
   const [platform, setPlatform] = useState("detecting");
+  const [mobileRedirectState, setMobileRedirectState] = useState("idle");
+  const [shareState, setShareState] = useState("idle");
 
   useEffect(() => {
     const nextPlatform = detectPlatform();
     setPlatform(nextPlatform);
 
     if (nextPlatform === "desktop") {
+      setMobileRedirectState("idle");
       return undefined;
     }
+
+    const hasRedirected = window.sessionStorage.getItem(AUTO_REDIRECT_SESSION_KEY);
+    if (hasRedirected === "1") {
+      setMobileRedirectState("returned");
+      return undefined;
+    }
+
+    setMobileRedirectState("redirecting");
+    window.sessionStorage.setItem(AUTO_REDIRECT_SESSION_KEY, "1");
 
     const destination = nextPlatform === "ios" ? IOS_URL : ANDROID_URL;
     const redirectTimer = window.setTimeout(() => {
@@ -177,6 +191,51 @@ export default function EgxGoldPage() {
     return () => window.clearTimeout(redirectTimer);
   }, [prefersReducedMotion]);
 
+  useEffect(() => {
+    if (shareState === "idle") {
+      return undefined;
+    }
+
+    const resetTimer = window.setTimeout(() => {
+      setShareState("idle");
+    }, 2400);
+
+    return () => window.clearTimeout(resetTimer);
+  }, [shareState]);
+
+  const handleShare = async () => {
+    const currentUrl = window.location.href;
+    const shareText = `EGX Gold | أسعار الذهب في مصر اليوم
+
+تابع أسعار الذهب لحظة بلحظة في مصر، واحسب استثمارك بسهولة.
+Track live gold prices in Egypt and follow your investment with clarity.
+
+Landing page: ${currentUrl}
+Google Play: ${ANDROID_URL}
+App Store: ${IOS_URL}`;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: "EGX Gold | أسعار الذهب في مصر اليوم",
+          text: shareText,
+          url: currentUrl,
+        });
+        setShareState("shared");
+        return;
+      }
+
+      await navigator.clipboard.writeText(shareText);
+      setShareState("copied");
+    } catch (error) {
+      if (error?.name === "AbortError") {
+        return;
+      }
+
+      setShareState("error");
+    }
+  };
+
   const isMobile = platform === "android" || platform === "ios";
   const platformTitle =
     platform === "ios" ? "Redirecting to the App Store" : "Redirecting to Google Play";
@@ -184,6 +243,18 @@ export default function EgxGoldPage() {
     platform === "ios"
       ? "جاري تحويلك إلى App Store"
       : "جاري تحويلك إلى Google Play";
+  const mobileMessage =
+    mobileRedirectState === "returned"
+      ? "You returned from the store. This page will stay here so you can open any link again."
+      : "If the store does not open automatically, use one of the buttons below.";
+  const shareStatusLabel =
+    shareState === "shared"
+      ? "Shared successfully."
+      : shareState === "copied"
+        ? "Share text copied."
+        : shareState === "error"
+          ? "Sharing failed. Try again."
+          : "Share this page";
 
   return (
     <>
@@ -345,11 +416,12 @@ export default function EgxGoldPage() {
                             dir="rtl"
                             className="mt-3 font-[var(--font-egx-body)] text-lg text-white/70"
                           >
-                            {platformArabic}
+                            {mobileRedirectState === "returned"
+                              ? "لقد عدت من المتجر. يمكنك البقاء هنا وفتح أي رابط مرة أخرى."
+                              : platformArabic}
                           </p>
                           <p className="mt-4 font-[var(--font-egx-body)] text-sm leading-7 text-white/65">
-                            If the store does not open automatically, use one of
-                            the buttons below.
+                            {mobileMessage}
                           </p>
                         </>
                       ) : (
@@ -367,6 +439,20 @@ export default function EgxGoldPage() {
                           </p>
                         </>
                       )}
+
+                      <div className="mt-6 flex flex-wrap items-center gap-3">
+                        <button
+                          type="button"
+                          onClick={handleShare}
+                          className="inline-flex items-center gap-3 rounded-full border border-amber-200/20 bg-amber-200/10 px-5 py-3 font-[var(--font-egx-body)] text-sm font-medium text-amber-100 transition-colors duration-300 hover:bg-amber-200/16"
+                        >
+                          <span>Share page</span>
+                          <span aria-hidden="true">↗</span>
+                        </button>
+                        <span className="font-[var(--font-egx-body)] text-sm text-white/55">
+                          {shareStatusLabel}
+                        </span>
+                      </div>
 
                       <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-1">
                         {storeCards.map((card, index) => (
