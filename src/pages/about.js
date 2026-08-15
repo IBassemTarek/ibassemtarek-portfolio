@@ -10,6 +10,31 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
 
+const AnimatedNo = ({ value }) => {
+  const ref = useRef(null);
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, {
+    duration: 3000,
+  });
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue]);
+
+  useEffect(() => {
+    return springValue.on("change", (latest) => {
+      if (ref.current && latest.toFixed(0) <= value) {
+        ref.current.textContent = latest.toFixed(0);
+      }
+    });
+  }, [springValue, value]);
+
+  return <span ref={ref}></span>;
+};
+
 const About = () => {
   const text1 =
     "Hi, I'm Bassem Tarek, bringing over half a decade of experience in engineering and software development. I've played a pivotal role in delivering high-value projects, showcasing my collaborative efforts through close collaboration with cross-functional teams of professionals.";
@@ -20,30 +45,6 @@ const About = () => {
   const text3 =
     "Eager to contribute my well-honed expertise to ensure the success of future projects.";
 
-  const AnimatedNo = ({ value }) => {
-    const ref = useRef(null);
-    const motionValue = useMotionValue(0);
-    const springValue = useSpring(motionValue, {
-      duration: 3000,
-    });
-    const isInView = useInView(ref, { once: true });
-
-    useEffect(() => {
-      if (isInView) {
-        motionValue.set(value);
-      }
-    }, [isInView, value, motionValue]);
-
-    useEffect(() => {
-      springValue.on("change", (latest) => {
-        if (ref.current && latest.toFixed(0) <= value) {
-          ref.current.textContent = latest.toFixed(0);
-        }
-      });
-    }, [springValue, value]);
-
-    return <span ref={ref}></span>;
-  };
   return (
     <>
       <Head>

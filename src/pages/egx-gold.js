@@ -6,7 +6,7 @@ import {
   Noto_Naskh_Arabic,
   Tajawal,
 } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const AUTO_REDIRECT_SESSION_KEY = "egx-gold-auto-redirected";
@@ -87,6 +87,10 @@ const storeCards = [
 ];
 
 function detectPlatform() {
+  if (typeof window === "undefined") {
+    return "desktop";
+  }
+
   const { userAgent, platform, maxTouchPoints = 0 } = window.navigator;
 
   if (/Android/i.test(userAgent)) {
@@ -101,6 +105,10 @@ function detectPlatform() {
   }
 
   return "desktop";
+}
+
+function subscribeToPlatform() {
+  return () => {};
 }
 
 function StoreCard({ card, priority = false }) {
@@ -157,7 +165,11 @@ function StoreCard({ card, priority = false }) {
 
 export default function EgxGoldPage({ locale = "en" } = {}) {
   const prefersReducedMotion = useReducedMotion();
-  const [platform, setPlatform] = useState("detecting");
+  const platform = useSyncExternalStore(
+    subscribeToPlatform,
+    detectPlatform,
+    () => "desktop"
+  );
   const [mobileRedirectState, setMobileRedirectState] = useState("idle");
   const [shareState, setShareState] = useState("idle");
   const isArabicPage = locale === "ar";
@@ -172,24 +184,29 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
     : "Track live gold prices in Egypt, compare karats, watch bullion movement, and download EGX Gold on iPhone or Android.";
 
   useEffect(() => {
-    const nextPlatform = detectPlatform();
-    setPlatform(nextPlatform);
+    if (platform === "desktop") {
+      const idleTimer = window.setTimeout(() => {
+        setMobileRedirectState("idle");
+      }, 0);
 
-    if (nextPlatform === "desktop") {
-      setMobileRedirectState("idle");
-      return undefined;
+      return () => window.clearTimeout(idleTimer);
     }
 
     const hasRedirected = window.sessionStorage.getItem(AUTO_REDIRECT_SESSION_KEY);
     if (hasRedirected === "1") {
-      setMobileRedirectState("returned");
-      return undefined;
+      const returnedTimer = window.setTimeout(() => {
+        setMobileRedirectState("returned");
+      }, 0);
+
+      return () => window.clearTimeout(returnedTimer);
     }
 
-    setMobileRedirectState("redirecting");
-    window.sessionStorage.setItem(AUTO_REDIRECT_SESSION_KEY, "1");
+    const stateTimer = window.setTimeout(() => {
+      setMobileRedirectState("redirecting");
+    }, 0);
 
-    const destination = nextPlatform === "ios" ? IOS_URL : ANDROID_URL;
+    window.sessionStorage.setItem(AUTO_REDIRECT_SESSION_KEY, "1");
+    const destination = platform === "ios" ? IOS_URL : ANDROID_URL;
     const redirectTimer = window.setTimeout(() => {
       const redirectWindow = window.open(destination, "_blank", "noopener,noreferrer");
 
@@ -198,8 +215,11 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
       }
     }, prefersReducedMotion ? 250 : 900);
 
-    return () => window.clearTimeout(redirectTimer);
-  }, [prefersReducedMotion]);
+    return () => {
+      window.clearTimeout(stateTimer);
+      window.clearTimeout(redirectTimer);
+    };
+  }, [platform, prefersReducedMotion]);
 
   useEffect(() => {
     if (shareState === "idle") {

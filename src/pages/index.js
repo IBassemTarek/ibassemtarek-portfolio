@@ -4,7 +4,6 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
-import HireMe from "@/components/HireMe";
 import { LinkArrow } from "@/components/AppIcons";
 import TransitionEffect from "@/components/TransitionEffect";
 import ContactForm from "@/components/ContactForm";
@@ -74,8 +73,6 @@ export default function Home() {
           </div>
           <ContactForm />
         </Layout>
-
-        <HireMe />
       </main>
     </>
   );
