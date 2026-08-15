@@ -7,6 +7,7 @@ import Link from "next/link";
 import HireMe from "@/components/HireMe";
 import { LinkArrow } from "@/components/AppIcons";
 import TransitionEffect from "@/components/TransitionEffect";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -20,11 +21,11 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className={"pt-0 md:p-16 sm:pt-8"}>
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="w-1/2 md:w-full">
+            <div className="w-1/2 aspect-[16/9] md:block md:w-full lg:hidden">
               <Image
                 src={profilePic}
-                alt="IBassemTarek"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
+                alt="Bassem Tarek Mahrous, full-stack developer"
+                className="h-auto w-full"
                 priority
                 sizes="(max-width: 639px) 100vw, 
                 (max-width: 1200px) 50vw,
@@ -51,12 +52,14 @@ export default function Home() {
                   "
                   href={"/BassemTarekMahrousResume.pdf"}
                   target={"_blank"}
+                  rel="noreferrer"
+                  aria-label="Open Bassem Tarek Mahrous resume PDF"
                 >
                   Resume <LinkArrow className={"w-6 ml-2"} />
                 </Link>
                 <Link
                   href={"mailto:ibassemtarek@gmail.com"}
-                  target={"_blank"}
+                  aria-label="Email Bassem Tarek"
                   className="ml-4 text-lg font-medium capitalize text-dark group relative dark:text-light md:text-base"
                 >
                   Contact
@@ -69,6 +72,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <ContactForm />
         </Layout>
 
         <HireMe />

@@ -155,11 +155,21 @@ function StoreCard({ card, priority = false }) {
   );
 }
 
-export default function EgxGoldPage() {
+export default function EgxGoldPage({ locale = "en" } = {}) {
   const prefersReducedMotion = useReducedMotion();
   const [platform, setPlatform] = useState("detecting");
   const [mobileRedirectState, setMobileRedirectState] = useState("idle");
   const [shareState, setShareState] = useState("idle");
+  const isArabicPage = locale === "ar";
+  const canonicalUrl = isArabicPage
+    ? "https://ibassemtarek.vercel.app/ar/egx-gold"
+    : "https://ibassemtarek.vercel.app/egx-gold";
+  const pageTitle = isArabicPage
+    ? "EGX Gold | أسعار الذهب في مصر اليوم"
+    : "EGX Gold | Smart Store Redirect";
+  const pageDescription = isArabicPage
+    ? "تابع أسعار الذهب في مصر لحظة بلحظة، قارن بين الأعيرة، راقب أسعار السبائك، وحمّل تطبيق EGX Gold على iPhone أو Android."
+    : "Track live gold prices in Egypt, compare karats, watch bullion movement, and download EGX Gold on iPhone or Android.";
 
   useEffect(() => {
     const nextPlatform = detectPlatform();
@@ -259,16 +269,36 @@ App Store: ${IOS_URL}`;
   return (
     <>
       <Head>
-        <title>EGX Gold | Smart Store Redirect</title>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://ibassemtarek.vercel.app/egx-gold"
+        />
+        <link
+          rel="alternate"
+          hrefLang="ar"
+          href="https://ibassemtarek.vercel.app/ar/egx-gold"
+        />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://ibassemtarek.vercel.app/egx-gold"
+        />
+        <meta property="og:locale" content={isArabicPage ? "ar_EG" : "en_US"} />
         <meta
-          name="description"
-          content="Track live gold prices in Egypt, compare karats, watch bullion movement, and download EGX Gold on iPhone or Android."
+          property="og:locale:alternate"
+          content={isArabicPage ? "en_US" : "ar_EG"}
         />
       </Head>
 
       <TransitionEffect />
 
       <main
+        lang={isArabicPage ? "ar" : "en"}
+        dir={isArabicPage ? "rtl" : "ltr"}
         className={`${cormorant.variable} ${tajawal.variable} ${notoNaskhArabic.variable} w-full px-10 pb-20 pt-6 text-white lg:px-8 md:px-6 sm:px-4`}
       >
         <section className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.75rem] border border-black/10 bg-[#040506] shadow-[0_40px_120px_rgba(0,0,0,0.35)]">
@@ -308,7 +338,9 @@ App Store: ${IOS_URL}`;
                       EGX Gold
                     </p>
                     <h1 className="mt-4 max-w-4xl font-[var(--font-egx-display)] text-7xl font-semibold leading-[0.9] text-[#fff5d5] xl:text-6xl md:text-5xl sm:text-4xl">
-                      Gold Prices in Egypt, always within reach.
+                      {isArabicPage
+                        ? "أسعار الذهب في مصر، دائمًا في متناولك."
+                        : "Gold Prices in Egypt, always within reach."}
                     </h1>
                     <p
                       dir="rtl"
@@ -318,9 +350,9 @@ App Store: ${IOS_URL}`;
                       أذكى للاستثمار.
                     </p>
                     <p className="mt-6 max-w-3xl font-[var(--font-egx-body)] text-base leading-8 text-white/72 md:text-[15px]">
-                      Track 24k, 21k, and 18k gold, see live buying and selling
-                      prices, monitor bullion by weight, and keep your own gold
-                      plan moving with clarity.
+                      {isArabicPage
+                        ? "تابع أسعار الذهب عيار 24 و21 و18، واعرف أسعار البيع والشراء، وراقب أسعار السبائك حسب الوزن، وخطط لادخار الذهب أو الاستثمار بوضوح."
+                        : "Track 24k, 21k, and 18k gold, see live buying and selling prices, monitor bullion by weight, and keep your own gold plan moving with clarity."}
                     </p>
                   </div>
                 </div>

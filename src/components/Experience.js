@@ -25,6 +25,8 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
           <a
             href={companyLink}
             target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${company} website`}
             className="text-primary capitalize dark:text-primaryDark"
           >
             @{company}

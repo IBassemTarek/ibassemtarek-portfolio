@@ -6,13 +6,23 @@ import TransitionEffect from "@/components/TransitionEffect";
 import { useRouter } from "next/router";
 import { projectData } from "@/utils/projectsData";
 
+const withAccessibleProjectImages = (html = "", title = "Project") =>
+  html.replace(/<img src="([^"]+)" \/>/g, (_, src) => {
+    const fileName = src.split("/").pop()?.replace(/\.[^.]+$/, "") || "preview";
+    return `<img src="${src}" alt="${title} ${fileName} screenshot" loading="lazy" />`;
+  });
+
 const Project = () => {
   const router = useRouter();
-  console.log(router.query.slug);
   const projectId = router.query.slug;
   const project_data = projectData.filter(
     (project) => project.id == projectId
   )[0];
+  const projectContent = withAccessibleProjectImages(
+    project_data?.content,
+    project_data?.title
+  );
+
   return (
     <>
       <Head>
@@ -27,7 +37,7 @@ const Project = () => {
             className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8 leading-snug"
           />
 
-          <div className="project-details">
+          <article className="project-details" aria-label={project_data?.title}>
             <style jsx global>{`
               .project-details {
                 margin: 20px 0;
@@ -83,8 +93,8 @@ const Project = () => {
               }
             `}</style>
 
-            <div dangerouslySetInnerHTML={{ __html: project_data?.content }} />
-          </div>
+            <div dangerouslySetInnerHTML={{ __html: projectContent }} />
+          </article>
         </Layout>
       </main>
     </>

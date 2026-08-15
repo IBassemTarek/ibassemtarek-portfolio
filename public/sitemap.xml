@@ -2,6 +2,7 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
   <url>
     <loc>https://ibassemtarek.vercel.app/</loc>
@@ -89,6 +90,21 @@
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://ibassemtarek.vercel.app/egx-gold"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://ibassemtarek.vercel.app/ar/egx-gold"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://ibassemtarek.vercel.app/egx-gold"
+    />
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
       <image:title>EGX Gold app icon</image:title>
@@ -107,10 +123,88 @@
   </url>
 
   <url>
+    <loc>https://ibassemtarek.vercel.app/ar/egx-gold</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://ibassemtarek.vercel.app/egx-gold"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://ibassemtarek.vercel.app/ar/egx-gold"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://ibassemtarek.vercel.app/egx-gold"
+    />
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
+      <image:title>أيقونة تطبيق EGX Gold</image:title>
+      <image:caption>أيقونة تطبيق EGX Gold لمتابعة أسعار الذهب في مصر.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-store.png</image:loc>
+      <image:title>رابط EGX Gold على App Store</image:title>
+      <image:caption>شارة App Store المعروضة في صفحة EGX Gold العربية.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/google-play.png</image:loc>
+      <image:title>رابط EGX Gold على Google Play</image:title>
+      <image:caption>شارة Google Play المعروضة في صفحة EGX Gold العربية.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://ibassemtarek.vercel.app/llms.txt</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://ibassemtarek.vercel.app/llms.txt"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://ibassemtarek.vercel.app/llms-ar.txt"
+    />
+  </url>
+
+  <url>
+    <loc>https://ibassemtarek.vercel.app/llms-ar.txt</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://ibassemtarek.vercel.app/llms.txt"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://ibassemtarek.vercel.app/llms-ar.txt"
+    />
+  </url>
+
+  <url>
+    <loc>https://ibassemtarek.vercel.app/ar/llms.txt</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <url>

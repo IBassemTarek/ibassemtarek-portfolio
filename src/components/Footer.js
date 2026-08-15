@@ -13,7 +13,7 @@ const Footer = () => {
       <Layout className="py-8 flex items-center justify-between sm:flex-col lg:py-6">
         <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
         <div>
-          Build With By <Link href="/"> IBassemTarek</Link>
+          Built by <Link href="/">IBassemTarek</Link>
         </div>
       </Layout>
     </footer>

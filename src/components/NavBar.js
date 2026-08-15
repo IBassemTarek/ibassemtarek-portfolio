@@ -41,6 +41,7 @@ const CustomLinkMobile = ({ href, title, className = "", toggle }) => {
 
   return (
     <button
+      type="button"
       onClick={handleClick}
       className={`${className} relative group text-light dark:text-dark my-2`}
     >
@@ -72,6 +73,10 @@ const NavBar = () => {
     "
     >
       <button
+        type="button"
+        aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={open}
+        aria-controls="mobile-navigation-menu"
         className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
       >
@@ -105,6 +110,8 @@ const NavBar = () => {
             className="w-6 mx-3"
             href={"https://twitter.com/IBassemTarek"}
             target={"_blank"}
+            rel="noreferrer"
+            aria-label="Open Bassem Tarek on X"
           >
             <TwitterIcon />
           </motion.a>
@@ -114,6 +121,8 @@ const NavBar = () => {
             className="w-6 mx-3"
             href={"https://github.com/IBassemTarek"}
             target={"_blank"}
+            rel="noreferrer"
+            aria-label="Open Bassem Tarek on GitHub"
           >
             <GithubIcon />
           </motion.a>
@@ -123,10 +132,14 @@ const NavBar = () => {
             className="w-6 ml-3"
             href={"https://www.linkedin.com/in/ibassemtarek/"}
             target={"_blank"}
+            rel="noreferrer"
+            aria-label="Open Bassem Tarek on LinkedIn"
           >
             <LinkedInIcon />
           </motion.a>
           <button
+            type="button"
+            aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
             className={` ml-6 flex items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
@@ -143,6 +156,7 @@ const NavBar = () => {
 
       {open && (
         <motion.div
+          id="mobile-navigation-menu"
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
           className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
@@ -168,6 +182,8 @@ const NavBar = () => {
               className="w-6 mx-3 sm:mx-1"
               href={"https://twitter.com/IBassemTarek"}
               target={"_blank"}
+              rel="noreferrer"
+              aria-label="Open Bassem Tarek on X"
             >
               <TwitterIcon />
             </motion.a>
@@ -177,6 +193,8 @@ const NavBar = () => {
               className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
               href={"https://github.com/IBassemTarek"}
               target={"_blank"}
+              rel="noreferrer"
+              aria-label="Open Bassem Tarek on GitHub"
             >
               <GithubIcon />
             </motion.a>
@@ -186,10 +204,14 @@ const NavBar = () => {
               className="w-6 ml-3 sm:mx-1"
               href={"https://www.linkedin.com/in/ibassemtarek/"}
               target={"_blank"}
+              rel="noreferrer"
+              aria-label="Open Bassem Tarek on LinkedIn"
             >
               <LinkedInIcon />
             </motion.a>
             <button
+              type="button"
+              aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
               className={` ml-6 flex items-center justify-center rounded-full p-1 ${
                 mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
               }`}

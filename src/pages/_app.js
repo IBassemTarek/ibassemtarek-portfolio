@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
+      <div
         className={`${montserrat.variable} font-mont bg-light w-full min-h-screen dark:bg-dark`}
       >
         <NavBar />
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
         <Footer />
-      </main>
+      </div>
     </>
   );
 }

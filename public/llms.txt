@@ -1,0 +1,81 @@
+# Bassem Tarek Mahrous Portfolio
+
+> English machine-readable guide for AI agents and LLM-based browsers using https://ibassemtarek.vercel.app. This site is a professional portfolio for Bassem Tarek Mahrous, a software engineer and full-stack developer, with a bilingual English/Arabic app landing page for EGX Gold.
+
+## Site Identity
+
+- Owner: Bassem Tarek Mahrous.
+- Role: Software engineer and full-stack developer.
+- Main domain: https://ibassemtarek.vercel.app.
+- Primary language: English.
+- Supported Arabic content: EGX Gold landing page and Arabic agent guide.
+- Contact email: ibassemtarek@gmail.com.
+- Public profiles: GitHub, LinkedIn, and X/Twitter links are listed in the Contact section.
+
+## What This Site Contains
+
+This portfolio presents Bassem's professional profile, software engineering experience, selected client and product work, project screenshots, source-code links where available, a downloadable resume, and a dedicated landing page for EGX Gold.
+
+Bassem's work spans backend development, mobile app development, full-stack web development, React Native, Flutter, Next.js, NestJS, PostgreSQL, MongoDB, Firebase, Docker, Shopify integrations, GraphQL, WordPress, and DevOps-oriented delivery.
+
+## Primary Pages
+
+- [Home](https://ibassemtarek.vercel.app/): Portfolio introduction, resume link, contact link, and WebMCP-ready contact form.
+- [About](https://ibassemtarek.vercel.app/about): Biography, skills, experience timeline, education, and professional credibility signals.
+- [Projects](https://ibassemtarek.vercel.app/projects): Portfolio project index with links to individual case-study pages.
+- [EGX Gold](https://ibassemtarek.vercel.app/egx-gold): English/default landing page for the EGX Gold mobile app.
+- [EGX Gold Arabic](https://ibassemtarek.vercel.app/ar/egx-gold): Arabic-focused landing page for EGX Gold.
+- [Resume PDF](https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf): Downloadable resume.
+- [XML Sitemap](https://ibassemtarek.vercel.app/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
+- [Arabic LLM Guide](https://ibassemtarek.vercel.app/ar/llms.txt): Arabic machine-readable guide for Arabic-first agents.
+
+## Project Pages
+
+- [Montu Mobile App Builder](https://ibassemtarek.vercel.app/projects/1): A no-code mobile app builder for Shopify merchants. Bassem worked as a backend and mobile app developer, maintaining scalable infrastructure, service integrations, React Native mobile features, and production troubleshooting.
+- [Gulf Coin Crypto Currency](https://ibassemtarek.vercel.app/projects/2): A cryptocurrency transaction management application for GulfCoin, focused on wallet/account visibility, presale participation, and investment tracking.
+- [Alawfar](https://ibassemtarek.vercel.app/projects/3): An ecommerce application focused on cash-on-delivery purchasing, built for users who prefer receiving orders before paying.
+- [Web Plaza](https://ibassemtarek.vercel.app/projects/4): A full-stack training and portfolio project using Next.js and MongoDB, with a public GitHub repository.
+- [Kindergarten World](https://ibassemtarek.vercel.app/projects/5): A classroom and learning management application for kindergarten teachers and students, with assignment, attendance, progress, and educational-resource concepts.
+- [A-plus Studio](https://ibassemtarek.vercel.app/projects/6): A WordPress studio/business website focused on company services, credibility, and client acquisition.
+- [Sary Academy](https://ibassemtarek.vercel.app/projects/7): A nursery school and educational experience platform combining learning and play for children.
+- [Yanabee Academy](https://ibassemtarek.vercel.app/projects/8): A Quranic platform and electronic academy for lessons, recitation learning, progress tracking, and Quranic sciences.
+- [Rosewell Energy](https://ibassemtarek.vercel.app/projects/9): A website for an oilfield chemical treatment and engineering services company.
+
+## EGX Gold
+
+EGX Gold is a mobile app landing page for users who want to track gold prices in Egypt. It includes Arabic and English messaging, app-store links, smart mobile redirection to Google Play or the App Store, store badges, a share action, and content describing live market tracking, bullion price monitoring, offline latest-update viewing, charts, and privacy-focused usage without login.
+
+Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or specifically asks about "أسعار الذهب", "سعر الذهب في مصر", "تحميل تطبيق EGX Gold", or similar Arabic queries.
+
+## Agentic Browsing Guidance
+
+- Prefer stable semantic navigation links: Home, About, Projects, EGX Gold, and EGX Gold Arabic.
+- Use the homepage contact form when the user wants to hire, contact, consult, collaborate, or ask about portfolio work.
+- The contact form is exposed as a declarative WebMCP tool named `contact_bassem`.
+- The contact form accepts Arabic or English names and messages.
+- Use the resume PDF when the user asks for credentials, CV, background, or hiring material.
+- Use project detail pages for specific implementation examples, screenshots, and project context.
+- Treat animated decorative graphics as non-essential visual decoration.
+- Do not infer hidden pages. Use only URLs listed in this guide or in the XML sitemap.
+
+## WebMCP Tools
+
+- `contact_bassem`: Prepares a direct email to Bassem Tarek Mahrous about hiring, consulting, collaboration, or questions about the portfolio.
+- Parameters: `name`, `email`, `topic`, and `message`.
+- Supported message languages: English and Arabic.
+- Submission behavior: opens the user's email client with a prepared mailto message.
+
+## Language and Locale Notes
+
+- English/default EGX Gold page: https://ibassemtarek.vercel.app/egx-gold.
+- Arabic EGX Gold page: https://ibassemtarek.vercel.app/ar/egx-gold.
+- English LLM guide: https://ibassemtarek.vercel.app/llms.txt.
+- Arabic LLM guide: https://ibassemtarek.vercel.app/ar/llms.txt.
+- Sitemap uses `hreflang` alternates only where actual localized URLs exist.
+
+## Contact
+
+- Email: ibassemtarek@gmail.com
+- GitHub: https://github.com/IBassemTarek
+- LinkedIn: https://www.linkedin.com/in/ibassemtarek/
+- X/Twitter: https://twitter.com/IBassemTarek

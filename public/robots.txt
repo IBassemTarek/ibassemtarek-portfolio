@@ -1,0 +1,12 @@
+# Robots policy for https://ibassemtarek.vercel.app
+# سياسة الزحف لموقع محفظة باسم طارق محفوظ
+
+User-agent: *
+Allow: /
+Allow: /ar/
+Allow: /llms.txt
+Allow: /llms-ar.txt
+Allow: /ar/llms.txt
+Allow: /sitemap.xml
+
+Sitemap: https://ibassemtarek.vercel.app/sitemap.xml

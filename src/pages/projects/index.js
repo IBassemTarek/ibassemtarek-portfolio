@@ -22,7 +22,7 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
       <Link
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
         href={`/projects/${id}`}
-        target="_blank"
+        aria-label={`View details for ${title}`}
       >
         <FramerImage
           src={img}
@@ -46,8 +46,8 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
         </span>
         <Link
           href={`/projects/${id}`}
-          target="_blank"
           className="hover:underline underline-offset-2"
+          aria-label={`View details for ${title}`}
         >
           <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
             {title}
@@ -58,7 +58,13 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
         </p>
         <div className="mt-2 flex items-center">
           {githubLink && (
-            <Link className="w-10" href={githubLink} target="_blank">
+            <Link
+              className="w-10"
+              href={githubLink}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open source code for ${title}`}
+            >
               <GithubIcon />
             </Link>
           )}
@@ -69,7 +75,7 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
             sm:px-4 sm:text-base
             "
             href={`/projects/${id}`}
-            target="_blank"
+            aria-label={`Visit details for ${title}`}
           >
             Visit The Project
           </Link>
@@ -90,7 +96,7 @@ const Project = ({ type, title, img, link, githubLink, id }) => {
       <Link
         className="w-full cursor-pointer overflow-hidden rounded-lg"
         href={`/projects/${id}`}
-        target="_blank"
+        aria-label={`View details for ${title}`}
       >
         <FramerImage
           src={img}
@@ -115,8 +121,8 @@ const Project = ({ type, title, img, link, githubLink, id }) => {
         </span>
         <Link
           href={`/projects/${id}`}
-          target="_blank"
           className="hover:underline underline-offset-2"
+          aria-label={`View details for ${title}`}
         >
           <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
             {title}
@@ -126,12 +132,18 @@ const Project = ({ type, title, img, link, githubLink, id }) => {
           <Link
             className="text-lg font-semibold md:text-base"
             href={`/projects/${id}`}
-            target="_blank"
+            aria-label={`Visit details for ${title}`}
           >
             Visit
           </Link>
           {githubLink && (
-            <Link className="w-8 md:w-6" href={githubLink} target="_blank">
+            <Link
+              className="w-8 md:w-6"
+              href={githubLink}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open source code for ${title}`}
+            >
               <GithubIcon />
             </Link>
           )}

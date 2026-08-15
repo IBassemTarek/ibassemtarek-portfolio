@@ -11,6 +11,7 @@ const Logo = () => {
     <div className="flex items-center justify-center mt-2">
       <MotionLink
         href={"/"}
+        aria-label="Go to homepage"
         className="w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2xl font-bold dark:border-light border border-solid border-transparent"
         whileHover={{
           backgroundColor: [
@@ -29,9 +30,8 @@ const Logo = () => {
       >
         <Image
           src={profilePic}
-          alt="IBassemTarek"
+          alt="IBassemTarek logo"
           className="w-[40%] h-auto"
-          priority
         />
       </MotionLink>
     </div>
