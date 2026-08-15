@@ -19,6 +19,7 @@ const ContactForm = () => {
 
   return (
     <section
+      id="contact"
       aria-labelledby="contact-heading"
       className="mt-24 w-full rounded-3xl border border-solid border-dark bg-light p-10 shadow-2xl dark:border-light dark:bg-dark lg:p-8 sm:p-5"
     >
@@ -42,9 +43,6 @@ const ContactForm = () => {
       </div>
 
       <form
-        action="mailto:ibassemtarek@gmail.com"
-        method="post"
-        encType="text/plain"
         aria-describedby="contact-description"
         toolname="contact_bassem"
         tooldescription="Prepares a direct email to Bassem Tarek Mahrous about hiring, consulting, collaboration, or questions about his portfolio. Accepts Arabic or English contact details and messages. يجهز رسالة بريد إلكتروني مباشرة إلى باسم طارق محفوظ بخصوص التوظيف أو الاستشارة أو التعاون أو أسئلة المحفظة."

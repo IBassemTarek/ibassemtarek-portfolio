@@ -58,8 +58,8 @@ export default function Home() {
                   Resume <LinkArrow className={"w-6 ml-2"} />
                 </Link>
                 <Link
-                  href={"mailto:ibassemtarek@gmail.com"}
-                  aria-label="Email Bassem Tarek"
+                  href={"#contact"}
+                  aria-label="Jump to contact form"
                   className="ml-4 text-lg font-medium capitalize text-dark group relative dark:text-light md:text-base"
                 >
                   Contact
