@@ -63,14 +63,16 @@ const quickHighlights = [
   "Private by default",
 ];
 
-const storeCards = [
+const getStoreCards = (isArabicPage) => [
   {
     href: IOS_URL,
     icon: "/images/egx-gold/app-store.png",
     alt: "Apple App Store",
     label: "iPhone / iPad",
     title: "Continue with the App Store",
-    subtitle: "For iOS users who want the premium EGX Gold experience.",
+    subtitle: isArabicPage
+      ? "لمستخدمي iOS الذين يريدون تجربة دهبنا الكاملة."
+      : "For iOS users who want the premium Dahabna experience.",
     accent: "from-sky-400/30 via-cyan-300/10 to-white/5",
     ring: "ring-sky-200/25",
   },
@@ -173,15 +175,17 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
   const [mobileRedirectState, setMobileRedirectState] = useState("idle");
   const [shareState, setShareState] = useState("idle");
   const isArabicPage = locale === "ar";
+  const brandName = isArabicPage ? "دهبنا" : "Dahabna";
+  const storeCards = getStoreCards(isArabicPage);
   const canonicalUrl = isArabicPage
     ? "https://ibassemtarek.vercel.app/ar/egx-gold"
     : "https://ibassemtarek.vercel.app/egx-gold";
   const pageTitle = isArabicPage
-    ? "EGX Gold | أسعار الذهب في مصر اليوم"
-    : "EGX Gold | Smart Store Redirect";
+    ? "دهبنا | أسعار الذهب في مصر اليوم"
+    : "Dahabna | Smart Store Redirect";
   const pageDescription = isArabicPage
-    ? "تابع أسعار الذهب في مصر لحظة بلحظة، قارن بين الأعيرة، راقب أسعار السبائك، وحمّل تطبيق EGX Gold على iPhone أو Android."
-    : "Track live gold prices in Egypt, compare karats, watch bullion movement, and download EGX Gold on iPhone or Android.";
+    ? "تابع أسعار الذهب في مصر لحظة بلحظة، قارن بين الأعيرة، راقب أسعار السبائك، وحمّل تطبيق دهبنا على iPhone أو Android."
+    : "Track live gold prices in Egypt, compare karats, watch bullion movement, and download Dahabna on iPhone or Android.";
 
   useEffect(() => {
     if (platform === "desktop") {
@@ -235,7 +239,7 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
 
   const handleShare = async () => {
     const currentUrl = window.location.href;
-    const shareText = `EGX Gold | أسعار الذهب في مصر اليوم
+    const shareText = `${brandName} | أسعار الذهب في مصر اليوم
 
 تابع أسعار الذهب لحظة بلحظة في مصر، واحسب استثمارك بسهولة.
 Track live gold prices in Egypt and follow your investment with clarity.
@@ -247,7 +251,7 @@ App Store: ${IOS_URL}`;
     try {
       if (navigator.share) {
         await navigator.share({
-          title: "EGX Gold | أسعار الذهب في مصر اليوم",
+          title: `${brandName} | أسعار الذهب في مصر اليوم`,
           text: shareText,
           url: currentUrl,
         });
@@ -291,6 +295,14 @@ App Store: ${IOS_URL}`;
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta
+          property="og:image"
+          content="https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg"
+        />
         <link rel="canonical" href={canonicalUrl} />
         <link
           rel="alternate"
@@ -345,7 +357,7 @@ App Store: ${IOS_URL}`;
                     <div className="absolute inset-0 rounded-[2rem] bg-[conic-gradient(from_220deg,rgba(255,255,255,0.06),rgba(255,220,120,0.16),rgba(255,255,255,0.04),rgba(72,224,255,0.12),rgba(255,255,255,0.06))]" />
                     <Image
                       src="/images/egx-gold/app-icon.jpg"
-                      alt="EGX Gold app logo"
+                      alt={isArabicPage ? "شعار تطبيق دهبنا" : "Dahabna app logo"}
                       width={120}
                       height={120}
                       priority
@@ -355,7 +367,7 @@ App Store: ${IOS_URL}`;
 
                   <div className="max-w-4xl">
                     <p className="font-[var(--font-egx-body)] text-xs uppercase tracking-[0.42em] text-amber-200/80">
-                      EGX Gold
+                      {brandName}
                     </p>
                     <h1 className="mt-4 max-w-4xl font-[var(--font-egx-display)] text-7xl font-semibold leading-[0.9] text-[#fff5d5] xl:text-6xl md:text-5xl sm:text-4xl">
                       {isArabicPage
@@ -482,7 +494,9 @@ App Store: ${IOS_URL}`;
                             Choose your device
                           </p>
                           <h2 className="mt-4 font-[var(--font-egx-display)] text-4xl font-semibold text-[#fff3cf] md:text-3xl">
-                            Download EGX Gold where you use it.
+                            {isArabicPage
+                              ? "حمّل دهبنا على جهازك."
+                              : "Download Dahabna where you use it."}
                           </h2>
                           <p className="mt-4 max-w-xl font-[var(--font-egx-body)] text-sm leading-7 text-white/65">
                             On desktop, choose your platform and continue to the

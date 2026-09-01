@@ -107,18 +107,18 @@
     />
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
-      <image:title>EGX Gold app icon</image:title>
-      <image:caption>Application icon for EGX Gold, a gold prices app for Egypt.</image:caption>
+      <image:title>Dahabna app icon</image:title>
+      <image:caption>Application icon for Dahabna, a gold prices app for Egypt.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-store.png</image:loc>
-      <image:title>EGX Gold App Store icon</image:title>
-      <image:caption>App Store badge shown on the EGX Gold landing page.</image:caption>
+      <image:title>Dahabna App Store icon</image:title>
+      <image:caption>App Store badge shown on the Dahabna landing page.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/google-play.png</image:loc>
-      <image:title>EGX Gold Google Play icon</image:title>
-      <image:caption>Google Play badge shown on the EGX Gold landing page.</image:caption>
+      <image:title>Dahabna Google Play icon</image:title>
+      <image:caption>Google Play badge shown on the Dahabna landing page.</image:caption>
     </image:image>
   </url>
 
@@ -144,18 +144,18 @@
     />
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
-      <image:title>أيقونة تطبيق EGX Gold</image:title>
-      <image:caption>أيقونة تطبيق EGX Gold لمتابعة أسعار الذهب في مصر.</image:caption>
+      <image:title>أيقونة تطبيق دهبنا</image:title>
+      <image:caption>أيقونة تطبيق دهبنا لمتابعة أسعار الذهب في مصر.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-store.png</image:loc>
-      <image:title>رابط EGX Gold على App Store</image:title>
-      <image:caption>شارة App Store المعروضة في صفحة EGX Gold العربية.</image:caption>
+      <image:title>رابط دهبنا على App Store</image:title>
+      <image:caption>شارة App Store المعروضة في صفحة دهبنا العربية.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/google-play.png</image:loc>
-      <image:title>رابط EGX Gold على Google Play</image:title>
-      <image:caption>شارة Google Play المعروضة في صفحة EGX Gold العربية.</image:caption>
+      <image:title>رابط دهبنا على Google Play</image:title>
+      <image:caption>شارة Google Play المعروضة في صفحة دهبنا العربية.</image:caption>
     </image:image>
   </url>
 

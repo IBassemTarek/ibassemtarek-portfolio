@@ -1,6 +1,6 @@
 # Bassem Tarek Mahrous Portfolio
 
-> English machine-readable guide for AI agents and LLM-based browsers using https://ibassemtarek.vercel.app. This site is a professional portfolio for Bassem Tarek Mahrous, a software engineer and full-stack developer, with a bilingual English/Arabic app landing page for EGX Gold.
+> English machine-readable guide for AI agents and LLM-based browsers using https://ibassemtarek.vercel.app. This site is a professional portfolio for Bassem Tarek Mahrous, a software engineer and full-stack developer, with a bilingual English/Arabic app landing page for Dahabna.
 
 ## Site Identity
 
@@ -8,13 +8,13 @@
 - Role: Software engineer and full-stack developer.
 - Main domain: https://ibassemtarek.vercel.app.
 - Primary language: English.
-- Supported Arabic content: EGX Gold landing page and Arabic agent guide.
+- Supported Arabic content: Dahabna landing page and Arabic agent guide.
 - Contact email: ibassemtarek@gmail.com.
 - Public profiles: GitHub, LinkedIn, and X/Twitter links are listed in the Contact section.
 
 ## What This Site Contains
 
-This portfolio presents Bassem's professional profile, software engineering experience, selected client and product work, project screenshots, source-code links where available, a downloadable resume, and a dedicated landing page for EGX Gold.
+This portfolio presents Bassem's professional profile, software engineering experience, selected client and product work, project screenshots, source-code links where available, a downloadable resume, and a dedicated landing page for Dahabna.
 
 Bassem's work spans backend development, mobile app development, full-stack web development, React Native, Flutter, Next.js, NestJS, PostgreSQL, MongoDB, Firebase, Docker, Shopify integrations, GraphQL, WordPress, and DevOps-oriented delivery.
 
@@ -23,8 +23,10 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 - [Home](https://ibassemtarek.vercel.app/): Portfolio introduction, resume link, contact link, and WebMCP-ready contact form.
 - [About](https://ibassemtarek.vercel.app/about): Biography, skills, experience timeline, education, and professional credibility signals.
 - [Projects](https://ibassemtarek.vercel.app/projects): Portfolio project index with links to individual case-study pages.
-- [EGX Gold](https://ibassemtarek.vercel.app/egx-gold): English/default landing page for the EGX Gold mobile app.
-- [EGX Gold Arabic](https://ibassemtarek.vercel.app/ar/egx-gold): Arabic-focused landing page for EGX Gold.
+- [Dahabna](https://ibassemtarek.vercel.app/egx-gold): English/default landing page for the Dahabna mobile app.
+- [دهبنا](https://ibassemtarek.vercel.app/ar/egx-gold): Arabic-focused landing page for Dahabna.
+- [Dahabna alias](https://ibassemtarek.vercel.app/dahabna): Alternate English route; its canonical page remains `/egx-gold`.
+- [دهبنا alias](https://ibassemtarek.vercel.app/دهبنا): Alternate Arabic route; its canonical page remains `/ar/egx-gold`.
 - [Resume PDF](https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf): Downloadable resume.
 - [XML Sitemap](https://ibassemtarek.vercel.app/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
 - [Arabic LLM Guide](https://ibassemtarek.vercel.app/ar/llms.txt): Arabic machine-readable guide for Arabic-first agents.
@@ -41,15 +43,15 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 - [Yanabee Academy](https://ibassemtarek.vercel.app/projects/8): A Quranic platform and electronic academy for lessons, recitation learning, progress tracking, and Quranic sciences.
 - [Rosewell Energy](https://ibassemtarek.vercel.app/projects/9): A website for an oilfield chemical treatment and engineering services company.
 
-## EGX Gold
+## Dahabna
 
-EGX Gold is a mobile app landing page for users who want to track gold prices in Egypt. It includes Arabic and English messaging, app-store links, smart mobile redirection to Google Play or the App Store, store badges, a share action, and content describing live market tracking, bullion price monitoring, offline latest-update viewing, charts, and privacy-focused usage without login.
+Dahabna is a mobile app landing page for users who want to track gold prices in Egypt. It includes Arabic and English messaging, app-store links, smart mobile redirection to Google Play or the App Store, store badges, a share action, and content describing live market tracking, bullion price monitoring, offline latest-update viewing, charts, and privacy-focused usage without login.
 
-Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or specifically asks about "أسعار الذهب", "سعر الذهب في مصر", "تحميل تطبيق EGX Gold", or similar Arabic queries.
+Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or specifically asks about "أسعار الذهب", "سعر الذهب في مصر", "تحميل تطبيق دهبنا", or similar Arabic queries.
 
 ## Agentic Browsing Guidance
 
-- Prefer stable semantic navigation links: Home, About, Projects, EGX Gold, and EGX Gold Arabic.
+- Prefer stable semantic navigation links: Home, About, Projects, Dahabna, and Dahabna Arabic.
 - Use the homepage contact form when the user wants to hire, contact, consult, collaborate, or ask about portfolio work.
 - The contact form is exposed as a declarative WebMCP tool named `contact_bassem`.
 - The contact form accepts Arabic or English names and messages.
@@ -67,8 +69,8 @@ Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or sp
 
 ## Language and Locale Notes
 
-- English/default EGX Gold page: https://ibassemtarek.vercel.app/egx-gold.
-- Arabic EGX Gold page: https://ibassemtarek.vercel.app/ar/egx-gold.
+- English/default Dahabna page: https://ibassemtarek.vercel.app/egx-gold.
+- Arabic Dahabna page: https://ibassemtarek.vercel.app/ar/egx-gold.
 - English LLM guide: https://ibassemtarek.vercel.app/llms.txt.
 - Arabic LLM guide: https://ibassemtarek.vercel.app/ar/llms.txt.
 - Sitemap uses `hreflang` alternates only where actual localized URLs exist.
