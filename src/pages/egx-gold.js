@@ -12,23 +12,32 @@ import {
   useState,
   useSyncExternalStore,
 } from "react";
-import TransitionEffect from "@/components/TransitionEffect";
 
+// display:swap → text paints immediately in a fallback face, then swaps (no
+// invisible-text FCP block). Only the English display face (used in the
+// above-the-fold H1) is preloaded; the Arabic/body faces load on demand to keep
+// the critical request count small.
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
+  display: "swap",
+  preload: true,
   variable: "--font-egx-display",
 });
 
 const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
   weight: ["400", "500", "700"],
+  display: "swap",
+  preload: false,
   variable: "--font-egx-body",
 });
 
 const notoNaskhArabic = Noto_Naskh_Arabic({
   subsets: ["arabic"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
+  display: "swap",
+  preload: false,
   variable: "--font-egx-arabic",
 });
 
@@ -304,26 +313,27 @@ function isIosSafari() {
 const BRAND_LOGO_SRC = "/images/egx-gold/dahabna-logo.png";
 const BRAND_LOGO_FALLBACK = "/images/egx-gold/app-icon.jpg";
 
-// Shows the existing app icon by default (always valid) and upgrades to the
-// new brand logo only once it successfully loads. This guarantees the tile is
-// never empty, and the PNG is adopted automatically the moment it is added to
-// public/images/egx-gold/dahabna-logo.png — no code change needed.
-function BrandLogo({ alt, className }) {
-  const [src, setSrc] = useState(BRAND_LOGO_FALLBACK);
-
-  useEffect(() => {
-    const probe = new window.Image();
-    probe.onload = () => {
-      if (probe.naturalWidth > 0) {
-        setSrc(BRAND_LOGO_SRC);
-      }
-    };
-    probe.src = BRAND_LOGO_SRC;
-  }, []);
+// next/image auto-serves a small webp/avif at the displayed size instead of the
+// full ~800KB source PNG (big LCP/bandwidth win). Falls back to the app icon if
+// the brand logo is ever missing.
+function BrandLogo({ alt, className, priority = false, sizes = "160px" }) {
+  const [src, setSrc] = useState(BRAND_LOGO_SRC);
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} width={120} height={120} className={className} />
+    <Image
+      src={src}
+      alt={alt}
+      width={160}
+      height={160}
+      sizes={sizes}
+      priority={priority}
+      onError={() => {
+        if (src !== BRAND_LOGO_FALLBACK) {
+          setSrc(BRAND_LOGO_FALLBACK);
+        }
+      }}
+      className={className}
+    />
   );
 }
 
@@ -599,10 +609,6 @@ App Store: ${IOS_URL}`;
       )
     : copy.pricePanel.sampleNote;
 
-  const enterFrom = prefersReducedMotion
-    ? false
-    : { opacity: 0, y: 24 };
-
   return (
     <>
       <Head>
@@ -641,8 +647,6 @@ App Store: ${IOS_URL}`;
           content={isArabicPage ? "en_US" : "ar_EG"}
         />
       </Head>
-
-      <TransitionEffect />
 
       <main
         lang={copy.lang}
@@ -685,21 +689,14 @@ App Store: ${IOS_URL}`;
             transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          <motion.div
-            initial={enterFrom}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative z-10 px-14 pb-14 pt-16 xl:px-10 lg:px-8 md:px-6 md:pb-10 md:pt-12"
-          >
+          {/* CSS-driven entrance (not framer): the hero content is present and
+              paints on the first frame instead of waiting for JS hydration. */}
+          <div className="egx-rise relative z-10 px-14 pb-14 pt-16 xl:px-10 lg:px-8 md:px-6 md:pb-10 md:pt-12">
             <div className="grid items-start gap-12 lg:gap-10">
               {/* Hero heading + logo */}
               <div className="grid grid-cols-[minmax(0,150px)_1fr] items-center gap-8 md:grid-cols-1 md:gap-6">
                 <motion.div
-                  initial={
-                    prefersReducedMotion ? false : { opacity: 0, scale: 0.92 }
-                  }
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                  initial={false}
                   whileHover={prefersReducedMotion ? undefined : { scale: 1.03 }}
                   className="egx-logo relative mx-auto flex h-36 w-36 items-center justify-center rounded-[1.9rem] p-4"
                 >
@@ -717,6 +714,7 @@ App Store: ${IOS_URL}`;
                   />
                   <BrandLogo
                     alt={isArabicPage ? "شعار تطبيق دهبنا" : "Dahabna app logo"}
+                    priority
                     className="relative z-10 h-full w-full rounded-[1.2rem] object-contain drop-shadow-[0_8px_20px_var(--egx-shadow)]"
                   />
                 </motion.div>
@@ -951,7 +949,7 @@ App Store: ${IOS_URL}`;
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
       </main>
 
@@ -1051,6 +1049,27 @@ App Store: ${IOS_URL}`;
         .egx[dir="rtl"] * {
           letter-spacing: 0 !important;
           text-transform: none !important;
+        }
+        /* Hero entrance as a pure-CSS animation so it starts at first paint
+           (no JS/hydration gate). fill-mode both keeps the from-state only for
+           the brief animation, then the content settles fully visible. */
+        @keyframes egx-rise {
+          from {
+            opacity: 0;
+            transform: translateY(24px);
+          }
+          to {
+            opacity: 1;
+            transform: none;
+          }
+        }
+        .egx-rise {
+          animation: egx-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .egx-rise {
+            animation: none;
+          }
         }
         .egx-hero {
           background:
