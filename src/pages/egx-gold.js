@@ -14,8 +14,6 @@ import {
 } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
 
-const AUTO_REDIRECT_SESSION_KEY = "egx-gold-auto-redirected";
-
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
@@ -38,6 +36,9 @@ const ANDROID_URL =
   "https://play.google.com/store/apps/details?id=com.egxgold.app";
 const IOS_URL =
   "https://apps.apple.com/us/app/egx-gold-%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D9%8A%D9%88%D9%85/id6762029452";
+// App Store numeric id (from IOS_URL). Used for Apple's native Smart App Banner
+// meta tag, which shows "OPEN" if the app is installed (iOS Safari only).
+const IOS_APP_ID = "6762029452";
 
 // Public, no-auth endpoint on the Cloudflare Worker backend that returns the
 // latest karat buy/sell snapshot. See egypt-gold-scraper: GET /public/latest-prices.
@@ -109,18 +110,13 @@ const COPY = {
     privacyLabel: "Privacy promise",
     privacyText:
       "No login, no data collection, no unnecessary friction. Your information stays on your device.",
-    redirectLabel: "Smart redirect",
     chooseLabel: "Choose your device",
     chooseHeading: "Download Dahabna where you use it.",
-    chooseBody:
-      "On desktop, choose your platform and continue to the right store. On mobile, this page redirects you automatically.",
-    redirect: {
-      ios: "Redirecting to the App Store",
-      android: "Redirecting to Google Play",
-      returnedTitle: "You're all set",
-      body: "If the store does not open automatically, use one of the buttons below.",
-      returnedBody:
-        "You returned from the store. This page stays here so you can open any link again.",
+    chooseBody: "Choose your platform and continue to the right store.",
+    banner: {
+      price: "Free",
+      tagline: "Live gold prices — 24k, 21k & 18k.",
+      cta: "Get",
     },
     share: {
       button: "Share page",
@@ -195,17 +191,13 @@ const COPY = {
     privacyLabel: "وعد الخصوصية",
     privacyText:
       "بدون تسجيل دخول، وبدون جمع بيانات، وبدون تعقيد. بياناتك تبقى على جهازك.",
-    redirectLabel: "تحويل ذكي",
     chooseLabel: "اختر جهازك",
     chooseHeading: "حمّل دهبنا على جهازك.",
-    chooseBody:
-      "على الكمبيوتر، اختر النظام لتنتقل إلى المتجر المناسب. على الهاتف، تُحوّلك هذه الصفحة تلقائيًا.",
-    redirect: {
-      ios: "جارٍ تحويلك إلى App Store",
-      android: "جارٍ تحويلك إلى Google Play",
-      returnedTitle: "كل شيء جاهز",
-      body: "إذا لم يفتح المتجر تلقائيًا، استخدم أحد الأزرار بالأسفل.",
-      returnedBody: "لقد عدت من المتجر. تبقى هذه الصفحة هنا لتفتح أي رابط مرة أخرى.",
+    chooseBody: "اختر نظام جهازك لتنتقل إلى المتجر المناسب.",
+    banner: {
+      price: "مجانًا",
+      tagline: "أسعار الذهب مباشرة — عيار 24 و21 و18.",
+      cta: "تحميل",
     },
     share: {
       button: "شارك الصفحة",
@@ -291,6 +283,22 @@ function detectPlatform() {
 
 function subscribeToPlatform() {
   return () => {};
+}
+
+// True only for real mobile Safari, where Apple's native Smart App Banner
+// renders. Other iOS browsers/webviews (Chrome, Firefox, Edge, in-app) don't
+// show it, so they get the custom banner instead.
+function isIosSafari() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+  const ua = window.navigator.userAgent;
+  return (
+    /Version\/[\d.]+.*Safari/.test(ua) &&
+    !/(CriOS|FxiOS|EdgiOS|OPiOS|GSA|FBAN|FBAV|Instagram|Line|MicroMessenger)/.test(
+      ua
+    )
+  );
 }
 
 const BRAND_LOGO_SRC = "/images/egx-gold/dahabna-logo.png";
@@ -431,6 +439,44 @@ function StoreCard({ card, cta, arrow, priority = false }) {
   );
 }
 
+// Custom "smart app banner": a compact, in-flow bar at the top of the page
+// shown on Android and non-Safari iOS browsers (where Apple's native banner
+// isn't available). Not dismissible. Links to the correct store per platform.
+function AppBanner({ copy, brand, storeUrl, reduce }) {
+  return (
+    <motion.div
+      initial={reduce ? false : { opacity: 0, y: -16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="mx-auto mb-4 flex max-w-7xl items-center gap-3 rounded-2xl border border-[color:var(--egx-card-border)] bg-[color:var(--egx-card)] px-3.5 py-2.5 shadow-[0_10px_30px_var(--egx-shadow)] backdrop-blur-xl"
+    >
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[color:var(--egx-card-border)] bg-[color:var(--egx-logo-bg)]">
+        <BrandLogo alt={brand} className="h-full w-full object-contain p-1" />
+      </div>
+      <div className="min-w-0 flex-1">
+        <p className="truncate font-[var(--font-egx-body)] text-sm font-semibold text-[color:var(--egx-ink)]">
+          {brand}
+        </p>
+        <p className="truncate font-[var(--font-egx-body)] text-xs text-[color:var(--egx-ink-soft)]">
+          <span className="font-semibold text-[color:var(--egx-gold-strong)]">
+            {copy.banner.price}
+          </span>
+          {" · "}
+          {copy.banner.tagline}
+        </p>
+      </div>
+      <a
+        href={storeUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="egx-share shrink-0 rounded-full px-5 py-2 font-[var(--font-egx-body)] text-sm font-semibold"
+      >
+        {copy.banner.cta}
+      </a>
+    </motion.div>
+  );
+}
+
 export default function EgxGoldPage({ locale = "en" } = {}) {
   const prefersReducedMotion = useReducedMotion();
   const platform = useSyncExternalStore(
@@ -438,7 +484,6 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
     detectPlatform,
     () => "desktop"
   );
-  const [mobileRedirectState, setMobileRedirectState] = useState("idle");
   const [shareState, setShareState] = useState("idle");
   const [activeKarat, setActiveKarat] = useState("21");
   const [livePrices, setLivePrices] = useState(null);
@@ -455,53 +500,6 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
     ? "دهبنا | أسعار الذهب في مصر اليوم"
     : "Dahabna | Live Gold Prices in Egypt";
   const pageDescription = copy.heroBody;
-
-  useEffect(() => {
-    if (platform === "desktop") {
-      const idleTimer = window.setTimeout(() => {
-        setMobileRedirectState("idle");
-      }, 0);
-
-      return () => window.clearTimeout(idleTimer);
-    }
-
-    const hasRedirected = window.sessionStorage.getItem(
-      AUTO_REDIRECT_SESSION_KEY
-    );
-    if (hasRedirected === "1") {
-      const returnedTimer = window.setTimeout(() => {
-        setMobileRedirectState("returned");
-      }, 0);
-
-      return () => window.clearTimeout(returnedTimer);
-    }
-
-    const stateTimer = window.setTimeout(() => {
-      setMobileRedirectState("redirecting");
-    }, 0);
-
-    window.sessionStorage.setItem(AUTO_REDIRECT_SESSION_KEY, "1");
-    const destination = platform === "ios" ? IOS_URL : ANDROID_URL;
-    const redirectTimer = window.setTimeout(
-      () => {
-        const redirectWindow = window.open(
-          destination,
-          "_blank",
-          "noopener,noreferrer"
-        );
-
-        if (!redirectWindow) {
-          window.location.assign(destination);
-        }
-      },
-      prefersReducedMotion ? 250 : 900
-    );
-
-    return () => {
-      window.clearTimeout(stateTimer);
-      window.clearTimeout(redirectTimer);
-    };
-  }, [platform, prefersReducedMotion]);
 
   // Pull the latest real prices from the public Worker endpoint, then refresh
   // every 60s. Any failure leaves the sample fallback in place — the page never
@@ -577,17 +575,11 @@ App Store: ${IOS_URL}`;
     }
   };
 
-  const isMobile = platform === "android" || platform === "ios";
-  const platformTitle =
-    mobileRedirectState === "returned"
-      ? copy.redirect.returnedTitle
-      : platform === "ios"
-        ? copy.redirect.ios
-        : copy.redirect.android;
-  const mobileMessage =
-    mobileRedirectState === "returned"
-      ? copy.redirect.returnedBody
-      : copy.redirect.body;
+  // Show the custom banner on Android, and on iOS only when the native Apple
+  // Smart App Banner won't render (i.e. non-Safari iOS browsers). Desktop: none.
+  const showAppBanner =
+    platform === "android" || (platform === "ios" && !isIosSafari());
+  const bannerStoreUrl = platform === "ios" ? IOS_URL : ANDROID_URL;
   const shareStatusLabel = copy.share[shareState] ?? copy.share.idle;
 
   const isLive = Boolean(
@@ -616,6 +608,9 @@ App Store: ${IOS_URL}`;
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        {/* Apple native Smart App Banner (iOS Safari). Shows "OPEN" if the app
+            is installed, otherwise routes to the App Store. */}
+        <meta name="apple-itunes-app" content={`app-id=${IOS_APP_ID}`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
@@ -656,6 +651,15 @@ App Store: ${IOS_URL}`;
           isArabicPage ? "font-[var(--font-egx-arabic)]" : ""
         } w-full px-10 pb-20 pt-6 lg:px-8 md:px-6 sm:px-4`}
       >
+        {showAppBanner && (
+          <AppBanner
+            copy={copy}
+            brand={copy.brand}
+            storeUrl={bannerStoreUrl}
+            reduce={prefersReducedMotion}
+          />
+        )}
+
         <section className="egx-hero relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-[color:var(--egx-border)] shadow-[0_40px_120px_var(--egx-shadow)]">
           <div className="egx-grid pointer-events-none absolute inset-0" />
           <motion.div
@@ -904,13 +908,13 @@ App Store: ${IOS_URL}`;
 
                   <div className="egx-card rounded-[1.75rem] p-6 shadow-[inset_0_1px_0_var(--egx-inset)] sm:p-5">
                     <p className="font-[var(--font-egx-body)] text-[11px] uppercase tracking-[0.28em] text-[color:var(--egx-gold-strong)]">
-                      {isMobile ? copy.redirectLabel : copy.chooseLabel}
+                      {copy.chooseLabel}
                     </p>
                     <h2 className="mt-3.5 font-[var(--font-egx-display)] text-3xl font-semibold text-[color:var(--egx-ink)] md:text-2xl">
-                      {isMobile ? platformTitle : copy.chooseHeading}
+                      {copy.chooseHeading}
                     </h2>
                     <p className="mt-3.5 max-w-xl font-[var(--font-egx-body)] text-sm leading-7 text-[color:var(--egx-ink-soft)]">
-                      {isMobile ? mobileMessage : copy.chooseBody}
+                      {copy.chooseBody}
                     </p>
 
                     <div className="mt-5 flex flex-wrap items-center gap-3">
