@@ -39,10 +39,15 @@ const ANDROID_URL =
 const IOS_URL =
   "https://apps.apple.com/us/app/egx-gold-%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D9%8A%D9%88%D9%85/id6762029452";
 
-// Illustrative sample used only for the animated preview panel — it is NOT a
-// live feed. Values are labelled as a sample in the UI so nothing implies
-// real-time pricing on this static landing page.
-const KARATS = [
+// Public, no-auth endpoint on the Cloudflare Worker backend that returns the
+// latest karat buy/sell snapshot. See egypt-gold-scraper: GET /public/latest-prices.
+const PRICES_ENDPOINT =
+  "https://egypt-gold-scraper.egypt-gold-scraper.workers.dev/public/latest-prices";
+
+// Fallback shown before the live snapshot arrives (or if the request fails).
+// Labelled as a sample in the UI so nothing implies these exact numbers are
+// real. `spark` is a decorative shape per karat, kept for both live and sample.
+const SAMPLE_KARATS = [
   { key: "24", sell: 5460, buy: 5390, spark: [58, 52, 60, 46, 50, 38, 30, 22] },
   { key: "21", sell: 4778, buy: 4715, spark: [62, 56, 58, 48, 52, 40, 36, 28] },
   { key: "18", sell: 4095, buy: 4040, spark: [64, 60, 55, 58, 50, 46, 42, 34] },
@@ -54,21 +59,23 @@ const COPY = {
     lang: "en",
     numberLocale: "en-US",
     brand: "Dahabna",
-    eyebrow: "Egyptian gold, in your pocket",
+    slogan: "Your gold. Your future.",
     heroTitle: "Gold prices in Egypt, always within reach.",
     heroSubtitle:
       "Follow the Egyptian gold market moment by moment and make smarter, calmer investment decisions.",
     heroBody:
       "Track 24k, 21k, and 18k gold, see live buying and selling prices, monitor bullion by weight, and keep your own savings plan moving with clarity.",
     pricePanel: {
-      label: "What the app shows",
-      live: "Live in app",
-      sample: "Sample view — real prices update inside Dahabna.",
+      label: "Gold price now",
+      live: "Live",
+      sample: "Sample",
       unit: "EGP / gram",
       karatWord: "karat",
       sell: "Sell",
       buy: "Buy",
       spread: "Spread",
+      liveNote: "Live from the Egyptian market — updated {time}.",
+      sampleNote: "Sample view — live prices open inside Dahabna.",
     },
     featuresLabel: "Why people keep this app close",
     features: [
@@ -141,21 +148,23 @@ const COPY = {
     lang: "ar",
     numberLocale: "ar-EG",
     brand: "دهبنا",
-    eyebrow: "ذهب مصر في جيبك",
+    slogan: "ذهبك. مستقبلك.",
     heroTitle: "أسعار الذهب في مصر، دائمًا في متناولك.",
     heroSubtitle:
       "تابع سوق الذهب المصري لحظة بلحظة، واتخذ قرارات استثمار أذكى وأكثر هدوءًا.",
     heroBody:
       "تابع الذهب عيار 24 و21 و18، واعرف أسعار البيع والشراء لحظيًا، وراقب أسعار السبائك حسب الوزن، وخطّط لادّخارك بوضوح.",
     pricePanel: {
-      label: "ما يعرضه التطبيق",
-      live: "مباشر داخل التطبيق",
-      sample: "عرض توضيحي — الأسعار الحقيقية تتحدّث داخل دهبنا.",
+      label: "سعر الذهب الآن",
+      live: "مباشر",
+      sample: "عرض توضيحي",
       unit: "جنيه / جرام",
       karatWord: "عيار",
       sell: "بيع",
       buy: "شراء",
       spread: "الفارق",
+      liveNote: "مباشر من السوق المصري — آخر تحديث {time}.",
+      sampleNote: "عرض توضيحي — الأسعار المباشرة داخل دهبنا.",
     },
     featuresLabel: "لماذا يبقى هذا التطبيق قريبًا منك",
     features: [
@@ -238,6 +247,27 @@ const getStoreCards = (copy) => [
   },
 ];
 
+function timeAgo(iso, isArabic) {
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) {
+    return "";
+  }
+
+  const rtf = new Intl.RelativeTimeFormat(isArabic ? "ar-EG" : "en", {
+    numeric: "auto",
+  });
+  const diffMin = Math.max(0, Math.round((Date.now() - then) / 60000));
+
+  if (diffMin < 60) {
+    return rtf.format(-diffMin, "minute");
+  }
+  const diffHr = Math.round(diffMin / 60);
+  if (diffHr < 24) {
+    return rtf.format(-diffHr, "hour");
+  }
+  return rtf.format(-Math.round(diffHr / 24), "day");
+}
+
 function detectPlatform() {
   if (typeof window === "undefined") {
     return "desktop";
@@ -261,6 +291,32 @@ function detectPlatform() {
 
 function subscribeToPlatform() {
   return () => {};
+}
+
+const BRAND_LOGO_SRC = "/images/egx-gold/dahabna-logo.png";
+const BRAND_LOGO_FALLBACK = "/images/egx-gold/app-icon.jpg";
+
+// Shows the existing app icon by default (always valid) and upgrades to the
+// new brand logo only once it successfully loads. This guarantees the tile is
+// never empty, and the PNG is adopted automatically the moment it is added to
+// public/images/egx-gold/dahabna-logo.png — no code change needed.
+function BrandLogo({ alt, className }) {
+  const [src, setSrc] = useState(BRAND_LOGO_FALLBACK);
+
+  useEffect(() => {
+    const probe = new window.Image();
+    probe.onload = () => {
+      if (probe.naturalWidth > 0) {
+        setSrc(BRAND_LOGO_SRC);
+      }
+    };
+    probe.src = BRAND_LOGO_SRC;
+  }, []);
+
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={src} alt={alt} width={120} height={120} className={className} />
+  );
 }
 
 function AnimatedNumber({ value, locale, reduce }) {
@@ -385,6 +441,7 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
   const [mobileRedirectState, setMobileRedirectState] = useState("idle");
   const [shareState, setShareState] = useState("idle");
   const [activeKarat, setActiveKarat] = useState("21");
+  const [livePrices, setLivePrices] = useState(null);
 
   const isArabicPage = locale === "ar";
   const copy = isArabicPage ? COPY.ar : COPY.en;
@@ -446,6 +503,36 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
     };
   }, [platform, prefersReducedMotion]);
 
+  // Pull the latest real prices from the public Worker endpoint, then refresh
+  // every 60s. Any failure leaves the sample fallback in place — the page never
+  // breaks if the backend is unreachable.
+  useEffect(() => {
+    let cancelled = false;
+
+    const load = async () => {
+      try {
+        const res = await fetch(PRICES_ENDPOINT, { cache: "no-store" });
+        if (!res.ok) {
+          return;
+        }
+        const data = await res.json();
+        if (!cancelled && data && data.gold_24k && data.gold_21k && data.gold_18k) {
+          setLivePrices(data);
+        }
+      } catch {
+        // Network/CORS error — keep the sample fallback.
+      }
+    };
+
+    load();
+    const intervalId = window.setInterval(load, 60000);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(intervalId);
+    };
+  }, []);
+
   useEffect(() => {
     if (shareState === "idle") {
       return undefined;
@@ -502,6 +589,23 @@ App Store: ${IOS_URL}`;
       ? copy.redirect.returnedBody
       : copy.redirect.body;
   const shareStatusLabel = copy.share[shareState] ?? copy.share.idle;
+
+  const isLive = Boolean(
+    livePrices && livePrices.gold_24k && livePrices.gold_21k && livePrices.gold_18k
+  );
+  const karats = SAMPLE_KARATS.map((karat) => {
+    const live = isLive ? livePrices[`gold_${karat.key}k`] : null;
+    return live ? { ...karat, sell: live.sell, buy: live.buy } : karat;
+  });
+  const priceStatusLabel = isLive
+    ? copy.pricePanel.live
+    : copy.pricePanel.sample;
+  const priceNote = isLive
+    ? copy.pricePanel.liveNote.replace(
+        "{time}",
+        timeAgo(livePrices.last_updated, isArabicPage)
+      )
+    : copy.pricePanel.sampleNote;
 
   const enterFrom = prefersReducedMotion
     ? false
@@ -607,23 +711,25 @@ App Store: ${IOS_URL}`;
                       ease: "linear",
                     }}
                   />
-                  <Image
-                    src="/images/egx-gold/app-icon.jpg"
+                  <BrandLogo
                     alt={isArabicPage ? "شعار تطبيق دهبنا" : "Dahabna app logo"}
-                    width={120}
-                    height={120}
-                    priority
-                    className="relative z-10 h-auto w-full rounded-[1.4rem]"
+                    className="relative z-10 h-full w-full rounded-[1.2rem] object-contain drop-shadow-[0_8px_20px_var(--egx-shadow)]"
                   />
                 </motion.div>
 
                 <div className="max-w-4xl">
-                  <span className="egx-eyebrow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.28em]">
+                  <span
+                    className={`egx-eyebrow inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-semibold ${
+                      isArabicPage
+                        ? "font-[var(--font-egx-arabic)] text-sm"
+                        : "text-[11px] uppercase tracking-[0.28em]"
+                    }`}
+                  >
                     <span className="egx-pulse relative flex h-2 w-2">
                       <span className="egx-pulse-ping absolute inline-flex h-full w-full rounded-full opacity-75" />
                       <span className="relative inline-flex h-2 w-2 rounded-full bg-current" />
                     </span>
-                    {copy.eyebrow}
+                    {copy.slogan}
                   </span>
                   <h1 className="mt-4 max-w-4xl font-[var(--font-egx-display)] text-6xl font-semibold leading-[0.95] text-[color:var(--egx-ink)] xl:text-5xl md:text-4xl sm:text-[2rem]">
                     {isArabicPage ? (
@@ -668,12 +774,12 @@ App Store: ${IOS_URL}`;
                           <span className="egx-pulse-ping absolute inline-flex h-full w-full rounded-full opacity-75" />
                           <span className="relative inline-flex h-2 w-2 rounded-full bg-current" />
                         </span>
-                        {copy.pricePanel.live}
+                        {priceStatusLabel}
                       </span>
                     </div>
 
                     <div className="grid grid-cols-3 gap-3 sm:grid-cols-1">
-                      {KARATS.map((karat) => {
+                      {karats.map((karat) => {
                         const isActive = activeKarat === karat.key;
                         const spread = karat.sell - karat.buy;
                         return (
@@ -728,7 +834,7 @@ App Store: ${IOS_URL}`;
                       })}
                     </div>
                     <p className="mt-4 font-[var(--font-egx-body)] text-[11px] leading-5 text-[color:var(--egx-ink-mute)]">
-                      {copy.pricePanel.sample}
+                      {priceNote}
                     </p>
                   </div>
 
@@ -883,6 +989,11 @@ App Store: ${IOS_URL}`;
           --egx-spread-ink: #96690f;
           --egx-share-bg: #2c2410;
           --egx-share-ink: #fff4d6;
+          --egx-logo-bg: linear-gradient(
+            160deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(253, 246, 230, 0.98)
+          );
         }
 
         :is(.dark) .egx {
@@ -922,6 +1033,11 @@ App Store: ${IOS_URL}`;
           --egx-spread-ink: #f4d78a;
           --egx-share-bg: #fff4d6;
           --egx-share-ink: #2c2410;
+          --egx-logo-bg: linear-gradient(
+            160deg,
+            rgba(22, 22, 28, 0.98),
+            rgba(8, 8, 10, 0.98)
+          );
         }
 
         .egx-hero {
@@ -953,13 +1069,7 @@ App Store: ${IOS_URL}`;
         }
         .egx-logo {
           border: 1px solid var(--egx-card-border);
-          background:
-            radial-gradient(
-              circle at 30% 20%,
-              rgba(255, 221, 124, 0.4),
-              transparent 40%
-            ),
-            var(--egx-card);
+          background: var(--egx-logo-bg);
           box-shadow: 0 20px 50px var(--egx-shadow);
         }
         .egx-logo-ring {
