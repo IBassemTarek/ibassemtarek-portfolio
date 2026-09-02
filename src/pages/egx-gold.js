@@ -1040,6 +1040,14 @@ App Store: ${IOS_URL}`;
           );
         }
 
+        /* Arabic is cursive: letter-spacing (Tailwind tracking-*) splits the
+           joins between letters, and text-transform is meaningless. Neutralize
+           both across the whole RTL scope so every label stays properly shaped,
+           regardless of the utility classes on it. */
+        .egx[dir="rtl"] * {
+          letter-spacing: 0 !important;
+          text-transform: none !important;
+        }
         .egx-hero {
           background:
             radial-gradient(
