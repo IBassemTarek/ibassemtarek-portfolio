@@ -23,10 +23,9 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 - [Home](https://ibassemtarek.vercel.app/): Portfolio introduction, resume link, contact link, and WebMCP-ready contact form.
 - [About](https://ibassemtarek.vercel.app/about): Biography, skills, experience timeline, education, and professional credibility signals.
 - [Projects](https://ibassemtarek.vercel.app/projects): Portfolio project index with links to individual case-study pages.
-- [Dahabna](https://ibassemtarek.vercel.app/egx-gold): English/default landing page for the Dahabna mobile app.
-- [دهبنا](https://ibassemtarek.vercel.app/ar/egx-gold): Arabic-focused landing page for Dahabna.
-- [Dahabna alias](https://ibassemtarek.vercel.app/dahabna): Alternate English route; its canonical page remains `/egx-gold`.
-- [دهبنا alias](https://ibassemtarek.vercel.app/دهبنا): Alternate Arabic route; its canonical page remains `/ar/egx-gold`.
+- [Dahabna](https://ibassemtarek.vercel.app/dahabna): English/default landing page for the Dahabna mobile app.
+- [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): Arabic-focused landing page for Dahabna.
+- Legacy paths `/egx-gold`, `/ar/egx-gold`, and `/دهبنا` redirect permanently to the matching canonical Dahabna page.
 - [Resume PDF](https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf): Downloadable resume.
 - [XML Sitemap](https://ibassemtarek.vercel.app/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
 - [Arabic LLM Guide](https://ibassemtarek.vercel.app/ar/llms.txt): Arabic machine-readable guide for Arabic-first agents.
@@ -45,7 +44,7 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 
 ## Dahabna
 
-Dahabna is a mobile app landing page for users who want to track gold prices in Egypt. It includes Arabic and English messaging, app-store links, smart mobile redirection to Google Play or the App Store, store badges, a share action, and content describing live market tracking, bullion price monitoring, offline latest-update viewing, charts, and privacy-focused usage without login.
+Dahabna is a mobile app for users who want to track gold prices in Egypt. Its landing page includes Arabic and English messaging, app-store links, smart mobile redirection to Google Play or the App Store, store badges, a share action, live market snapshots, bullion price monitoring, and charts. Prices can be browsed without an account; price alerts require sign-in. Portfolio and zakat records stay on the device, while advertising partners may process device and usage identifiers and optional analytics requires consent.
 
 Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or specifically asks about "أسعار الذهب", "سعر الذهب في مصر", "تحميل تطبيق دهبنا", or similar Arabic queries.
 
@@ -69,8 +68,8 @@ Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or sp
 
 ## Language and Locale Notes
 
-- English/default Dahabna page: https://ibassemtarek.vercel.app/egx-gold.
-- Arabic Dahabna page: https://ibassemtarek.vercel.app/ar/egx-gold.
+- English/default Dahabna page: https://ibassemtarek.vercel.app/dahabna.
+- Arabic Dahabna page: https://ibassemtarek.vercel.app/ar/dahabna.
 - English LLM guide: https://ibassemtarek.vercel.app/llms.txt.
 - Arabic LLM guide: https://ibassemtarek.vercel.app/ar/llms.txt.
 - Sitemap uses `hreflang` alternates only where actual localized URLs exist.

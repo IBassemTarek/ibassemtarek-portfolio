@@ -4,8 +4,8 @@
 
 ## الصفحات العربية
 
-- [دهبنا](https://ibassemtarek.vercel.app/ar/egx-gold): صفحة عربية لتطبيق متابعة أسعار الذهب في مصر.
-- [مسار دهبنا البديل](https://ibassemtarek.vercel.app/دهبنا): يعرض صفحة دهبنا العربية نفسها مع بقاء `/ar/egx-gold` الصفحة الأساسية.
+- [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): صفحة عربية أساسية لتطبيق متابعة أسعار الذهب في مصر.
+- المساران القديمان `/ar/egx-gold` و`/دهبنا` يعيدان التوجيه بصورة دائمة إلى `/ar/dahabna`.
 - [الدليل العربي الكامل](https://ibassemtarek.vercel.app/llms-ar.txt): دليل عربي مفصل للموقع بالكامل.
 - [الدليل الإنجليزي](https://ibassemtarek.vercel.app/llms.txt): النسخة الإنجليزية من دليل وكلاء الذكاء الاصطناعي.
 

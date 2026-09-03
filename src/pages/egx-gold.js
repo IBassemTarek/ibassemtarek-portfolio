@@ -12,6 +12,7 @@ import {
   useState,
   useSyncExternalStore,
 } from "react";
+import { isValidGoldPricePayload } from "../lib/dahabna-prices.mjs";
 
 // display:swap → text paints immediately in a fallback face, then swaps (no
 // invisible-text FCP block). Only the English display face (used in the
@@ -55,6 +56,9 @@ const IOS_APP_ID = "6762029452";
 // latest karat buy/sell snapshot. See egypt-gold-scraper: GET /public/latest-prices.
 const PRICES_ENDPOINT =
   "https://egypt-gold-scraper.egypt-gold-scraper.workers.dev/public/latest-prices";
+const PRIVACY_POLICY_URL =
+  "https://egypt-gold-scraper.egypt-gold-scraper.workers.dev/privacy-policy";
+const SUPPORT_EMAIL = "ibassemtarek@gmail.com";
 
 // Fallback shown before the live snapshot arrives (or if the request fails).
 // Labelled as a sample in the UI so nothing implies these exact numbers are
@@ -74,7 +78,7 @@ const COPY = {
     slogan: "Your gold. Your future.",
     heroTitle: "Gold prices in Egypt, always within reach.",
     heroSubtitle:
-      "Follow the Egyptian gold market moment by moment and make smarter, calmer investment decisions.",
+      "Follow the Egyptian gold market with clear, up-to-date information for calmer everyday decisions.",
     heroBody:
       "Track 24k, 21k, and 18k gold, see live buying and selling prices, monitor bullion by weight, and keep your own savings plan moving with clarity.",
     pricePanel: {
@@ -107,7 +111,7 @@ const COPY = {
         eyebrow: "Personal planning",
         title: "Plan your savings and investment goals.",
         detail:
-          "Use the built-in calculator to estimate plans for marriage, investment, or future saving.",
+          "Use informational calculator scenarios to explore marriage, investment, or future-saving plans.",
       },
     ],
     highlightsLabel: "Built for everyday confidence",
@@ -115,12 +119,23 @@ const COPY = {
       "Arabic & English",
       "Works offline",
       "Price charts",
-      "No login required",
-      "Private by default",
+      "Prices without sign-in",
+      "Portfolio stays local",
     ],
     privacyLabel: "Privacy promise",
     privacyText:
-      "No login, no data collection, no unnecessary friction. Your information stays on your device.",
+      "Browse prices without an account. Price alerts require sign-in. Portfolio and zakat records stay on your device. Advertising partners may process device and usage identifiers, and optional analytics runs only when you enable it.",
+    disclosure: {
+      label: "Important information",
+      commercial:
+        "Dahabna is free to download, contains ads, and offers an optional Premium subscription. Store pricing may vary and is shown before purchase.",
+      advice:
+        "Prices, calculations, and projections are indicative and provided for information only. They are not financial, investment, tax, or religious advice.",
+      privacy: "Read the privacy policy",
+      contact: "Developer contact",
+      address:
+        "332 Mahmoudia Canal, Royal House, Moharram Bek, Alexandria, Alexandria 21522, Egypt",
+    },
     social: {
       label: "Stay connected",
       heading: "Follow Dahabna",
@@ -165,7 +180,7 @@ const COPY = {
     slogan: "ذهبك. مستقبلك.",
     heroTitle: "أسعار الذهب في مصر، دائمًا في متناولك.",
     heroSubtitle:
-      "تابع سوق الذهب المصري لحظة بلحظة، واتخذ قرارات استثمار أذكى وأكثر هدوءًا.",
+      "تابع سوق الذهب المصري بمعلومات واضحة ومحدّثة تساعدك تفهم حركة السوق بهدوء.",
     heroBody:
       "تابع الذهب عيار 24 و21 و18، واعرف أسعار البيع والشراء لحظيًا، وراقب أسعار السبائك حسب الوزن، وخطّط لادّخارك بوضوح.",
     pricePanel: {
@@ -195,7 +210,8 @@ const COPY = {
       {
         eyebrow: "تخطيط شخصي",
         title: "خطّط لأهداف ادّخارك واستثمارك.",
-        detail: "استخدم الحاسبة المدمجة لتقدير خطط الزواج أو الاستثمار أو الادّخار.",
+        detail:
+          "استخدم سيناريوهات الحاسبة التوضيحية لاستكشاف خطط الزواج أو الاستثمار أو الادّخار المستقبلي.",
       },
     ],
     highlightsLabel: "مصمّم ليمنحك الثقة كل يوم",
@@ -203,12 +219,23 @@ const COPY = {
       "عربي وإنجليزي",
       "يعمل بدون إنترنت",
       "رسوم بيانية للأسعار",
-      "بدون تسجيل دخول",
-      "خصوصية افتراضية",
+      "الأسعار بدون تسجيل",
+      "المحفظة محفوظة محليًا",
     ],
     privacyLabel: "وعد الخصوصية",
     privacyText:
-      "بدون تسجيل دخول، وبدون جمع بيانات، وبدون تعقيد. بياناتك تبقى على جهازك.",
+      "تقدر تتابع الأسعار من غير حساب، بينما تنبيهات الأسعار تحتاج تسجيل دخول. بيانات المحفظة والزكاة تفضل محفوظة على جهازك. قد يعالج شركاء الإعلانات معرّفات الجهاز وبيانات الاستخدام، ولا تعمل التحليلات الاختيارية إلا بعد موافقتك.",
+    disclosure: {
+      label: "معلومات مهمة",
+      commercial:
+        "تحميل دهبنا مجاني، ويحتوي التطبيق على إعلانات، كما يوفّر اشتراك Premium اختياريًا. قد تختلف أسعار المتجر وتظهر لك قبل الشراء.",
+      advice:
+        "الأسعار والحسابات والتوقعات تقديرية ولغرض المعلومات فقط، وليست نصيحة مالية أو استثمارية أو ضريبية أو دينية.",
+      privacy: "اقرأ سياسة الخصوصية",
+      contact: "تواصل مع المطوّر",
+      address:
+        "٣٣٢ ترعة المحمودية، رويال هاوس، محرم بك، الإسكندرية ٢١٥٢٢، مصر",
+    },
     social: {
       label: "ابقَ على تواصل",
       heading: "تابع دهبنا",
@@ -587,8 +614,8 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
   const storeCards = getStoreCards(copy);
 
   const canonicalUrl = isArabicPage
-    ? "https://ibassemtarek.vercel.app/ar/egx-gold"
-    : "https://ibassemtarek.vercel.app/egx-gold";
+    ? "https://ibassemtarek.vercel.app/ar/dahabna"
+    : "https://ibassemtarek.vercel.app/dahabna";
   const pageTitle = isArabicPage
     ? "دهبنا | أسعار الذهب في مصر اليوم"
     : "Dahabna | Live Gold Prices in Egypt";
@@ -601,17 +628,26 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
     let cancelled = false;
 
     const load = async () => {
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), 8000);
+
       try {
-        const res = await fetch(PRICES_ENDPOINT, { cache: "no-store" });
+        const res = await fetch(PRICES_ENDPOINT, {
+          cache: "no-store",
+          signal: controller.signal,
+        });
         if (!res.ok) {
+          if (!cancelled) setLivePrices(null);
           return;
         }
         const data = await res.json();
-        if (!cancelled && data && data.gold_24k && data.gold_21k && data.gold_18k) {
-          setLivePrices(data);
+        if (!cancelled) {
+          setLivePrices(isValidGoldPricePayload(data) ? data : null);
         }
       } catch {
-        // Network/CORS error — keep the sample fallback.
+        if (!cancelled) setLivePrices(null);
+      } finally {
+        window.clearTimeout(timeoutId);
       }
     };
 
@@ -637,12 +673,11 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
   }, [shareState]);
 
   const handleShare = async () => {
-    const currentUrl = window.location.href;
     const shareText = `${copy.brand} | ${copy.heroTitle}
 
 ${copy.heroSubtitle}
 
-${copy.brand}: ${currentUrl}
+${copy.brand}: ${canonicalUrl}
 Google Play: ${ANDROID_URL}
 App Store: ${IOS_URL}
 Facebook: ${FACEBOOK_URL}
@@ -653,7 +688,7 @@ Instagram: ${INSTAGRAM_URL}`;
         await navigator.share({
           title: `${copy.brand} | ${copy.heroTitle}`,
           text: shareText,
-          url: currentUrl,
+          url: canonicalUrl,
         });
         setShareState("shared");
         return;
@@ -677,9 +712,7 @@ Instagram: ${INSTAGRAM_URL}`;
   const bannerStoreUrl = platform === "ios" ? IOS_URL : ANDROID_URL;
   const shareStatusLabel = copy.share[shareState] ?? copy.share.idle;
 
-  const isLive = Boolean(
-    livePrices && livePrices.gold_24k && livePrices.gold_21k && livePrices.gold_18k
-  );
+  const isLive = isValidGoldPricePayload(livePrices);
   const karats = SAMPLE_KARATS.map((karat) => {
     const live = isLive ? livePrices[`gold_${karat.key}k`] : null;
     return live ? { ...karat, sell: live.sell, buy: live.buy } : karat;
@@ -714,17 +747,17 @@ Instagram: ${INSTAGRAM_URL}`;
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://ibassemtarek.vercel.app/egx-gold"
+          href="https://ibassemtarek.vercel.app/dahabna"
         />
         <link
           rel="alternate"
           hrefLang="ar"
-          href="https://ibassemtarek.vercel.app/ar/egx-gold"
+          href="https://ibassemtarek.vercel.app/ar/dahabna"
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://ibassemtarek.vercel.app/egx-gold"
+          href="https://ibassemtarek.vercel.app/dahabna"
         />
         <meta property="og:locale" content={isArabicPage ? "ar_EG" : "en_US"} />
         <meta
@@ -987,6 +1020,37 @@ Instagram: ${INSTAGRAM_URL}`;
                     <p className="mt-3.5 font-[var(--font-egx-body)] text-base leading-8 text-[color:var(--egx-ink-soft)]">
                       {copy.privacyText}
                     </p>
+                  </div>
+
+                  <div className="egx-card rounded-[1.75rem] p-6 sm:p-5">
+                    <p className="font-[var(--font-egx-body)] text-[11px] uppercase tracking-[0.28em] text-[color:var(--egx-gold-strong)]">
+                      {copy.disclosure.label}
+                    </p>
+                    <p className="mt-3.5 font-[var(--font-egx-body)] text-sm leading-7 text-[color:var(--egx-ink-soft)]">
+                      {copy.disclosure.commercial}
+                    </p>
+                    <p className="mt-3 font-[var(--font-egx-body)] text-sm leading-7 text-[color:var(--egx-ink-soft)]">
+                      {copy.disclosure.advice}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 font-[var(--font-egx-body)] text-sm font-semibold">
+                      <a
+                        href={PRIVACY_POLICY_URL}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[color:var(--egx-cyan-strong)] underline decoration-transparent underline-offset-4 transition hover:decoration-current"
+                      >
+                        {copy.disclosure.privacy}
+                      </a>
+                      <a
+                        href={`mailto:${SUPPORT_EMAIL}`}
+                        className="text-[color:var(--egx-cyan-strong)] underline decoration-transparent underline-offset-4 transition hover:decoration-current"
+                      >
+                        {copy.disclosure.contact}
+                      </a>
+                    </div>
+                    <address className="mt-4 not-italic font-[var(--font-egx-body)] text-xs leading-6 text-[color:var(--egx-ink-mute)]">
+                      {copy.disclosure.address}
+                    </address>
                   </div>
 
                   <div className="egx-card rounded-[1.75rem] p-6 sm:p-5">
