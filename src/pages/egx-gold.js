@@ -45,6 +45,8 @@ const ANDROID_URL =
   "https://play.google.com/store/apps/details?id=com.egxgold.app";
 const IOS_URL =
   "https://apps.apple.com/us/app/egx-gold-%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D9%8A%D9%88%D9%85/id6762029452";
+const FACEBOOK_URL = "https://www.facebook.com/dahabnaapp";
+const INSTAGRAM_URL = "https://www.instagram.com/dahabnaapp/";
 // App Store numeric id (from IOS_URL). Used for Apple's native Smart App Banner
 // meta tag, which shows "OPEN" if the app is installed (iOS Safari only).
 const IOS_APP_ID = "6762029452";
@@ -119,6 +121,13 @@ const COPY = {
     privacyLabel: "Privacy promise",
     privacyText:
       "No login, no data collection, no unnecessary friction. Your information stays on your device.",
+    social: {
+      label: "Stay connected",
+      heading: "Follow Dahabna",
+      body: "Keep up with gold market updates and the latest from the app.",
+      facebook: "Facebook",
+      instagram: "Instagram",
+    },
     chooseLabel: "Choose your device",
     chooseHeading: "Download Dahabna where you use it.",
     chooseBody: "Choose your platform and continue to the right store.",
@@ -200,6 +209,13 @@ const COPY = {
     privacyLabel: "وعد الخصوصية",
     privacyText:
       "بدون تسجيل دخول، وبدون جمع بيانات، وبدون تعقيد. بياناتك تبقى على جهازك.",
+    social: {
+      label: "ابقَ على تواصل",
+      heading: "تابع دهبنا",
+      body: "تابع مستجدات سوق الذهب وكل جديد في التطبيق.",
+      facebook: "فيسبوك",
+      instagram: "إنستجرام",
+    },
     chooseLabel: "اختر جهازك",
     chooseHeading: "حمّل دهبنا على جهازك.",
     chooseBody: "اختر نظام جهازك لتنتقل إلى المتجر المناسب.",
@@ -395,6 +411,73 @@ function Sparkline({ points, className = "" }) {
   );
 }
 
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
+      <path
+        fill="currentColor"
+        d="M13.6 22v-9h3l.45-3.5H13.6V7.27c0-1.01.28-1.7 1.73-1.7h1.85V2.45a24.8 24.8 0 0 0-2.7-.14c-2.67 0-4.5 1.63-4.5 4.62V9.5H7v3.5h2.98v9h3.62Z"
+      />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"
+      />
+      <circle
+        cx="12"
+        cy="12"
+        r="4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor" />
+    </svg>
+  );
+}
+
+function SocialLink({ href, label, icon, accent }) {
+  return (
+    <motion.a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${label}: @dahabnaapp`}
+      whileHover={{ y: -3 }}
+      whileTap={{ scale: 0.98 }}
+      className="egx-social-link group flex min-w-0 items-center gap-3 rounded-2xl p-3.5"
+    >
+      <span
+        className={`egx-social-icon egx-social-icon-${accent} flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white shadow-[0_8px_20px_var(--egx-shadow)]`}
+      >
+        {icon}
+      </span>
+      <span className="min-w-0 flex-1 font-[var(--font-egx-body)]">
+        <span className="block text-sm font-semibold text-[color:var(--egx-ink)]">
+          {label}
+        </span>
+        <span className="block truncate text-xs text-[color:var(--egx-ink-mute)]">
+          @dahabnaapp
+        </span>
+      </span>
+      <span
+        aria-hidden="true"
+        className="text-sm text-[color:var(--egx-gold-strong)] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+      >
+        ↗
+      </span>
+    </motion.a>
+  );
+}
+
 function StoreCard({ card, cta, arrow, priority = false }) {
   return (
     <motion.a
@@ -561,7 +644,9 @@ ${copy.heroSubtitle}
 
 ${copy.brand}: ${currentUrl}
 Google Play: ${ANDROID_URL}
-App Store: ${IOS_URL}`;
+App Store: ${IOS_URL}
+Facebook: ${FACEBOOK_URL}
+Instagram: ${INSTAGRAM_URL}`;
 
     try {
       if (navigator.share) {
@@ -904,6 +989,32 @@ App Store: ${IOS_URL}`;
                     </p>
                   </div>
 
+                  <div className="egx-card rounded-[1.75rem] p-6 sm:p-5">
+                    <p className="font-[var(--font-egx-body)] text-[11px] uppercase tracking-[0.28em] text-[color:var(--egx-gold-strong)]">
+                      {copy.social.label}
+                    </p>
+                    <h2 className="mt-3.5 text-xl font-semibold text-[color:var(--egx-ink)]">
+                      {copy.social.heading}
+                    </h2>
+                    <p className="mt-2 font-[var(--font-egx-body)] text-sm leading-7 text-[color:var(--egx-ink-soft)]">
+                      {copy.social.body}
+                    </p>
+                    <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-1">
+                      <SocialLink
+                        href={FACEBOOK_URL}
+                        label={copy.social.facebook}
+                        accent="facebook"
+                        icon={<FacebookIcon />}
+                      />
+                      <SocialLink
+                        href={INSTAGRAM_URL}
+                        label={copy.social.instagram}
+                        accent="instagram"
+                        icon={<InstagramIcon />}
+                      />
+                    </div>
+                  </div>
+
                   <div className="egx-card rounded-[1.75rem] p-6 shadow-[inset_0_1px_0_var(--egx-inset)] sm:p-5">
                     <p className="font-[var(--font-egx-body)] text-[11px] uppercase tracking-[0.28em] text-[color:var(--egx-gold-strong)]">
                       {copy.chooseLabel}
@@ -1182,6 +1293,28 @@ App Store: ${IOS_URL}`;
         }
         .egx-share:hover {
           opacity: 0.9;
+        }
+        .egx-social-link {
+          border: 1px solid var(--egx-card-border);
+          background: var(--egx-feature-bg);
+          transition:
+            border-color 0.2s ease,
+            background-color 0.2s ease,
+            box-shadow 0.2s ease;
+        }
+        .egx-social-link:hover {
+          border-color: var(--egx-karat-active-border);
+          box-shadow: 0 10px 26px var(--egx-shadow);
+        }
+        .egx-social-link:focus-visible {
+          outline: 2px solid var(--egx-cyan-strong);
+          outline-offset: 3px;
+        }
+        .egx-social-icon-facebook {
+          background: #1877f2;
+        }
+        .egx-social-icon-instagram {
+          background: linear-gradient(135deg, #833ab4, #fd1d1d 58%, #fcb045);
         }
         .egx-store-ios {
           background: linear-gradient(
