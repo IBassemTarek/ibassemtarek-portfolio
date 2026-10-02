@@ -13,6 +13,7 @@ import {
   useSyncExternalStore,
 } from "react";
 import { isValidGoldPricePayload } from "../lib/dahabna-prices.mjs";
+import { ANDROID_STORE_URL, IOS_STORE_URL } from "../lib/dahabna-download.mjs";
 
 // display:swap → text paints immediately in a fallback face, then swaps (no
 // invisible-text FCP block). Only the English display face (used in the
@@ -42,10 +43,8 @@ const notoNaskhArabic = Noto_Naskh_Arabic({
   variable: "--font-egx-arabic",
 });
 
-const ANDROID_URL =
-  "https://play.google.com/store/apps/details?id=com.egxgold.app";
-const IOS_URL =
-  "https://apps.apple.com/us/app/egx-gold-%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D9%8A%D9%88%D9%85/id6762029452";
+const ANDROID_URL = ANDROID_STORE_URL;
+const IOS_URL = IOS_STORE_URL;
 const FACEBOOK_URL = "https://www.facebook.com/dahabnaapp";
 const INSTAGRAM_URL = "https://www.instagram.com/dahabnaapp/";
 // App Store numeric id (from IOS_URL). Used for Apple's native Smart App Banner
