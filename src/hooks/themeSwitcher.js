@@ -7,7 +7,6 @@ const useThemeSwitcher = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
     const userRef = window.localStorage.getItem("theme");
-    console.log(userRef);
     const handleChange = () => {
       if (userRef) {
         let check = userRef == "dark" ? "dark" : "light";

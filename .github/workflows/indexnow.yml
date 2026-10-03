@@ -1,0 +1,27 @@
+name: IndexNow
+
+# Vercel reports each deployment back to GitHub as a deployment status. Once a
+# production deploy succeeds, ping IndexNow so Bing (and the other IndexNow
+# engines) recrawl the sitemap URLs. Preview deployments are ignored.
+on:
+  deployment_status:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node scripts/indexnow.mjs
