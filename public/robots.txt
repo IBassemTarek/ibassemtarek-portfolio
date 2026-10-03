@@ -1,5 +1,5 @@
 # Robots policy for https://ibassemtarek.vercel.app
-# سياسة الزحف لموقع محفظة باسم طارق محفوظ
+# سياسة الزحف لموقع محفظة باسم طارق محروس
 
 User-agent: *
 Allow: /

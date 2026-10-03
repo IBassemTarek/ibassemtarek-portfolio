@@ -1,8 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { documentLocale } from "@/lib/locale.mjs";
 
-export default function Document() {
+export default function Document({ __NEXT_DATA__ }) {
+  const { lang, dir } = documentLocale(__NEXT_DATA__?.page);
+
   return (
-    <Html lang="en">
+    <Html lang={lang} dir={dir}>
       <Head>
         <script
           id="theme-switcher"

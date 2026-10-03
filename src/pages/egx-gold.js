@@ -12,8 +12,15 @@ import {
   useState,
   useSyncExternalStore,
 } from "react";
-import { isValidGoldPricePayload } from "../lib/dahabna-prices.mjs";
-import { ANDROID_STORE_URL, IOS_STORE_URL } from "../lib/dahabna-download.mjs";
+import {
+  PRICES_ENDPOINT,
+  isValidGoldPricePayload,
+} from "../lib/dahabna-prices.mjs";
+import {
+  ANDROID_STORE_URL,
+  DOWNLOAD_PATH,
+  IOS_STORE_URL,
+} from "../lib/dahabna-download.mjs";
 
 // display:swap → text paints immediately in a fallback face, then swaps (no
 // invisible-text FCP block). Only the English display face (used in the
@@ -51,13 +58,14 @@ const INSTAGRAM_URL = "https://www.instagram.com/dahabnaapp/";
 // meta tag, which shows "OPEN" if the app is installed (iOS Safari only).
 const IOS_APP_ID = "6762029452";
 
-// Public, no-auth endpoint on the Cloudflare Worker backend that returns the
-// latest karat buy/sell snapshot. See egypt-gold-scraper: GET /public/latest-prices.
-const PRICES_ENDPOINT =
-  "https://egypt-gold-scraper.egypt-gold-scraper.workers.dev/public/latest-prices";
 const PRIVACY_POLICY_URL =
   "https://egypt-gold-scraper.egypt-gold-scraper.workers.dev/privacy-policy";
 const SUPPORT_EMAIL = "ibassemtarek@gmail.com";
+
+const SITE_URL = "https://ibassemtarek.vercel.app";
+const OG_IMAGE_URL = `${SITE_URL}/images/egx-gold/og-banner.jpg`;
+const APP_ICON_URL = `${SITE_URL}/images/egx-gold/app-icon.jpg`;
+const BRAND_ICON_URL = `${SITE_URL}/images/egx-gold/dahabna-icon-512.png`;
 
 // Fallback shown before the live snapshot arrives (or if the request fails).
 // Labelled as a sample in the UI so nothing implies these exact numbers are
@@ -79,7 +87,7 @@ const COPY = {
     heroSubtitle:
       "Follow the Egyptian gold market with clear, up-to-date information for calmer everyday decisions.",
     heroBody:
-      "Track 24k, 21k, and 18k gold, see live buying and selling prices, monitor bullion by weight, and keep your own savings plan moving with clarity.",
+      "Live 24k, 21k, and 18k gold prices in Egypt, bullion by weight, your gold portfolio, zakat calculator, market news, and alerts — free on iPhone and Android.",
     pricePanel: {
       label: "Gold price now",
       live: "Live",
@@ -89,41 +97,66 @@ const COPY = {
       sell: "Sell",
       buy: "Buy",
       spread: "Spread",
-      liveNote: "Live from the Egyptian market — updated {time}.",
+      liveNote: "Live from the Egyptian market — updated {time} (Cairo time).",
       sampleNote: "Sample view — live prices open inside Dahabna.",
     },
-    featuresLabel: "Why people keep this app close",
+    featuresLabel: "Everything in Dahabna",
     features: [
       {
-        eyebrow: "Live market view",
-        title: "Track 24k, 21k, and 18k gold in real time.",
+        eyebrow: "Live prices",
+        title: "Gold prices in Egypt, updated live.",
         detail:
-          "Follow buying and selling prices across the Egyptian market without the noise.",
+          "Buying and selling prices per gram for 24k, 21k, and 18k gold, plus silver and US dollar rates, with charts of how they move over time.",
       },
       {
-        eyebrow: "Bullion intelligence",
-        title: "Monitor bullion prices by weight and movement.",
+        eyebrow: "Bullion",
+        title: "Bullion prices by weight and manufacturer.",
         detail:
-          "Spot shifts faster with a view that stays focused on what matters to buyers and investors.",
+          "Compare gold bars across weights and available manufacturers before you buy or sell.",
       },
       {
-        eyebrow: "Personal planning",
-        title: "Plan your savings and investment goals.",
+        eyebrow: "Gold portfolio",
+        title: "Record your gold bars and investments.",
         detail:
-          "Use informational calculator scenarios to explore marriage, investment, or future-saving plans.",
+          "Add your ingots and gold holdings to your portfolio and see what they are worth at today's price.",
+      },
+      {
+        eyebrow: "Zakat",
+        title: "Calculate the zakat on your gold.",
+        detail:
+          "Dahabna works out the zakat due on the gold in your portfolio and keeps a yearly zakat record.",
+      },
+      {
+        eyebrow: "Alerts & sync",
+        title: "Get notified when your investments move.",
+        detail:
+          "Set price alerts, or turn on cloud sync to back up your portfolio and get a notification when its value rises or falls noticeably. Your holdings come back when you reinstall or switch phones.",
+      },
+      {
+        eyebrow: "Market news",
+        title: "Gold, silver, and economic news.",
+        detail:
+          "Read the latest market stories that move gold prices, right inside the app.",
+      },
+      {
+        eyebrow: "Planning",
+        title: "Plan your savings and retirement.",
+        detail:
+          "Use the retirement planner and a risk assessment quiz to explore marriage, investment, or retirement goals. Calculations are informational.",
       },
     ],
     highlightsLabel: "Built for everyday confidence",
     highlights: [
+      "Free on iPhone & Android",
       "Arabic & English",
       "Works offline",
-      "Price charts",
+      "Gold, silver & USD charts",
       "Prices without sign-in",
-      "Portfolio stays local",
+      "Optional cloud backup",
     ],
     privacyLabel: "Privacy promise",
     privacyText:
-      "Browse prices without an account. Price alerts require sign-in. Portfolio and zakat records stay on your device. Advertising partners may process device and usage identifiers, and optional analytics runs only when you enable it.",
+      "Browse prices without an account. Price alerts and portfolio sync need sign-in. Your portfolio and zakat records stay on your device unless you turn on cloud sync, which backs them up to your account so we can alert you when their value moves. Advertising partners may process device and usage identifiers, and optional analytics runs only when you enable it.",
     disclosure: {
       label: "Important information",
       commercial:
@@ -157,6 +190,55 @@ const COPY = {
       copied: "Share text copied.",
       error: "Sharing failed. Try again.",
     },
+    faq: {
+      label: "FAQ",
+      heading: "Frequently asked questions",
+      priceQuestion: "What is the price of 21k gold in Egypt today?",
+      priceAnswer:
+        "As of {time} Cairo time, 21k gold sells for {sell21} EGP per gram and buys for {buy21} EGP. 24k gold sells for {sell24} EGP and 18k gold for {sell18} EGP per gram. Prices move during the day, so open Dahabna for the latest rate.",
+      items: [
+        {
+          question: "Is Dahabna free?",
+          answer:
+            "Yes. Dahabna is free to download on iPhone and Android. It shows ads and offers an optional Premium subscription, and store pricing is shown before any purchase.",
+        },
+        {
+          question: "Do I need an account to see gold prices?",
+          answer:
+            "No. You can browse gold prices without signing in. Only price alerts need an account.",
+        },
+        {
+          question: "What does Dahabna show?",
+          answer:
+            "Buying and selling prices per gram for 24k, 21k, and 18k gold in Egyptian pounds, bullion prices by weight and manufacturer, silver and US dollar rates, price charts, and gold market news.",
+        },
+        {
+          question: "Can I track my gold bars and calculate zakat?",
+          answer:
+            "Yes. Add your ingots and gold investments to your Dahabna portfolio to see their value at today's price, and Dahabna calculates the zakat due on the gold you have recorded.",
+        },
+        {
+          question: "Can Dahabna tell me when my gold investments go up or down?",
+          answer:
+            "Yes. Turn on cloud sync for your portfolio and Dahabna checks it once a day and notifies you when its value rises or falls noticeably. You can also set price alerts. Both need you to sign in.",
+        },
+        {
+          question: "Does Dahabna work offline?",
+          answer:
+            "Yes. The app keeps the latest prices it loaded, so you can still check them without an internet connection.",
+        },
+        {
+          question: "Is my portfolio data private?",
+          answer:
+            "Your portfolio and zakat records stay on your device unless you turn on cloud sync, which backs them up to your account. Advertising partners may process device and usage identifiers, and optional analytics only runs if you turn it on.",
+        },
+        {
+          question: "Where can I download Dahabna?",
+          answer:
+            "On the App Store for iPhone and iPad, and on Google Play for Android. The link ibassemtarek.vercel.app/dahabna/download opens the right store for your phone automatically.",
+        },
+      ],
+    },
     stores: {
       ios: {
         label: "iPhone / iPad",
@@ -181,7 +263,7 @@ const COPY = {
     heroSubtitle:
       "تابع سوق الذهب المصري بمعلومات واضحة ومحدّثة تساعدك تفهم حركة السوق بهدوء.",
     heroBody:
-      "تابع الذهب عيار 24 و21 و18، واعرف أسعار البيع والشراء لحظيًا، وراقب أسعار السبائك حسب الوزن، وخطّط لادّخارك بوضوح.",
+      "أسعار الذهب عيار 24 و21 و18 في مصر لحظة بلحظة، وأسعار السبائك حسب الوزن، ومحفظة ذهبك، وحاسبة الزكاة، وأخبار السوق والتنبيهات — مجانًا على iPhone وAndroid.",
     pricePanel: {
       label: "سعر الذهب الآن",
       live: "مباشر",
@@ -191,39 +273,62 @@ const COPY = {
       sell: "بيع",
       buy: "شراء",
       spread: "الفارق",
-      liveNote: "مباشر من السوق المصري — آخر تحديث {time}.",
+      liveNote: "مباشر من السوق المصري — آخر تحديث {time} بتوقيت القاهرة.",
       sampleNote: "عرض توضيحي — الأسعار المباشرة داخل دهبنا.",
     },
-    featuresLabel: "لماذا يبقى هذا التطبيق قريبًا منك",
+    featuresLabel: "كل ما يقدّمه دهبنا",
     features: [
       {
-        eyebrow: "متابعة لحظية للسوق",
-        title: "تابع الذهب عيار 24 و21 و18 في الوقت الحقيقي.",
-        detail: "اعرف أسعار البيع والشراء في السوق المصري بدون تشويش.",
-      },
-      {
-        eyebrow: "ذكاء السبائك",
-        title: "راقب أسعار السبائك حسب الوزن والحركة.",
-        detail: "اكتشف التغيّرات أسرع بواجهة تركّز على ما يهمّ المشتري والمستثمر.",
-      },
-      {
-        eyebrow: "تخطيط شخصي",
-        title: "خطّط لأهداف ادّخارك واستثمارك.",
+        eyebrow: "أسعار مباشرة",
+        title: "أسعار الذهب في مصر لحظة بلحظة.",
         detail:
-          "استخدم سيناريوهات الحاسبة التوضيحية لاستكشاف خطط الزواج أو الاستثمار أو الادّخار المستقبلي.",
+          "أسعار البيع والشراء للجرام لعيار 24 و21 و18، مع أسعار الفضة والدولار، ورسوم بيانية لحركة الأسعار.",
+      },
+      {
+        eyebrow: "السبائك",
+        title: "أسعار السبائك حسب الوزن والشركة المصنّعة.",
+        detail: "قارن سبائك الذهب بأوزانها المختلفة والشركات المتاحة قبل البيع أو الشراء.",
+      },
+      {
+        eyebrow: "محفظة الذهب",
+        title: "سجّل سبائكك واستثماراتك في الذهب.",
+        detail: "أضف سبائكك ومقتنياتك من الذهب إلى محفظتك واعرف قيمتها بسعر النهارده.",
+      },
+      {
+        eyebrow: "الزكاة",
+        title: "احسب زكاة ذهبك.",
+        detail: "دهبنا يحسب الزكاة المستحقة على الذهب المسجّل في محفظتك ويحتفظ بسجل سنوي للزكاة.",
+      },
+      {
+        eyebrow: "التنبيهات والمزامنة",
+        title: "اعرف لما قيمة استثماراتك تتغيّر.",
+        detail:
+          "فعّل تنبيهات الأسعار، أو شغّل المزامنة السحابية لحفظ محفظتك وتوصلك إشعارات لما قيمتها تزيد أو تقل بشكل ملحوظ. ومقتنياتك بترجع تلقائيًا لو غيّرت موبايلك أو نزّلت التطبيق من جديد.",
+      },
+      {
+        eyebrow: "أخبار السوق",
+        title: "أخبار الذهب والفضة والاقتصاد.",
+        detail: "تابع آخر أخبار السوق اللي بتأثر على أسعار الذهب من داخل التطبيق.",
+      },
+      {
+        eyebrow: "التخطيط",
+        title: "خطّط لادّخارك وتقاعدك.",
+        detail:
+          "استخدم مخطط التقاعد واختبار تقييم المخاطر لاستكشاف خطط الزواج أو الاستثمار أو التقاعد. الحسابات لغرض المعلومات فقط.",
       },
     ],
     highlightsLabel: "مصمّم ليمنحك الثقة كل يوم",
     highlights: [
+      "مجاني على iPhone وAndroid",
       "عربي وإنجليزي",
       "يعمل بدون إنترنت",
-      "رسوم بيانية للأسعار",
+      "رسوم بيانية للذهب والفضة والدولار",
       "الأسعار بدون تسجيل",
-      "المحفظة محفوظة محليًا",
+      "نسخ احتياطي سحابي اختياري",
     ],
     privacyLabel: "وعد الخصوصية",
     privacyText:
-      "تقدر تتابع الأسعار من غير حساب، بينما تنبيهات الأسعار تحتاج تسجيل دخول. بيانات المحفظة والزكاة تفضل محفوظة على جهازك. قد يعالج شركاء الإعلانات معرّفات الجهاز وبيانات الاستخدام، ولا تعمل التحليلات الاختيارية إلا بعد موافقتك.",
+      "تقدر تتابع الأسعار من غير حساب، بينما تنبيهات الأسعار ومزامنة المحفظة تحتاج تسجيل دخول. بيانات المحفظة والزكاة تفضل على جهازك إلا لو شغّلت المزامنة السحابية، فتتحفظ في حسابك عشان ننبّهك لما قيمتها تتغيّر. قد يعالج شركاء الإعلانات معرّفات الجهاز وبيانات الاستخدام، ولا تعمل التحليلات الاختيارية إلا بعد موافقتك.",
     disclosure: {
       label: "معلومات مهمة",
       commercial:
@@ -256,6 +361,55 @@ const COPY = {
       shared: "تمت المشاركة بنجاح.",
       copied: "تم نسخ نص المشاركة.",
       error: "فشلت المشاركة. حاول مرة أخرى.",
+    },
+    faq: {
+      label: "أسئلة شائعة",
+      heading: "الأسئلة الشائعة",
+      priceQuestion: "كم سعر الذهب عيار 21 في مصر اليوم؟",
+      priceAnswer:
+        "حتى {time} بتوقيت القاهرة، سعر بيع الذهب عيار 21 هو {sell21} جنيه للجرام وسعر الشراء {buy21} جنيه. سعر بيع عيار 24 هو {sell24} جنيه وعيار 18 هو {sell18} جنيه للجرام. الأسعار تتغيّر خلال اليوم، فافتح دهبنا لمعرفة آخر سعر.",
+      items: [
+        {
+          question: "هل تطبيق دهبنا مجاني؟",
+          answer:
+            "نعم. تحميل دهبنا مجاني على iPhone وAndroid. يحتوي التطبيق على إعلانات ويوفّر اشتراك Premium اختياريًا، ويظهر سعر المتجر قبل أي عملية شراء.",
+        },
+        {
+          question: "هل أحتاج حسابًا لمعرفة أسعار الذهب؟",
+          answer:
+            "لا. تقدر تتابع أسعار الذهب من غير تسجيل دخول، وتنبيهات الأسعار فقط هي اللي تحتاج حساب.",
+        },
+        {
+          question: "ماذا يعرض تطبيق دهبنا؟",
+          answer:
+            "أسعار البيع والشراء للجرام لعيار 24 و21 و18 بالجنيه المصري، وأسعار السبائك حسب الوزن والشركة المصنّعة، وأسعار الفضة والدولار، ورسومًا بيانية للأسعار، وأخبار سوق الذهب.",
+        },
+        {
+          question: "هل أقدر أسجّل سبائكي وأحسب الزكاة؟",
+          answer:
+            "نعم. أضف سبائكك واستثماراتك في الذهب إلى محفظة دهبنا لتعرف قيمتها بسعر النهارده، ودهبنا يحسب الزكاة المستحقة على الذهب المسجّل.",
+        },
+        {
+          question: "هل ينبّهني دهبنا لما قيمة استثماراتي في الذهب تزيد أو تقل؟",
+          answer:
+            "نعم. شغّل المزامنة السحابية لمحفظتك، ودهبنا يراجعها مرة كل يوم ويبعتلك إشعار لما قيمتها تزيد أو تقل بشكل ملحوظ. وتقدر كمان تفعّل تنبيهات الأسعار. الاتنين محتاجين تسجيل دخول.",
+        },
+        {
+          question: "هل يعمل دهبنا بدون إنترنت؟",
+          answer:
+            "نعم. يحتفظ التطبيق بآخر أسعار تم تحميلها، فتقدر تشوفها حتى من غير اتصال بالإنترنت.",
+        },
+        {
+          question: "هل بيانات محفظتي خاصة؟",
+          answer:
+            "بيانات المحفظة والزكاة تفضل على جهازك إلا لو شغّلت المزامنة السحابية، فتتحفظ في حسابك. قد يعالج شركاء الإعلانات معرّفات الجهاز وبيانات الاستخدام، ولا تعمل التحليلات الاختيارية إلا بعد موافقتك.",
+        },
+        {
+          question: "أين يمكنني تحميل دهبنا؟",
+          answer:
+            "من App Store لأجهزة iPhone وiPad، ومن Google Play لأجهزة Android. الرابط ibassemtarek.vercel.app/dahabna/download يفتح المتجر المناسب لجهازك تلقائيًا.",
+        },
+      ],
     },
     stores: {
       ios: {
@@ -290,25 +444,36 @@ const getStoreCards = (copy) => [
   },
 ];
 
-function timeAgo(iso, isArabic) {
-  const then = new Date(iso).getTime();
-  if (Number.isNaN(then)) {
+// Absolute time in Egypt's timezone, so the server-rendered HTML and the
+// browser agree and crawlers get a timestamp that stays meaningful once cached.
+function formatCairoTime(iso, locale) {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) {
     return "";
   }
+  return new Intl.DateTimeFormat(locale, {
+    dateStyle: "medium",
+    timeStyle: "short",
+    timeZone: "Africa/Cairo",
+  }).format(date);
+}
 
-  const rtf = new Intl.RelativeTimeFormat(isArabic ? "ar-EG" : "en", {
-    numeric: "auto",
-  });
-  const diffMin = Math.max(0, Math.round((Date.now() - then) / 60000));
+const fillTemplate = (template, values) =>
+  template.replace(/\{(\w+)\}/g, (match, key) => values[key] ?? match);
 
-  if (diffMin < 60) {
-    return rtf.format(-diffMin, "minute");
-  }
-  const diffHr = Math.round(diffMin / 60);
-  if (diffHr < 24) {
-    return rtf.format(-diffHr, "hour");
-  }
-  return rtf.format(-Math.round(diffHr / 24), "day");
+// Renders "{time}" inside a template as a <time> element. Intl output can
+// differ slightly between Node and the browser, hence suppressHydrationWarning.
+function TimeTemplate({ template, iso, label }) {
+  const [before, after = ""] = template.split("{time}");
+  return (
+    <>
+      {before}
+      <time dateTime={iso} suppressHydrationWarning>
+        {label}
+      </time>
+      {after}
+    </>
+  );
 }
 
 function detectPlatform() {
@@ -379,24 +544,31 @@ function BrandLogo({ alt, className, priority = false, sizes = "160px" }) {
   );
 }
 
+const formatPrice = (input, locale) =>
+  Math.round(input).toLocaleString(locale, { maximumFractionDigits: 0 });
+
+// The real value is in the server-rendered HTML (crawlers read it as-is); the
+// count animation only runs when a refresh changes the price.
 function AnimatedNumber({ value, locale, reduce }) {
   const ref = useRef(null);
+  const previous = useRef(value);
 
   useEffect(() => {
     const node = ref.current;
+    const from = previous.current;
+    previous.current = value;
     if (!node) {
       return undefined;
     }
 
-    const format = (input) =>
-      Math.round(input).toLocaleString(locale, { maximumFractionDigits: 0 });
+    const format = (input) => formatPrice(input, locale);
 
-    if (reduce) {
+    if (reduce || from === value) {
       node.textContent = format(value);
       return undefined;
     }
 
-    const controls = animate(0, value, {
+    const controls = animate(from, value, {
       duration: 1.2,
       ease: [0.16, 1, 0.3, 1],
       onUpdate: (latest) => {
@@ -407,7 +579,7 @@ function AnimatedNumber({ value, locale, reduce }) {
     return () => controls.stop();
   }, [value, locale, reduce]);
 
-  return <span ref={ref}>0</span>;
+  return <span ref={ref}>{formatPrice(value, locale)}</span>;
 }
 
 function Sparkline({ points, className = "" }) {
@@ -596,7 +768,10 @@ function AppBanner({ copy, brand, storeUrl, reduce }) {
   );
 }
 
-export default function EgxGoldPage({ locale = "en" } = {}) {
+export default function EgxGoldPage({
+  locale = "en",
+  initialPrices = null,
+} = {}) {
   const prefersReducedMotion = useReducedMotion();
   const platform = useSyncExternalStore(
     subscribeToPlatform,
@@ -605,7 +780,7 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
   );
   const [shareState, setShareState] = useState("idle");
   const [activeKarat, setActiveKarat] = useState("21");
-  const [livePrices, setLivePrices] = useState(null);
+  const [livePrices, setLivePrices] = useState(initialPrices);
 
   const isArabicPage = locale === "ar";
   const copy = isArabicPage ? COPY.ar : COPY.en;
@@ -613,8 +788,8 @@ export default function EgxGoldPage({ locale = "en" } = {}) {
   const storeCards = getStoreCards(copy);
 
   const canonicalUrl = isArabicPage
-    ? "https://ibassemtarek.vercel.app/ar/dahabna"
-    : "https://ibassemtarek.vercel.app/dahabna";
+    ? `${SITE_URL}/ar/dahabna`
+    : `${SITE_URL}/dahabna`;
   const pageTitle = isArabicPage
     ? "دهبنا | أسعار الذهب في مصر اليوم"
     : "Dahabna | Live Gold Prices in Egypt";
@@ -719,12 +894,122 @@ Instagram: ${INSTAGRAM_URL}`;
   const priceStatusLabel = isLive
     ? copy.pricePanel.live
     : copy.pricePanel.sample;
-  const priceNote = isLive
-    ? copy.pricePanel.liveNote.replace(
-        "{time}",
-        timeAgo(livePrices.last_updated, isArabicPage)
-      )
-    : copy.pricePanel.sampleNote;
+  const updatedAt = isLive ? livePrices.last_updated : null;
+  const updatedLabel = updatedAt
+    ? formatCairoTime(updatedAt, copy.numberLocale)
+    : "";
+
+  // FAQ: the live-price answer only exists when we have real prices — sample
+  // numbers must never be presented as today's rate. Prices in the answer use
+  // Western digits, which is how people type them into search.
+  const faqItems = [...copy.faq.items];
+  if (isLive && updatedLabel) {
+    const price = (karat, side) =>
+      formatPrice(livePrices[`gold_${karat}k`][side], "en-US");
+    faqItems.unshift({
+      question: copy.faq.priceQuestion,
+      answerTemplate: fillTemplate(copy.faq.priceAnswer, {
+        sell21: price(21, "sell"),
+        buy21: price(21, "buy"),
+        sell24: price(24, "sell"),
+        sell18: price(18, "sell"),
+      }),
+    });
+  }
+  const faqAnswerText = (item) =>
+    item.answer ?? fillTemplate(item.answerTemplate, { time: updatedLabel });
+
+  const appId = `${SITE_URL}/dahabna#app`;
+  const organizationId = `${SITE_URL}/dahabna#organization`;
+  const personId = `${SITE_URL}/#person`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MobileApplication",
+        "@id": appId,
+        name: "Dahabna",
+        alternateName: ["دهبنا", "EGX Gold"],
+        description: COPY.en.heroBody,
+        url: `${SITE_URL}/dahabna`,
+        image: APP_ICON_URL,
+        screenshot: OG_IMAGE_URL,
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "Android, iOS",
+        inLanguage: ["ar", "en"],
+        countriesSupported: "EG",
+        downloadUrl: [IOS_URL, ANDROID_URL],
+        installUrl: `${SITE_URL}${DOWNLOAD_PATH}`,
+        // Both store listings and the social profiles are this same app, so
+        // answer engines cite the App Store alongside Google Play.
+        sameAs: [IOS_URL, ANDROID_URL, FACEBOOK_URL, INSTAGRAM_URL],
+        offers: { "@type": "Offer", price: "0", priceCurrency: "EGP" },
+        featureList: COPY.en.features.map((feature) => feature.title),
+        // Matches the App Store listing's seller.
+        publisher: {
+          "@type": "Organization",
+          name: "Fanar, LLC",
+          url: "https://apps.apple.com/us/developer/fanar-llc/id1887897835",
+        },
+        author: { "@id": personId },
+        provider: { "@id": organizationId },
+      },
+      {
+        "@type": "Organization",
+        "@id": organizationId,
+        name: "Dahabna",
+        alternateName: "دهبنا",
+        slogan: COPY.ar.slogan,
+        url: `${SITE_URL}/dahabna`,
+        logo: {
+          "@type": "ImageObject",
+          url: BRAND_ICON_URL,
+          width: 512,
+          height: 512,
+        },
+        email: SUPPORT_EMAIL,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "332 Mahmoudia Canal, Royal House, Moharram Bek",
+          addressLocality: "Alexandria",
+          postalCode: "21522",
+          addressCountry: "EG",
+        },
+        sameAs: [FACEBOOK_URL, INSTAGRAM_URL],
+        founder: { "@id": personId },
+      },
+      {
+        "@type": "Person",
+        "@id": personId,
+        name: "Bassem Tarek Mahrous",
+        url: `${SITE_URL}/`,
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: pageTitle,
+        description: pageDescription,
+        inLanguage: copy.lang,
+        isPartOf: { "@type": "WebSite", url: `${SITE_URL}/` },
+        about: { "@id": appId },
+        mainEntity: { "@id": appId },
+        publisher: { "@id": organizationId },
+        primaryImageOfPage: OG_IMAGE_URL,
+        ...(updatedAt ? { dateModified: updatedAt } : {}),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+        inLanguage: copy.lang,
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: faqAnswerText(item) },
+        })),
+      },
+    ],
+  };
 
   return (
     <>
@@ -738,25 +1023,35 @@ Instagram: ${INSTAGRAM_URL}`;
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Dahabna" />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta
-          property="og:image"
-          content="https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg"
+          property="og:image:alt"
+          content={
+            isArabicPage
+              ? "تطبيق دهبنا يعرض أسعار الذهب في مصر لحظة بلحظة"
+              : "Dahabna app showing live gold prices in Egypt"
+          }
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
         <link rel="canonical" href={canonicalUrl} />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://ibassemtarek.vercel.app/dahabna"
-        />
-        <link
-          rel="alternate"
-          hrefLang="ar"
-          href="https://ibassemtarek.vercel.app/ar/dahabna"
-        />
+        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/dahabna`} />
+        <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar/dahabna`} />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://ibassemtarek.vercel.app/dahabna"
+          href={`${SITE_URL}/dahabna`}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
         />
         <meta property="og:locale" content={isArabicPage ? "ar_EG" : "en_US"} />
         <meta
@@ -953,7 +1248,15 @@ Instagram: ${INSTAGRAM_URL}`;
                       })}
                     </div>
                     <p className="mt-4 font-[var(--font-egx-body)] text-[11px] leading-5 text-[color:var(--egx-ink-mute)]">
-                      {priceNote}
+                      {isLive ? (
+                        <TimeTemplate
+                          template={copy.pricePanel.liveNote}
+                          iso={updatedAt}
+                          label={updatedLabel}
+                        />
+                      ) : (
+                        copy.pricePanel.sampleNote
+                      )}
                     </p>
                   </div>
 
@@ -1122,6 +1425,41 @@ Instagram: ${INSTAGRAM_URL}`;
                   </div>
                 </div>
               </div>
+
+              {/* FAQ: plain, always-visible Q&A so search and answer engines
+                  can quote it directly. Mirrors the FAQPage JSON-LD above. */}
+              <section
+                aria-labelledby="egx-faq-heading"
+                className="egx-card rounded-[1.75rem] p-6 sm:p-5"
+              >
+                <p className="font-[var(--font-egx-body)] text-[11px] uppercase tracking-[0.28em] text-[color:var(--egx-gold-strong)]">
+                  {copy.faq.label}
+                </p>
+                <h2
+                  id="egx-faq-heading"
+                  className="mt-3.5 font-[var(--font-egx-display)] text-3xl font-semibold text-[color:var(--egx-ink)] md:text-2xl"
+                >
+                  {copy.faq.heading}
+                </h2>
+                <div className="mt-6 grid grid-cols-2 gap-x-8 gap-y-6 lg:grid-cols-1">
+                  {faqItems.map((item) => (
+                    <div key={item.question}>
+                      <h3 className="text-lg font-semibold text-[color:var(--egx-ink)]">
+                        {item.question}
+                      </h3>
+                      <p className="mt-2 font-[var(--font-egx-body)] text-sm leading-7 text-[color:var(--egx-ink-soft)]">
+                        {item.answer ?? (
+                          <TimeTemplate
+                            template={item.answerTemplate}
+                            iso={updatedAt}
+                            label={updatedLabel}
+                          />
+                        )}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
           </div>
         </section>

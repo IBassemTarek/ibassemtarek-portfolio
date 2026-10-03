@@ -1,8 +1,12 @@
 import React from "react";
 import Layout from "./Layout";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { isArabicPath } from "@/lib/locale.mjs";
 
 const Footer = () => {
+  const isArabic = isArabicPath(useRouter().pathname);
+
   return (
     <footer
       className="w-full border-t-2 border-solid border-dark
@@ -11,9 +15,12 @@ const Footer = () => {
     "
     >
       <Layout className="py-8 flex items-center justify-between sm:flex-col lg:py-6">
-        <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
+        <span>
+          {new Date().getFullYear()} &copy;{" "}
+          {isArabic ? "جميع الحقوق محفوظة" : "All Rights Reserved"}
+        </span>
         <div>
-          Built by <Link href="/">IBassemTarek</Link>
+          {isArabic ? "تطوير" : "Built by"} <Link href="/">IBassemTarek</Link>
         </div>
       </Layout>
     </footer>

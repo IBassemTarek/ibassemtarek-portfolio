@@ -87,8 +87,8 @@
 
   <url>
     <loc>https://ibassemtarek.vercel.app/dahabna</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
     <xhtml:link
       rel="alternate"
@@ -105,6 +105,11 @@
       hreflang="x-default"
       href="https://ibassemtarek.vercel.app/dahabna"
     />
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/og-banner.jpg</image:loc>
+      <image:title>Dahabna app banner</image:title>
+      <image:caption>Dahabna showing live 24k, 21k, and 18k gold prices in Egypt, portfolio tracking, and retirement planning.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
       <image:title>Dahabna app icon</image:title>
@@ -124,8 +129,8 @@
 
   <url>
     <loc>https://ibassemtarek.vercel.app/ar/dahabna</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
     <xhtml:link
       rel="alternate"
@@ -142,6 +147,11 @@
       hreflang="x-default"
       href="https://ibassemtarek.vercel.app/dahabna"
     />
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/og-banner.jpg</image:loc>
+      <image:title>بانر تطبيق دهبنا</image:title>
+      <image:caption>تطبيق دهبنا يعرض أسعار الذهب عيار 24 و21 و18 في مصر لحظة بلحظة، مع متابعة المحفظة والتخطيط للتقاعد.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
       <image:title>أيقونة تطبيق دهبنا</image:title>

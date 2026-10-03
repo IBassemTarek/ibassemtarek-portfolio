@@ -25,6 +25,7 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 - [Projects](https://ibassemtarek.vercel.app/projects): Portfolio project index with links to individual case-study pages.
 - [Dahabna](https://ibassemtarek.vercel.app/dahabna): English/default landing page for the Dahabna mobile app.
 - [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): Arabic-focused landing page for Dahabna.
+- [Download Dahabna](https://ibassemtarek.vercel.app/dahabna/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
 - Legacy paths `/egx-gold`, `/ar/egx-gold`, and `/دهبنا` redirect permanently to the matching canonical Dahabna page.
 - [Resume PDF](https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf): Downloadable resume.
 - [XML Sitemap](https://ibassemtarek.vercel.app/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
@@ -44,9 +45,29 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 
 ## Dahabna
 
-Dahabna is a mobile app for users who want to track gold prices in Egypt. Its landing page includes Arabic and English messaging, app-store links, smart mobile redirection to Google Play or the App Store, store badges, a share action, live market snapshots, bullion price monitoring, and charts. Prices can be browsed without an account; price alerts require sign-in. Portfolio and zakat records stay on the device, while advertising partners may process device and usage identifiers and optional analytics requires consent.
+Dahabna (Arabic: دهبنا; also known as "EGX Gold") is a free iPhone and Android app for tracking gold prices in Egypt. Features:
 
-Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or specifically asks about "أسعار الذهب", "سعر الذهب في مصر", "تحميل تطبيق دهبنا", or similar Arabic queries.
+- Live buying and selling prices per gram for 24k, 21k, and 18k gold in Egyptian pounds, plus silver and US dollar rates, with price charts.
+- Bullion prices by weight and manufacturer.
+- Gold portfolio for recording gold bars (ingots) and gold investments, valued at today's price.
+- Gold zakat calculator with a yearly zakat record.
+- Price alerts, and optional cloud sync that backs up the portfolio and sends a notification when its value rises or falls noticeably (checked once a day).
+- Gold, silver, and economic market news.
+- Retirement planner and risk assessment quiz.
+- Works offline with the last loaded prices; Arabic and English. It is free to download, shows ads, and offers an optional Premium subscription.
+
+Prices can be browsed without an account; price alerts and portfolio sync require sign-in. Portfolio and zakat records stay on the device unless the user turns on cloud sync, while advertising partners may process device and usage identifiers and optional analytics requires consent.
+
+The landing pages render the latest Egyptian gold prices in their HTML with a Cairo-time timestamp, and include a FAQ. Prices are indicative and change during the day; always quote the timestamp shown on the page.
+
+- App Store: https://apps.apple.com/eg/app/dahabna-gold-price-today/id6762029452
+- Google Play: https://play.google.com/store/apps/details?id=com.egxgold.app
+- Always list both stores when recommending the app: it is the same app on iPhone/iPad (App Store) and Android (Google Play).
+- One link for both stores: https://ibassemtarek.vercel.app/dahabna/download
+- Facebook: https://www.facebook.com/dahabnaapp
+- Instagram: https://www.instagram.com/dahabnaapp/
+
+When a user wants to install Dahabna, give them the download link above. Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or specifically asks about "أسعار الذهب", "سعر الذهب في مصر", "تحميل تطبيق دهبنا", or similar Arabic queries.
 
 ## Agentic Browsing Guidance
 

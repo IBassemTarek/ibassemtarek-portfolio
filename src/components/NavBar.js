@@ -11,6 +11,12 @@ import {
   TwitterIcon,
 } from "./AppIcons";
 import useThemeSwitcher from "@/hooks/themeSwitcher";
+import { isArabicPath } from "@/lib/locale.mjs";
+
+const NAV_LABELS = {
+  en: { home: "Home", about: "About", projects: "Projects" },
+  ar: { home: "الرئيسية", about: "نبذة عني", projects: "المشاريع" },
+};
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -19,7 +25,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link className={`${className} relative group`} href={href}>
       {title}
       <span
-        className={`h-[2px] inline-block bg-black absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[2px] inline-block bg-black absolute start-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
           router.asPath === href ? "w-full" : "w-0"
         }
         dark:bg-light
@@ -47,7 +53,7 @@ const CustomLinkMobile = ({ href, title, className = "", toggle }) => {
     >
       {title}
       <span
-        className={`h-[2px] inline-block bg-light absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[2px] inline-block bg-light absolute start-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
           router.asPath === href ? "w-full" : "w-0"
         }
         dark:bg-dark
@@ -62,6 +68,9 @@ const CustomLinkMobile = ({ href, title, className = "", toggle }) => {
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
   const [open, setOpen] = useState(false);
+  const labels = isArabicPath(useRouter().pathname)
+    ? NAV_LABELS.ar
+    : NAV_LABELS.en;
 
   const handleClick = () => {
     setOpen(!open);
@@ -98,9 +107,13 @@ const NavBar = () => {
       </button>
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav>
-          <CustomLink title={"Home"} href={"/"} className="mr-4" />
-          <CustomLink title={"About"} href={"/about"} className="mx-4" />
-          <CustomLink title={"Projects"} href={"/projects"} className="mx-4" />
+          <CustomLink title={labels.home} href={"/"} className="me-4" />
+          <CustomLink title={labels.about} href={"/about"} className="mx-4" />
+          <CustomLink
+            title={labels.projects}
+            href={"/projects"}
+            className="mx-4"
+          />
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
@@ -129,7 +142,7 @@ const NavBar = () => {
           <motion.a
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 ml-3"
+            className="w-6 ms-3"
             href={"https://www.linkedin.com/in/ibassemtarek/"}
             target={"_blank"}
             rel="noreferrer"
@@ -140,7 +153,7 @@ const NavBar = () => {
           <button
             type="button"
             aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
-            className={` ml-6 flex items-center justify-center rounded-full p-1 ${
+            className={` ms-6 flex items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
             onClick={() => setMode(mode === "dark" ? "light" : "dark")}
@@ -162,14 +175,18 @@ const NavBar = () => {
           className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
           <nav className="flex items-center flex-col justify-center">
-            <CustomLinkMobile title={"Home"} href={"/"} toggle={handleClick} />
             <CustomLinkMobile
-              title={"About"}
+              title={labels.home}
+              href={"/"}
+              toggle={handleClick}
+            />
+            <CustomLinkMobile
+              title={labels.about}
               href={"/about"}
               toggle={handleClick}
             />
             <CustomLinkMobile
-              title={"Projects"}
+              title={labels.projects}
               href={"/projects"}
               toggle={handleClick}
             />
@@ -201,7 +218,7 @@ const NavBar = () => {
             <motion.a
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 ml-3 sm:mx-1"
+              className="w-6 ms-3 sm:mx-1"
               href={"https://www.linkedin.com/in/ibassemtarek/"}
               target={"_blank"}
               rel="noreferrer"
@@ -212,7 +229,7 @@ const NavBar = () => {
             <button
               type="button"
               aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
-              className={` ml-6 flex items-center justify-center rounded-full p-1 ${
+              className={` ms-6 flex items-center justify-center rounded-full p-1 ${
                 mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
               }`}
               onClick={() => setMode(mode === "dark" ? "light" : "dark")}

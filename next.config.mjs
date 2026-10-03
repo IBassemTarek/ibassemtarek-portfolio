@@ -1,8 +1,11 @@
+import { downloadRedirects } from "./src/lib/dahabna-download.mjs";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
+      ...downloadRedirects(),
       {
         source: "/egx-gold",
         destination: "/dahabna",
@@ -23,6 +26,6 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;
