@@ -11,6 +11,8 @@ const nextConfig = {
       // App projects have landing pages instead of /projects/<id> case studies.
       { source: "/projects/10", destination: "/horus-arcade", permanent: true },
       { source: "/projects/11", destination: "/dahabna", permanent: true },
+      { source: "/projects/12", destination: "https://mindovaq.com/shm/", permanent: true },
+      { source: "/projects/13", destination: "https://simplynikah.app", permanent: true },
       {
         source: "/egx-gold",
         destination: "/dahabna",

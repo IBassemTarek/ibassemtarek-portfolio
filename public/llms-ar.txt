@@ -35,6 +35,10 @@
 
 ## صفحات المشاريع
 
+- [Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade): تطبيق ألعاب مجاني لـ iPhone وAndroid يضم 23 لعبة (المشروع المميز).
+- [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): تطبيق مجاني لمتابعة أسعار الذهب في مصر.
+- [SHM](https://mindovaq.com/shm/): تطبيق من Mindovaq لمعلومات السوق وأدوات التداول للمستثمرين في مصر: مستويات الدعم والمقاومة في البورصة المصرية، تنبيهات أسعار فورية، وحاسبات متوسط الشراء وحجم المركز، بالعربية والإنجليزية.
+- [Simply Nikah](https://simplynikah.app): تطبيق زواج متوافق مع الشريعة لـ iPhone وAndroid بدعم من المفتي منك، مع توثيق الحسابات بالسيلفي، ومطابقة حسب الاهتمامات، والتحكم في خصوصية الصور، ومراقبة الرسائل بالذكاء الاصطناعي.
 - [Montu Mobile App Builder](https://ibassemtarek.vercel.app/projects/1): أداة بدون كود لإنشاء تطبيقات موبايل لتجار Shopify. عمل باسم كمطور Backend ومطور تطبيقات موبايل، وشارك في البنية التحتية، التكاملات، ميزات React Native، ومعالجة مشاكل الإنتاج.
 - [Gulf Coin Crypto Currency](https://ibassemtarek.vercel.app/projects/2): تطبيق لإدارة معاملات GulfCoin، مع التركيز على المحفظة، الحساب، المشاركة في البيع المسبق، وتتبع الاستثمار.
 - [Alawfar](https://ibassemtarek.vercel.app/projects/3): تطبيق تجارة إلكترونية يدعم الدفع عند الاستلام للمستخدمين الذين يفضلون استلام الطلب قبل الدفع.
@@ -112,3 +116,5 @@ Horus Arcade تطبيق ألعاب مجاني على iPhone وAndroid يضم 23 
 - GitHub: https://github.com/IBassemTarek
 - LinkedIn: https://www.linkedin.com/in/ibassemtarek/
 - X/Twitter: https://twitter.com/IBassemTarek
+- Facebook: https://www.facebook.com/IBassemTarek
+- Instagram: https://www.instagram.com/ibassemtarek

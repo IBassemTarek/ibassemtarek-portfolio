@@ -7,18 +7,23 @@
 >
   <url>
     <loc>https://ibassemtarek.vercel.app/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/profile/developer-pic-1.png</image:loc>
+      <image:loc>https://ibassemtarek.vercel.app/images/profile/bassem-hero.webp</image:loc>
       <image:title>Bassem Tarek Mahrous profile image</image:title>
-      <image:caption>Full-stack developer portfolio homepage hero image for Bassem Tarek Mahrous.</image:caption>
+      <image:caption>Bassem Tarek Mahrous, mobile and full-stack developer, working on his laptop.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/circular-text.png</image:loc>
       <image:title>Portfolio circular text graphic</image:title>
       <image:caption>Decorative portfolio call-to-action graphic used on the homepage.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/profile/og-home.jpg</image:loc>
+      <image:title>Bassem Tarek, mobile and full-stack developer</image:title>
+      <image:caption>Bassem Tarek at his laptop: React Native, Flutter, Next.js and NestJS developer.</image:caption>
     </image:image>
   </url>
 

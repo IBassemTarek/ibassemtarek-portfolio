@@ -1,16 +1,17 @@
 # Bassem Tarek Mahrous Portfolio
 
-> English machine-readable guide for AI agents and LLM-based browsers using https://ibassemtarek.vercel.app. This site is a professional portfolio for Bassem Tarek Mahrous, a software engineer and full-stack developer, with a bilingual English/Arabic app landing page for Dahabna.
+> English machine-readable guide for AI agents and LLM-based browsers using https://ibassemtarek.vercel.app. This site is a professional portfolio for Bassem Tarek Mahrous, a software engineer and mobile/full-stack developer with 5+ years of experience. It includes landing pages for his apps Horus Arcade and Dahabna (English and Arabic), and lists SHM and Simply Nikah among his projects.
 
 ## Site Identity
 
 - Owner: Bassem Tarek Mahrous.
-- Role: Software engineer and full-stack developer.
+- Role: Software engineer, mobile and full-stack developer (React Native, Flutter, Next.js, NestJS). Backend developer at GiveBrite LLC since March 2024.
+- Experience: 5+ years, 12+ projects, 10+ clients.
 - Main domain: https://ibassemtarek.vercel.app.
 - Primary language: English.
 - Supported Arabic content: Dahabna landing page and Arabic agent guide.
 - Contact email: ibassemtarek@gmail.com.
-- Public profiles: GitHub, LinkedIn, and X/Twitter links are listed in the Contact section.
+- Public profiles: GitHub (https://github.com/IBassemTarek), LinkedIn (https://www.linkedin.com/in/ibassemtarek/), X (https://twitter.com/IBassemTarek), Facebook (https://www.facebook.com/IBassemTarek), Instagram (https://www.instagram.com/ibassemtarek).
 
 ## What This Site Contains
 
@@ -35,6 +36,10 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 
 ## Project Pages
 
+- [Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade): Free iPhone and Android game app with 23 arcade, puzzle, brain, board and word games (featured project).
+- [Dahabna](https://ibassemtarek.vercel.app/dahabna): Free iPhone and Android app for live gold prices in Egypt.
+- [SHM](https://mindovaq.com/shm/): Android app by Mindovaq with market information and trading tools for Egyptian investors: EGX support and resistance levels, real-time price alerts, average-down and position-size calculators, in Arabic and English. Google Play: https://play.google.com/store/apps/details?id=com.mindovaq.shm
+- [Simply Nikah](https://simplynikah.app): Shariah-compliant matrimony app for iPhone and Android backed by Mufti Menk, with selfie-verified profiles, interest-based matchmaking, image privacy controls and AI message moderation. App Store: https://apps.apple.com/us/app/simply-nikah/id6471347083 · Google Play: https://play.google.com/store/apps/details?id=com.simplynikah.app
 - [Montu Mobile App Builder](https://ibassemtarek.vercel.app/projects/1): A no-code mobile app builder for Shopify merchants. Bassem worked as a backend and mobile app developer, maintaining scalable infrastructure, service integrations, React Native mobile features, and production troubleshooting.
 - [Gulf Coin Crypto Currency](https://ibassemtarek.vercel.app/projects/2): A cryptocurrency transaction management application for GulfCoin, focused on wallet/account visibility, presale participation, and investment tracking.
 - [Alawfar](https://ibassemtarek.vercel.app/projects/3): An ecommerce application focused on cash-on-delivery purchasing, built for users who prefer receiving orders before paying.
@@ -122,3 +127,5 @@ Players earn XP on every run, climb weekly and all-time ranks and per-game leade
 - GitHub: https://github.com/IBassemTarek
 - LinkedIn: https://www.linkedin.com/in/ibassemtarek/
 - X/Twitter: https://twitter.com/IBassemTarek
+- Facebook: https://www.facebook.com/IBassemTarek
+- Instagram: https://www.instagram.com/ibassemtarek

@@ -344,6 +344,8 @@ export default function HorusArcadePage() {
           "https://github.com/IBassemTarek",
           "https://www.linkedin.com/in/ibassemtarek/",
           "https://twitter.com/IBassemTarek",
+          "https://www.facebook.com/IBassemTarek",
+          "https://www.instagram.com/ibassemtarek",
         ],
       },
       {

@@ -3,23 +3,16 @@
 @tailwind utilities;
 
 /* Horus Arcade pages: the shared header and footer take the game's neon
-   palette, cream and indigo in light mode, night navy in dark mode. */
+   palette, night navy in both light and dark mode, to match the page. */
 [data-page-theme="horus-arcade"] {
-  --pt-surface: linear-gradient(180deg, #fff8ec 0%, #f4e7d1 100%);
-  --pt-ink: #2e2a7a;
-  --pt-hover: #c41a85;
-  --pt-underline: #ff3ec8;
-  --pt-toggle: #2e2a7a;
-  --pt-neon: linear-gradient(90deg, #f5c04a, #ff3ec8 50%, #29e6ff);
-  background: var(--pt-surface);
-  color: var(--pt-ink);
-}
-.dark [data-page-theme="horus-arcade"] {
   --pt-surface: linear-gradient(180deg, #03092a 0%, #0a0820 100%);
   --pt-ink: #f4e7d1;
   --pt-hover: #29e6ff;
   --pt-underline: #f5c04a;
   --pt-toggle: #f5c04a;
+  --pt-neon: linear-gradient(90deg, #f5c04a, #ff3ec8 50%, #29e6ff);
+  background: var(--pt-surface);
+  color: var(--pt-ink);
 }
 [data-page-theme="horus-arcade"].site-header {
   border-bottom: 3px solid transparent;
@@ -36,7 +29,9 @@
   background: transparent;
 }
 .dark [data-page-theme="horus-arcade"].site-header,
-.dark [data-page-theme="horus-arcade"].site-footer {
+.dark [data-page-theme="horus-arcade"].site-footer,
+[data-page-theme="horus-arcade"].site-header,
+[data-page-theme="horus-arcade"].site-footer {
   color: var(--pt-ink);
 }
 [data-page-theme="horus-arcade"] .site-nav-link:hover,
@@ -81,4 +76,45 @@
 .dark [data-page-theme="horus-arcade"] .site-mobile-link .site-nav-underline,
 [data-page-theme="horus-arcade"] .site-mobile-link .site-nav-underline {
   background: #f5c04a;
+}
+
+/* Home hero glows. Radial gradients rather than blurred blobs: Safari clips
+   a CSS blur to a hard-edged box. */
+.home-hero-glow {
+  background:
+    radial-gradient(38% 45% at 4% 28%, rgba(182, 62, 150, 0.16), transparent 72%),
+    radial-gradient(36% 48% at 96% 42%, rgba(88, 230, 217, 0.2), transparent 72%);
+}
+.dark .home-hero-glow {
+  background:
+    radial-gradient(38% 45% at 4% 28%, rgba(182, 62, 150, 0.22), transparent 72%),
+    radial-gradient(36% 48% at 96% 42%, rgba(88, 230, 217, 0.12), transparent 72%);
+}
+.home-portrait-glow {
+  background: radial-gradient(closest-side, rgba(182, 62, 150, 0.28), rgba(88, 230, 217, 0.14) 55%, transparent 100%);
+}
+
+/* Contact card: the brand gradient panel and the send button. */
+.contact-panel {
+  background:
+    radial-gradient(70% 60% at 100% 0%, rgba(88, 230, 217, 0.35), transparent 70%),
+    radial-gradient(60% 50% at 0% 100%, rgba(255, 255, 255, 0.12), transparent 70%),
+    linear-gradient(150deg, #b63e96 0%, #7a2f8f 55%, #3b2a7a 100%);
+}
+.contact-submit {
+  background: linear-gradient(90deg, #b63e96, #7a2f8f 60%, #3b2a7a);
+}
+
+/* Projects page: the featured showcase and three-line card summaries. */
+.projects-featured {
+  background:
+    radial-gradient(60% 70% at 100% 0%, rgba(88, 230, 217, 0.28), transparent 70%),
+    radial-gradient(50% 60% at 0% 100%, rgba(182, 62, 150, 0.45), transparent 70%),
+    linear-gradient(140deg, #1b1430 0%, #261a45 50%, #0f1a2e 100%);
+}
+.projects-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }

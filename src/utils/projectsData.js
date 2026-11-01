@@ -9,6 +9,8 @@ import yanabeeAcademyImg from "../../public/images/projects/yanabee-academy.png"
 import rosewellEnergyImg from "../../public/images/projects/rosewell-energy.png";
 import horusArcadeImg from "../../public/images/projects/horus-arcade.jpg";
 import dahabnaImg from "../../public/images/projects/dahabna.jpg";
+import shmImg from "../../public/images/projects/shm.jpg";
+import simplyNikahImg from "../../public/images/projects/simply-nikah.jpg";
 import {
   aPlusContent,
   alawfarContent,
@@ -21,11 +23,13 @@ import {
   rosewellContent,
 } from "./projectsContent";
 
-// Apps with their own landing page link there (`href`) instead of to a
-// /projects/<id> case study; `tag` is the label above the card title.
+// Apps with their own page link there (`href`, on this site or external)
+// instead of to a /projects/<id> case study; `tag` is the label above the
+// card title. `kind` ("app" or "web") drives the filters on /projects.
 export const projectData = [
   {
     title: "Horus Arcade",
+    kind: "app",
     tag: "Mobile game · iOS & Android",
     isFeatured: true,
     summary:
@@ -36,6 +40,7 @@ export const projectData = [
   },
   {
     title: "Dahabna",
+    kind: "app",
     tag: "Gold prices app · iOS & Android",
     isFeatured: false,
     summary:
@@ -45,9 +50,33 @@ export const projectData = [
     href: "/dahabna",
   },
   {
-    title: "Montu Mobile App Builder",
+    title: "SHM",
+    kind: "app",
+    tag: "Trading tools app · Android",
+    isFeatured: false,
     summary:
-      "Montu Is A No-Code Mobile App Builder For Shopify Merchants. We Help You Build A Native Mobile App Instantly, Without The Need For Expensive Dev Teams Or Prior Knowledge Of App-Building.",
+      "Market information and trading tools for Egyptian investors: EGX support and resistance levels, real-time price alerts, average-down and position-size calculators, in Arabic and English.",
+    img: shmImg,
+    id: 12,
+    href: "https://mindovaq.com/shm/",
+  },
+  {
+    title: "Simply Nikah",
+    kind: "app",
+    tag: "Matrimony app · iOS & Android",
+    isFeatured: false,
+    summary:
+      "A Shariah-compliant marriage app backed by Mufti Menk, with selfie-verified profiles, interest-based matchmaking, image privacy controls and AI message moderation.",
+    img: simplyNikahImg,
+    id: 13,
+    href: "https://simplynikah.app",
+  },
+  {
+    title: "Montu Mobile App Builder",
+    kind: "app",
+    tag: "No-code app builder · Shopify",
+    summary:
+      "A no-code mobile app builder for Shopify merchants: brands launch a native iOS and Android app without a dev team. Backend, integrations, React Native features and production support.",
     img: montuImg,
     id: 1,
     isFeatured: false,
@@ -55,24 +84,30 @@ export const projectData = [
   },
   {
     title: "Gulf Coin Crypto Currency",
+    kind: "app",
+    tag: "Crypto wallet & presale app",
     isFeatured: false,
     summary:
-      "Gulf project revolves around an outstanding BEP-20 coin, developed by the top-notch programmers and experts, inspired from the source of its creation to honor the GULF countries for their embracement and contributions to the crypto-world",
+      "A cryptocurrency transaction management app for GulfCoin, a BEP-20 token, focused on wallet and account visibility, presale participation and investment tracking.",
     img: gulfCoinImg,
     id: 2,
     content: gulfCoinContent,
   },
   {
     title: "Alawfar",
+    kind: "app",
+    tag: "E-commerce app",
     isFeatured: false,
     summary:
-      "The rise of technology has brought about many changes in the way we live and do business. E-commerce has become a norm, with people all over the world shopping online and having their purchases delivered right to their doorsteps",
+      "An e-commerce app built around cash on delivery, for shoppers who prefer to receive their order before they pay.",
     img: alawfarImg,
     content: alawfarContent,
     id: 3,
   },
   {
     title: "Web Plaza",
+    kind: "web",
+    tag: "Full-stack web app · Next.js",
     isFeatured: false,
     summary:
       "I developed this website to enhance my skills in creating full-stack applications using Next.js 13.4 and MongoDB. It served as a valuable training ground for honing my abilities and allowed me to leverage its components and logic in my freelance projects.",
@@ -83,49 +118,59 @@ export const projectData = [
   },
   {
     title: "Kindergarten World",
+    kind: "app",
+    tag: "Education app",
     isFeatured: false,
     id: 5,
     content: kindergartenContent,
     summary:
-      "The application is a cutting-edge tool designed specifically for kindergarten teachers and students",
+      "A classroom and learning management app for kindergarten teachers and students, covering assignments, attendance, progress and learning resources.",
     img: kindergarten_worldImg,
     githubLink: "https://github.com/IBassemTarek/Kindergarten",
   },
   {
     title: "A-plus Studio",
+    kind: "web",
+    tag: "Business website · WordPress",
     isFeatured: false,
     id: 6,
     content: aPlusContent,
     summary:
-      "The aim of Studio is to deliver top-notch services and solutions to its clients and help them reach their full potential.",
+      "A WordPress website for a services studio, built to present its work, build trust and win new clients.",
     img: APlusImg,
   },
 
   {
     title: "Sary Academy",
+    kind: "web",
+    tag: "Education website",
     isFeatured: false,
     id: 7,
     content: saryAcademyContent,
     summary:
-      "Sary Academy is an innovative nursery school that provides young children with a unique educational experience.",
+      "A nursery school platform that combines learning and play into one educational experience for young children.",
     img: saryAcademyImg,
   },
 
   {
     title: "Yanabee Academy",
+    kind: "web",
+    tag: "Quran learning platform",
     isFeatured: false,
     id: 8,
     content: yanabeeContent,
     summary:
-      "The Quranic platform and electronic academy project is an exciting and innovative initiative aimed at making the teachings of the Holy Quran more accessible and convenient for students around the world.",
+      "A Quran platform and online academy for lessons, recitation practice, progress tracking and Quranic sciences.",
     img: yanabeeAcademyImg,
   },
 
   {
     title: "Rosewell energy",
+    kind: "web",
+    tag: "Company website",
     isFeatured: false,
     summary:
-      "Rosewell Energy is a company that is dedicated to providing top-notch chemical treatment and engineering services to the oilfield industry.",
+      "A website for an oilfield chemical treatment and engineering services company.",
     img: rosewellEnergyImg,
     content: rosewellContent,
     id: 9,
