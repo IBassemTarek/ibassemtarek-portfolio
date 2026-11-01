@@ -40,6 +40,17 @@ export const gulfCoinContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-6.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-7.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-7.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-8.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-8.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-9.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-9.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-10.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-10.webp" /></a></p>
+
 <p><a href="https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp" /></a></p>
 <p><a href="https://ibassemtarek.vercel.app/images/gulf/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/4.webp" /></a></p>
 <p><a href="https://ibassemtarek.vercel.app/images/gulf/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/1.webp" /></a></p>
@@ -238,3 +249,59 @@ export const rosewellContent = `<h2><strong>Project description</strong></h2>
 
 <p>&nbsp;</p>
 `;
+
+export const smoovContent = `<h2><strong>Project description</strong></h2>
+
+<p>SmooV (formerly Lockers) is a Riyadh-based platform for moving furniture across Saudi Arabia. Customers book a move online at a fixed price per room, and trained teams handle disassembly, packing, transport and reassembly, with every piece photo-documented before the move.</p>
+
+<p>As a Flutter developer at Lockers, I built and maintained the client and driver mobile apps and integrated REST and third-party APIs. The driver app is live on Google Play as SmooV Driver: drivers sign in with their phone number, follow orders by status (pending, confirmed, going to upload, completed), see each order&rsquo;s package, services and addresses, confirm jobs, upload photos of the furniture, track their completed and cancelled jobs, and switch between Arabic and English. <a href="https://play.google.com/store/apps/details?id=com.lockers.driver">Google Play</a> <a href="https://smoov.sa">View project</a></p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>Flutter -&nbsp;Dart -&nbsp;REST APIs -&nbsp;Third-party APIs -&nbsp;Arabic &amp; English localization -&nbsp;Git</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/feature-graphic.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/feature-graphic.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/website.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/website.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/smoov/website-mobile.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/website-mobile.webp" /></a></p>`;
+
+export const blthanihContent = `<h2><strong>Project description</strong></h2>
+
+<p>blthanih (بالثانية) is a Riyadh-based salon and spa management platform, founded in 2022, that runs a salon&rsquo;s day-to-day work in one system: bookings, staff, services, products, offers, customer loyalty, financial transactions and reports.</p>
+
+<p>As a React Native developer at blthanih, I built its two mobile apps in TypeScript, both launched on the App Store.</p>
+
+<p>The client app brings Saudi Arabia&rsquo;s leading salons into one place. Customers search for the nearest, best-rated or best-priced salon, also on a map and by category (men, women, pets), open salon profiles, book a service with their preferred staff member and time, pay securely, then rate the service. They catch exclusive time-limited offers, shop beauty products in an in-app store with a bag and checkout, collect visit points and loyalty gifts, save favourite salons, chat, and get notifications, in Arabic or English.</p>
+
+<p>The employee app is a salon HR app for owners, managers and staff: employee scheduling and today&rsquo;s bookings, attendance and departure tracking, performance evaluation, payroll and salary follow-up, holiday and loan requests, absences, deductions, offences, custody, circulars, an employee database and a communication hub. <a href="https://www.linkedin.com/company/blthanih/">View company</a></p>
+
+<hr />
+<h2>Skills and deliverables</h2>
+
+<p>React Native -&nbsp;TypeScript -&nbsp;Redux Toolkit -&nbsp;React Query -&nbsp;React Navigation -&nbsp;Formik &amp; Yup -&nbsp;Firebase Messaging &amp; Crashlytics -&nbsp;React Native Maps -&nbsp;i18n (Arabic &amp; English) -&nbsp;styled-components</p>
+
+<hr />
+<h2>Preview</h2>
+
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-6.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-7.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-7.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-8.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-8.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-6.webp" /></a></p>`;

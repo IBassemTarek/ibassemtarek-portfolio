@@ -48,6 +48,8 @@
 - [Sary Academy](https://ibassemtarek.vercel.app/projects/7): منصة تعليمية وحضانة أطفال تجمع بين التعلم واللعب.
 - [Yanabee Academy](https://ibassemtarek.vercel.app/projects/8): منصة قرآنية وأكاديمية إلكترونية للدروس، تعلم التلاوة، متابعة التقدم، وعلوم القرآن.
 - [Rosewell Energy](https://ibassemtarek.vercel.app/projects/9): موقع لشركة تعمل في المعالجة الكيميائية والخدمات الهندسية لقطاع البترول.
+- [SmooV سموف](https://ibassemtarek.vercel.app/projects/14): تطبيقا العميل والسائق بـ Flutter لمنصة سموف (لوكرز سابقًا) لنقل الأثاث في السعودية بسعر ثابت للغرفة. تطبيق السائق متاح على Google Play باسم SmooV Driver.
+- [بالثانية blthanih](https://ibassemtarek.vercel.app/projects/15): تطبيقا العميل والموظف بـ React Native لمنصة بالثانية لإدارة الصالونات والسبا في الرياض: اكتشاف الصالونات والحجز للعملاء، والجدول والحضور والإجازات والرواتب للموظفين.
 
 ## دهبنا
 

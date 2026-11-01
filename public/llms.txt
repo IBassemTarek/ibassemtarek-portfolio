@@ -49,6 +49,8 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 - [Sary Academy](https://ibassemtarek.vercel.app/projects/7): A nursery school and educational experience platform combining learning and play for children.
 - [Yanabee Academy](https://ibassemtarek.vercel.app/projects/8): A Quranic platform and electronic academy for lessons, recitation learning, progress tracking, and Quranic sciences.
 - [Rosewell Energy](https://ibassemtarek.vercel.app/projects/9): A website for an oilfield chemical treatment and engineering services company.
+- [SmooV](https://ibassemtarek.vercel.app/projects/14): Client and driver Flutter apps for SmooV (formerly Lockers), a Riyadh platform for booking furniture moves at a fixed price per room. The driver app is on Google Play as SmooV Driver: https://play.google.com/store/apps/details?id=com.lockers.driver . Website: https://smoov.sa
+- [blthanih](https://ibassemtarek.vercel.app/projects/15): React Native client and employee apps for blthanih (بالثانية), a Riyadh salon and spa management platform: salon discovery and booking for customers, and schedules, attendance, leave and payroll for staff.
 
 ## Dahabna
 

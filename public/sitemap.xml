@@ -322,6 +322,26 @@
       <image:caption>Cryptocurrency transaction management app project cover.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-4.webp</image:loc>
+      <image:title>GulfCoin app dashboard</image:title>
+      <image:caption>GulfCoin app dashboard: token balance, presale price and receiving wallet.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-6.webp</image:loc>
+      <image:title>GulfCoin buy calculator</image:title>
+      <image:caption>Choose a currency (USD, ETH, BNB, USDT, BUSD) and calculate the GulfCoin price.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-7.webp</image:loc>
+      <image:title>GulfCoin transactions</image:title>
+      <image:caption>GulfCoin transactions list with paid and unpaid purchases.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-9.webp</image:loc>
+      <image:title>GulfCoin coin balance</image:title>
+      <image:caption>Coin balance: purchased, referral and bonus coins, contributions and withdrawals.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://ibassemtarek.vercel.app/images/gulf/4.webp</image:loc>
       <image:title>Gulf Coin project screenshot 1</image:title>
       <image:caption>Gulf Coin application dashboard preview screenshot.</image:caption>
@@ -589,6 +609,75 @@
       <image:loc>https://ibassemtarek.vercel.app/images/rosewell/4.webp</image:loc>
       <image:title>Rosewell Energy project screenshot 4</image:title>
       <image:caption>Rosewell Energy final page preview screenshot.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://ibassemtarek.vercel.app/projects/14</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/projects/smoov.webp</image:loc>
+      <image:title>SmooV project cover</image:title>
+      <image:caption>SmooV furniture moving platform in Saudi Arabia, with the SmooV Driver app.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/smoov/2.webp</image:loc>
+      <image:title>SmooV Driver orders screen</image:title>
+      <image:caption>Driver app order list filtered by status, with pickup and destination addresses.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/smoov/4.webp</image:loc>
+      <image:title>SmooV Driver order details</image:title>
+      <image:caption>Order details with package, total amount and addresses, ready to confirm.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/smoov/website.webp</image:loc>
+      <image:title>SmooV website</image:title>
+      <image:caption>SmooV website: book a furniture move in Saudi Arabia at a fixed price per room.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://ibassemtarek.vercel.app/projects/15</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/projects/blthanih.webp</image:loc>
+      <image:title>blthanih project cover</image:title>
+      <image:caption>blthanih salon and spa management platform, client and employee apps.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/client-1.webp</image:loc>
+      <image:title>blthanih client app</image:title>
+      <image:caption>blthanih client app: a digital system for managing salon services from one device.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/client-3.webp</image:loc>
+      <image:title>blthanih client app home</image:title>
+      <image:caption>Client app home with today's offer, categories and salons near your location.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/client-2.webp</image:loc>
+      <image:title>blthanih salon map</image:title>
+      <image:caption>Find nail, hair and spa salons on the map.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/employee-6.webp</image:loc>
+      <image:title>blthanih employee app home</image:title>
+      <image:caption>Employee app home: attendance and departure, salary, holidays, absence, loans and today's bookings.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/employee-3.webp</image:loc>
+      <image:title>blthanih employee schedule</image:title>
+      <image:caption>Employee schedule with each day's bookings.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/employee-5.webp</image:loc>
+      <image:title>blthanih salary and custody</image:title>
+      <image:caption>Salary follow-up and custody screens in the employee app.</image:caption>
     </image:image>
   </url>
 </urlset>

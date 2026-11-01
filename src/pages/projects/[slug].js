@@ -23,7 +23,12 @@ export function getStaticPaths() {
   };
 }
 
-const stripTags = (html) => html.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").trim();
+const stripTags = (html) =>
+  html
+    .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .trim();
 
 // The case-study HTML always has three parts: a description, a "Skills and
 // deliverables" line of dash-separated names, and a "Preview" run of
@@ -44,7 +49,7 @@ async function parseContent(html) {
     .trim();
 
   const skills = stripTags(skillsPart)
-    .split(/\s*-\s*/)
+    .split(/\s+-\s*/)
     .map((skill) => skill.trim())
     .filter(Boolean);
 
@@ -80,6 +85,14 @@ export async function getStaticProps({ params }) {
   };
 }
 
+function linkLabel(label, href) {
+  if (/code/i.test(label)) return "View the code";
+  if (href.includes("play.google.com")) return "Get it on Google Play";
+  if (href.includes("apps.apple.com")) return "Download on the App Store";
+  if (href.includes("linkedin.com")) return "Company on LinkedIn";
+  return "Visit the live project";
+}
+
 function Arrow({ className = "h-5 w-5" }) {
   return (
     <span className={`inline-flex shrink-0 ${className}`}>
@@ -90,6 +103,9 @@ function Arrow({ className = "h-5 w-5" }) {
 
 export default function CaseStudy({ id, description, links, skills, gallery, neighbours }) {
   const project = projectData.find((item) => item.id === id);
+  // Phone screenshots read better four to a row; mixed galleries keep two.
+  const mostlyPortrait =
+    gallery.filter(({ width, height }) => height > width * 1.4).length > gallery.length / 2;
   const reduce = useReducedMotion();
   const pageUrl = `${SITE_URL}/projects/${id}`;
   const imageUrl = `${SITE_URL}${project.img.src}`;
@@ -177,7 +193,7 @@ export default function CaseStudy({ id, description, links, skills, gallery, nei
                 </span>
                 <span className="text-primary dark:text-primaryDark">{project.tag}</span>
               </p>
-              <h1 className="mt-4 text-6xl font-bold capitalize leading-[1.05] xl:text-5xl sm:text-4xl">
+              <h1 className="mt-4 text-6xl font-bold leading-[1.05] xl:text-5xl sm:text-4xl">
                 {project.title}
               </h1>
               <p className="mt-5 text-lg font-medium leading-relaxed text-dark/75 dark:text-light/75 sm:text-base">
@@ -197,7 +213,7 @@ export default function CaseStudy({ id, description, links, skills, gallery, nei
                           : "border-2 border-solid border-dark dark:border-light"
                       }`}
                     >
-                      {/code/i.test(label) ? "View the code" : "Visit the live project"}
+                      {linkLabel(label, href)}
                       <Arrow />
                     </a>
                   ))}
@@ -273,7 +289,13 @@ export default function CaseStudy({ id, description, links, skills, gallery, nei
               </h2>
               {/* Masonry columns: screenshots of different heights pack
                   together instead of leaving gaps in a grid row. */}
-              <ul className="mt-8 columns-2 gap-6 p-0 md:columns-1">
+              <ul
+                className={`mt-8 gap-6 p-0 ${
+                  mostlyPortrait
+                    ? "columns-4 xl:columns-3 md:columns-2 sm:gap-4"
+                    : "columns-2 md:columns-1"
+                }`}
+              >
                 {gallery.map((image, index) => (
                   <li key={image.src} className="mb-6 inline-block w-full list-none break-inside-avoid">
                     <a
@@ -311,7 +333,7 @@ export default function CaseStudy({ id, description, links, skills, gallery, nei
                 <span className="text-sm font-semibold text-dark/55 dark:text-light/55">
                   {index === 0 ? "← Previous project" : "Next project →"}
                 </span>
-                <span className="mt-1 block text-2xl font-bold capitalize transition group-hover:text-primary dark:group-hover:text-primaryDark">
+                <span className="mt-1 block text-2xl font-bold transition group-hover:text-primary dark:group-hover:text-primaryDark">
                   {item.title}
                 </span>
                 <span className="block text-sm font-medium text-dark/60 dark:text-light/60">{item.tag}</span>

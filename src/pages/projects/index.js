@@ -15,7 +15,7 @@ import {
 const SITE_URL = "https://ibassemtarek.vercel.app";
 const TITLE = "Projects | Bassem Tarek – Mobile Apps, Web Apps & Backends";
 const DESCRIPTION =
-  "Projects by Bassem Tarek: the Horus Arcade, Dahabna, SHM and Simply Nikah mobile apps, plus Montu, Gulf Coin, Alawfar and more web and mobile work.";
+  "Projects by Bassem Tarek: the Horus Arcade, Dahabna, SHM and Simply Nikah mobile apps, SmooV and blthanih for Saudi startups, plus Montu, Gulf Coin, Alawfar and more web and mobile work.";
 
 const absolute = (href) => (href.startsWith("http") ? href : `${SITE_URL}${href}`);
 const hrefFor = (project) => project.href ?? `/projects/${project.id}`;
@@ -158,7 +158,7 @@ function ProjectCard({ project, index, reduce }) {
           <p className="text-sm font-semibold text-primary dark:text-primaryDark">
             {project.tag}
           </p>
-          <h2 className="mt-1 text-2xl font-bold capitalize">
+          <h2 className="mt-1 text-2xl font-bold">
             <Link
               href={href}
               {...newTabFor(href)}

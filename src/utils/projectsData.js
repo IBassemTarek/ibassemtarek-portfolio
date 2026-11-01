@@ -11,6 +11,8 @@ import horusArcadeImg from "../../public/images/projects/horus-arcade.webp";
 import dahabnaImg from "../../public/images/projects/dahabna.webp";
 import shmImg from "../../public/images/projects/shm.webp";
 import simplyNikahImg from "../../public/images/projects/simply-nikah.webp";
+import smoovImg from "../../public/images/projects/smoov.webp";
+import blthanihImg from "../../public/images/projects/blthanih.webp";
 import {
   aPlusContent,
   alawfarContent,
@@ -21,6 +23,8 @@ import {
   webPlazaContent,
   yanabeeContent,
   rosewellContent,
+  smoovContent,
+  blthanihContent,
 } from "./projectsContent";
 
 // Apps with their own page link there (`href`, on this site or external)
@@ -70,6 +74,28 @@ export const projectData = [
     img: simplyNikahImg,
     id: 13,
     href: "https://simplynikah.app",
+  },
+  {
+    title: "SmooV",
+    kind: "app",
+    tag: "Furniture moving app · Flutter",
+    isFeatured: false,
+    summary:
+      "Client and driver apps for SmooV (formerly Lockers), a Riyadh platform for booking furniture moves at a fixed price per room. The driver app is live on Google Play as SmooV Driver.",
+    img: smoovImg,
+    id: 14,
+    content: smoovContent,
+  },
+  {
+    title: "blthanih",
+    kind: "app",
+    tag: "Salon & spa management · React Native",
+    isFeatured: false,
+    summary:
+      "Client and employee apps for blthanih (بالثانية), a Saudi salon and spa platform: salon search, booking, offers, loyalty and an in-app store for customers, and scheduling, attendance and payroll for salon staff.",
+    img: blthanihImg,
+    id: 15,
+    content: blthanihContent,
   },
   {
     title: "Montu Mobile App Builder",
@@ -165,7 +191,7 @@ export const projectData = [
   },
 
   {
-    title: "Rosewell energy",
+    title: "Rosewell Energy",
     kind: "web",
     tag: "Company website",
     isFeatured: false,
