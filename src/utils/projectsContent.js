@@ -10,12 +10,12 @@ export const montuContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/projects/montu.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/montu.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/5.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/3.jpg" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/3.jpg" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/4.jpg" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/4.jpg" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/projects/montu.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/montu.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/montu/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/montu/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/montu/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/montu/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/montu/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/4.webp" /></a></p>
 
 <p>&nbsp;</p>`;
 
@@ -40,11 +40,11 @@ export const gulfCoinContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/projects/GulfCoin.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/GulfCoin.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/4.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/3.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/gulf/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/3.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -64,9 +64,9 @@ export const alawfarContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/alawfar/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/3.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/alawfar/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/alawfar/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/2.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/alawfar/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/alawfar/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/alawfar/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/2.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -83,15 +83,15 @@ export const webPlazaContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/3.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/4.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/5.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/6.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/7.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/7.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/8.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/8.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/9.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/9.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/6.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/7.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/7.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/8.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/8.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/9.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/9.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -120,8 +120,8 @@ export const kindergartenContent = `<h2><strong>Project description</strong></h2
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -150,9 +150,9 @@ export const aPlusContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/aplus/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/aplus/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/aplus/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/3.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/aplus/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/aplus/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/aplus/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/3.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -169,12 +169,12 @@ export const saryAcademyContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/sary/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/3.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/4.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/5.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/6.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/sary/6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/6.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -200,12 +200,12 @@ export const yanabeeContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/3.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/4.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/5.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/5.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/6.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/6.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/4.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/5.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/yanabee/6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/6.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -231,10 +231,10 @@ export const rosewellContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/1.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/1.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/2.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/2.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/3.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/3.png" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/4.png" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/4.png" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/rosewell/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/1.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/rosewell/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/2.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/rosewell/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/3.webp" /></a></p>
+<p><a href="https://ibassemtarek.vercel.app/images/rosewell/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/4.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;

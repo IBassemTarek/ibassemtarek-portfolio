@@ -118,3 +118,17 @@
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
+
+/* Case-study description (HTML from projectsContent.js). */
+.case-prose p + p {
+  margin-top: 1rem;
+}
+.case-prose a {
+  color: #b63e96;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.dark .case-prose a {
+  color: #58e6d9;
+}

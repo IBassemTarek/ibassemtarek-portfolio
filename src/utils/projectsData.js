@@ -1,16 +1,16 @@
-import montuImg from "../../public/images/projects/montu.png";
-import gulfCoinImg from "../../public/images/projects/GulfCoin.png";
-import alawfarImg from "../../public/images/projects/alawfar.png";
-import webPlazaImg from "../../public/images/projects/web_plaza.png";
-import kindergarten_worldImg from "../../public/images/projects/kindergarten-world.png";
-import APlusImg from "../../public/images/projects/a-plus.png";
-import saryAcademyImg from "../../public/images/projects/sary-academy.png";
-import yanabeeAcademyImg from "../../public/images/projects/yanabee-academy.png";
-import rosewellEnergyImg from "../../public/images/projects/rosewell-energy.png";
-import horusArcadeImg from "../../public/images/projects/horus-arcade.jpg";
-import dahabnaImg from "../../public/images/projects/dahabna.jpg";
-import shmImg from "../../public/images/projects/shm.jpg";
-import simplyNikahImg from "../../public/images/projects/simply-nikah.jpg";
+import montuImg from "../../public/images/projects/montu.webp";
+import gulfCoinImg from "../../public/images/projects/GulfCoin.webp";
+import alawfarImg from "../../public/images/projects/alawfar.webp";
+import webPlazaImg from "../../public/images/projects/web_plaza.webp";
+import kindergarten_worldImg from "../../public/images/projects/kindergarten-world.webp";
+import APlusImg from "../../public/images/projects/a-plus.webp";
+import saryAcademyImg from "../../public/images/projects/sary-academy.webp";
+import yanabeeAcademyImg from "../../public/images/projects/yanabee-academy.webp";
+import rosewellEnergyImg from "../../public/images/projects/rosewell-energy.webp";
+import horusArcadeImg from "../../public/images/projects/horus-arcade.webp";
+import dahabnaImg from "../../public/images/projects/dahabna.webp";
+import shmImg from "../../public/images/projects/shm.webp";
+import simplyNikahImg from "../../public/images/projects/simply-nikah.webp";
 import {
   aPlusContent,
   alawfarContent,

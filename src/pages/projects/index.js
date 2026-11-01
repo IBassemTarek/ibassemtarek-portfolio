@@ -63,15 +63,20 @@ function Arrow({ className = "h-5 w-5" }) {
   );
 }
 
+// Both cards use a "stretched link": the title link's ::after covers the
+// whole card, so a click anywhere opens the project. Other links in the card
+// (store buttons, GitHub) sit above it with relative z-10.
+// Both cards use a "stretched link": the title link's ::after covers the
+// whole card, so a click anywhere opens the project. Other links inside the
+// card (store buttons, GitHub) sit above it with relative z-10.
+const STRETCHED =
+  "after:absolute after:inset-0 after:content-[''] focus:outline-none focus-visible:after:ring-4";
+
 function FeaturedProject({ project }) {
   const href = hrefFor(project);
   return (
-    <article className="projects-featured relative grid grid-cols-[1.15fr_1fr] items-center gap-10 overflow-hidden rounded-[2rem] p-8 text-light shadow-2xl lg:grid-cols-1 lg:gap-6 sm:p-5">
-      <Link
-        href={href}
-        className="group relative block overflow-hidden rounded-2xl ring-1 ring-light/20"
-        aria-label={`See ${project.title}`}
-      >
+    <article className="projects-featured group relative grid cursor-pointer grid-cols-[1.15fr_1fr] items-center gap-10 overflow-hidden rounded-[2rem] p-8 text-light shadow-2xl transition duration-300 hover:shadow-[0_30px_80px_rgba(182,62,150,0.35)] lg:grid-cols-1 lg:gap-6 sm:p-5">
+      <div className="overflow-hidden rounded-2xl ring-1 ring-light/20">
         <Image
           src={project.img}
           alt={`${project.title} app`}
@@ -79,30 +84,35 @@ function FeaturedProject({ project }) {
           priority
           sizes="(max-width: 1023px) 100vw, 55vw"
         />
-      </Link>
+      </div>
       <div>
         <p className="inline-flex items-center gap-2 rounded-full bg-light/15 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-light ring-1 ring-light/25">
           ★ Featured project
         </p>
         <h2 className="mt-4 text-5xl font-bold leading-tight lg:text-4xl sm:text-3xl">
-          {project.title}
+          <Link
+            href={href}
+            className={`${STRETCHED} after:rounded-[2rem] focus-visible:after:ring-primaryDark/60`}
+          >
+            {project.title}
+          </Link>
         </h2>
         <p className="mt-2 font-semibold text-primaryDark">{project.tag}</p>
         <p className="mt-4 text-lg leading-relaxed text-light/85 sm:text-base">
           {project.summary}
         </p>
         <div className="mt-7 flex flex-wrap items-center gap-3">
-          <Link
-            href={href}
-            className="inline-flex items-center gap-2 rounded-xl bg-light px-5 py-3 font-semibold text-dark shadow-lg transition hover:-translate-y-0.5"
+          <span
+            aria-hidden="true"
+            className="inline-flex items-center gap-2 rounded-xl bg-light px-5 py-3 font-semibold text-dark shadow-lg transition group-hover:-translate-y-0.5"
           >
             Explore the app <Arrow />
-          </Link>
+          </span>
           <a
             href={IOS_STORE_URL}
             target="_blank"
             rel="noopener"
-            className="rounded-xl px-5 py-3 font-semibold ring-1 ring-light/40 transition hover:bg-light/10"
+            className="relative z-10 rounded-xl px-5 py-3 font-semibold ring-1 ring-light/40 transition hover:bg-light/10"
           >
             App Store
           </a>
@@ -110,7 +120,7 @@ function FeaturedProject({ project }) {
             href={ANDROID_STORE_URL}
             target="_blank"
             rel="noopener"
-            className="rounded-xl px-5 py-3 font-semibold ring-1 ring-light/40 transition hover:bg-light/10"
+            className="relative z-10 rounded-xl px-5 py-3 font-semibold ring-1 ring-light/40 transition hover:bg-light/10"
           >
             Google Play
           </a>
@@ -132,13 +142,8 @@ function ProjectCard({ project, index, reduce }) {
       transition={{ duration: 0.4, delay: reduce ? 0 : Math.min(index, 9) * 0.04 }}
       className="list-none"
     >
-      <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-solid border-dark/10 bg-light shadow-md transition duration-300 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-2xl dark:border-light/10 dark:bg-dark dark:hover:border-primaryDark/30">
-        <Link
-          href={href}
-          {...newTabFor(href)}
-          className="relative block overflow-hidden"
-          aria-label={`View ${project.title}`}
-        >
+      <article className="group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-3xl border border-solid border-dark/10 bg-light shadow-md transition duration-300 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-2xl dark:border-light/10 dark:bg-dark dark:hover:border-primaryDark/30">
+        <div className="relative overflow-hidden">
           <Image
             src={project.img}
             alt={`${project.title} project preview`}
@@ -148,30 +153,37 @@ function ProjectCard({ project, index, reduce }) {
           <span className="absolute left-4 top-4 rounded-full bg-dark/75 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-light backdrop-blur">
             {project.kind === "app" ? "Mobile app" : "Website"}
           </span>
-        </Link>
+        </div>
         <div className="flex flex-1 flex-col p-6 sm:p-5">
           <p className="text-sm font-semibold text-primary dark:text-primaryDark">
             {project.tag}
           </p>
-          <h2 className="mt-1 text-2xl font-bold capitalize">{project.title}</h2>
+          <h2 className="mt-1 text-2xl font-bold capitalize">
+            <Link
+              href={href}
+              {...newTabFor(href)}
+              className={`${STRETCHED} after:rounded-3xl focus-visible:after:ring-primary/40`}
+            >
+              {project.title}
+            </Link>
+          </h2>
           <p className="projects-summary mt-2 flex-1 text-base text-dark/70 dark:text-light/70">
             {project.summary}
           </p>
           <div className="mt-5 flex items-center justify-between">
-            <Link
-              href={href}
-              {...newTabFor(href)}
-              className="inline-flex items-center gap-2 font-semibold transition hover:text-primary dark:hover:text-primaryDark"
+            <span
+              aria-hidden="true"
+              className="inline-flex items-center gap-2 font-semibold transition group-hover:text-primary dark:group-hover:text-primaryDark"
             >
               {external ? "Visit the site" : project.href ? "See the app" : "Read the case study"}
-              <Arrow className="h-4 w-4" />
-            </Link>
+              <Arrow className="h-4 w-4 transition group-hover:translate-x-1" />
+            </span>
             {project.githubLink && (
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-8 w-8"
+                className="relative z-10 inline-flex h-8 w-8"
                 aria-label={`Source code for ${project.title}`}
               >
                 <GithubIcon />
