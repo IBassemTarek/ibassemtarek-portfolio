@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FacebookIcon,
-  GithubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from "./AppIcons";
+import { GithubIcon, LinkedInIcon, TwitterIcon } from "./AppIcons";
 
 const EMAIL = "ibassemtarek@gmail.com";
 
@@ -37,18 +31,6 @@ const CHANNELS = [
     value: "@IBassemTarek",
     href: "https://twitter.com/IBassemTarek",
     Icon: TwitterIcon,
-  },
-  {
-    label: "Facebook",
-    value: "IBassemTarek",
-    href: "https://www.facebook.com/IBassemTarek",
-    Icon: FacebookIcon,
-  },
-  {
-    label: "Instagram",
-    value: "@ibassemtarek",
-    href: "https://www.instagram.com/ibassemtarek",
-    Icon: InstagramIcon,
   },
 ];
 

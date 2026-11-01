@@ -4,9 +4,7 @@ import Logo from "./Logo";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import {
-  FacebookIcon,
   GithubIcon,
-  InstagramIcon,
   LinkedInIcon,
   MoonIcon,
   SunIcon,
@@ -145,35 +143,13 @@ const NavBar = () => {
           <motion.a
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
+            className="w-6 ms-3"
             href={"https://www.linkedin.com/in/ibassemtarek/"}
             target={"_blank"}
             rel="noreferrer"
             aria-label="Open Bassem Tarek on LinkedIn"
           >
             <LinkedInIcon />
-          </motion.a>
-          <motion.a
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-            href={"https://www.facebook.com/IBassemTarek"}
-            target={"_blank"}
-            rel="noreferrer"
-            aria-label="Open Bassem Tarek on Facebook"
-          >
-            <FacebookIcon />
-          </motion.a>
-          <motion.a
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 ms-3"
-            href={"https://www.instagram.com/ibassemtarek"}
-            target={"_blank"}
-            rel="noreferrer"
-            aria-label="Open Bassem Tarek on Instagram"
-          >
-            <InstagramIcon />
           </motion.a>
           <button
             type="button"
@@ -243,35 +219,13 @@ const NavBar = () => {
             <motion.a
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
+              className="w-6 ms-3 sm:mx-1"
               href={"https://www.linkedin.com/in/ibassemtarek/"}
               target={"_blank"}
               rel="noreferrer"
               aria-label="Open Bassem Tarek on LinkedIn"
             >
               <LinkedInIcon />
-            </motion.a>
-            <motion.a
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
-              href={"https://www.facebook.com/IBassemTarek"}
-              target={"_blank"}
-              rel="noreferrer"
-              aria-label="Open Bassem Tarek on Facebook"
-            >
-              <FacebookIcon />
-            </motion.a>
-            <motion.a
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 ms-3 sm:mx-1"
-              href={"https://www.instagram.com/ibassemtarek"}
-              target={"_blank"}
-              rel="noreferrer"
-              aria-label="Open Bassem Tarek on Instagram"
-            >
-              <InstagramIcon />
             </motion.a>
             <button
               type="button"

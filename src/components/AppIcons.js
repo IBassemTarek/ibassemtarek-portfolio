@@ -55,48 +55,6 @@ export const LinkedInIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const FacebookIcon = ({ className, ...rest }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    viewBox="0 0 256 256"
-    {...rest}
-    className={`w-full h-auto ${className}`}
-  >
-    <rect width={256} height={256} fill="#1877F2" rx={60} />
-    <path
-      fill="#fff"
-      d="M171.4 256V157h33.2l5-38.6h-38.2V93.8c0-11.2 3.1-18.8 19.1-18.8h20.4V40.5c-3.5-.5-15.6-1.5-29.7-1.5-29.4 0-49.5 17.9-49.5 50.9v28.5H98.5V157h33.2v99h39.7Z"
-    />
-  </svg>
-);
-
-export const InstagramIcon = ({ className, ...rest }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    viewBox="0 0 256 256"
-    {...rest}
-    className={`w-full h-auto ${className}`}
-  >
-    <defs>
-      <radialGradient id="instagram-icon-bg" cx="0.25" cy="1.05" r="1.25">
-        <stop offset="0" stopColor="#FFD776" />
-        <stop offset="0.25" stopColor="#F3A554" />
-        <stop offset="0.5" stopColor="#E1306C" />
-        <stop offset="0.75" stopColor="#C13584" />
-        <stop offset="1" stopColor="#5851DB" />
-      </radialGradient>
-    </defs>
-    <rect width={256} height={256} fill="url(#instagram-icon-bg)" rx={60} />
-    <rect x={56} y={56} width={144} height={144} rx={42} fill="none" stroke="#fff" strokeWidth={16} />
-    <circle cx={128} cy={128} r={34} fill="none" stroke="#fff" strokeWidth={16} />
-    <circle cx={171} cy={85} r={10} fill="#fff" />
-  </svg>
-);
-
 export const PinterestIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
