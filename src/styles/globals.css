@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Horus Arcade pages: the shared header and footer take the game's neon
+   palette, cream and indigo in light mode, night navy in dark mode. */
+[data-page-theme="horus-arcade"] {
+  --pt-surface: linear-gradient(180deg, #fff8ec 0%, #f4e7d1 100%);
+  --pt-ink: #2e2a7a;
+  --pt-hover: #c41a85;
+  --pt-underline: #ff3ec8;
+  --pt-toggle: #2e2a7a;
+  --pt-neon: linear-gradient(90deg, #f5c04a, #ff3ec8 50%, #29e6ff);
+  background: var(--pt-surface);
+  color: var(--pt-ink);
+}
+.dark [data-page-theme="horus-arcade"] {
+  --pt-surface: linear-gradient(180deg, #03092a 0%, #0a0820 100%);
+  --pt-ink: #f4e7d1;
+  --pt-hover: #29e6ff;
+  --pt-underline: #f5c04a;
+  --pt-toggle: #f5c04a;
+}
+[data-page-theme="horus-arcade"].site-header {
+  border-bottom: 3px solid transparent;
+  border-image: var(--pt-neon) 1;
+  box-shadow: 0 6px 28px rgba(255, 62, 200, 0.18);
+}
+[data-page-theme="horus-arcade"].site-footer {
+  border-top: 3px solid transparent;
+  border-image: var(--pt-neon) 1;
+}
+/* The footer's Layout wrapper paints the site background; let ours show. */
+.dark [data-page-theme="horus-arcade"].site-footer > div,
+[data-page-theme="horus-arcade"].site-footer > div {
+  background: transparent;
+}
+.dark [data-page-theme="horus-arcade"].site-header,
+.dark [data-page-theme="horus-arcade"].site-footer {
+  color: var(--pt-ink);
+}
+[data-page-theme="horus-arcade"] .site-nav-link:hover,
+[data-page-theme="horus-arcade"].site-footer a:hover {
+  color: var(--pt-hover);
+}
+[data-page-theme="horus-arcade"].site-footer a {
+  color: var(--pt-underline);
+  font-weight: 700;
+}
+.dark [data-page-theme="horus-arcade"] .site-nav-underline,
+[data-page-theme="horus-arcade"] .site-nav-underline {
+  background: var(--pt-underline);
+  height: 3px;
+  border-radius: 999px;
+  box-shadow: 0 0 10px var(--pt-underline);
+}
+.dark [data-page-theme="horus-arcade"] .site-burger-line,
+[data-page-theme="horus-arcade"] .site-burger-line {
+  background: var(--pt-ink);
+}
+.dark [data-page-theme="horus-arcade"] .site-mode-toggle,
+[data-page-theme="horus-arcade"] .site-mode-toggle {
+  background: var(--pt-toggle);
+  box-shadow: 0 0 14px rgba(245, 192, 74, 0.55);
+}
+[data-page-theme="horus-arcade"] .site-logo a {
+  background: #1c1740;
+  border: 2px solid #f5c04a;
+  box-shadow: 0 0 18px rgba(245, 192, 74, 0.55), 0 0 36px rgba(255, 62, 200, 0.25);
+}
+.dark [data-page-theme="horus-arcade"] .site-mobile-menu,
+[data-page-theme="horus-arcade"] .site-mobile-menu {
+  background: rgba(16, 13, 43, 0.95);
+  border: 1px solid rgba(245, 192, 74, 0.5);
+  box-shadow: 0 0 40px rgba(255, 62, 200, 0.3);
+}
+.dark [data-page-theme="horus-arcade"] .site-mobile-link,
+[data-page-theme="horus-arcade"] .site-mobile-link {
+  color: #f4e7d1;
+}
+.dark [data-page-theme="horus-arcade"] .site-mobile-link .site-nav-underline,
+[data-page-theme="horus-arcade"] .site-mobile-link .site-nav-underline {
+  background: #f5c04a;
+}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Lilita_One } from "next/font/google";
 import { useEffect } from "react";
+import DownloadQr from "../../components/horus-arcade/DownloadQr";
 import StoreBadges from "../../components/horus-arcade/StoreBadges";
 import {
   DOWNLOAD_PATH,
@@ -93,19 +94,8 @@ export default function HorusArcadeDownloadPage() {
           your store below.
         </p>
         <StoreBadges className="relative justify-center" />
-        <div className="relative flex flex-col items-center gap-2 md:hidden">
-          <div className="rounded-2xl bg-white p-3">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/horus-arcade/download-qr.svg"
-              alt="QR code to download Horus Arcade"
-              width={120}
-              height={120}
-            />
-          </div>
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#8f8ab0]">
-            Scan with your phone
-          </p>
+        <div className="relative md:hidden">
+          <DownloadQr caption="Scan with your phone" />
         </div>
         <Link
           href="/horus-arcade"

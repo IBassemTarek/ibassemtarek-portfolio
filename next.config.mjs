@@ -8,6 +8,9 @@ const nextConfig = {
     return [
       ...dahabnaDownloadRedirects(),
       ...horusArcadeDownloadRedirects(),
+      // App projects have landing pages instead of /projects/<id> case studies.
+      { source: "/projects/10", destination: "/horus-arcade", permanent: true },
+      { source: "/projects/11", destination: "/dahabna", permanent: true },
       {
         source: "/egx-gold",
         destination: "/dahabna",

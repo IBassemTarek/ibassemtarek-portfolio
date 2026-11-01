@@ -10,7 +10,8 @@ import TransitionEffect from "@/components/TransitionEffect";
 import { featureProject, projectData } from "@/utils/projectsData";
 
 const FramerImage = motion(Image);
-const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
+const FeaturedProjects = ({ type, title, summary, img, githubLink, id, href }) => {
+  const target = href ?? `/projects/${id}`;
   return (
     <article
       className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light
@@ -21,7 +22,7 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
 
       <Link
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
-        href={`/projects/${id}`}
+        href={target}
         aria-label={`View details for ${title}`}
       >
         <FramerImage
@@ -45,7 +46,7 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
           {type}
         </span>
         <Link
-          href={`/projects/${id}`}
+          href={target}
           className="hover:underline underline-offset-2"
           aria-label={`View details for ${title}`}
         >
@@ -74,7 +75,7 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
             dark:hover:bg-dark dark:hover:text-light dark:hover:border-light
             sm:px-4 sm:text-base
             "
-            href={`/projects/${id}`}
+            href={target}
             aria-label={`Visit details for ${title}`}
           >
             Visit The Project
@@ -85,7 +86,8 @@ const FeaturedProjects = ({ type, title, summary, img, githubLink, id }) => {
   );
 };
 
-const Project = ({ type, title, img, link, githubLink, id }) => {
+const Project = ({ type, title, img, githubLink, id, href }) => {
+  const target = href ?? `/projects/${id}`;
   return (
     <article
       className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:border-light dark:bg-dark
@@ -95,7 +97,7 @@ const Project = ({ type, title, img, link, githubLink, id }) => {
       <div className="absolute top-0 -right-2 -z-10 w-[101%] h-[102%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded[1.5rem]" />
       <Link
         className="w-full cursor-pointer overflow-hidden rounded-lg"
-        href={`/projects/${id}`}
+        href={target}
         aria-label={`View details for ${title}`}
       >
         <FramerImage
@@ -120,7 +122,7 @@ const Project = ({ type, title, img, link, githubLink, id }) => {
           {type}
         </span>
         <Link
-          href={`/projects/${id}`}
+          href={target}
           className="hover:underline underline-offset-2"
           aria-label={`View details for ${title}`}
         >
@@ -131,7 +133,7 @@ const Project = ({ type, title, img, link, githubLink, id }) => {
         <div className="mt-2 flex items-center justify-between w-full">
           <Link
             className="text-lg font-semibold md:text-base"
-            href={`/projects/${id}`}
+            href={target}
             aria-label={`Visit details for ${title}`}
           >
             Visit
@@ -158,7 +160,10 @@ const Projects = () => {
     <>
       <Head>
         <title>Projects - IBassemTarek</title>
-        <meta name="description" content="My Projects" />
+        <meta
+          name="description"
+          content="Projects by Bassem Tarek: the Horus Arcade and Dahabna mobile apps, Montu, Gulf Coin, Alawfar and more web and mobile work."
+        />
       </Head>
       <TransitionEffect />
       <main className="flex flex-col w-full mb-16 items-center justify-center dark:text-light">
@@ -173,10 +178,10 @@ const Projects = () => {
               <FeaturedProjects
                 title={featureProject.title}
                 summary={featureProject.summary}
-                link={featureProject.link}
-                type={"Featured Project"}
+                type={`Featured Project · ${featureProject.tag}`}
                 img={featureProject.img}
                 id={featureProject.id}
+                href={featureProject.href}
               />
             </div>
 
@@ -185,13 +190,12 @@ const Projects = () => {
                 return (
                   <div key={index} className="col-span-6 sm:col-span-12">
                     <Project
-                      type={project.isFeatured}
+                      type={project.tag}
                       title={project.title}
-                      summary={project.summary}
-                      link={project.link}
                       img={project.img}
                       githubLink={project.githubLink}
                       id={project.id}
+                      href={project.href}
                     />
                   </div>
                 );

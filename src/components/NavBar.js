@@ -12,6 +12,7 @@ import {
 } from "./AppIcons";
 import useThemeSwitcher from "@/hooks/themeSwitcher";
 import { isArabicPath } from "@/lib/locale.mjs";
+import { pageTheme } from "@/lib/page-theme.mjs";
 
 const NAV_LABELS = {
   en: { home: "Home", about: "About", projects: "Projects" },
@@ -22,10 +23,10 @@ const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
 
   return (
-    <Link className={`${className} relative group`} href={href}>
+    <Link className={`${className} site-nav-link relative group`} href={href}>
       {title}
       <span
-        className={`h-[2px] inline-block bg-black absolute start-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`site-nav-underline h-[2px] inline-block bg-black absolute start-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
           router.asPath === href ? "w-full" : "w-0"
         }
         dark:bg-light
@@ -49,11 +50,11 @@ const CustomLinkMobile = ({ href, title, className = "", toggle }) => {
     <button
       type="button"
       onClick={handleClick}
-      className={`${className} relative group text-light dark:text-dark my-2`}
+      className={`${className} site-mobile-link relative group text-light dark:text-dark my-2`}
     >
       {title}
       <span
-        className={`h-[2px] inline-block bg-light absolute start-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`site-nav-underline h-[2px] inline-block bg-light absolute start-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 ${
           router.asPath === href ? "w-full" : "w-0"
         }
         dark:bg-dark
@@ -68,16 +69,16 @@ const CustomLinkMobile = ({ href, title, className = "", toggle }) => {
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
   const [open, setOpen] = useState(false);
-  const labels = isArabicPath(useRouter().pathname)
-    ? NAV_LABELS.ar
-    : NAV_LABELS.en;
+  const { pathname } = useRouter();
+  const labels = isArabicPath(pathname) ? NAV_LABELS.ar : NAV_LABELS.en;
 
   const handleClick = () => {
     setOpen(!open);
   };
   return (
     <header
-      className="w-full px-32 py-8 font-medium flex items-center justify-between
+      data-page-theme={pageTheme(pathname)}
+      className="site-header w-full px-32 py-8 font-medium flex items-center justify-between
     dark:text-light relative z-10 lg:px-16 md:12 sm:px-8
     "
     >
@@ -90,17 +91,17 @@ const NavBar = () => {
         onClick={handleClick}
       >
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`site-burger-line bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             open ? "rotate-45 translate-y-1" : "-translate-y-0.5"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-100 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+          className={`site-burger-line bg-dark dark:bg-light block transition-all duration-100 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
             open ? "opacity-0" : "opacity-100"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`site-burger-line bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             open ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           }`}
         ></span>
@@ -153,7 +154,7 @@ const NavBar = () => {
           <button
             type="button"
             aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
-            className={` ms-6 flex items-center justify-center rounded-full p-1 ${
+            className={`site-mode-toggle ms-6 flex items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
             onClick={() => setMode(mode === "dark" ? "light" : "dark")}
@@ -172,7 +173,7 @@ const NavBar = () => {
           id="mobile-navigation-menu"
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
+          className="site-mobile-menu min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
           <nav className="flex items-center flex-col justify-center">
             <CustomLinkMobile
@@ -229,7 +230,7 @@ const NavBar = () => {
             <button
               type="button"
               aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
-              className={` ms-6 flex items-center justify-center rounded-full p-1 ${
+              className={`site-mode-toggle ms-6 flex items-center justify-center rounded-full p-1 ${
                 mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
               }`}
               onClick={() => setMode(mode === "dark" ? "light" : "dark")}
@@ -244,7 +245,7 @@ const NavBar = () => {
         </motion.div>
       )}
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+      <div className="site-logo absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
       </div>
     </header>

@@ -3,6 +3,7 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
 >
   <url>
     <loc>https://ibassemtarek.vercel.app/</loc>
@@ -35,7 +36,7 @@
 
   <url>
     <loc>https://ibassemtarek.vercel.app/projects</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -189,6 +190,35 @@
       <image:title>Horus Arcade hall screenshot</image:title>
       <image:caption>The Horus Arcade hall, where every game is a cabinet on a shelf.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/02-number-stack.webp</image:loc>
+      <image:title>Horus Arcade screenshot: Number Stack</image:title>
+      <image:caption>Number Stack: drag, match, merge.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/03-eyecon.webp</image:loc>
+      <image:title>Horus Arcade screenshot: Eyecon</image:title>
+      <image:caption>Eyecon: spot the matching symbol first.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/06-nova-skim.webp</image:loc>
+      <image:title>Horus Arcade screenshot: Nova Skim</image:title>
+      <image:caption>Nova Skim: hop planet to planet.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/10-glyph-guess.webp</image:loc>
+      <image:title>Horus Arcade screenshot: Glyph Guess</image:title>
+      <image:caption>Glyph Guess: find the hidden five-letter word.</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://ibassemtarek.vercel.app/videos/horus-arcade/discovery-v2-poster.webp</video:thumbnail_loc>
+      <video:title>Horus Arcade: walk the neon hall</video:title>
+      <video:description>Horus the falcon walks the Horus Arcade hall and plays the cabinets one by one. 23 games in one app, free on the App Store and Google Play.</video:description>
+      <video:content_loc>https://ibassemtarek.vercel.app/videos/horus-arcade/discovery-v2.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-11-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
 
   <url>

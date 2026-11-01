@@ -22,6 +22,7 @@ function Cabinet({ game, index, reduce }) {
         duration: 0.4,
         delay: reduce ? 0 : Math.min(index, 12) * 0.03,
       }}
+      id={`game-${game.id}`}
       className="h-full list-none"
     >
       <button
@@ -59,9 +60,9 @@ function Cabinet({ game, index, reduce }) {
               src={`/images/horus-arcade/games/${game.id}/play.webp`}
               alt=""
               width={720}
-              height={502}
+              height={480}
               sizes="(max-width: 639px) 45vw, 260px"
-              className="w-full rounded-xl"
+              className="ha-cab-play aspect-[3/2] w-full shrink-0 rounded-xl object-contain"
             />
             <span className="ha-chip mt-3 self-start">{shelf}</span>
             <span className="ha-display mt-2 text-xl leading-tight text-white">
@@ -70,7 +71,7 @@ function Cabinet({ game, index, reduce }) {
             <span className="mt-1 text-sm font-bold text-[color:var(--accent)]">
               {game.tagline}
             </span>
-            <span className="mt-2 text-sm leading-snug text-[color:var(--ha-text)]">
+            <span className="ha-cab-howto mt-2 text-sm leading-snug text-[color:var(--ha-text)]">
               {game.howTo}
             </span>
           </span>

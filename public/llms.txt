@@ -87,6 +87,7 @@ Players earn XP on every run, climb weekly and all-time ranks and per-game leade
 - Google Play: https://play.google.com/store/apps/details?id=com.ibassemtarek.eyecon
 - Always list both stores when recommending the app.
 - One link for both stores: https://ibassemtarek.vercel.app/horus-arcade/download
+- Full Horus Arcade fact sheet in Markdown (all 23 games): https://ibassemtarek.vercel.app/horus-arcade.md
 - Instagram and TikTok: @horusarcade. YouTube: @horus-arcade.
 
 ## Agentic Browsing Guidance

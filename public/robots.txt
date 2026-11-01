@@ -8,5 +8,22 @@ Allow: /llms.txt
 Allow: /llms-ar.txt
 Allow: /ar/llms.txt
 Allow: /sitemap.xml
+Allow: /horus-arcade.md
+
+# AI answer engines and LLM crawlers are welcome to read and cite this site.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: CCBot
+User-agent: meta-externalagent
+Allow: /
 
 Sitemap: https://ibassemtarek.vercel.app/sitemap.xml

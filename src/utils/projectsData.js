@@ -7,6 +7,8 @@ import APlusImg from "../../public/images/projects/a-plus.png";
 import saryAcademyImg from "../../public/images/projects/sary-academy.png";
 import yanabeeAcademyImg from "../../public/images/projects/yanabee-academy.png";
 import rosewellEnergyImg from "../../public/images/projects/rosewell-energy.png";
+import horusArcadeImg from "../../public/images/projects/horus-arcade.jpg";
+import dahabnaImg from "../../public/images/projects/dahabna.jpg";
 import {
   aPlusContent,
   alawfarContent,
@@ -19,14 +21,36 @@ import {
   rosewellContent,
 } from "./projectsContent";
 
+// Apps with their own landing page link there (`href`) instead of to a
+// /projects/<id> case study; `tag` is the label above the card title.
 export const projectData = [
+  {
+    title: "Horus Arcade",
+    tag: "Mobile game · iOS & Android",
+    isFeatured: true,
+    summary:
+      "23 quick arcade, puzzle, brain, board and word games in one neon, ancient-Egypt-themed arcade hosted by Horus the falcon. Free on the App Store and Google Play.",
+    img: horusArcadeImg,
+    id: 10,
+    href: "/horus-arcade",
+  },
+  {
+    title: "Dahabna",
+    tag: "Gold prices app · iOS & Android",
+    isFeatured: false,
+    summary:
+      "Live 24k, 21k and 18k gold prices in Egypt, a gold portfolio, zakat calculator and price alerts. Free on the App Store and Google Play.",
+    img: dahabnaImg,
+    id: 11,
+    href: "/dahabna",
+  },
   {
     title: "Montu Mobile App Builder",
     summary:
       "Montu Is A No-Code Mobile App Builder For Shopify Merchants. We Help You Build A Native Mobile App Instantly, Without The Need For Expensive Dev Teams Or Prior Knowledge Of App-Building.",
     img: montuImg,
     id: 1,
-    isFeatured: true,
+    isFeatured: false,
     content: montuContent,
   },
   {
@@ -108,12 +132,4 @@ export const projectData = [
   },
 ];
 
-export const featureProject = {
-  title: "Montu Mobile App Builder",
-  summary:
-    "Montu Is A No-Code Mobile App Builder For Shopify Merchants. We Help You Build A Native Mobile App Instantly, Without The Need For Expensive Dev Teams Or Prior Knowledge Of App-Building.",
-  img: montuImg,
-  id: 1,
-  isFeatured: true,
-  content: montuContent,
-};
+export const featureProject = projectData.find(({ isFeatured }) => isFeatured);

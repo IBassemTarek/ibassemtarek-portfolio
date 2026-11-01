@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { animate, motion, useInView, useReducedMotion } from "framer-motion";
 import { Lilita_One, Nunito } from "next/font/google";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import GameHall from "../components/horus-arcade/GameHall";
-import LoopVideo, { videoSources } from "../components/horus-arcade/LoopVideo";
+import DownloadQr from "../components/horus-arcade/DownloadQr";
+import LoopVideo, { videoSource } from "../components/horus-arcade/LoopVideo";
 import StoreBadges from "../components/horus-arcade/StoreBadges";
-import { GAMES } from "../components/horus-arcade/games";
+import { GAMES, SHELVES } from "../components/horus-arcade/games";
 import {
   ANDROID_STORE_URL,
   DOWNLOAD_PATH,
@@ -132,10 +133,43 @@ const SCREENS = [
   ["14-sand-slide", "Sand Slide: slide it back in order"],
 ];
 
+// Answer-first copy: one self-contained definition and a fact list that
+// search snippets, voice assistants and AI answer engines can quote as-is.
+const SUMMARY =
+  "Horus Arcade is a free mobile game app for iPhone and Android with 23 quick games in one neon, ancient-Egypt-themed arcade hosted by Horus the falcon. It mixes arcade, puzzle, brain, classic board and word games, works offline, and has leaderboards, daily challenges, a computer rival called Seth and two-player modes.";
+
+const GAMES_BY_SHELF = SHELVES.map(
+  ({ id, label }) =>
+    `${label}: ${GAMES.filter((game) => game.shelf === id)
+      .map(({ name }) => name)
+      .join(", ")}`
+).join(". ");
+
+const FACTS = [
+  ["Platforms", "iPhone (App Store) and Android phones (Google Play)"],
+  ["Price", "Free to download and play; ads, with optional in-app purchases"],
+  ["Games", "23 games on 5 shelves: Brain, Puzzle, Arcade, Classics, Word"],
+  ["Play modes", "Solo, vs Seth (Easy, Medium, Hard), 2 players on one phone, online Eyecon matches"],
+  ["Offline", "Every game plays offline; scores sync when you reconnect"],
+  ["Progress", "Guest play, or sign in with Apple or Google for cloud saves"],
+  ["Leaderboards", "Weekly and all-time ranks, plus Game Center and Google Play Games"],
+  ["Language", "English; Glyph Guess also has an Arabic word mode"],
+  ["Made by", "Bassem Tarek, published by Fanar, LLC"],
+];
+
 const FAQS = [
+  { q: "What is Horus Arcade?", a: SUMMARY },
+  {
+    q: "What games are in Horus Arcade?",
+    a: `23 games on five shelves. ${GAMES_BY_SHELF}.`,
+  },
   {
     q: "Is Horus Arcade free?",
     a: "Yes. All 23 games are free to play. Coin packs, a one-time Remove Ads purchase and Horus Arcade Premium are optional extras inside the app.",
+  },
+  {
+    q: "Does Horus Arcade have ads?",
+    a: "Yes, the free version shows ads, paced so you never get one right after a loss. A one-time Remove Ads purchase or Horus Arcade Premium turns them off, and reward videos are always optional.",
   },
   {
     q: "Can I play offline?",
@@ -150,8 +184,16 @@ const FAQS = [
     a: "Eyecon has online quick matches, private rooms and a two-player Duo mode on one phone. Four in a Row, Senet, Nile Seeds and Kemet Draughts can be played by two people on one phone, or against Seth.",
   },
   {
+    q: "Can I play ancient Egyptian board games like Senet?",
+    a: "Yes. Senet is the pharaohs' race game, Nile Seeds is mancala on a Nile boat and Kemet Draughts is classic draughts. Play them against Seth or a friend on one phone.",
+  },
+  {
     q: "Does it save my progress?",
     a: "Sign in with Google or Apple to keep your progress in the cloud, or play as a guest. You can delete your account at any time from the app or the web.",
+  },
+  {
+    q: "Who makes Horus Arcade?",
+    a: "Horus Arcade is made by independent developer Bassem Tarek and published by Fanar, LLC.",
   },
 ];
 
@@ -211,10 +253,23 @@ function SectionHeading({ eyebrow, title, children }) {
   );
 }
 
-// Plays the promo reel muted; the button hands the sound to the viewer.
+// Phones get a lighter 540p cut of the reel; the first matching source wins.
+const REEL_SOURCES = [
+  { src: `${VID}/discovery-v2-540.mp4`, media: "(max-width: 767px)" },
+  { src: `${VID}/discovery-v2.mp4` },
+];
+
+// Plays the promo reel muted; the button hands the sound to the viewer. If the
+// browser refuses autoplay (iOS Low Power Mode), a play button takes over.
 function ReelPhone() {
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
+  const [blocked, setBlocked] = useState(false);
+  const onBlocked = useCallback(() => setBlocked(true), []);
+
+  const playNow = () => {
+    videoRef.current?.play().then(() => setBlocked(false)).catch(() => {});
+  };
 
   const toggleSound = () => {
     const video = videoRef.current;
@@ -222,8 +277,9 @@ function ReelPhone() {
       return;
     }
     video.muted = !muted;
+    video.dataset.unmuted = muted ? "true" : "";
     if (muted) {
-      video.play().catch(() => {});
+      playNow();
     }
     setMuted(!muted);
   };
@@ -233,12 +289,25 @@ function ReelPhone() {
       <div className="ha-phone-screen relative overflow-hidden">
         <LoopVideo
           ref={videoRef}
-          sources={videoSources(`${VID}/discovery-v2`)}
+          eager
+          sources={REEL_SOURCES}
           poster={`${VID}/discovery-v2-poster.webp`}
-          preload="metadata"
+          onBlocked={onBlocked}
           label="Horus Arcade promo: Horus walks the neon hall and plays the arcade cabinets"
           className="block aspect-[9/16] w-full object-cover"
         />
+        {blocked && (
+          <button
+            type="button"
+            onClick={playNow}
+            className="ha-play absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full"
+            aria-label="Play the Horus Arcade trailer"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="ms-1 h-9 w-9 fill-current">
+              <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" />
+            </svg>
+          </button>
+        )}
         <button
           type="button"
           onClick={toggleSound}
@@ -252,57 +321,107 @@ function ReelPhone() {
   );
 }
 
-// Phones keep the still hall art; only wider screens fetch the hero loop.
-function useWideScreen() {
-  const [wide, setWide] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(min-width: 768px)");
-    const update = () => setWide(query.matches);
-    update();
-    query.addEventListener("change", update);
-    return () => query.removeEventListener("change", update);
-  }, []);
-  return wide;
-}
-
 export default function HorusArcadePage() {
   const reduce = useReducedMotion();
-  const wideScreen = useWideScreen();
 
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: "Bassem Tarek",
+        publisher: { "@id": `${SITE_URL}/#person` },
+      },
+      {
+        "@type": "Person",
+        "@id": `${SITE_URL}/#person`,
+        name: "Bassem Tarek",
+        url: SITE_URL,
+        jobTitle: "Mobile and full-stack developer",
+        sameAs: [
+          "https://github.com/IBassemTarek",
+          "https://www.linkedin.com/in/ibassemtarek/",
+          "https://twitter.com/IBassemTarek",
+        ],
+      },
+      {
+        "@type": "Organization",
+        "@id": `${PAGE_URL}#publisher`,
+        name: "Fanar, LLC",
+      },
+      {
         "@type": ["MobileApplication", "VideoGame"],
         "@id": `${PAGE_URL}#app`,
         name: "Horus Arcade",
-        description: DESCRIPTION,
+        alternateName: "Eyecon",
+        url: PAGE_URL,
+        description: SUMMARY,
         image: APP_ICON_URL,
-        screenshot: `${SITE_URL}${IMG}/screens/01-hub.webp`,
+        screenshot: SCREENS.map(([file]) => `${SITE_URL}${IMG}/screens/${file}.webp`),
         applicationCategory: "GameApplication",
-        genre: ["Arcade", "Puzzle", "Casual", "Board"],
+        applicationSubCategory: "Arcade, Puzzle, Board, Word",
+        genre: ["Arcade", "Puzzle", "Casual", "Board", "Word", "Brain training"],
         operatingSystem: "iOS, Android",
         gamePlatform: ["iOS", "Android"],
         playMode: ["SinglePlayer", "MultiPlayer"],
+        inLanguage: "en",
+        isAccessibleForFree: true,
         downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
         installUrl: `${SITE_URL}${DOWNLOAD_PATH}`,
         sameAs: [IOS_STORE_URL, ANDROID_STORE_URL, ...SOCIALS.map(({ href }) => href)],
-        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+        },
         featureList: GAMES.map(({ name, tagline }) => `${name}: ${tagline}`),
-        publisher: { "@type": "Organization", name: "Fanar, LLC" },
-        author: { "@type": "Person", name: "Bassem Tarek", url: SITE_URL },
+        hasPart: { "@id": `${PAGE_URL}#games` },
+        author: { "@id": `${SITE_URL}/#person` },
+        publisher: { "@id": `${PAGE_URL}#publisher` },
         trailer: { "@id": `${PAGE_URL}#reel` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${PAGE_URL}#games`,
+        name: "Games in Horus Arcade",
+        numberOfItems: GAMES.length,
+        itemListElement: GAMES.map((game, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "VideoGame",
+            "@id": `${PAGE_URL}#game-${game.id}`,
+            url: `${PAGE_URL}#game-${game.id}`,
+            name: game.name,
+            description: `${game.tagline}. ${game.howTo}`,
+            genre: SHELVES.find(({ id }) => id === game.shelf)?.label,
+            image: `${SITE_URL}${IMG}/games/${game.id}/play.webp`,
+            isPartOf: { "@id": `${PAGE_URL}#app` },
+          },
+        })),
       },
       {
         "@type": "VideoObject",
         "@id": `${PAGE_URL}#reel`,
         name: "Horus Arcade: walk the neon hall",
         description:
-          "Horus the falcon walks the Horus Arcade hall and plays the cabinets one by one.",
+          "Horus the falcon walks the Horus Arcade hall and plays the cabinets one by one. 23 games in one app, free on the App Store and Google Play.",
         thumbnailUrl: `${SITE_URL}${VID}/discovery-v2-poster.webp`,
         contentUrl: `${SITE_URL}${VID}/discovery-v2.mp4`,
         uploadDate: "2026-11-01",
         duration: "PT20S",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Projects", item: `${SITE_URL}/projects` },
+          { "@type": "ListItem", position: 3, name: "Horus Arcade", item: PAGE_URL },
+        ],
       },
       {
         "@type": "WebPage",
@@ -311,8 +430,16 @@ export default function HorusArcadePage() {
         name: TITLE,
         description: DESCRIPTION,
         inLanguage: "en",
+        dateModified: "2026-11-01",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
         primaryImageOfPage: OG_IMAGE_URL,
         about: { "@id": `${PAGE_URL}#app` },
+        mainEntity: { "@id": `${PAGE_URL}#app` },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: [".ha-summary", ".ha-faq-answer"],
+        },
       },
       {
         "@type": "FAQPage",
@@ -331,11 +458,34 @@ export default function HorusArcadePage() {
       <Head>
         <title>{TITLE}</title>
         <meta name="description" content={DESCRIPTION} />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="author" content="Bassem Tarek" />
+        <meta name="application-name" content="Horus Arcade" />
         <meta name="theme-color" content="#0a0820" />
         <meta name="apple-itunes-app" content={`app-id=${IOS_APP_ID}`} />
         <link rel="canonical" href={PAGE_URL} />
         <link rel="apple-touch-icon" href={`${IMG}/app-icon.jpg`} />
+        {/* Plain-text fact sheet for LLM crawlers and answer engines. */}
+        <link rel="alternate" type="text/markdown" href="/horus-arcade.md" />
+        {/* The first frames people see: the reel's poster, and the hero
+            loop's poster on screens wide enough to play it. */}
+        <link
+          rel="preload"
+          as="image"
+          href={`${VID}/discovery-v2-poster.webp`}
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={`${VID}/hero-loop-poster.webp`}
+          media="(min-width: 768px)"
+        />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Horus Arcade" />
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESCRIPTION} />
@@ -348,6 +498,19 @@ export default function HorusArcadePage() {
           content="Horus Arcade: the Eye of Horus surrounded by neon game tiles over pyramids"
         />
         <meta property="og:video" content={`${SITE_URL}${VID}/discovery-v2.mp4`} />
+        <meta property="og:video:type" content="video/mp4" />
+        <meta property="og:video:width" content="720" />
+        <meta property="og:video:height" content="1280" />
+        {/* App Links and Twitter app cards: deep-link shares straight to the
+            stores. */}
+        <meta property="al:ios:app_store_id" content={IOS_APP_ID} />
+        <meta property="al:ios:app_name" content="Horus Arcade" />
+        <meta property="al:android:package" content="com.ibassemtarek.eyecon" />
+        <meta property="al:android:app_name" content="Horus Arcade" />
+        <meta name="twitter:app:name:iphone" content="Horus Arcade" />
+        <meta name="twitter:app:id:iphone" content={IOS_APP_ID} />
+        <meta name="twitter:app:name:googleplay" content="Horus Arcade" />
+        <meta name="twitter:app:id:googleplay" content="com.ibassemtarek.eyecon" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={TITLE} />
         <meta name="twitter:description" content={DESCRIPTION} />
@@ -374,14 +537,14 @@ export default function HorusArcadePage() {
             sizes="100vw"
             className="-z-20 object-cover object-center opacity-60"
           />
-          {wideScreen && (
-            <LoopVideo
-              sources={videoSources(`${VID}/hero-loop`)}
-              poster={`${VID}/hero-loop-poster.webp`}
-              preload="metadata"
-              className="ha-hero-video absolute inset-0 -z-20 h-full w-full object-cover"
-            />
-          )}
+          {/* Phones match no source (and hide the element), so they never
+              download the loop and keep the still hall art. */}
+          <LoopVideo
+            eager
+            sources={[{ src: `${VID}/hero-loop.mp4`, media: "(min-width: 768px)" }]}
+            poster={`${VID}/hero-loop-poster.webp`}
+            className="ha-hero-video absolute inset-0 -z-20 h-full w-full object-cover md:hidden"
+          />
           <div className="ha-hero-shade pointer-events-none absolute inset-0 -z-10" />
           <div className="ha-floor pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-56" />
 
@@ -446,6 +609,38 @@ export default function HorusArcadePage() {
           </div>
         </section>
 
+        {/* ── At a glance ──────────────────────────────────────── */}
+        <section
+          id="about"
+          aria-labelledby="ha-about-title"
+          className="mx-auto max-w-6xl px-10 pt-24 lg:px-6 md:pt-16"
+        >
+          <Reveal className="ha-panel grid grid-cols-[1fr_1.1fr] gap-10 rounded-[2rem] p-10 lg:grid-cols-1 lg:p-8 sm:p-6">
+            <div>
+              <p className="ha-eyebrow">At a glance</p>
+              <h2
+                id="ha-about-title"
+                className="ha-display mt-3 text-4xl leading-tight text-white sm:text-3xl"
+              >
+                What is Horus Arcade?
+              </h2>
+              <p className="ha-summary mt-4 text-lg leading-relaxed text-[color:var(--ha-text)]">
+                {SUMMARY}
+              </p>
+            </div>
+            <dl className="ha-facts m-0 grid gap-x-6 gap-y-3 self-center">
+              {FACTS.map(([term, detail]) => (
+                <div key={term} className="grid grid-cols-[8.5rem_1fr] gap-4 sm:grid-cols-1 sm:gap-0">
+                  <dt className="text-sm font-extrabold uppercase tracking-[0.12em] text-[color:var(--ha-gold)]">
+                    {term}
+                  </dt>
+                  <dd className="m-0 text-[color:var(--ha-text)]">{detail}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        </section>
+
         {/* ── The hall ─────────────────────────────────────────── */}
         <section id="games" className="mx-auto max-w-7xl px-10 pt-28 lg:px-6 md:pt-20">
           <SectionHeading eyebrow="Welcome to the arcade" title="Pick a cabinet">
@@ -454,7 +649,7 @@ export default function HorusArcadePage() {
           </SectionHeading>
           <Reveal className="ha-parade mx-auto mt-10 max-w-md overflow-hidden rounded-[2rem]">
             <LoopVideo
-              sources={videoSources(`${VID}/cabinet-parade`)}
+              sources={videoSource(`${VID}/cabinet-parade`)}
               poster={`${VID}/cabinet-parade-poster.webp`}
               label="Arcade cabinets slide past as their neon signs light up"
               className="block aspect-square w-full object-cover"
@@ -513,7 +708,7 @@ export default function HorusArcadePage() {
                 >
                   <div style={{ "--accent": clip.accent }} className="ha-clip">
                     <LoopVideo
-                      sources={videoSources(`${VID}/${clip.id}-preview`, { webm: false })}
+                      sources={videoSource(`${VID}/${clip.id}-preview`)}
                       poster={`${VID}/${clip.id}-preview-poster.webp`}
                       label={`${clip.name} gameplay`}
                       className="block aspect-video w-full object-cover"
@@ -536,7 +731,7 @@ export default function HorusArcadePage() {
           <div className="ha-versus grid grid-cols-2 items-center gap-12 overflow-hidden rounded-[2.5rem] p-12 lg:grid-cols-1 lg:p-8 sm:p-5">
             <Reveal>
               <LoopVideo
-                sources={videoSources(`${VID}/horus-vs-seth`)}
+                sources={videoSource(`${VID}/horus-vs-seth`)}
                 poster={`${VID}/horus-vs-seth-poster.webp`}
                 label="Horus and Seth face off, with Easy, Medium and Hard difficulty"
                 className="ha-versus-video block aspect-[4/5] w-full rounded-[2rem] object-cover"
@@ -675,26 +870,15 @@ export default function HorusArcadePage() {
                 </p>
                 <StoreBadges className="mt-6 lg:justify-center" />
               </div>
-              <div className="ha-qr text-center lg:hidden">
-                <div className="rounded-2xl bg-white p-3">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${IMG}/download-qr.svg`}
-                    alt="QR code to download Horus Arcade"
-                    width={132}
-                    height={132}
-                  />
-                </div>
-                <p className="mt-2 text-xs font-bold uppercase tracking-[0.14em] text-[color:var(--ha-muted)]">
-                  Scan with your phone
-                </p>
+              <div className="lg:hidden">
+                <DownloadQr caption="Scan with your phone" />
               </div>
             </div>
           </Reveal>
         </section>
 
         {/* ── FAQ ──────────────────────────────────────────────── */}
-        <section className="mx-auto max-w-3xl px-6 pb-16 pt-28 md:pt-20">
+        <section id="faq" className="mx-auto max-w-3xl px-6 pb-16 pt-28 md:pt-20">
           <SectionHeading eyebrow="Questions" title="Good to know" />
           <div className="mt-10 space-y-3">
             {FAQS.map(({ q, a }) => (
@@ -703,7 +887,7 @@ export default function HorusArcadePage() {
                   {q}
                   <span aria-hidden="true" className="ha-faq-plus text-2xl text-[color:var(--ha-gold)]">+</span>
                 </summary>
-                <p className="mt-3 leading-relaxed text-[color:var(--ha-text)]">{a}</p>
+                <p className="ha-faq-answer mt-3 leading-relaxed text-[color:var(--ha-text)]">{a}</p>
               </details>
             ))}
           </div>
@@ -876,6 +1060,13 @@ export default function HorusArcadePage() {
           backdrop-filter: blur(8px);
           transition: transform 0.2s ease, background 0.2s ease;
         }
+        .ha-play {
+          background: rgba(10, 8, 32, 0.72);
+          border: 2px solid var(--ha-gold);
+          color: var(--ha-gold);
+          box-shadow: 0 0 30px rgba(245, 192, 74, 0.5);
+          backdrop-filter: blur(6px);
+        }
         .ha-sound:hover {
           transform: scale(1.05);
           background: rgba(28, 23, 64, 0.9);
@@ -991,9 +1182,23 @@ export default function HorusArcadePage() {
           color: #fff;
           text-align: center;
         }
+        /* The back is laid over the front, so only the front sizes the card
+           and every cabinet in a row stays the same height. */
         .ha-cab-back {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
           transform: rotateY(180deg);
           padding: 0.8rem;
+        }
+        .ha-cab-play {
+          background: radial-gradient(circle at 50% 60%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 70%);
+        }
+        .ha-cab-howto {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 5;
+          overflow: hidden;
         }
         .ha-chip {
           display: inline-block;

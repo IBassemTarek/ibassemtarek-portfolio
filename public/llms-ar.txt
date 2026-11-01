@@ -78,6 +78,7 @@ Horus Arcade تطبيق ألعاب مجاني على iPhone وAndroid يضم 23 
 - App Store: https://apps.apple.com/eg/app/horus-arcade/id6819313846
 - Google Play: https://play.google.com/store/apps/details?id=com.ibassemtarek.eyecon
 - رابط واحد للمتجرين: https://ibassemtarek.vercel.app/horus-arcade/download
+- ملف حقائق كامل عن Horus Arcade بصيغة Markdown (كل الألعاب الـ23): https://ibassemtarek.vercel.app/horus-arcade.md
 
 ## إرشادات التصفح الوكيلي
 
