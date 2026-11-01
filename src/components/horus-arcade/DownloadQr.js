@@ -17,7 +17,7 @@ export default function DownloadQr({ size = 168, caption = "Scan to download" })
           />
           <Image
             src="/images/horus-arcade/icon-512.png"
-            alt=""
+            alt="Horus Arcade app icon"
             width={512}
             height={512}
             sizes="48px"

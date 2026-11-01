@@ -38,7 +38,7 @@ function Cabinet({ game, index, reduce }) {
             <span className="ha-cab-sign">
               <Image
                 src={`/images/horus-arcade/games/${game.id}/sign.webp`}
-                alt=""
+                alt={`${game.name} neon sign`}
                 width={800}
                 height={229}
                 sizes="(max-width: 639px) 45vw, 240px"
@@ -47,7 +47,7 @@ function Cabinet({ game, index, reduce }) {
             </span>
             <Image
               src={`/images/horus-arcade/games/${game.id}/cabinet.webp`}
-              alt=""
+              alt={`${game.name} arcade cabinet`}
               width={374}
               height={600}
               sizes="(max-width: 639px) 40vw, 200px"
@@ -58,7 +58,7 @@ function Cabinet({ game, index, reduce }) {
           <span className="ha-cab-face ha-cab-back">
             <Image
               src={`/images/horus-arcade/games/${game.id}/play.webp`}
-              alt=""
+              alt={`Horus the falcon playing ${game.name}`}
               width={720}
               height={480}
               sizes="(max-width: 639px) 45vw, 260px"

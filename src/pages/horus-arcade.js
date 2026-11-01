@@ -531,7 +531,7 @@ export default function HorusArcadePage() {
         <section className="ha-hero relative isolate overflow-hidden">
           <Image
             src={`${IMG}/hall-wide.webp`}
-            alt=""
+            alt="The Horus Arcade neon hall: the Eye of Horus and game tiles over pyramids at sunset"
             fill
             priority
             sizes="100vw"
@@ -792,7 +792,7 @@ export default function HorusArcadePage() {
               />
               <Image
                 src={`${IMG}/props/hoard.webp`}
-                alt=""
+                alt="A pile of gold coins"
                 width={400}
                 height={383}
                 sizes="140px"
@@ -800,7 +800,7 @@ export default function HorusArcadePage() {
               />
               <Image
                 src={`${IMG}/props/crown.webp`}
-                alt=""
+                alt="A golden crown"
                 width={400}
                 height={342}
                 sizes="90px"
@@ -925,7 +925,7 @@ export default function HorusArcadePage() {
           >
             <Image
               src={`${IMG}/icon-512.png`}
-              alt=""
+              alt="Horus Arcade app icon"
               width={512}
               height={512}
               sizes="44px"
