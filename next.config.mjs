@@ -1,11 +1,13 @@
-import { downloadRedirects } from "./src/lib/dahabna-download.mjs";
+import { downloadRedirects as dahabnaDownloadRedirects } from "./src/lib/dahabna-download.mjs";
+import { downloadRedirects as horusArcadeDownloadRedirects } from "./src/lib/horus-arcade-download.mjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
-      ...downloadRedirects(),
+      ...dahabnaDownloadRedirects(),
+      ...horusArcadeDownloadRedirects(),
       {
         source: "/egx-gold",
         destination: "/dahabna",

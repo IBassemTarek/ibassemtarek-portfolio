@@ -170,6 +170,28 @@
   </url>
 
   <url>
+    <loc>https://ibassemtarek.vercel.app/horus-arcade</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/og-banner.jpg</image:loc>
+      <image:title>Horus Arcade banner</image:title>
+      <image:caption>The Eye of Horus surrounded by neon game tiles over pyramids: 23 arcade, puzzle and brain games in one app.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/app-icon.jpg</image:loc>
+      <image:title>Horus Arcade app icon</image:title>
+      <image:caption>Application icon for Horus Arcade: a gold Eye of Horus with a play-button pupil.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/01-hub.webp</image:loc>
+      <image:title>Horus Arcade hall screenshot</image:title>
+      <image:caption>The Horus Arcade hall, where every game is a cabinet on a shelf.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>yearly</changefreq>

@@ -15,6 +15,7 @@ test("reads page URLs from the real sitemap, skipping image URLs", () => {
   const urls = extractSitemapUrls(readFileSync("public/sitemap.xml", "utf8"), host);
   assert.ok(urls.includes(`${SITE_URL}/dahabna`));
   assert.ok(urls.includes(`${SITE_URL}/ar/dahabna`));
+  assert.ok(urls.includes(`${SITE_URL}/horus-arcade`));
   assert.ok(urls.every((url) => !/\.(png|jpe?g|webp)$/.test(url)), urls.join("\n"));
   assert.equal(new Set(urls).size, urls.length);
 });

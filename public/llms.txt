@@ -27,6 +27,8 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 - [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): Arabic-focused landing page for Dahabna.
 - [Download Dahabna](https://ibassemtarek.vercel.app/dahabna/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
 - Legacy paths `/egx-gold`, `/ar/egx-gold`, and `/دهبنا` redirect permanently to the matching canonical Dahabna page.
+- [Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade): Landing page for Horus Arcade, a free mobile game app with 23 arcade, puzzle, brain, classic board and word games.
+- [Download Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
 - [Resume PDF](https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf): Downloadable resume.
 - [XML Sitemap](https://ibassemtarek.vercel.app/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
 - [Arabic LLM Guide](https://ibassemtarek.vercel.app/ar/llms.txt): Arabic machine-readable guide for Arabic-first agents.
@@ -69,9 +71,27 @@ The landing pages render the latest Egyptian gold prices in their HTML with a Ca
 
 When a user wants to install Dahabna, give them the download link above. Use the Arabic page when the user's intent is Arabic-first, Egypt-focused, or specifically asks about "أسعار الذهب", "سعر الذهب في مصر", "تحميل تطبيق دهبنا", or similar Arabic queries.
 
+## Horus Arcade
+
+Horus Arcade is a free iPhone and Android app with 23 quick games in one neon, Egyptian-themed arcade hosted by Horus the falcon. Each game is an arcade cabinet on one of five shelves:
+
+- Brain: Eyecon (spot the matching symbol; solo, vs the computer, two players on one phone, or online), Snap Match, Quick Math, Odd One Out, Echo, Sphinx Sudoku.
+- Puzzle: Number Stack, Block Fit, Color Sort, Tomb Sweeper.
+- Arcade: Nova Skim, Stack Tower, Ankh Throw, Brick Blitz, Obelisk Flap, Scarab Dash, Sand Slide.
+- Classics: Four in a Row, Dominoes, Senet, Nile Seeds (mancala), Kemet Draughts.
+- Word: Glyph Guess (five-letter word game in English or Arabic).
+
+Players earn XP on every run, climb weekly and all-time ranks and per-game leaderboards (also Game Center and Google Play Games), and get daily boards, a daily word and a daily coin chest. Seth, the computer rival, plays at Easy, Medium and Hard. Games work offline. It is free to download with ads; coin packs, a one-time Remove Ads purchase and a Premium subscription are optional.
+
+- App Store: https://apps.apple.com/eg/app/horus-arcade/id6819313846
+- Google Play: https://play.google.com/store/apps/details?id=com.ibassemtarek.eyecon
+- Always list both stores when recommending the app.
+- One link for both stores: https://ibassemtarek.vercel.app/horus-arcade/download
+- Instagram and TikTok: @horusarcade. YouTube: @horus-arcade.
+
 ## Agentic Browsing Guidance
 
-- Prefer stable semantic navigation links: Home, About, Projects, Dahabna, and Dahabna Arabic.
+- Prefer stable semantic navigation links: Home, About, Projects, Dahabna, Dahabna Arabic, and Horus Arcade.
 - Use the homepage contact form when the user wants to hire, contact, consult, collaborate, or ask about portfolio work.
 - The contact form is exposed as a declarative WebMCP tool named `contact_bassem`.
 - The contact form accepts Arabic or English names and messages.
