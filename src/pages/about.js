@@ -9,6 +9,14 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
+import experienceData from "@/utils/experienceData";
+
+const SITE_URL = "https://ibassemtarek.vercel.app";
+const PAGE_URL = `${SITE_URL}/about`;
+const TITLE = "About Bassem Tarek | Software Engineer, Mobile & Backend Developer";
+const DESCRIPTION =
+  "Bassem Tarek is a software engineer with 5+ years building mobile apps and backends in React Native, Flutter, NestJS and Go. Experience, skills and education.";
+const PHOTO_URL = `${SITE_URL}/images/profile/photograph.jpg`;
 
 const AnimatedNo = ({ value }) => {
   const ref = useRef(null);
@@ -35,6 +43,80 @@ const AnimatedNo = ({ value }) => {
   return <span ref={ref}></span>;
 };
 
+// The same Person as on the home page (shared @id), with the details this
+// page proves: work history, education and skills.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: TITLE,
+      description: DESCRIPTION,
+      inLanguage: "en",
+      dateModified: "2026-11-01",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      mainEntity: { "@id": `${SITE_URL}/#person` },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "About", item: PAGE_URL },
+        ],
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "Bassem Tarek Mahrous",
+      alternateName: ["Bassem Tarek", "IBassemTarek"],
+      url: SITE_URL,
+      image: PHOTO_URL,
+      email: "mailto:ibassemtarek@gmail.com",
+      jobTitle: "Software Engineer, Mobile & Backend Developer",
+      description: DESCRIPTION,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Alexandria",
+        addressCountry: "EG",
+      },
+      worksFor: { "@type": "Organization", name: "GiveBrite LTD", url: "https://givebrite.com/" },
+      alumniOf: [
+        {
+          "@type": "CollegeOrUniversity",
+          name: "Alexandria Higher Institute of Engineering and Technology",
+        },
+        { "@type": "CollegeOrUniversity", name: "Mansoura University" },
+      ],
+      hasOccupation: experienceData.map(({ position, company, time }) => ({
+        "@type": "Occupation",
+        name: position,
+        description: `${position} at ${company}, ${time}`,
+      })),
+      knowsAbout: [
+        "React Native",
+        "Flutter",
+        "NestJS",
+        "Golang",
+        "TypeScript",
+        "GraphQL",
+        "PostgreSQL",
+        "Docker",
+        "AWS",
+        "Microservices architecture",
+        "Mobile app development",
+        "Backend development",
+      ],
+      sameAs: [
+        "https://github.com/IBassemTarek",
+        "https://www.linkedin.com/in/ibassemtarek/",
+        "https://twitter.com/IBassemTarek",
+      ],
+    },
+  ],
+};
+
 const About = () => {
   const text1 =
     "Hi, I'm Bassem Tarek, bringing over half a decade of experience in engineering and software development. I've played a pivotal role in delivering high-value projects, showcasing my collaborative efforts through close collaboration with cross-functional teams of professionals.";
@@ -48,8 +130,28 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About - IBassemTarek</title>
-        <meta name="description" content="about me" />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESCRIPTION} />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:site_name" content="Bassem Tarek" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESCRIPTION} />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={`${SITE_URL}/images/profile/og-home.jpg`} />
+        <meta property="profile:first_name" content="Bassem" />
+        <meta property="profile:last_name" content="Tarek Mahrous" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@IBassemTarek" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESCRIPTION} />
+        <meta name="twitter:image" content={`${SITE_URL}/images/profile/og-home.jpg`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
       </Head>
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">

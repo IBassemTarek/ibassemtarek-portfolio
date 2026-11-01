@@ -52,7 +52,7 @@ const SOCIALS = [
 
 const TITLE = "Horus Arcade: 23 Free Arcade & Puzzle Games in One App";
 const DESCRIPTION =
-  "Horus Arcade packs 23 quick games into one neon Egyptian arcade: Eyecon, Number Stack, Nova Skim, Block Fit, Senet, Sphinx Sudoku and more. Free on iPhone and Android.";
+  "Horus Arcade packs 23 quick games into one neon Egyptian arcade: Eyecon, Number Stack, Nova Skim, Senet, Sphinx Sudoku and more. Free on iPhone and Android.";
 
 const STATS = [
   { value: 23, label: "games in one app" },

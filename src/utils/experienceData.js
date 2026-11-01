@@ -10,10 +10,10 @@ const experienceData = [
 
   {
     position: "Flutter Developer",
-    company: "Lockers LLC",
+    company: "Lockers LLC (now SmooV)",
     time: "November 2023 - March 2024",
     address: "Remote",
-    companyLink: "https://lockers.sa/",
+    companyLink: "https://smoov.sa/",
     work: "I crafted and managed the Lockers client and driver mobile app, boosting user engagement by 11% and enhancing in-app functionality. Integrated REST-based and third-party APIs to expand features and improve the user experience, resulting in an 8% increase in retention.",
   },
 
@@ -22,7 +22,7 @@ const experienceData = [
     company: "blthanih LLC",
     time: "September 2023 - March 2024",
     address: "Remote",
-    companyLink: "https://blthanih.sa/",
+    companyLink: "https://www.linkedin.com/company/blthanih/",
     work: "I crafted and managed the blthanih client and employee mobile app, boosting user engagement by 15% and enhancing in-app functionality. Integrated REST-based and third-party APIs to expand features and improved the user experience, resulting in a 30% increase in retention.",
   },
 

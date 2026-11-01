@@ -13,7 +13,7 @@ import { projectData } from "@/utils/projectsData";
 const SITE_URL = "https://ibassemtarek.vercel.app";
 const TITLE = "Bassem Tarek | Mobile & Full-Stack Developer (React Native, Next.js)";
 const DESCRIPTION =
-  "Bassem Tarek is a software engineer with 5+ years of experience building iOS and Android apps, web apps and backends with React Native, Flutter, Next.js and NestJS. Projects include Horus Arcade, Dahabna, SHM and Simply Nikah.";
+  "Bassem Tarek is a software engineer with 5+ years building iOS and Android apps and backends in React Native, Flutter, Next.js and NestJS.";
 const OG_IMAGE_URL = `${SITE_URL}/images/profile/og-home.jpg`;
 
 const SOCIALS = [

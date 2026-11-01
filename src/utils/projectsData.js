@@ -37,7 +37,7 @@ export const projectData = [
     tag: "Mobile game · iOS & Android",
     isFeatured: true,
     summary:
-      "23 quick arcade, puzzle, brain, board and word games in one neon, ancient-Egypt-themed arcade hosted by Horus the falcon. Free on the App Store and Google Play.",
+      "23 quick arcade, puzzle, brain, board and word games in one neon, ancient-Egypt-themed arcade hosted by Horus the falcon. Free on iPhone and Android.",
     img: horusArcadeImg,
     id: 10,
     href: "/horus-arcade",
@@ -59,7 +59,7 @@ export const projectData = [
     tag: "Trading tools app · Android",
     isFeatured: false,
     summary:
-      "Market information and trading tools for Egyptian investors: EGX support and resistance levels, real-time price alerts, average-down and position-size calculators, in Arabic and English.",
+      "Market data and trading tools for Egyptian investors: EGX support and resistance levels, live price alerts and trading calculators, in Arabic and English.",
     img: shmImg,
     id: 12,
     href: "https://mindovaq.com/shm/",
@@ -70,7 +70,7 @@ export const projectData = [
     tag: "Matrimony app · iOS & Android",
     isFeatured: false,
     summary:
-      "A Shariah-compliant marriage app backed by Mufti Menk, with selfie-verified profiles, interest-based matchmaking, image privacy controls and AI message moderation.",
+      "A Shariah-compliant marriage app backed by Mufti Menk: selfie-verified profiles, interest-based matchmaking, image privacy and AI message moderation.",
     img: simplyNikahImg,
     id: 13,
     href: "https://simplynikah.app",
@@ -81,7 +81,7 @@ export const projectData = [
     tag: "Furniture moving app · Flutter",
     isFeatured: false,
     summary:
-      "Client and driver apps for SmooV (formerly Lockers), a Riyadh platform for booking furniture moves at a fixed price per room. The driver app is live on Google Play as SmooV Driver.",
+      "Flutter client and driver apps for SmooV (formerly Lockers), a Riyadh platform for booking furniture moves at a fixed price per room.",
     img: smoovImg,
     id: 14,
     content: smoovContent,
@@ -92,7 +92,7 @@ export const projectData = [
     tag: "Salon & spa management · React Native",
     isFeatured: false,
     summary:
-      "Client and employee apps for blthanih (بالثانية), a Saudi salon and spa platform: salon search, booking, offers, loyalty and an in-app store for customers, and scheduling, attendance and payroll for salon staff.",
+      "React Native client and employee apps for blthanih (بالثانية), a Saudi salon and spa platform: booking, offers and loyalty for clients, HR for staff.",
     img: blthanihImg,
     id: 15,
     content: blthanihContent,
@@ -102,7 +102,7 @@ export const projectData = [
     kind: "app",
     tag: "No-code app builder · Shopify",
     summary:
-      "A no-code mobile app builder for Shopify merchants: brands launch a native iOS and Android app without a dev team. Backend, integrations, React Native features and production support.",
+      "A no-code app builder for Shopify merchants to launch native iOS and Android apps without a dev team. Backend, integrations and React Native features.",
     img: montuImg,
     id: 1,
     isFeatured: false,
@@ -114,7 +114,7 @@ export const projectData = [
     tag: "Crypto wallet & presale app",
     isFeatured: false,
     summary:
-      "A cryptocurrency transaction management app for GulfCoin, a BEP-20 token, focused on wallet and account visibility, presale participation and investment tracking.",
+      "A transaction management app for GulfCoin, a BEP-20 token: wallet and account visibility, presale purchases and investment tracking.",
     img: gulfCoinImg,
     id: 2,
     content: gulfCoinContent,
@@ -136,7 +136,7 @@ export const projectData = [
     tag: "Full-stack web app · Next.js",
     isFeatured: false,
     summary:
-      "I developed this website to enhance my skills in creating full-stack applications using Next.js 13.4 and MongoDB. It served as a valuable training ground for honing my abilities and allowed me to leverage its components and logic in my freelance projects.",
+      "A full-stack Next.js and MongoDB e-commerce web app I built to sharpen my full-stack skills, later reused in freelance projects. Source on GitHub.",
     img: webPlazaImg,
     content: webPlazaContent,
     id: 4,
