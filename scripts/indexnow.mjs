@@ -8,15 +8,15 @@
 export const INDEXNOW_SITES = [
   {
     siteUrl: "https://www.ibassemtarek.fyi",
-    key: "1a0d8393b7fb494cbab91bc95ce2906e",
+    key: "660c50e54f254643bf64212c1ad5e822",
   },
   {
     siteUrl: "https://dahabna.ibassemtarek.fyi",
-    key: "69c353d063d98ebf693f8d4d9416f662",
+    key: "8a505cf851664420aebf9efd2ba023d9",
   },
   {
     siteUrl: "https://horus-arcade.ibassemtarek.fyi",
-    key: "a288449ed4b2accd81a35e2beb8a1310",
+    key: "3e75af7153144ca5aa2a740ea18eb6b9",
   },
 ];
 export const SITE_URL = INDEXNOW_SITES[0].siteUrl;
