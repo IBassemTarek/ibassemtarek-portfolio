@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+>
+  <url>
+    <loc>https://horus-arcade.ibassemtarek.fyi/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://horus-arcade.ibassemtarek.fyi/images/horus-arcade/og-banner.jpg</image:loc>
+      <image:title>Horus Arcade banner</image:title>
+      <image:caption>The Eye of Horus surrounded by neon game tiles over pyramids: 23 free arcade, puzzle, board, and word games.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://horus-arcade.ibassemtarek.fyi/images/horus-arcade/app-icon.jpg</image:loc>
+      <image:title>Horus Arcade app icon</image:title>
+      <image:caption>Application icon for Horus Arcade.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://horus-arcade.ibassemtarek.fyi/images/horus-arcade/screens/01-hub.webp</image:loc>
+      <image:title>Horus Arcade hall screenshot</image:title>
+      <image:caption>The Horus Arcade hall, where every game is a cabinet on a shelf.</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://horus-arcade.ibassemtarek.fyi/videos/horus-arcade/discovery-v2-poster.webp</video:thumbnail_loc>
+      <video:title>Horus Arcade: walk the neon hall</video:title>
+      <video:description>Horus walks the arcade hall and plays the cabinets. Horus Arcade includes 23 free games on iPhone and Android.</video:description>
+      <video:content_loc>https://horus-arcade.ibassemtarek.fyi/videos/horus-arcade/discovery-v2.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-11-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+</urlset>

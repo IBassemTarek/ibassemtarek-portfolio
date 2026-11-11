@@ -18,7 +18,7 @@ export function detectStorePlatform(userAgent = "") {
 
 // One smart store link per app: `storeUrlFor` maps a platform to its listing,
 // `redirects` builds the matching next.config rules for `path`.
-export function createStoreDownload({ path, iosUrl, androidUrl }) {
+export function createStoreDownload({ paths, host, iosUrl, androidUrl }) {
   function storeUrlFor(platform) {
     if (platform === "android") {
       return androidUrl;
@@ -33,15 +33,24 @@ export function createStoreDownload({ path, iosUrl, androidUrl }) {
   // the store without waiting on a serverless function. Next matches `has`
   // values as `^value$`, hence the surrounding `.*`.
   function redirects() {
-    return [
-      { pattern: ANDROID_UA, destination: androidUrl },
-      { pattern: IOS_UA, destination: iosUrl },
-    ].map(({ pattern, destination }) => ({
-      source: path,
-      has: [{ type: "header", key: "user-agent", value: `.*(?:${pattern}).*` }],
-      destination,
-      permanent: false,
-    }));
+    return paths.flatMap((path) =>
+      [
+        { pattern: ANDROID_UA, destination: androidUrl },
+        { pattern: IOS_UA, destination: iosUrl },
+      ].map(({ pattern, destination }) => ({
+        source: path,
+        has: [
+          { type: "host", value: host },
+          {
+            type: "header",
+            key: "user-agent",
+            value: `.*(?:${pattern}).*`,
+          },
+        ],
+        destination,
+        permanent: false,
+      }))
+    );
   }
 
   return { storeUrlFor, redirects };

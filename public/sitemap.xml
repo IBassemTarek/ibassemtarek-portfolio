@@ -6,676 +6,542 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
 >
   <url>
-    <loc>https://ibassemtarek.vercel.app/</loc>
+    <loc>https://www.ibassemtarek.fyi/</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/profile/bassem-hero.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/profile/bassem-hero.webp</image:loc>
       <image:title>Bassem Tarek Mahrous profile image</image:title>
       <image:caption>Bassem Tarek Mahrous, mobile and full-stack developer, working on his laptop.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/circular-text.png</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/circular-text.png</image:loc>
       <image:title>Portfolio circular text graphic</image:title>
       <image:caption>Decorative portfolio call-to-action graphic used on the homepage.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/profile/og-home.jpg</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/profile/og-home.jpg</image:loc>
       <image:title>Bassem Tarek, mobile and full-stack developer</image:title>
       <image:caption>Bassem Tarek at his laptop: React Native, Flutter, Next.js and NestJS developer.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/about</loc>
+    <loc>https://www.ibassemtarek.fyi/about</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/profile/photograph.jpg</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/profile/photograph.jpg</image:loc>
       <image:title>Bassem Tarek Mahrous photograph</image:title>
       <image:caption>About page portrait for Bassem Tarek Mahrous, software engineer and full-stack developer.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects</loc>
+    <loc>https://www.ibassemtarek.fyi/projects</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/montu.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/montu.webp</image:loc>
       <image:title>Montu Mobile App Builder project cover</image:title>
       <image:caption>Featured portfolio project for a no-code mobile app builder for Shopify merchants.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/GulfCoin.webp</image:loc>
       <image:title>Gulf Coin cryptocurrency project cover</image:title>
       <image:caption>Portfolio project cover for a GulfCoin cryptocurrency transaction management application.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/alawfar.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/alawfar.webp</image:loc>
       <image:title>Alawfar ecommerce project cover</image:title>
       <image:caption>Portfolio project cover for an ecommerce application with cash-on-delivery support.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/web_plaza.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/web_plaza.webp</image:loc>
       <image:title>Web Plaza full-stack project cover</image:title>
       <image:caption>Portfolio project cover for a full-stack Next.js and MongoDB training application.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/kindergarten-world.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/kindergarten-world.webp</image:loc>
       <image:title>Kindergarten World project cover</image:title>
       <image:caption>Portfolio project cover for a classroom and learning management application.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/a-plus.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/a-plus.webp</image:loc>
       <image:title>A-plus Studio project cover</image:title>
       <image:caption>Portfolio project cover for a WordPress studio website.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/sary-academy.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/sary-academy.webp</image:loc>
       <image:title>Sary Academy project cover</image:title>
       <image:caption>Portfolio project cover for a nursery school and educational experience platform.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/yanabee-academy.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/yanabee-academy.webp</image:loc>
       <image:title>Yanabee Academy project cover</image:title>
       <image:caption>Portfolio project cover for a Quranic platform and electronic academy.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/rosewell-energy.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/rosewell-energy.webp</image:loc>
       <image:title>Rosewell Energy project cover</image:title>
       <image:caption>Portfolio project cover for an oilfield chemical treatment and engineering services website.</image:caption>
     </image:image>
   </url>
 
-  <url>
-    <loc>https://ibassemtarek.vercel.app/dahabna</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://ibassemtarek.vercel.app/dahabna"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://ibassemtarek.vercel.app/ar/dahabna"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://ibassemtarek.vercel.app/dahabna"
-    />
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/og-banner.jpg</image:loc>
-      <image:title>Dahabna app banner</image:title>
-      <image:caption>Dahabna showing live 24k, 21k, and 18k gold prices in Egypt, portfolio tracking, and retirement planning.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
-      <image:title>Dahabna app icon</image:title>
-      <image:caption>Application icon for Dahabna, a gold prices app for Egypt.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-store.png</image:loc>
-      <image:title>Dahabna App Store icon</image:title>
-      <image:caption>App Store badge shown on the Dahabna landing page.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/google-play.png</image:loc>
-      <image:title>Dahabna Google Play icon</image:title>
-      <image:caption>Google Play badge shown on the Dahabna landing page.</image:caption>
-    </image:image>
-  </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/ar/dahabna</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://ibassemtarek.vercel.app/dahabna"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://ibassemtarek.vercel.app/ar/dahabna"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://ibassemtarek.vercel.app/dahabna"
-    />
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/og-banner.jpg</image:loc>
-      <image:title>بانر تطبيق دهبنا</image:title>
-      <image:caption>تطبيق دهبنا يعرض أسعار الذهب عيار 24 و21 و18 في مصر لحظة بلحظة، مع متابعة المحفظة والتخطيط للتقاعد.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-icon.jpg</image:loc>
-      <image:title>أيقونة تطبيق دهبنا</image:title>
-      <image:caption>أيقونة تطبيق دهبنا لمتابعة أسعار الذهب في مصر.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/app-store.png</image:loc>
-      <image:title>رابط دهبنا على App Store</image:title>
-      <image:caption>شارة App Store المعروضة في صفحة دهبنا العربية.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/egx-gold/google-play.png</image:loc>
-      <image:title>رابط دهبنا على Google Play</image:title>
-      <image:caption>شارة Google Play المعروضة في صفحة دهبنا العربية.</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://ibassemtarek.vercel.app/horus-arcade</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/og-banner.jpg</image:loc>
-      <image:title>Horus Arcade banner</image:title>
-      <image:caption>The Eye of Horus surrounded by neon game tiles over pyramids: 23 arcade, puzzle and brain games in one app.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/app-icon.jpg</image:loc>
-      <image:title>Horus Arcade app icon</image:title>
-      <image:caption>Application icon for Horus Arcade: a gold Eye of Horus with a play-button pupil.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/01-hub.webp</image:loc>
-      <image:title>Horus Arcade hall screenshot</image:title>
-      <image:caption>The Horus Arcade hall, where every game is a cabinet on a shelf.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/02-number-stack.webp</image:loc>
-      <image:title>Horus Arcade screenshot: Number Stack</image:title>
-      <image:caption>Number Stack: drag, match, merge.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/03-eyecon.webp</image:loc>
-      <image:title>Horus Arcade screenshot: Eyecon</image:title>
-      <image:caption>Eyecon: spot the matching symbol first.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/06-nova-skim.webp</image:loc>
-      <image:title>Horus Arcade screenshot: Nova Skim</image:title>
-      <image:caption>Nova Skim: hop planet to planet.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/horus-arcade/screens/10-glyph-guess.webp</image:loc>
-      <image:title>Horus Arcade screenshot: Glyph Guess</image:title>
-      <image:caption>Glyph Guess: find the hidden five-letter word.</image:caption>
-    </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://ibassemtarek.vercel.app/videos/horus-arcade/discovery-v2-poster.webp</video:thumbnail_loc>
-      <video:title>Horus Arcade: walk the neon hall</video:title>
-      <video:description>Horus the falcon walks the Horus Arcade hall and plays the cabinets one by one. 23 games in one app, free on the App Store and Google Play.</video:description>
-      <video:content_loc>https://ibassemtarek.vercel.app/videos/horus-arcade/discovery-v2.mp4</video:content_loc>
-      <video:duration>20</video:duration>
-      <video:publication_date>2026-11-01</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-  </url>
-
-  <url>
-    <loc>https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf</loc>
+    <loc>https://www.ibassemtarek.fyi/BassemTarekMahrousResume.pdf</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/llms.txt</loc>
+    <loc>https://www.ibassemtarek.fyi/llms.txt</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://ibassemtarek.vercel.app/llms.txt"
+      href="https://www.ibassemtarek.fyi/llms.txt"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://ibassemtarek.vercel.app/llms-ar.txt"
+      href="https://www.ibassemtarek.fyi/llms-ar.txt"
     />
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/llms-ar.txt</loc>
+    <loc>https://www.ibassemtarek.fyi/llms-ar.txt</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://ibassemtarek.vercel.app/llms.txt"
+      href="https://www.ibassemtarek.fyi/llms.txt"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://ibassemtarek.vercel.app/llms-ar.txt"
+      href="https://www.ibassemtarek.fyi/llms-ar.txt"
     />
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/ar/llms.txt</loc>
+    <loc>https://www.ibassemtarek.fyi/ar/llms.txt</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/1</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/1</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/montu.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/montu.webp</image:loc>
       <image:title>Montu Mobile App Builder cover image</image:title>
       <image:caption>No-code mobile app builder project for Shopify merchants.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/montu/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/montu/1.webp</image:loc>
       <image:title>Montu project screenshot 1</image:title>
       <image:caption>Montu mobile app builder product preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/montu/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/montu/2.webp</image:loc>
       <image:title>Montu project screenshot 2</image:title>
       <image:caption>Montu mobile app builder interface preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/montu/5.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/montu/5.webp</image:loc>
       <image:title>Montu project screenshot 3</image:title>
       <image:caption>Montu feature preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/montu/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/montu/3.webp</image:loc>
       <image:title>Montu project screenshot 4</image:title>
       <image:caption>Montu mobile experience preview image.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/montu/4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/montu/4.webp</image:loc>
       <image:title>Montu project screenshot 5</image:title>
       <image:caption>Montu application workflow preview image.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/2</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/2</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/GulfCoin.webp</image:loc>
       <image:title>Gulf Coin cryptocurrency cover image</image:title>
       <image:caption>Cryptocurrency transaction management app project cover.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/app-4.webp</image:loc>
       <image:title>GulfCoin app dashboard</image:title>
       <image:caption>GulfCoin app dashboard: token balance, presale price and receiving wallet.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-6.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/app-6.webp</image:loc>
       <image:title>GulfCoin buy calculator</image:title>
       <image:caption>Choose a currency (USD, ETH, BNB, USDT, BUSD) and calculate the GulfCoin price.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-7.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/app-7.webp</image:loc>
       <image:title>GulfCoin transactions</image:title>
       <image:caption>GulfCoin transactions list with paid and unpaid purchases.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/app-9.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/app-9.webp</image:loc>
       <image:title>GulfCoin coin balance</image:title>
       <image:caption>Coin balance: purchased, referral and bonus coins, contributions and withdrawals.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/4.webp</image:loc>
       <image:title>Gulf Coin project screenshot 1</image:title>
       <image:caption>Gulf Coin application dashboard preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/1.webp</image:loc>
       <image:title>Gulf Coin project screenshot 2</image:title>
       <image:caption>Gulf Coin wallet and account preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/2.webp</image:loc>
       <image:title>Gulf Coin project screenshot 3</image:title>
       <image:caption>Gulf Coin transaction management preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/gulf/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/gulf/3.webp</image:loc>
       <image:title>Gulf Coin project screenshot 4</image:title>
       <image:caption>Gulf Coin mobile application preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/3</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/3</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/alawfar.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/alawfar.webp</image:loc>
       <image:title>Alawfar ecommerce cover image</image:title>
       <image:caption>Ecommerce application project cover with cash-on-delivery support.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/alawfar/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/alawfar/3.webp</image:loc>
       <image:title>Alawfar project screenshot 1</image:title>
       <image:caption>Alawfar ecommerce app product preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/alawfar/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/alawfar/1.webp</image:loc>
       <image:title>Alawfar project screenshot 2</image:title>
       <image:caption>Alawfar ecommerce shopping flow preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/alawfar/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/alawfar/2.webp</image:loc>
       <image:title>Alawfar project screenshot 3</image:title>
       <image:caption>Alawfar ecommerce order experience preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/4</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/4</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/web_plaza.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/web_plaza.webp</image:loc>
       <image:title>Web Plaza full-stack cover image</image:title>
       <image:caption>Next.js and MongoDB full-stack portfolio project cover.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/1.webp</image:loc>
       <image:title>Web Plaza project screenshot 1</image:title>
       <image:caption>Web Plaza application preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/2.webp</image:loc>
       <image:title>Web Plaza project screenshot 2</image:title>
       <image:caption>Web Plaza user interface preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/3.webp</image:loc>
       <image:title>Web Plaza project screenshot 3</image:title>
       <image:caption>Web Plaza feature preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/4.webp</image:loc>
       <image:title>Web Plaza project screenshot 4</image:title>
       <image:caption>Web Plaza page preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/5.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/5.webp</image:loc>
       <image:title>Web Plaza project screenshot 5</image:title>
       <image:caption>Web Plaza application workflow preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/6.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/6.webp</image:loc>
       <image:title>Web Plaza project screenshot 6</image:title>
       <image:caption>Web Plaza admin or content preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/7.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/7.webp</image:loc>
       <image:title>Web Plaza project screenshot 7</image:title>
       <image:caption>Web Plaza interface state preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/8.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/8.webp</image:loc>
       <image:title>Web Plaza project screenshot 8</image:title>
       <image:caption>Web Plaza responsive page preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/webPlaza/9.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/webPlaza/9.webp</image:loc>
       <image:title>Web Plaza project screenshot 9</image:title>
       <image:caption>Web Plaza final interface preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/5</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/5</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/kindergarten-world.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/kindergarten-world.webp</image:loc>
       <image:title>Kindergarten World cover image</image:title>
       <image:caption>Kindergarten classroom and learning management project cover.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/kindergartenWorld/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/kindergartenWorld/1.webp</image:loc>
       <image:title>Kindergarten World project screenshot 1</image:title>
       <image:caption>Kindergarten World classroom management preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/kindergartenWorld/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/kindergartenWorld/2.webp</image:loc>
       <image:title>Kindergarten World project screenshot 2</image:title>
       <image:caption>Kindergarten World learning application preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/6</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/6</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/a-plus.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/a-plus.webp</image:loc>
       <image:title>A-plus Studio cover image</image:title>
       <image:caption>WordPress studio website project cover.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/aplus/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/aplus/1.webp</image:loc>
       <image:title>A-plus Studio project screenshot 1</image:title>
       <image:caption>A-plus Studio website homepage preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/aplus/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/aplus/2.webp</image:loc>
       <image:title>A-plus Studio project screenshot 2</image:title>
       <image:caption>A-plus Studio website section preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/aplus/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/aplus/3.webp</image:loc>
       <image:title>A-plus Studio project screenshot 3</image:title>
       <image:caption>A-plus Studio website responsive preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/7</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/7</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/sary-academy.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/sary-academy.webp</image:loc>
       <image:title>Sary Academy cover image</image:title>
       <image:caption>Nursery school and educational platform project cover.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/sary/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/sary/1.webp</image:loc>
       <image:title>Sary Academy project screenshot 1</image:title>
       <image:caption>Sary Academy website and application preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/sary/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/sary/2.webp</image:loc>
       <image:title>Sary Academy project screenshot 2</image:title>
       <image:caption>Sary Academy educational interface preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/sary/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/sary/3.webp</image:loc>
       <image:title>Sary Academy project screenshot 3</image:title>
       <image:caption>Sary Academy learning content preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/sary/4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/sary/4.webp</image:loc>
       <image:title>Sary Academy project screenshot 4</image:title>
       <image:caption>Sary Academy platform preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/sary/5.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/sary/5.webp</image:loc>
       <image:title>Sary Academy project screenshot 5</image:title>
       <image:caption>Sary Academy mobile or web interface preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/sary/6.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/sary/6.webp</image:loc>
       <image:title>Sary Academy project screenshot 6</image:title>
       <image:caption>Sary Academy final interface preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/8</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/8</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/yanabee-academy.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/yanabee-academy.webp</image:loc>
       <image:title>Yanabee Academy cover image</image:title>
       <image:caption>Quranic platform and electronic academy project cover.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/yanabee/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/yanabee/1.webp</image:loc>
       <image:title>Yanabee Academy project screenshot 1</image:title>
       <image:caption>Yanabee Academy website and platform preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/yanabee/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/yanabee/2.webp</image:loc>
       <image:title>Yanabee Academy project screenshot 2</image:title>
       <image:caption>Yanabee Academy student learning preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/yanabee/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/yanabee/3.webp</image:loc>
       <image:title>Yanabee Academy project screenshot 3</image:title>
       <image:caption>Yanabee Academy Quranic classes preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/yanabee/4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/yanabee/4.webp</image:loc>
       <image:title>Yanabee Academy project screenshot 4</image:title>
       <image:caption>Yanabee Academy platform content preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/yanabee/5.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/yanabee/5.webp</image:loc>
       <image:title>Yanabee Academy project screenshot 5</image:title>
       <image:caption>Yanabee Academy interface preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/yanabee/6.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/yanabee/6.webp</image:loc>
       <image:title>Yanabee Academy project screenshot 6</image:title>
       <image:caption>Yanabee Academy final page preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/9</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/9</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/rosewell-energy.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/rosewell-energy.webp</image:loc>
       <image:title>Rosewell Energy cover image</image:title>
       <image:caption>Oilfield chemical treatment and engineering services project cover.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/rosewell/1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/rosewell/1.webp</image:loc>
       <image:title>Rosewell Energy project screenshot 1</image:title>
       <image:caption>Rosewell Energy website homepage preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/rosewell/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/rosewell/2.webp</image:loc>
       <image:title>Rosewell Energy project screenshot 2</image:title>
       <image:caption>Rosewell Energy services preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/rosewell/3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/rosewell/3.webp</image:loc>
       <image:title>Rosewell Energy project screenshot 3</image:title>
       <image:caption>Rosewell Energy company website section preview screenshot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/rosewell/4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/rosewell/4.webp</image:loc>
       <image:title>Rosewell Energy project screenshot 4</image:title>
       <image:caption>Rosewell Energy final page preview screenshot.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/14</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/14</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/smoov.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/smoov.webp</image:loc>
       <image:title>SmooV project cover</image:title>
       <image:caption>SmooV furniture moving platform in Saudi Arabia, with the SmooV Driver app.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/smoov/2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/smoov/2.webp</image:loc>
       <image:title>SmooV Driver orders screen</image:title>
       <image:caption>Driver app order list filtered by status, with pickup and destination addresses.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/smoov/4.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/smoov/4.webp</image:loc>
       <image:title>SmooV Driver order details</image:title>
       <image:caption>Order details with package, total amount and addresses, ready to confirm.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/smoov/website.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/smoov/website.webp</image:loc>
       <image:title>SmooV website</image:title>
       <image:caption>SmooV website: book a furniture move in Saudi Arabia at a fixed price per room.</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ibassemtarek.vercel.app/projects/15</loc>
+    <loc>https://www.ibassemtarek.fyi/projects/15</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/projects/blthanih.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/projects/blthanih.webp</image:loc>
       <image:title>blthanih project cover</image:title>
       <image:caption>blthanih salon and spa management platform, client and employee apps.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/client-1.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/blthanih/client-1.webp</image:loc>
       <image:title>blthanih client app</image:title>
       <image:caption>blthanih client app: a digital system for managing salon services from one device.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/client-3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/blthanih/client-3.webp</image:loc>
       <image:title>blthanih client app home</image:title>
       <image:caption>Client app home with today's offer, categories and salons near your location.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/client-2.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/blthanih/client-2.webp</image:loc>
       <image:title>blthanih salon map</image:title>
       <image:caption>Find nail, hair and spa salons on the map.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/employee-6.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/blthanih/employee-6.webp</image:loc>
       <image:title>blthanih employee app home</image:title>
       <image:caption>Employee app home: attendance and departure, salary, holidays, absence, loans and today's bookings.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/employee-3.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/blthanih/employee-3.webp</image:loc>
       <image:title>blthanih employee schedule</image:title>
       <image:caption>Employee schedule with each day's bookings.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ibassemtarek.vercel.app/images/blthanih/employee-5.webp</image:loc>
+      <image:loc>https://www.ibassemtarek.fyi/images/blthanih/employee-5.webp</image:loc>
       <image:title>blthanih salary and custody</image:title>
       <image:caption>Salary follow-up and custody screens in the employee app.</image:caption>
     </image:image>

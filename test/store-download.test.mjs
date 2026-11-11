@@ -6,7 +6,8 @@ import { downloadRedirects as dahabnaRedirects } from "../src/lib/dahabna-downlo
 import { downloadRedirects as horusArcadeRedirects } from "../src/lib/horus-arcade-download.mjs";
 
 const app = createStoreDownload({
-  path: "/example/download",
+  paths: ["/download", "/ar/download"],
+  host: "example.com",
   iosUrl: "https://apps.apple.com/app/id1",
   androidUrl: "https://play.google.com/store/apps/details?id=example",
 });
@@ -20,18 +21,25 @@ test("each app maps platforms to its own listings", () => {
   assert.equal(app.storeUrlFor("desktop"), null);
 });
 
-test("builds one Android and one iOS rule for the app's path", () => {
+test("builds host-scoped Android and iOS rules for every download path", () => {
   const rules = app.redirects();
-  assert.equal(rules.length, 2);
+  assert.equal(rules.length, 4);
   assert.deepEqual(
     rules.map(({ source }) => source),
-    ["/example/download", "/example/download"]
+    ["/download", "/download", "/ar/download", "/ar/download"]
+  );
+  assert.ok(
+    rules.every(({ has }) =>
+      has.some(({ type, value }) => type === "host" && value === "example.com")
+    )
   );
 });
 
-test("apps' redirect rules never share a source path", () => {
-  const sources = new Set(dahabnaRedirects().map(({ source }) => source));
-  for (const { source } of horusArcadeRedirects()) {
-    assert.ok(!sources.has(source), source);
+test("apps' shared paths are separated by their host match", () => {
+  const ruleKey = ({ source, has }) =>
+    `${has.find(({ type }) => type === "host").value}${source}`;
+  const dahabnaRules = new Set(dahabnaRedirects().map(ruleKey));
+  for (const rule of horusArcadeRedirects()) {
+    assert.ok(!dahabnaRules.has(ruleKey(rule)), ruleKey(rule));
   }
 });

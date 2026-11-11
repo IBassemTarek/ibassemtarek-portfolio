@@ -1,4 +1,5 @@
 import { createStoreDownload } from "./store-download.mjs";
+import { DAHABNA_HOST } from "./site-urls.mjs";
 
 export { detectStorePlatform } from "./store-download.mjs";
 
@@ -10,10 +11,12 @@ export const ANDROID_STORE_URL =
 export const IOS_STORE_URL =
   "https://apps.apple.com/eg/app/dahabna-gold-price-today/id6762029452";
 
-export const DOWNLOAD_PATH = "/dahabna/download";
+export const DOWNLOAD_PATH = "/download";
+export const ARABIC_DOWNLOAD_PATH = "/ar/download";
 
 const download = createStoreDownload({
-  path: DOWNLOAD_PATH,
+  paths: [DOWNLOAD_PATH, ARABIC_DOWNLOAD_PATH],
+  host: DAHABNA_HOST,
   iosUrl: IOS_STORE_URL,
   androidUrl: ANDROID_STORE_URL,
 });

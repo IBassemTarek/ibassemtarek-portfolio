@@ -3,12 +3,14 @@ import test from "node:test";
 
 import {
   ANDROID_STORE_URL,
+  ARABIC_DOWNLOAD_PATH,
   DOWNLOAD_PATH,
   IOS_STORE_URL,
   detectStorePlatform,
   downloadRedirects,
   storeUrlFor,
 } from "../src/lib/dahabna-download.mjs";
+import { DAHABNA_HOST } from "../src/lib/site-urls.mjs";
 
 const UA = {
   androidChrome:
@@ -53,7 +55,11 @@ test("maps platforms to store URLs", () => {
 // first matching redirect wins.
 function edgeRedirectFor(userAgent) {
   const rule = downloadRedirects().find(({ has }) =>
-    has.every(({ value }) => new RegExp(`^${value}$`).test(userAgent))
+    has.every(({ type, value }) =>
+      type === "host"
+        ? value === DAHABNA_HOST
+        : new RegExp(`^${value}$`).test(userAgent)
+    )
   );
   return rule?.destination ?? null;
 }
@@ -70,7 +76,15 @@ test("edge redirects agree with detectStorePlatform", () => {
 
 test("edge redirects are temporary and scoped to the download path", () => {
   for (const rule of downloadRedirects()) {
-    assert.equal(rule.source, DOWNLOAD_PATH);
+    assert.ok(
+      rule.source === DOWNLOAD_PATH || rule.source === ARABIC_DOWNLOAD_PATH,
+      rule.source
+    );
+    assert.ok(
+      rule.has.some(
+        ({ type, value }) => type === "host" && value === DAHABNA_HOST
+      )
+    );
     assert.equal(rule.permanent, false);
   }
 });

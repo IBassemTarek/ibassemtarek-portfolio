@@ -8,8 +8,9 @@ import {
   detectStorePlatform,
   storeUrlFor,
 } from "../../lib/dahabna-download.mjs";
+import { DAHABNA_URL } from "../../lib/site-urls.mjs";
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
+const SITE_URL = DAHABNA_URL;
 const TITLE = "Download Dahabna | تحميل دهبنا";
 const DESCRIPTION =
   "Get Dahabna, the free gold prices app for Egypt, on the App Store or Google Play. حمّل دهبنا وتابع أسعار الذهب في مصر لحظة بلحظة.";
@@ -58,6 +59,7 @@ export default function DahabnaDownloadPage() {
           name="twitter:image"
           content={`${SITE_URL}/images/egx-gold/og-banner.jpg`}
         />
+        <link rel="canonical" href={`${SITE_URL}${DOWNLOAD_PATH}`} />
       </Head>
       <main className="flex min-h-[60vh] w-full flex-col items-center justify-center gap-6 px-6 py-16 text-center text-dark dark:text-light">
         <h1 className="text-3xl font-bold">Download Dahabna</h1>
@@ -84,11 +86,11 @@ export default function DahabnaDownloadPage() {
           </a>
         </div>
         <div className="flex gap-6">
-          <Link href="/dahabna" className="underline underline-offset-4">
+          <Link href="/" className="underline underline-offset-4">
             Learn more about Dahabna
           </Link>
           <Link
-            href="/ar/dahabna"
+            href="/ar"
             lang="ar"
             className="underline underline-offset-4"
           >

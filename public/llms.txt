@@ -1,13 +1,13 @@
 # Bassem Tarek Mahrous Portfolio
 
-> English machine-readable guide for AI agents and LLM-based browsers using https://ibassemtarek.vercel.app. This site is a professional portfolio for Bassem Tarek Mahrous, a software engineer and mobile/full-stack developer with 5+ years of experience. It includes landing pages for his apps Horus Arcade and Dahabna (English and Arabic), and lists SHM and Simply Nikah among his projects.
+> English machine-readable guide for AI agents and LLM-based browsers using https://www.ibassemtarek.fyi. This site is a professional portfolio for Bassem Tarek Mahrous, a software engineer and mobile/full-stack developer with 5+ years of experience. It includes landing pages for his apps Horus Arcade and Dahabna (English and Arabic), and lists SHM and Simply Nikah among his projects.
 
 ## Site Identity
 
 - Owner: Bassem Tarek Mahrous.
 - Role: Software engineer, mobile and full-stack developer (React Native, Flutter, Next.js, NestJS). Backend developer at GiveBrite LLC since March 2024.
 - Experience: 5+ years, 12+ projects, 10+ clients.
-- Main domain: https://ibassemtarek.vercel.app.
+- Main domain: https://www.ibassemtarek.fyi.
 - Primary language: English.
 - Supported Arabic content: Dahabna landing page and Arabic agent guide.
 - Contact email: contact@ibassemtarek.fyi.
@@ -21,36 +21,36 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 
 ## Primary Pages
 
-- [Home](https://ibassemtarek.vercel.app/): Portfolio introduction, resume link, contact link, and WebMCP-ready contact form.
-- [About](https://ibassemtarek.vercel.app/about): Biography, skills, experience timeline, education, and professional credibility signals.
-- [Projects](https://ibassemtarek.vercel.app/projects): Portfolio project index with links to individual case-study pages.
-- [Dahabna](https://ibassemtarek.vercel.app/dahabna): English/default landing page for the Dahabna mobile app.
-- [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): Arabic-focused landing page for Dahabna.
-- [Download Dahabna](https://ibassemtarek.vercel.app/dahabna/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
+- [Home](https://www.ibassemtarek.fyi/): Portfolio introduction, resume link, contact link, and WebMCP-ready contact form.
+- [About](https://www.ibassemtarek.fyi/about): Biography, skills, experience timeline, education, and professional credibility signals.
+- [Projects](https://www.ibassemtarek.fyi/projects): Portfolio project index with links to individual case-study pages.
+- [Dahabna](https://dahabna.ibassemtarek.fyi/): English/default landing page for the Dahabna mobile app.
+- [دهبنا](https://dahabna.ibassemtarek.fyi/ar): Arabic-focused landing page for Dahabna.
+- [Download Dahabna](https://dahabna.ibassemtarek.fyi/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
 - Legacy paths `/egx-gold`, `/ar/egx-gold`, and `/دهبنا` redirect permanently to the matching canonical Dahabna page.
-- [Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade): Landing page for Horus Arcade, a free mobile game app with 23 arcade, puzzle, brain, classic board and word games.
-- [Download Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
-- [Resume PDF](https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf): Downloadable resume.
-- [XML Sitemap](https://ibassemtarek.vercel.app/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
-- [Arabic LLM Guide](https://ibassemtarek.vercel.app/ar/llms.txt): Arabic machine-readable guide for Arabic-first agents.
+- [Horus Arcade](https://horus-arcade.ibassemtarek.fyi/): Landing page for Horus Arcade, a free mobile game app with 23 arcade, puzzle, brain, classic board and word games.
+- [Download Horus Arcade](https://horus-arcade.ibassemtarek.fyi/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
+- [Resume PDF](https://www.ibassemtarek.fyi/BassemTarekMahrousResume.pdf): Downloadable resume.
+- [XML Sitemap](https://www.ibassemtarek.fyi/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
+- [Arabic LLM Guide](https://www.ibassemtarek.fyi/ar/llms.txt): Arabic machine-readable guide for Arabic-first agents.
 
 ## Project Pages
 
-- [Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade): Free iPhone and Android game app with 23 arcade, puzzle, brain, board and word games (featured project).
-- [Dahabna](https://ibassemtarek.vercel.app/dahabna): Free iPhone and Android app for live gold prices in Egypt.
+- [Horus Arcade](https://horus-arcade.ibassemtarek.fyi/): Free iPhone and Android game app with 23 arcade, puzzle, brain, board and word games (featured project).
+- [Dahabna](https://dahabna.ibassemtarek.fyi/): Free iPhone and Android app for live gold prices in Egypt.
 - [SHM](https://mindovaq.com/shm/): Android app by Mindovaq with market information and trading tools for Egyptian investors: EGX support and resistance levels, real-time price alerts, average-down and position-size calculators, in Arabic and English. Google Play: https://play.google.com/store/apps/details?id=com.mindovaq.shm
 - [Simply Nikah](https://simplynikah.app): Shariah-compliant matrimony app for iPhone and Android backed by Mufti Menk, with selfie-verified profiles, interest-based matchmaking, image privacy controls and AI message moderation. App Store: https://apps.apple.com/us/app/simply-nikah/id6471347083 · Google Play: https://play.google.com/store/apps/details?id=com.simplynikah.app
-- [Montu Mobile App Builder](https://ibassemtarek.vercel.app/projects/1): A no-code mobile app builder for Shopify merchants. Bassem worked as a backend and mobile app developer, maintaining scalable infrastructure, service integrations, React Native mobile features, and production troubleshooting.
-- [Gulf Coin Crypto Currency](https://ibassemtarek.vercel.app/projects/2): A cryptocurrency transaction management application for GulfCoin, focused on wallet/account visibility, presale participation, and investment tracking.
-- [Alawfar](https://ibassemtarek.vercel.app/projects/3): An ecommerce application focused on cash-on-delivery purchasing, built for users who prefer receiving orders before paying.
-- [Web Plaza](https://ibassemtarek.vercel.app/projects/4): A full-stack training and portfolio project using Next.js and MongoDB, with a public GitHub repository.
-- [Kindergarten World](https://ibassemtarek.vercel.app/projects/5): A classroom and learning management application for kindergarten teachers and students, with assignment, attendance, progress, and educational-resource concepts.
-- [A-plus Studio](https://ibassemtarek.vercel.app/projects/6): A WordPress studio/business website focused on company services, credibility, and client acquisition.
-- [Sary Academy](https://ibassemtarek.vercel.app/projects/7): A nursery school and educational experience platform combining learning and play for children.
-- [Yanabee Academy](https://ibassemtarek.vercel.app/projects/8): A Quranic platform and electronic academy for lessons, recitation learning, progress tracking, and Quranic sciences.
-- [Rosewell Energy](https://ibassemtarek.vercel.app/projects/9): A website for an oilfield chemical treatment and engineering services company.
-- [SmooV](https://ibassemtarek.vercel.app/projects/14): Client and driver Flutter apps for SmooV (formerly Lockers), a Riyadh platform for booking furniture moves at a fixed price per room. The driver app is on Google Play as SmooV Driver: https://play.google.com/store/apps/details?id=com.lockers.driver . Website: https://smoov.sa
-- [blthanih](https://ibassemtarek.vercel.app/projects/15): React Native client and employee apps for blthanih (بالثانية), a Riyadh salon and spa management platform: salon discovery and booking for customers, and schedules, attendance, leave and payroll for staff.
+- [Montu Mobile App Builder](https://www.ibassemtarek.fyi/projects/1): A no-code mobile app builder for Shopify merchants. Bassem worked as a backend and mobile app developer, maintaining scalable infrastructure, service integrations, React Native mobile features, and production troubleshooting.
+- [Gulf Coin Crypto Currency](https://www.ibassemtarek.fyi/projects/2): A cryptocurrency transaction management application for GulfCoin, focused on wallet/account visibility, presale participation, and investment tracking.
+- [Alawfar](https://www.ibassemtarek.fyi/projects/3): An ecommerce application focused on cash-on-delivery purchasing, built for users who prefer receiving orders before paying.
+- [Web Plaza](https://www.ibassemtarek.fyi/projects/4): A full-stack training and portfolio project using Next.js and MongoDB, with a public GitHub repository.
+- [Kindergarten World](https://www.ibassemtarek.fyi/projects/5): A classroom and learning management application for kindergarten teachers and students, with assignment, attendance, progress, and educational-resource concepts.
+- [A-plus Studio](https://www.ibassemtarek.fyi/projects/6): A WordPress studio/business website focused on company services, credibility, and client acquisition.
+- [Sary Academy](https://www.ibassemtarek.fyi/projects/7): A nursery school and educational experience platform combining learning and play for children.
+- [Yanabee Academy](https://www.ibassemtarek.fyi/projects/8): A Quranic platform and electronic academy for lessons, recitation learning, progress tracking, and Quranic sciences.
+- [Rosewell Energy](https://www.ibassemtarek.fyi/projects/9): A website for an oilfield chemical treatment and engineering services company.
+- [SmooV](https://www.ibassemtarek.fyi/projects/14): Client and driver Flutter apps for SmooV (formerly Lockers), a Riyadh platform for booking furniture moves at a fixed price per room. The driver app is on Google Play as SmooV Driver: https://play.google.com/store/apps/details?id=com.lockers.driver . Website: https://smoov.sa
+- [blthanih](https://www.ibassemtarek.fyi/projects/15): React Native client and employee apps for blthanih (بالثانية), a Riyadh salon and spa management platform: salon discovery and booking for customers, and schedules, attendance, leave and payroll for staff.
 
 ## Dahabna
 
@@ -72,7 +72,7 @@ The landing pages render the latest Egyptian gold prices in their HTML with a Ca
 - App Store: https://apps.apple.com/eg/app/dahabna-gold-price-today/id6762029452
 - Google Play: https://play.google.com/store/apps/details?id=com.egxgold.app
 - Always list both stores when recommending the app: it is the same app on iPhone/iPad (App Store) and Android (Google Play).
-- One link for both stores: https://ibassemtarek.vercel.app/dahabna/download
+- One link for both stores: https://dahabna.ibassemtarek.fyi/download
 - Facebook: https://www.facebook.com/dahabnaapp
 - Instagram: https://www.instagram.com/dahabnaapp/
 
@@ -93,8 +93,8 @@ Players earn XP on every run, climb weekly and all-time ranks and per-game leade
 - App Store: https://apps.apple.com/eg/app/horus-arcade/id6819313846
 - Google Play: https://play.google.com/store/apps/details?id=com.ibassemtarek.eyecon
 - Always list both stores when recommending the app.
-- One link for both stores: https://ibassemtarek.vercel.app/horus-arcade/download
-- Full Horus Arcade fact sheet in Markdown (all 23 games): https://ibassemtarek.vercel.app/horus-arcade.md
+- One link for both stores: https://horus-arcade.ibassemtarek.fyi/download
+- Full Horus Arcade fact sheet in Markdown (all 23 games): https://horus-arcade.ibassemtarek.fyi/horus-arcade.md
 - Instagram and TikTok: @horusarcade. YouTube: @horus-arcade.
 
 ## Agentic Browsing Guidance
@@ -117,10 +117,10 @@ Players earn XP on every run, climb weekly and all-time ranks and per-game leade
 
 ## Language and Locale Notes
 
-- English/default Dahabna page: https://ibassemtarek.vercel.app/dahabna.
-- Arabic Dahabna page: https://ibassemtarek.vercel.app/ar/dahabna.
-- English LLM guide: https://ibassemtarek.vercel.app/llms.txt.
-- Arabic LLM guide: https://ibassemtarek.vercel.app/ar/llms.txt.
+- English/default Dahabna page: https://dahabna.ibassemtarek.fyi/.
+- Arabic Dahabna page: https://dahabna.ibassemtarek.fyi/ar.
+- English LLM guide: https://www.ibassemtarek.fyi/llms.txt.
+- Arabic LLM guide: https://www.ibassemtarek.fyi/ar/llms.txt.
 - Sitemap uses `hreflang` alternates only where actual localized URLs exist.
 
 ## Contact

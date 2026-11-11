@@ -16,6 +16,7 @@ import {
   IOS_STORE_URL,
 } from "../lib/horus-arcade-download.mjs";
 import { CONTACT_EMAIL } from "../lib/contact.mjs";
+import { HORUS_ARCADE_URL, PORTFOLIO_URL } from "../lib/site-urls.mjs";
 
 // The app's own type pairing: Lilita One for headings and scores, a rounded
 // body face. Only the display face sits in the above-the-fold H1.
@@ -35,8 +36,8 @@ const nunito = Nunito({
   variable: "--font-ha-body",
 });
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
-const PAGE_URL = `${SITE_URL}/horus-arcade`;
+const SITE_URL = HORUS_ARCADE_URL;
+const PAGE_URL = `${SITE_URL}/`;
 const IMG = "/images/horus-arcade";
 const VID = "/videos/horus-arcade";
 const OG_IMAGE_URL = `${SITE_URL}${IMG}/og-banner.jpg`;
@@ -51,7 +52,7 @@ const SOCIALS = [
   { label: "YouTube", href: "https://www.youtube.com/@horus-arcade" },
 ];
 
-const TITLE = "Horus Arcade: 23 Free Arcade & Puzzle Games in One App";
+const TITLE = "Horus Arcade – 23 Free Arcade & Puzzle Games";
 const DESCRIPTION =
   "Horus Arcade packs 23 quick games into one neon Egyptian arcade: Eyecon, Number Stack, Nova Skim, Senet, Sphinx Sudoku and more. Free on iPhone and Android.";
 
@@ -173,20 +174,20 @@ const FAQS = [
     a: "Yes, the free version shows ads, paced so you never get one right after a loss. A one-time Remove Ads purchase or Horus Arcade Premium turns them off, and reward videos are always optional.",
   },
   {
-    q: "Can I play offline?",
-    a: "Yes. Every game works without a connection, and your scores are saved and sent to the leaderboards when you're back online. Online Eyecon matches need a connection.",
+    q: "Is Horus Arcade a free offline game for Android?",
+    a: "Yes. Horus Arcade is free on Android, and all 23 games work offline. Scores are saved and sent to the leaderboards when you reconnect; only online Eyecon matches need a connection.",
   },
   {
     q: "Which phones does it run on?",
     a: "iPhone, from the App Store, and Android phones, from Google Play.",
   },
   {
-    q: "Can I play with friends?",
-    a: "Eyecon has online quick matches, private rooms and a two-player Duo mode on one phone. Four in a Row, Senet, Nile Seeds and Kemet Draughts can be played by two people on one phone, or against Seth.",
+    q: "Which games support two players on one phone?",
+    a: "Eyecon has a two-player Duo mode on one phone. Four in a Row, Senet, Nile Seeds and Kemet Draughts also let two people pass the same phone, or play against Seth.",
   },
   {
-    q: "Can I play ancient Egyptian board games like Senet?",
-    a: "Yes. Senet is the pharaohs' race game, Nile Seeds is mancala on a Nile boat and Kemet Draughts is classic draughts. Play them against Seth or a friend on one phone.",
+    q: "What games like Senet are included?",
+    a: "Horus Arcade includes Senet, the pharaohs' race game; Nile Seeds, a mancala-style game on a Nile boat; and Kemet Draughts, a themed version of classic draughts. Each can be played against Seth or a friend on one phone.",
   },
   {
     q: "Does it save my progress?",
@@ -331,15 +332,15 @@ export default function HorusArcadePage() {
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
-        url: SITE_URL,
-        name: "Bassem Tarek",
-        publisher: { "@id": `${SITE_URL}/#person` },
+        url: PAGE_URL,
+        name: "Horus Arcade",
+        publisher: { "@id": `${PAGE_URL}#publisher` },
       },
       {
         "@type": "Person",
-        "@id": `${SITE_URL}/#person`,
+        "@id": `${PORTFOLIO_URL}/#person`,
         name: "Bassem Tarek",
-        url: SITE_URL,
+        url: PORTFOLIO_URL,
         jobTitle: "Mobile and full-stack developer",
         sameAs: [
           "https://github.com/IBassemTarek",
@@ -351,6 +352,7 @@ export default function HorusArcadePage() {
         "@type": "Organization",
         "@id": `${PAGE_URL}#publisher`,
         name: "Fanar, LLC",
+        url: "https://apps.apple.com/us/developer/fanar-llc/id1887897835",
       },
       {
         "@type": ["MobileApplication", "VideoGame"],
@@ -374,13 +376,14 @@ export default function HorusArcadePage() {
         sameAs: [IOS_STORE_URL, ANDROID_STORE_URL, ...SOCIALS.map(({ href }) => href)],
         offers: {
           "@type": "Offer",
+          url: `${SITE_URL}${DOWNLOAD_PATH}`,
           price: "0",
           priceCurrency: "USD",
           availability: "https://schema.org/InStock",
         },
         featureList: GAMES.map(({ name, tagline }) => `${name}: ${tagline}`),
         hasPart: { "@id": `${PAGE_URL}#games` },
-        author: { "@id": `${SITE_URL}/#person` },
+        author: { "@id": `${PORTFOLIO_URL}/#person` },
         publisher: { "@id": `${PAGE_URL}#publisher` },
         trailer: { "@id": `${PAGE_URL}#reel` },
       },
@@ -416,24 +419,14 @@ export default function HorusArcadePage() {
         duration: "PT20S",
       },
       {
-        "@type": "BreadcrumbList",
-        "@id": `${PAGE_URL}#breadcrumb`,
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-          { "@type": "ListItem", position: 2, name: "Projects", item: `${SITE_URL}/projects` },
-          { "@type": "ListItem", position: 3, name: "Horus Arcade", item: PAGE_URL },
-        ],
-      },
-      {
         "@type": "WebPage",
-        "@id": PAGE_URL,
+        "@id": `${PAGE_URL}#webpage`,
         url: PAGE_URL,
         name: TITLE,
         description: DESCRIPTION,
         inLanguage: "en",
         dateModified: "2026-11-01",
         isPartOf: { "@id": `${SITE_URL}/#website` },
-        breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
         primaryImageOfPage: OG_IMAGE_URL,
         about: { "@id": `${PAGE_URL}#app` },
         mainEntity: { "@id": `${PAGE_URL}#app` },
@@ -470,7 +463,11 @@ export default function HorusArcadePage() {
         <link rel="canonical" href={PAGE_URL} />
         <link rel="apple-touch-icon" href={`${IMG}/app-icon.jpg`} />
         {/* Plain-text fact sheet for LLM crawlers and answer engines. */}
-        <link rel="alternate" type="text/markdown" href="/horus-arcade.md" />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href={`${SITE_URL}/horus-arcade.md`}
+        />
         {/* The first frames people see: the reel's poster, and the hero
             loop's poster on screens wide enough to play it. */}
         <link

@@ -5,7 +5,12 @@
 // The key is public by design: search engines verify ownership by fetching
 // https://<host>/<key>.txt, which lives in /public.
 
-export const SITE_URL = "https://ibassemtarek.vercel.app";
+export const SITE_URL = "https://www.ibassemtarek.fyi";
+export const SITE_URLS = [
+  SITE_URL,
+  "https://dahabna.ibassemtarek.fyi",
+  "https://horus-arcade.ibassemtarek.fyi",
+];
 export const INDEXNOW_KEY = "1a0d8393b7fb494cbab91bc95ce2906e";
 const ENDPOINT = "https://api.indexnow.org/indexnow";
 
@@ -28,35 +33,37 @@ export function buildPayload(urls, siteUrl = SITE_URL, key = INDEXNOW_KEY) {
 }
 
 async function main() {
-  const host = new URL(SITE_URL).host;
-  const sitemap = await fetch(`${SITE_URL}/sitemap.xml`, {
-    signal: AbortSignal.timeout(15000),
-  });
-  if (!sitemap.ok) {
-    throw new Error(`sitemap.xml returned ${sitemap.status}`);
-  }
+  for (const siteUrl of SITE_URLS) {
+    const host = new URL(siteUrl).host;
+    const sitemap = await fetch(`${siteUrl}/sitemap.xml`, {
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!sitemap.ok) {
+      throw new Error(`${host}/sitemap.xml returned ${sitemap.status}`);
+    }
 
-  const urls = extractSitemapUrls(await sitemap.text(), host);
-  if (urls.length === 0) {
-    throw new Error("sitemap.xml has no URLs for this host");
-  }
+    const urls = extractSitemapUrls(await sitemap.text(), host);
+    if (urls.length === 0) {
+      throw new Error(`${host}/sitemap.xml has no URLs for this host`);
+    }
 
-  const res = await fetch(ENDPOINT, {
-    method: "POST",
-    headers: { "Content-Type": "application/json; charset=utf-8" },
-    body: JSON.stringify(buildPayload(urls)),
-    signal: AbortSignal.timeout(15000),
-  });
+    const res = await fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify(buildPayload(urls, siteUrl)),
+      signal: AbortSignal.timeout(15000),
+    });
 
-  // 200 = accepted, 202 = accepted while the key file is being verified.
-  if (res.status !== 200 && res.status !== 202) {
-    throw new Error(
-      `IndexNow returned ${res.status}: ${(await res.text()).slice(0, 300)}`
-    );
-  }
-  console.log(`IndexNow ${res.status}: submitted ${urls.length} URLs`);
-  for (const url of urls) {
-    console.log(`  ${url}`);
+    // 200 = accepted, 202 = accepted while the key file is being verified.
+    if (res.status !== 200 && res.status !== 202) {
+      throw new Error(
+        `IndexNow returned ${res.status} for ${host}: ${(await res.text()).slice(0, 300)}`
+      );
+    }
+    console.log(`IndexNow ${res.status}: submitted ${urls.length} URLs for ${host}`);
+    for (const url of urls) {
+      console.log(`  ${url}`);
+    }
   }
 }
 

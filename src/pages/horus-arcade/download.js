@@ -11,6 +11,7 @@ import {
   detectStorePlatform,
   storeUrlFor,
 } from "../../lib/horus-arcade-download.mjs";
+import { HORUS_ARCADE_URL } from "../../lib/site-urls.mjs";
 
 const lilita = Lilita_One({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const lilita = Lilita_One({
   variable: "--font-ha-display",
 });
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
+const SITE_URL = HORUS_ARCADE_URL;
 const OG_IMAGE_URL = `${SITE_URL}/images/horus-arcade/og-banner.jpg`;
 const TITLE = "Download Horus Arcade: 23 games, free";
 const DESCRIPTION =
@@ -64,6 +65,7 @@ export default function HorusArcadeDownloadPage() {
         <meta name="twitter:title" content={TITLE} />
         <meta name="twitter:description" content={DESCRIPTION} />
         <meta name="twitter:image" content={OG_IMAGE_URL} />
+        <link rel="canonical" href={`${SITE_URL}${DOWNLOAD_PATH}`} />
       </Head>
       <main
         className={`ha ${lilita.variable} relative flex min-h-[80vh] w-full flex-col items-center justify-center gap-6 overflow-hidden px-6 py-16 text-center`}
@@ -98,7 +100,7 @@ export default function HorusArcadeDownloadPage() {
           <DownloadQr caption="Scan with your phone" />
         </div>
         <Link
-          href="/horus-arcade"
+          href="/"
           className="relative font-bold text-[#29e6ff] underline underline-offset-4"
         >
           Take a tour of the arcade

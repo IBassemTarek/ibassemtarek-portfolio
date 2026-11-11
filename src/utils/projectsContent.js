@@ -10,12 +10,12 @@ export const montuContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/projects/montu.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/montu.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/montu/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/montu/4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/projects/montu.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/projects/montu.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/montu/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/montu/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/montu/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/montu/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/montu/5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/montu/5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/montu/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/montu/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/montu/4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/montu/4.webp" /></a></p>
 
 <p>&nbsp;</p>`;
 
@@ -40,22 +40,22 @@ export const gulfCoinContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-6.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-7.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-7.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-8.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-8.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-9.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-9.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/app-10.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/app-10.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-6.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-6.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-7.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-7.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-8.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-8.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-9.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-9.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/app-10.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/app-10.webp" /></a></p>
 
-<p><a href="https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/projects/GulfCoin.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/gulf/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/gulf/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/projects/GulfCoin.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/projects/GulfCoin.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/gulf/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/gulf/3.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -75,9 +75,9 @@ export const alawfarContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/alawfar/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/alawfar/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/alawfar/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/alawfar/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/alawfar/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/alawfar/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/alawfar/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/alawfar/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/alawfar/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/alawfar/2.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -94,15 +94,15 @@ export const webPlazaContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/6.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/7.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/7.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/8.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/8.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/webPlaza/9.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/webPlaza/9.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/6.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/6.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/7.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/7.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/8.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/8.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/webPlaza/9.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/webPlaza/9.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -131,8 +131,8 @@ export const kindergartenContent = `<h2><strong>Project description</strong></h2
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/kindergartenWorld/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/kindergartenWorld/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/kindergartenWorld/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/kindergartenWorld/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/kindergartenWorld/2.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -161,9 +161,9 @@ export const aPlusContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/aplus/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/aplus/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/aplus/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/aplus/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/aplus/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/aplus/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/aplus/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/aplus/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/aplus/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/aplus/3.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -180,12 +180,12 @@ export const saryAcademyContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/sary/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/sary/6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/sary/6.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/sary/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/sary/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/sary/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/sary/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/sary/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/sary/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/sary/4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/sary/4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/sary/5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/sary/5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/sary/6.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/sary/6.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -211,12 +211,12 @@ export const yanabeeContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/yanabee/6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/yanabee/6.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/yanabee/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/yanabee/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/yanabee/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/yanabee/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/yanabee/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/yanabee/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/yanabee/4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/yanabee/4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/yanabee/5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/yanabee/5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/yanabee/6.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/yanabee/6.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -242,10 +242,10 @@ export const rosewellContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/rosewell/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/rosewell/4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/rosewell/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/rosewell/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/rosewell/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/rosewell/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/rosewell/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/rosewell/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/rosewell/4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/rosewell/4.webp" /></a></p>
 
 <p>&nbsp;</p>
 `;
@@ -264,14 +264,14 @@ export const smoovContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/feature-graphic.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/feature-graphic.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/website.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/website.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/smoov/website-mobile.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/smoov/website-mobile.webp" /></a></p>`;
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/feature-graphic.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/feature-graphic.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/website.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/website.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/smoov/website-mobile.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/smoov/website-mobile.webp" /></a></p>`;
 
 export const blthanihContent = `<h2><strong>Project description</strong></h2>
 
@@ -291,17 +291,17 @@ export const blthanihContent = `<h2><strong>Project description</strong></h2>
 <hr />
 <h2>Preview</h2>
 
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-6.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-7.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-7.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/client-8.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/client-8.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-1.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-1.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-2.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-2.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-3.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-3.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-4.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-4.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-5.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-5.webp" /></a></p>
-<p><a href="https://ibassemtarek.vercel.app/images/blthanih/employee-6.webp" rel="" target="_blank"><img src="https://ibassemtarek.vercel.app/images/blthanih/employee-6.webp" /></a></p>`;
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-6.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-6.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-7.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-7.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/client-8.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/client-8.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/employee-1.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/employee-1.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/employee-2.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/employee-2.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/employee-3.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/employee-3.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/employee-4.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/employee-4.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/employee-5.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/employee-5.webp" /></a></p>
+<p><a href="https://www.ibassemtarek.fyi/images/blthanih/employee-6.webp" rel="" target="_blank"><img src="https://www.ibassemtarek.fyi/images/blthanih/employee-6.webp" /></a></p>`;

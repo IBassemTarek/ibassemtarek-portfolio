@@ -26,6 +26,7 @@ import {
   smoovContent,
   blthanihContent,
 } from "./projectsContent";
+import { DAHABNA_URL, HORUS_ARCADE_URL } from "../lib/site-urls.mjs";
 
 // Apps with their own page link there (`href`, on this site or external)
 // instead of to a /projects/<id> case study; `tag` is the label above the
@@ -40,7 +41,7 @@ export const projectData = [
       "23 quick arcade, puzzle, brain, board and word games in one neon, ancient-Egypt-themed arcade hosted by Horus the falcon. Free on iPhone and Android.",
     img: horusArcadeImg,
     id: 10,
-    href: "/horus-arcade",
+    href: HORUS_ARCADE_URL,
   },
   {
     title: "Dahabna",
@@ -51,7 +52,7 @@ export const projectData = [
       "Live 24k, 21k and 18k gold prices in Egypt, a gold portfolio, zakat calculator and price alerts. Free on the App Store and Google Play.",
     img: dahabnaImg,
     id: 11,
-    href: "/dahabna",
+    href: DAHABNA_URL,
   },
   {
     title: "SHM",

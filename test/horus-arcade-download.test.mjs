@@ -3,6 +3,7 @@ import test from "node:test";
 
 import {
   ANDROID_STORE_URL,
+  ARABIC_DOWNLOAD_PATH,
   DOWNLOAD_PATH,
   IOS_APP_ID,
   IOS_STORE_URL,
@@ -10,6 +11,7 @@ import {
   downloadRedirects,
   storeUrlFor,
 } from "../src/lib/horus-arcade-download.mjs";
+import { HORUS_ARCADE_HOST } from "../src/lib/site-urls.mjs";
 
 const UA = {
   androidChrome:
@@ -42,7 +44,11 @@ test("maps phones to their store and everything else to null", () => {
 // first matching redirect wins.
 function edgeRedirectFor(userAgent) {
   const rule = downloadRedirects().find(({ has }) =>
-    has.every(({ value }) => new RegExp(`^${value}$`).test(userAgent))
+    has.every(({ type, value }) =>
+      type === "host"
+        ? value === HORUS_ARCADE_HOST
+        : new RegExp(`^${value}$`).test(userAgent)
+    )
   );
   return rule?.destination ?? null;
 }
@@ -58,9 +64,17 @@ test("edge redirects agree with detectStorePlatform", () => {
 });
 
 test("edge redirects are temporary and scoped to the download path", () => {
-  assert.equal(DOWNLOAD_PATH, "/horus-arcade/download");
+  assert.equal(DOWNLOAD_PATH, "/download");
   for (const rule of downloadRedirects()) {
-    assert.equal(rule.source, DOWNLOAD_PATH);
+    assert.ok(
+      rule.source === DOWNLOAD_PATH || rule.source === ARABIC_DOWNLOAD_PATH,
+      rule.source
+    );
+    assert.ok(
+      rule.has.some(
+        ({ type, value }) => type === "host" && value === HORUS_ARCADE_HOST
+      )
+    );
     assert.equal(rule.permanent, false);
   }
 });

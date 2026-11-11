@@ -11,8 +11,9 @@ import {
   ANDROID_STORE_URL,
   IOS_STORE_URL,
 } from "@/lib/horus-arcade-download.mjs";
+import { PORTFOLIO_URL } from "@/lib/site-urls.mjs";
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
+const SITE_URL = PORTFOLIO_URL;
 const TITLE = "Projects | Bassem Tarek – Mobile Apps, Web Apps & Backends";
 const DESCRIPTION =
   "Projects by Bassem Tarek: Horus Arcade, Dahabna, SHM, Simply Nikah, SmooV and blthanih mobile apps, plus web platforms and backends for startups.";

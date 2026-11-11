@@ -9,9 +9,14 @@ import { LinkArrow } from "@/components/AppIcons";
 import TransitionEffect from "@/components/TransitionEffect";
 import ContactForm from "@/components/ContactForm";
 import { CONTACT_EMAIL } from "@/lib/contact.mjs";
+import {
+  DAHABNA_URL,
+  HORUS_ARCADE_URL,
+  PORTFOLIO_URL,
+} from "@/lib/site-urls.mjs";
 import { projectData } from "@/utils/projectsData";
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
+const SITE_URL = PORTFOLIO_URL;
 const TITLE = "Bassem Tarek | Mobile & Full-Stack Developer (React Native, Next.js)";
 const DESCRIPTION =
   "Bassem Tarek is a software engineer with 5+ years building iOS and Android apps and backends in React Native, Flutter, Next.js and NestJS.";
@@ -290,11 +295,11 @@ export default function Home() {
                 I&apos;m Bassem Tarek, a software engineer who builds iOS and
                 Android apps and the backends behind them. I turn ideas into
                 products people use every day, like{" "}
-                <Link href="/horus-arcade" className="font-semibold text-primary underline-offset-4 hover:underline dark:text-primaryDark">
+                <Link href={HORUS_ARCADE_URL} className="font-semibold text-primary underline-offset-4 hover:underline dark:text-primaryDark">
                   Horus Arcade
                 </Link>{" "}
                 and{" "}
-                <Link href="/dahabna" className="font-semibold text-primary underline-offset-4 hover:underline dark:text-primaryDark">
+                <Link href={DAHABNA_URL} className="font-semibold text-primary underline-offset-4 hover:underline dark:text-primaryDark">
                   Dahabna
                 </Link>
                 .

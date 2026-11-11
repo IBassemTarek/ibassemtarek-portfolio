@@ -1,4 +1,4 @@
-# Robots policy for https://ibassemtarek.vercel.app
+# Robots policy for https://www.ibassemtarek.fyi
 # سياسة الزحف لموقع محفظة باسم طارق محروس
 
 User-agent: *
@@ -26,4 +26,4 @@ User-agent: CCBot
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://ibassemtarek.vercel.app/sitemap.xml
+Sitemap: https://www.ibassemtarek.fyi/sitemap.xml

@@ -11,8 +11,9 @@ import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
 import experienceData from "@/utils/experienceData";
 import { CONTACT_EMAIL } from "@/lib/contact.mjs";
+import { PORTFOLIO_URL } from "@/lib/site-urls.mjs";
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
+const SITE_URL = PORTFOLIO_URL;
 const PAGE_URL = `${SITE_URL}/about`;
 const TITLE = "About Bassem Tarek | Software Engineer, Mobile & Backend Developer";
 const DESCRIPTION =

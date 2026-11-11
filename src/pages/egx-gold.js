@@ -22,6 +22,7 @@ import {
   IOS_STORE_URL,
 } from "../lib/dahabna-download.mjs";
 import { CONTACT_EMAIL } from "../lib/contact.mjs";
+import { DAHABNA_URL, PORTFOLIO_URL } from "../lib/site-urls.mjs";
 
 // display:swap → text paints immediately in a fallback face, then swaps (no
 // invisible-text FCP block). Only the English display face (used in the
@@ -63,7 +64,7 @@ const PRIVACY_POLICY_URL =
   "https://egypt-gold-scraper.egypt-gold-scraper.workers.dev/privacy-policy";
 const SUPPORT_EMAIL = CONTACT_EMAIL;
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
+const SITE_URL = DAHABNA_URL;
 const OG_IMAGE_URL = `${SITE_URL}/images/egx-gold/og-banner.jpg`;
 const APP_ICON_URL = `${SITE_URL}/images/egx-gold/app-icon.jpg`;
 const BRAND_ICON_URL = `${SITE_URL}/images/egx-gold/dahabna-icon-512.png`;
@@ -179,6 +180,34 @@ const COPY = {
     chooseLabel: "Choose your device",
     chooseHeading: "Download Dahabna where you use it.",
     chooseBody: "Choose your platform and continue to the right store.",
+    guide: {
+      label: "Understand the price",
+      heading: "A practical guide to gold prices in Egypt",
+      intro:
+        "Dahabna presents the market numbers with the context you need to read them correctly.",
+      items: [
+        {
+          title: "What do 24k, 21k, and 18k mean?",
+          detail:
+            "Karat measures gold purity. 24k is the highest-purity form, 21k is widely traded in Egypt, and 18k contains more alloy for added durability. Dahabna shows a per-gram price for each karat.",
+        },
+        {
+          title: "What is the difference between sell and buy prices?",
+          detail:
+            "The sell price is the indicative price at which a gold dealer sells one gram to a customer. The buy price is the indicative price at which a dealer buys it from a customer. Workmanship and dealer margins can change a final quote.",
+        },
+        {
+          title: "When were the prices updated?",
+          detail:
+            "The timestamp beside the price panel shows the latest update received from Dahabna's Egyptian market data service in Cairo time. Prices can move during the day, so use the timestamp before making a comparison.",
+        },
+        {
+          title: "How does the gold zakat calculator help?",
+          detail:
+            "Record your gold holdings in the portfolio and Dahabna estimates the zakat due and keeps a yearly record. The calculation is informational; ask a qualified religious adviser about your circumstances.",
+        },
+      ],
+    },
     banner: {
       price: "Free",
       tagline: "Live gold prices — 24k, 21k & 18k.",
@@ -236,7 +265,7 @@ const COPY = {
         {
           question: "Where can I download Dahabna?",
           answer:
-            "On the App Store for iPhone and iPad, and on Google Play for Android. The link ibassemtarek.vercel.app/dahabna/download opens the right store for your phone automatically.",
+            "On the App Store for iPhone and iPad, and on Google Play for Android. The link dahabna.ibassemtarek.fyi/download opens the right store for your phone automatically.",
         },
       ],
     },
@@ -351,6 +380,34 @@ const COPY = {
     chooseLabel: "اختر جهازك",
     chooseHeading: "حمّل دهبنا على جهازك.",
     chooseBody: "اختر نظام جهازك لتنتقل إلى المتجر المناسب.",
+    guide: {
+      label: "افهم السعر",
+      heading: "دليل عملي لفهم سعر الذهب اليوم في مصر",
+      intro:
+        "يعرض دهبنا أرقام السوق مع المعلومات الأساسية التي تساعدك تقرأها بشكل صحيح.",
+      items: [
+        {
+          title: "ما الفرق بين الذهب عيار 24 وعيار 21 وعيار 18؟",
+          detail:
+            "العيار يعبّر عن درجة نقاء الذهب. عيار 24 هو الأعلى نقاءً، وعيار 21 هو الأكثر تداولًا في مصر، وعيار 18 يحتوي على نسبة أكبر من المعادن المضافة لزيادة الصلابة. يعرض دهبنا سعر الجرام لكل عيار.",
+        },
+        {
+          title: "ما الفرق بين سعر البيع وسعر الشراء؟",
+          detail:
+            "سعر البيع هو السعر الاسترشادي الذي يبيع به تاجر الذهب جرام الذهب للعميل، وسعر الشراء هو السعر الاسترشادي الذي يشتري به التاجر الذهب من العميل. قد تغيّر المصنعية وهامش التاجر السعر النهائي.",
+        },
+        {
+          title: "متى تم تحديث سعر الذهب؟",
+          detail:
+            "يوضح التوقيت بجوار لوحة الأسعار آخر تحديث استلمه دهبنا من خدمة بيانات السوق المصري بتوقيت القاهرة. الأسعار قد تتغير خلال اليوم، لذلك راجع وقت التحديث قبل المقارنة.",
+        },
+        {
+          title: "كيف يساعدني حساب زكاة الذهب؟",
+          detail:
+            "سجّل مقتنياتك الذهبية في المحفظة ليقدّر دهبنا الزكاة المستحقة ويحتفظ بسجل سنوي. الحساب استرشادي، فارجع إلى جهة دينية موثوقة حسب حالتك.",
+        },
+      ],
+    },
     banner: {
       price: "مجانًا",
       tagline: "أسعار الذهب مباشرة — عيار 24 و21 و18.",
@@ -408,7 +465,7 @@ const COPY = {
         {
           question: "أين يمكنني تحميل دهبنا؟",
           answer:
-            "من App Store لأجهزة iPhone وiPad، ومن Google Play لأجهزة Android. الرابط ibassemtarek.vercel.app/dahabna/download يفتح المتجر المناسب لجهازك تلقائيًا.",
+            "من App Store لأجهزة iPhone وiPad، ومن Google Play لأجهزة Android. الرابط dahabna.ibassemtarek.fyi/download يفتح المتجر المناسب لجهازك تلقائيًا.",
         },
       ],
     },
@@ -789,11 +846,11 @@ export default function EgxGoldPage({
   const storeCards = getStoreCards(copy);
 
   const canonicalUrl = isArabicPage
-    ? `${SITE_URL}/ar/dahabna`
-    : `${SITE_URL}/dahabna`;
+    ? `${SITE_URL}/ar`
+    : `${SITE_URL}/`;
   const pageTitle = isArabicPage
-    ? "دهبنا | أسعار الذهب في مصر اليوم"
-    : "Dahabna | Live Gold Prices in Egypt";
+    ? "دهبنا – سعر الذهب اليوم في مصر، عيار 21 و24"
+    : "Dahabna – Live Gold Prices in Egypt, 21K & 24K";
   const pageDescription = copy.heroBody;
 
   // Pull the latest real prices from the public Worker endpoint, then refresh
@@ -920,9 +977,9 @@ Instagram: ${INSTAGRAM_URL}`;
   const faqAnswerText = (item) =>
     item.answer ?? fillTemplate(item.answerTemplate, { time: updatedLabel });
 
-  const appId = `${SITE_URL}/dahabna#app`;
-  const organizationId = `${SITE_URL}/dahabna#organization`;
-  const personId = `${SITE_URL}/#person`;
+  const appId = `${SITE_URL}/#app`;
+  const organizationId = `${SITE_URL}/#organization`;
+  const personId = `${PORTFOLIO_URL}/#person`;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -932,7 +989,7 @@ Instagram: ${INSTAGRAM_URL}`;
         name: "Dahabna",
         alternateName: ["دهبنا", "EGX Gold"],
         description: COPY.en.heroBody,
-        url: `${SITE_URL}/dahabna`,
+        url: `${SITE_URL}/`,
         image: APP_ICON_URL,
         screenshot: OG_IMAGE_URL,
         applicationCategory: "FinanceApplication",
@@ -961,7 +1018,7 @@ Instagram: ${INSTAGRAM_URL}`;
         name: "Dahabna",
         alternateName: "دهبنا",
         slogan: COPY.ar.slogan,
-        url: `${SITE_URL}/dahabna`,
+        url: `${SITE_URL}/`,
         logo: {
           "@type": "ImageObject",
           url: BRAND_ICON_URL,
@@ -983,7 +1040,16 @@ Instagram: ${INSTAGRAM_URL}`;
         "@type": "Person",
         "@id": personId,
         name: "Bassem Tarek Mahrous",
+        url: `${PORTFOLIO_URL}/`,
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
         url: `${SITE_URL}/`,
+        name: "Dahabna",
+        alternateName: "دهبنا",
+        inLanguage: ["en", "ar"],
+        publisher: { "@id": organizationId },
       },
       {
         "@type": "WebPage",
@@ -992,7 +1058,7 @@ Instagram: ${INSTAGRAM_URL}`;
         name: pageTitle,
         description: pageDescription,
         inLanguage: copy.lang,
-        isPartOf: { "@type": "WebSite", url: `${SITE_URL}/` },
+        isPartOf: { "@id": `${SITE_URL}/#website` },
         about: { "@id": appId },
         mainEntity: { "@id": appId },
         publisher: { "@id": organizationId },
@@ -1017,6 +1083,10 @@ Instagram: ${INSTAGRAM_URL}`;
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1"
+        />
         {/* Apple native Smart App Banner (iOS Safari). Shows "OPEN" if the app
             is installed, otherwise routes to the App Store. */}
         <meta name="apple-itunes-app" content={`app-id=${IOS_APP_ID}`} />
@@ -1041,12 +1111,12 @@ Instagram: ${INSTAGRAM_URL}`;
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={OG_IMAGE_URL} />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/dahabna`} />
-        <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar/dahabna`} />
+        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/`} />
+        <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar`} />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${SITE_URL}/dahabna`}
+          href={`${SITE_URL}/`}
         />
         <script
           type="application/ld+json"
@@ -1426,6 +1496,39 @@ Instagram: ${INSTAGRAM_URL}`;
                   </div>
                 </div>
               </div>
+
+              <section
+                aria-labelledby="egx-guide-heading"
+                className="egx-card rounded-[1.75rem] p-6 sm:p-5"
+              >
+                <p className="font-[var(--font-egx-body)] text-[11px] uppercase tracking-[0.28em] text-[color:var(--egx-cyan-strong)]">
+                  {copy.guide.label}
+                </p>
+                <h2
+                  id="egx-guide-heading"
+                  className="mt-3.5 font-[var(--font-egx-display)] text-3xl font-semibold text-[color:var(--egx-ink)] md:text-2xl"
+                >
+                  {copy.guide.heading}
+                </h2>
+                <p className="mt-3 max-w-3xl font-[var(--font-egx-body)] text-sm leading-7 text-[color:var(--egx-ink-soft)]">
+                  {copy.guide.intro}
+                </p>
+                <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-1">
+                  {copy.guide.items.map((item) => (
+                    <article
+                      key={item.title}
+                      className="egx-feature rounded-2xl p-5"
+                    >
+                      <h3 className="text-lg font-semibold text-[color:var(--egx-ink)]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 font-[var(--font-egx-body)] text-sm leading-7 text-[color:var(--egx-ink-soft)]">
+                        {item.detail}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </section>
 
               {/* FAQ: plain, always-visible Q&A so search and answer engines
                   can quote it directly. Mirrors the FAQPage JSON-LD above. */}

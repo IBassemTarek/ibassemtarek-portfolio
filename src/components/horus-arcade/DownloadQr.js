@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-// The QR (download-qr.svg) leaves its centre clear for the app icon; error
-// level Q keeps it scannable. The white card is the quiet zone scanners need.
+// The QR points at the canonical subdomain download URL. Error level H keeps
+// it scannable beneath the centred app icon; the white card is its quiet zone.
 export default function DownloadQr({ size = 168, caption = "Scan to download" }) {
   return (
     <figure className="ha-qr m-0 flex flex-col items-center">

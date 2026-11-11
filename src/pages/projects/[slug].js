@@ -9,8 +9,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import { GithubIcon, LinkArrow } from "@/components/AppIcons";
 import { projectData } from "@/utils/projectsData";
+import { PORTFOLIO_URL } from "@/lib/site-urls.mjs";
 
-const SITE_URL = "https://ibassemtarek.vercel.app";
+const SITE_URL = PORTFOLIO_URL;
 
 // Only projects without their own page have a case study here; the others
 // redirect to it (next.config.mjs).

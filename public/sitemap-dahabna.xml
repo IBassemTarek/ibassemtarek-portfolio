@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <url>
+    <loc>https://dahabna.ibassemtarek.fyi/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dahabna.ibassemtarek.fyi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dahabna.ibassemtarek.fyi/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dahabna.ibassemtarek.fyi/" />
+    <image:image>
+      <image:loc>https://dahabna.ibassemtarek.fyi/images/egx-gold/og-banner.jpg</image:loc>
+      <image:title>Dahabna app banner</image:title>
+      <image:caption>Dahabna showing live 24k, 21k, and 18k gold prices in Egypt, portfolio tracking, and zakat calculations.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dahabna.ibassemtarek.fyi/images/egx-gold/app-icon.jpg</image:loc>
+      <image:title>Dahabna app icon</image:title>
+      <image:caption>Application icon for Dahabna, a gold prices app for Egypt.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dahabna.ibassemtarek.fyi/ar</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dahabna.ibassemtarek.fyi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dahabna.ibassemtarek.fyi/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dahabna.ibassemtarek.fyi/" />
+    <image:image>
+      <image:loc>https://dahabna.ibassemtarek.fyi/images/egx-gold/og-banner.jpg</image:loc>
+      <image:title>بانر تطبيق دهبنا</image:title>
+      <image:caption>تطبيق دهبنا يعرض سعر الذهب اليوم في مصر لعيار 24 و21 و18، مع متابعة المحفظة وحساب زكاة الذهب.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dahabna.ibassemtarek.fyi/images/egx-gold/app-icon.jpg</image:loc>
+      <image:title>أيقونة تطبيق دهبنا</image:title>
+      <image:caption>أيقونة تطبيق دهبنا لمتابعة أسعار الذهب في مصر.</image:caption>
+    </image:image>
+  </url>
+</urlset>

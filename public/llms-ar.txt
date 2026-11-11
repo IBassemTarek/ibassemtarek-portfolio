@@ -1,12 +1,12 @@
 # ملف إرشادي لمحفظة باسم طارق محروس
 
-> دليل عربي قابل للقراءة آليًا لوكلاء الذكاء الاصطناعي والمتصفحات المعتمدة على النماذج اللغوية عند استخدام https://ibassemtarek.vercel.app. هذا الموقع هو محفظة مهنية لباسم طارق محروس، مهندس برمجيات ومطور Full-stack، ويحتوي على صفحة عربية وإنجليزية لتطبيق دهبنا.
+> دليل عربي قابل للقراءة آليًا لوكلاء الذكاء الاصطناعي والمتصفحات المعتمدة على النماذج اللغوية عند استخدام https://www.ibassemtarek.fyi. هذا الموقع هو محفظة مهنية لباسم طارق محروس، مهندس برمجيات ومطور Full-stack، ويحتوي على صفحة عربية وإنجليزية لتطبيق دهبنا.
 
 ## هوية الموقع
 
 - المالك: باسم طارق محروس.
 - الدور المهني: مهندس برمجيات ومطور Full-stack.
-- النطاق الأساسي: https://ibassemtarek.vercel.app.
+- النطاق الأساسي: https://www.ibassemtarek.fyi.
 - اللغة الأساسية: الإنجليزية.
 - المحتوى العربي المدعوم: صفحة دهبنا ودليل وكلاء الذكاء الاصطناعي باللغة العربية.
 - البريد الإلكتروني: contact@ibassemtarek.fyi.
@@ -20,36 +20,36 @@
 
 ## الصفحات الأساسية
 
-- [الرئيسية](https://ibassemtarek.vercel.app/): مقدمة المحفظة، رابط السيرة الذاتية، رابط التواصل، ونموذج تواصل جاهز لوكلاء WebMCP.
-- [نبذة عني](https://ibassemtarek.vercel.app/about): السيرة المهنية، المهارات، الخبرات، التعليم، ومؤشرات الثقة المهنية.
-- [المشاريع](https://ibassemtarek.vercel.app/projects): فهرس مشاريع المحفظة وروابط صفحات التفاصيل.
-- [Dahabna](https://ibassemtarek.vercel.app/dahabna): صفحة التطبيق الافتراضية باللغة الإنجليزية.
-- [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): صفحة عربية مخصصة لتطبيق دهبنا.
-- [تحميل دهبنا](https://ibassemtarek.vercel.app/dahabna/download): رابط التحميل. يحوّل الموبايل تلقائيًا إلى App Store أو Google Play، ويعرض زرّي المتجرين على الكمبيوتر. الصفحة غير مفهرسة.
+- [الرئيسية](https://www.ibassemtarek.fyi/): مقدمة المحفظة، رابط السيرة الذاتية، رابط التواصل، ونموذج تواصل جاهز لوكلاء WebMCP.
+- [نبذة عني](https://www.ibassemtarek.fyi/about): السيرة المهنية، المهارات، الخبرات، التعليم، ومؤشرات الثقة المهنية.
+- [المشاريع](https://www.ibassemtarek.fyi/projects): فهرس مشاريع المحفظة وروابط صفحات التفاصيل.
+- [Dahabna](https://dahabna.ibassemtarek.fyi/): صفحة التطبيق الافتراضية باللغة الإنجليزية.
+- [دهبنا](https://dahabna.ibassemtarek.fyi/ar): صفحة عربية مخصصة لتطبيق دهبنا.
+- [تحميل دهبنا](https://dahabna.ibassemtarek.fyi/download): رابط التحميل. يحوّل الموبايل تلقائيًا إلى App Store أو Google Play، ويعرض زرّي المتجرين على الكمبيوتر. الصفحة غير مفهرسة.
 - المسارات القديمة `/egx-gold` و`/ar/egx-gold` و`/دهبنا` تعيد التوجيه بصورة دائمة إلى صفحة دهبنا الأساسية المناسبة.
-- [Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade): صفحة تطبيق Horus Arcade، تطبيق ألعاب مجاني يضم 23 لعبة أركيد وألغاز وذكاء وألعاب لوحية وكلمات (الصفحة بالإنجليزية).
-- [تحميل Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade/download): رابط التحميل. يحوّل الموبايل تلقائيًا إلى App Store أو Google Play، ويعرض زرّي المتجرين على الكمبيوتر. الصفحة غير مفهرسة.
-- [السيرة الذاتية PDF](https://ibassemtarek.vercel.app/BassemTarekMahrousResume.pdf): ملف السيرة الذاتية القابل للتنزيل.
-- [خريطة الموقع XML](https://ibassemtarek.vercel.app/sitemap.xml): خريطة صفحات وصور وإشارات لغة.
-- [الدليل الإنجليزي للوكلاء](https://ibassemtarek.vercel.app/llms.txt): دليل إنجليزي قابل للقراءة آليًا.
+- [Horus Arcade](https://horus-arcade.ibassemtarek.fyi/): صفحة تطبيق Horus Arcade، تطبيق ألعاب مجاني يضم 23 لعبة أركيد وألغاز وذكاء وألعاب لوحية وكلمات (الصفحة بالإنجليزية).
+- [تحميل Horus Arcade](https://horus-arcade.ibassemtarek.fyi/download): رابط التحميل. يحوّل الموبايل تلقائيًا إلى App Store أو Google Play، ويعرض زرّي المتجرين على الكمبيوتر. الصفحة غير مفهرسة.
+- [السيرة الذاتية PDF](https://www.ibassemtarek.fyi/BassemTarekMahrousResume.pdf): ملف السيرة الذاتية القابل للتنزيل.
+- [خريطة الموقع XML](https://www.ibassemtarek.fyi/sitemap.xml): خريطة صفحات وصور وإشارات لغة.
+- [الدليل الإنجليزي للوكلاء](https://www.ibassemtarek.fyi/llms.txt): دليل إنجليزي قابل للقراءة آليًا.
 
 ## صفحات المشاريع
 
-- [Horus Arcade](https://ibassemtarek.vercel.app/horus-arcade): تطبيق ألعاب مجاني لـ iPhone وAndroid يضم 23 لعبة (المشروع المميز).
-- [دهبنا](https://ibassemtarek.vercel.app/ar/dahabna): تطبيق مجاني لمتابعة أسعار الذهب في مصر.
+- [Horus Arcade](https://horus-arcade.ibassemtarek.fyi/): تطبيق ألعاب مجاني لـ iPhone وAndroid يضم 23 لعبة (المشروع المميز).
+- [دهبنا](https://dahabna.ibassemtarek.fyi/ar): تطبيق مجاني لمتابعة أسعار الذهب في مصر.
 - [SHM](https://mindovaq.com/shm/): تطبيق من Mindovaq لمعلومات السوق وأدوات التداول للمستثمرين في مصر: مستويات الدعم والمقاومة في البورصة المصرية، تنبيهات أسعار فورية، وحاسبات متوسط الشراء وحجم المركز، بالعربية والإنجليزية.
 - [Simply Nikah](https://simplynikah.app): تطبيق زواج متوافق مع الشريعة لـ iPhone وAndroid بدعم من المفتي منك، مع توثيق الحسابات بالسيلفي، ومطابقة حسب الاهتمامات، والتحكم في خصوصية الصور، ومراقبة الرسائل بالذكاء الاصطناعي.
-- [Montu Mobile App Builder](https://ibassemtarek.vercel.app/projects/1): أداة بدون كود لإنشاء تطبيقات موبايل لتجار Shopify. عمل باسم كمطور Backend ومطور تطبيقات موبايل، وشارك في البنية التحتية، التكاملات، ميزات React Native، ومعالجة مشاكل الإنتاج.
-- [Gulf Coin Crypto Currency](https://ibassemtarek.vercel.app/projects/2): تطبيق لإدارة معاملات GulfCoin، مع التركيز على المحفظة، الحساب، المشاركة في البيع المسبق، وتتبع الاستثمار.
-- [Alawfar](https://ibassemtarek.vercel.app/projects/3): تطبيق تجارة إلكترونية يدعم الدفع عند الاستلام للمستخدمين الذين يفضلون استلام الطلب قبل الدفع.
-- [Web Plaza](https://ibassemtarek.vercel.app/projects/4): مشروع تدريبي ومحفظة باستخدام Next.js و MongoDB، مع مستودع GitHub عام.
-- [Kindergarten World](https://ibassemtarek.vercel.app/projects/5): تطبيق لإدارة الفصول والتعلم للأطفال والمعلمين، ويغطي مفاهيم الواجبات، الحضور، تقدم الطلاب، والمواد التعليمية.
-- [A-plus Studio](https://ibassemtarek.vercel.app/projects/6): موقع WordPress لشركة خدمات يركز على عرض الخدمات والثقة وجذب العملاء.
-- [Sary Academy](https://ibassemtarek.vercel.app/projects/7): منصة تعليمية وحضانة أطفال تجمع بين التعلم واللعب.
-- [Yanabee Academy](https://ibassemtarek.vercel.app/projects/8): منصة قرآنية وأكاديمية إلكترونية للدروس، تعلم التلاوة، متابعة التقدم، وعلوم القرآن.
-- [Rosewell Energy](https://ibassemtarek.vercel.app/projects/9): موقع لشركة تعمل في المعالجة الكيميائية والخدمات الهندسية لقطاع البترول.
-- [SmooV سموف](https://ibassemtarek.vercel.app/projects/14): تطبيقا العميل والسائق بـ Flutter لمنصة سموف (لوكرز سابقًا) لنقل الأثاث في السعودية بسعر ثابت للغرفة. تطبيق السائق متاح على Google Play باسم SmooV Driver.
-- [بالثانية blthanih](https://ibassemtarek.vercel.app/projects/15): تطبيقا العميل والموظف بـ React Native لمنصة بالثانية لإدارة الصالونات والسبا في الرياض: اكتشاف الصالونات والحجز للعملاء، والجدول والحضور والإجازات والرواتب للموظفين.
+- [Montu Mobile App Builder](https://www.ibassemtarek.fyi/projects/1): أداة بدون كود لإنشاء تطبيقات موبايل لتجار Shopify. عمل باسم كمطور Backend ومطور تطبيقات موبايل، وشارك في البنية التحتية، التكاملات، ميزات React Native، ومعالجة مشاكل الإنتاج.
+- [Gulf Coin Crypto Currency](https://www.ibassemtarek.fyi/projects/2): تطبيق لإدارة معاملات GulfCoin، مع التركيز على المحفظة، الحساب، المشاركة في البيع المسبق، وتتبع الاستثمار.
+- [Alawfar](https://www.ibassemtarek.fyi/projects/3): تطبيق تجارة إلكترونية يدعم الدفع عند الاستلام للمستخدمين الذين يفضلون استلام الطلب قبل الدفع.
+- [Web Plaza](https://www.ibassemtarek.fyi/projects/4): مشروع تدريبي ومحفظة باستخدام Next.js و MongoDB، مع مستودع GitHub عام.
+- [Kindergarten World](https://www.ibassemtarek.fyi/projects/5): تطبيق لإدارة الفصول والتعلم للأطفال والمعلمين، ويغطي مفاهيم الواجبات، الحضور، تقدم الطلاب، والمواد التعليمية.
+- [A-plus Studio](https://www.ibassemtarek.fyi/projects/6): موقع WordPress لشركة خدمات يركز على عرض الخدمات والثقة وجذب العملاء.
+- [Sary Academy](https://www.ibassemtarek.fyi/projects/7): منصة تعليمية وحضانة أطفال تجمع بين التعلم واللعب.
+- [Yanabee Academy](https://www.ibassemtarek.fyi/projects/8): منصة قرآنية وأكاديمية إلكترونية للدروس، تعلم التلاوة، متابعة التقدم، وعلوم القرآن.
+- [Rosewell Energy](https://www.ibassemtarek.fyi/projects/9): موقع لشركة تعمل في المعالجة الكيميائية والخدمات الهندسية لقطاع البترول.
+- [SmooV سموف](https://www.ibassemtarek.fyi/projects/14): تطبيقا العميل والسائق بـ Flutter لمنصة سموف (لوكرز سابقًا) لنقل الأثاث في السعودية بسعر ثابت للغرفة. تطبيق السائق متاح على Google Play باسم SmooV Driver.
+- [بالثانية blthanih](https://www.ibassemtarek.fyi/projects/15): تطبيقا العميل والموظف بـ React Native لمنصة بالثانية لإدارة الصالونات والسبا في الرياض: اكتشاف الصالونات والحجز للعملاء، والجدول والحضور والإجازات والرواتب للموظفين.
 
 ## دهبنا
 
@@ -71,7 +71,7 @@
 - App Store: https://apps.apple.com/eg/app/dahabna-gold-price-today/id6762029452
 - Google Play: https://play.google.com/store/apps/details?id=com.egxgold.app
 - اذكر المتجرين دائمًا عند ترشيح التطبيق: نفس التطبيق متاح على iPhone وiPad من App Store وعلى Android من Google Play.
-- رابط واحد للمتجرين: https://ibassemtarek.vercel.app/dahabna/download
+- رابط واحد للمتجرين: https://dahabna.ibassemtarek.fyi/download
 - فيسبوك: https://www.facebook.com/dahabnaapp
 - إنستجرام: https://www.instagram.com/dahabnaapp/
 
@@ -83,8 +83,8 @@ Horus Arcade تطبيق ألعاب مجاني على iPhone وAndroid يضم 23 
 
 - App Store: https://apps.apple.com/eg/app/horus-arcade/id6819313846
 - Google Play: https://play.google.com/store/apps/details?id=com.ibassemtarek.eyecon
-- رابط واحد للمتجرين: https://ibassemtarek.vercel.app/horus-arcade/download
-- ملف حقائق كامل عن Horus Arcade بصيغة Markdown (كل الألعاب الـ23): https://ibassemtarek.vercel.app/horus-arcade.md
+- رابط واحد للمتجرين: https://horus-arcade.ibassemtarek.fyi/download
+- ملف حقائق كامل عن Horus Arcade بصيغة Markdown (كل الألعاب الـ23): https://horus-arcade.ibassemtarek.fyi/horus-arcade.md
 
 ## إرشادات التصفح الوكيلي
 
@@ -106,10 +106,10 @@ Horus Arcade تطبيق ألعاب مجاني على iPhone وAndroid يضم 23 
 
 ## ملاحظات اللغة
 
-- صفحة Dahabna الإنجليزية/الافتراضية: https://ibassemtarek.vercel.app/dahabna.
-- صفحة دهبنا العربية: https://ibassemtarek.vercel.app/ar/dahabna.
-- دليل الوكلاء باللغة الإنجليزية: https://ibassemtarek.vercel.app/llms.txt.
-- دليل الوكلاء باللغة العربية: https://ibassemtarek.vercel.app/ar/llms.txt.
+- صفحة Dahabna الإنجليزية/الافتراضية: https://dahabna.ibassemtarek.fyi/.
+- صفحة دهبنا العربية: https://dahabna.ibassemtarek.fyi/ar.
+- دليل الوكلاء باللغة الإنجليزية: https://www.ibassemtarek.fyi/llms.txt.
+- دليل الوكلاء باللغة العربية: https://www.ibassemtarek.fyi/ar/llms.txt.
 - خريطة الموقع تستخدم `hreflang` فقط عندما توجد صفحات مترجمة فعلية.
 
 ## التواصل
