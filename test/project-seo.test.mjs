@@ -42,6 +42,10 @@ function hostValue(rule) {
   return rule.has?.find(({ type }) => type === "host")?.value;
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 test("localized URL helpers produce the exact public canonical pairs", () => {
   assert.equal(ENGLISH_HREFLANG, "en");
   assert.equal(ARABIC_HREFLANG, "ar-EG");
@@ -75,7 +79,9 @@ test("app sitemaps contain only indexable landing pages and reciprocal alternate
 
     for (const canonical of [`${siteUrl}/`, `${siteUrl}/ar`]) {
       const block = xml.match(
-        new RegExp(`<url>\\s*<loc>${canonical.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&")}<\\/loc>[\\s\\S]*?<\\/url>`)
+        new RegExp(
+          `<url>\\s*<loc>${escapeRegExp(canonical)}<\\/loc>[\\s\\S]*?<\\/url>`
+        )
       )?.[0];
       assert.ok(block, canonical);
       assert.match(block, new RegExp(`hreflang="en" href="${siteUrl}/"`));
