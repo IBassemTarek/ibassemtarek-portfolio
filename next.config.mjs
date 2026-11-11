@@ -28,7 +28,35 @@ const nextConfig = {
         destination: "/ar/dahabna",
         permanent: true,
       },
+        {
+        source: "/dahabna",
+        has: [{ type: "host", value: "www.ibassemtarek.fyi" }],
+        destination: "https://dahabna.ibassemtarek.fyi",
+        permanent: true,
+      },
+      {
+        source: "/horus-arcade",
+        has: [{ type: "host", value: "www.ibassemtarek.fyi" }],
+        destination: "https://horus-arcade.ibassemtarek.fyi",
+        permanent: true,
+      },
     ];
+  },
+   async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/",
+          has: [{ type: "host", value: "dahabna.ibassemtarek.fyi" }],
+          destination: "/dahabna",
+        },
+        {
+          source: "/",
+          has: [{ type: "host", value: "horus-arcade.ibassemtarek.fyi" }],
+          destination: "/horus-arcade",
+        },
+      ],
+    };
   },
   images: {
     formats: ["image/avif", "image/webp"],
