@@ -1,7 +1,6 @@
 import React from "react";
+import { CONTACT_EMAIL } from "../lib/contact.mjs";
 import { GithubIcon, LinkedInIcon, TwitterIcon } from "./AppIcons";
-
-const EMAIL = "ibassemtarek@gmail.com";
 
 function MailIcon() {
   return (
@@ -13,7 +12,12 @@ function MailIcon() {
 
 // Icons sit in a fixed box: the shared icons carry their own w-full.
 const CHANNELS = [
-  { label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, Icon: MailIcon },
+  {
+    label: "Email",
+    value: CONTACT_EMAIL,
+    href: `mailto:${CONTACT_EMAIL}`,
+    Icon: MailIcon,
+  },
   {
     label: "LinkedIn",
     value: "in/ibassemtarek",
@@ -52,7 +56,7 @@ const ContactForm = () => {
       `Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\n${message}`
     );
 
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   return (

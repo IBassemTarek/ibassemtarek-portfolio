@@ -10,7 +10,7 @@
 - Main domain: https://ibassemtarek.vercel.app.
 - Primary language: English.
 - Supported Arabic content: Dahabna landing page and Arabic agent guide.
-- Contact email: ibassemtarek@gmail.com.
+- Contact email: contact@ibassemtarek.fyi.
 - Public profiles: GitHub (https://github.com/IBassemTarek), LinkedIn (https://www.linkedin.com/in/ibassemtarek/), X (https://twitter.com/IBassemTarek).
 
 ## What This Site Contains
@@ -125,7 +125,7 @@ Players earn XP on every run, climb weekly and all-time ranks and per-game leade
 
 ## Contact
 
-- Email: ibassemtarek@gmail.com
+- Email: contact@ibassemtarek.fyi
 - GitHub: https://github.com/IBassemTarek
 - LinkedIn: https://www.linkedin.com/in/ibassemtarek/
 - X/Twitter: https://twitter.com/IBassemTarek

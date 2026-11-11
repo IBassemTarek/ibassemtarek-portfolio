@@ -10,6 +10,7 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
 import experienceData from "@/utils/experienceData";
+import { CONTACT_EMAIL } from "@/lib/contact.mjs";
 
 const SITE_URL = "https://ibassemtarek.vercel.app";
 const PAGE_URL = `${SITE_URL}/about`;
@@ -73,7 +74,7 @@ const structuredData = {
       alternateName: ["Bassem Tarek", "IBassemTarek"],
       url: SITE_URL,
       image: PHOTO_URL,
-      email: "mailto:ibassemtarek@gmail.com",
+      email: `mailto:${CONTACT_EMAIL}`,
       jobTitle: "Software Engineer, Mobile & Backend Developer",
       description: DESCRIPTION,
       address: {

@@ -21,6 +21,7 @@ import {
   DOWNLOAD_PATH,
   IOS_STORE_URL,
 } from "../lib/dahabna-download.mjs";
+import { CONTACT_EMAIL } from "../lib/contact.mjs";
 
 // display:swap → text paints immediately in a fallback face, then swaps (no
 // invisible-text FCP block). Only the English display face (used in the
@@ -60,7 +61,7 @@ const IOS_APP_ID = "6762029452";
 
 const PRIVACY_POLICY_URL =
   "https://egypt-gold-scraper.egypt-gold-scraper.workers.dev/privacy-policy";
-const SUPPORT_EMAIL = "ibassemtarek@gmail.com";
+const SUPPORT_EMAIL = CONTACT_EMAIL;
 
 const SITE_URL = "https://ibassemtarek.vercel.app";
 const OG_IMAGE_URL = `${SITE_URL}/images/egx-gold/og-banner.jpg`;

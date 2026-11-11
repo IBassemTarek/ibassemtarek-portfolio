@@ -15,6 +15,7 @@ import {
   IOS_APP_ID,
   IOS_STORE_URL,
 } from "../lib/horus-arcade-download.mjs";
+import { CONTACT_EMAIL } from "../lib/contact.mjs";
 
 // The app's own type pairing: Lilita One for headings and scores, a rounded
 // body face. Only the display face sits in the above-the-fold H1.
@@ -43,7 +44,7 @@ const APP_ICON_URL = `${SITE_URL}${IMG}/app-icon.jpg`;
 
 const PRIVACY_POLICY_URL = "https://eyecon-backend.fly.dev/privacy-policy";
 const DELETE_ACCOUNT_URL = "https://eyecon-backend.fly.dev/delete-account";
-const SUPPORT_EMAIL = "ibassemtarek@gmail.com";
+const SUPPORT_EMAIL = CONTACT_EMAIL;
 const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/horusarcade/" },
   { label: "TikTok", href: "https://www.tiktok.com/@horusarcade" },

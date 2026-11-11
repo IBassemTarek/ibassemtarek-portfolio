@@ -7,7 +7,7 @@
 - App Store (iPhone): https://apps.apple.com/eg/app/horus-arcade/id6819313846
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.ibassemtarek.eyecon
 - Made by Bassem Tarek (https://ibassemtarek.vercel.app), published by Fanar, LLC
-- Support: ibassemtarek@gmail.com · Privacy policy: https://eyecon-backend.fly.dev/privacy-policy
+- Support: contact@ibassemtarek.fyi · Privacy policy: https://eyecon-backend.fly.dev/privacy-policy
 - Social: Instagram and TikTok @horusarcade, YouTube @horus-arcade
 
 ## Quick facts

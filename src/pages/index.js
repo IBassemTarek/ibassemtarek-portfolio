@@ -8,6 +8,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { LinkArrow } from "@/components/AppIcons";
 import TransitionEffect from "@/components/TransitionEffect";
 import ContactForm from "@/components/ContactForm";
+import { CONTACT_EMAIL } from "@/lib/contact.mjs";
 import { projectData } from "@/utils/projectsData";
 
 const SITE_URL = "https://ibassemtarek.vercel.app";
@@ -91,7 +92,7 @@ const FAQS = [
   },
   {
     q: "How can I hire Bassem Tarek?",
-    a: "Use the contact form on this page or email ibassemtarek@gmail.com. You can also download his resume or reach him on LinkedIn.",
+    a: `Use the contact form on this page or email ${CONTACT_EMAIL}. You can also download his resume or reach him on LinkedIn.`,
   },
 ];
 
@@ -156,7 +157,7 @@ export default function Home() {
         alternateName: ["Bassem Tarek", "IBassemTarek"],
         url: SITE_URL,
         image: `${SITE_URL}/images/profile/bassem-hero.webp`,
-        email: "mailto:ibassemtarek@gmail.com",
+        email: `mailto:${CONTACT_EMAIL}`,
         jobTitle: "Software Engineer, Mobile & Full-Stack Developer",
         worksFor: { "@type": "Organization", name: "GiveBrite LLC" },
         knowsAbout: [

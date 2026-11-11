@@ -9,7 +9,7 @@
 - النطاق الأساسي: https://ibassemtarek.vercel.app.
 - اللغة الأساسية: الإنجليزية.
 - المحتوى العربي المدعوم: صفحة دهبنا ودليل وكلاء الذكاء الاصطناعي باللغة العربية.
-- البريد الإلكتروني: ibassemtarek@gmail.com.
+- البريد الإلكتروني: contact@ibassemtarek.fyi.
 - الحسابات العامة: GitHub و LinkedIn و X/Twitter موجودة في قسم التواصل.
 
 ## محتوى الموقع
@@ -114,7 +114,7 @@ Horus Arcade تطبيق ألعاب مجاني على iPhone وAndroid يضم 23 
 
 ## التواصل
 
-- البريد الإلكتروني: ibassemtarek@gmail.com
+- البريد الإلكتروني: contact@ibassemtarek.fyi
 - GitHub: https://github.com/IBassemTarek
 - LinkedIn: https://www.linkedin.com/in/ibassemtarek/
 - X/Twitter: https://twitter.com/IBassemTarek
