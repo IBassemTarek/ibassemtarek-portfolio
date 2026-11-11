@@ -10,8 +10,18 @@ import {
   storeUrlFor,
 } from "../../lib/dahabna-download.mjs";
 import { DAHABNA_URL } from "../../lib/site-urls.mjs";
+import {
+  ARABIC_HREFLANG,
+  DEFAULT_HREFLANG,
+  ENGLISH_HREFLANG,
+  getLocalizedUrls,
+} from "../../lib/project-seo.mjs";
 
 const SITE_URL = DAHABNA_URL;
+const LOCALIZED_URLS = getLocalizedUrls(SITE_URL, {
+  englishPath: DOWNLOAD_PATH,
+  arabicPath: ARABIC_DOWNLOAD_PATH,
+});
 const COPY = {
   en: {
     title: "Download Dahabna – App Store & Google Play",
@@ -40,7 +50,7 @@ const COPY = {
 export default function DahabnaDownloadPage({ locale = "en" }) {
   const isArabic = locale === "ar";
   const copy = isArabic ? COPY.ar : COPY.en;
-  const pageUrl = `${SITE_URL}${isArabic ? ARABIC_DOWNLOAD_PATH : DOWNLOAD_PATH}`;
+  const pageUrl = isArabic ? LOCALIZED_URLS.arabic : LOCALIZED_URLS.english;
 
   useEffect(() => {
     const { userAgent, platform, maxTouchPoints = 0 } = window.navigator;
@@ -83,10 +93,10 @@ export default function DahabnaDownloadPage({ locale = "en" }) {
           name="twitter:image"
           content={`${SITE_URL}/images/egx-gold/og-banner.jpg`}
         />
-        <link rel="canonical" href={pageUrl} />
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}${DOWNLOAD_PATH}`} />
-        <link rel="alternate" hrefLang="ar" href={`${SITE_URL}${ARABIC_DOWNLOAD_PATH}`} />
-        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${DOWNLOAD_PATH}`} />
+        <link rel="canonical" href={pageUrl} key="canonical" />
+        <link rel="alternate" hrefLang={ENGLISH_HREFLANG} href={LOCALIZED_URLS.english} key="alternate-en" />
+        <link rel="alternate" hrefLang={ARABIC_HREFLANG} href={LOCALIZED_URLS.arabic} key="alternate-ar-eg" />
+        <link rel="alternate" hrefLang={DEFAULT_HREFLANG} href={LOCALIZED_URLS.default} key="alternate-x-default" />
       </Head>
       <main
         lang={isArabic ? "ar" : "en"}
@@ -115,7 +125,7 @@ export default function DahabnaDownloadPage({ locale = "en" }) {
           </Link>
           <Link
             href={isArabic ? DOWNLOAD_PATH : ARABIC_DOWNLOAD_PATH}
-            hrefLang={isArabic ? "en" : "ar"}
+            hrefLang={isArabic ? ENGLISH_HREFLANG : ARABIC_HREFLANG}
             className="underline underline-offset-4"
           >
             {copy.switchLabel}

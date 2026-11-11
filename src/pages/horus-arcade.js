@@ -16,6 +16,12 @@ import {
   IOS_STORE_URL,
 } from "../lib/horus-arcade-download.mjs";
 import { CONTACT_EMAIL } from "../lib/contact.mjs";
+import {
+  ARABIC_HREFLANG,
+  DEFAULT_HREFLANG,
+  ENGLISH_HREFLANG,
+  getLocalizedUrls,
+} from "../lib/project-seo.mjs";
 import { HORUS_ARCADE_URL, PORTFOLIO_URL } from "../lib/site-urls.mjs";
 
 // The app's own type pairing: Lilita One for headings and scores, a rounded
@@ -38,6 +44,7 @@ const nunito = Nunito({
 
 const SITE_URL = HORUS_ARCADE_URL;
 const PAGE_URL = `${SITE_URL}/`;
+const LOCALIZED_URLS = getLocalizedUrls(SITE_URL);
 const IMG = "/images/horus-arcade";
 const VID = "/videos/horus-arcade";
 const OG_IMAGE_URL = `${SITE_URL}${IMG}/og-banner.jpg`;
@@ -334,7 +341,7 @@ export default function HorusArcadePage() {
         "@id": `${SITE_URL}/#website`,
         url: PAGE_URL,
         name: "Horus Arcade",
-        inLanguage: ["en", "ar"],
+        inLanguage: [ENGLISH_HREFLANG, ARABIC_HREFLANG],
         publisher: { "@id": `${PAGE_URL}#publisher` },
       },
       {
@@ -370,7 +377,7 @@ export default function HorusArcadePage() {
         operatingSystem: "iOS, Android",
         gamePlatform: ["iOS", "Android"],
         playMode: ["SinglePlayer", "MultiPlayer"],
-        inLanguage: ["en", "ar"],
+        inLanguage: [ENGLISH_HREFLANG, ARABIC_HREFLANG],
         isAccessibleForFree: true,
         downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
         installUrl: `${SITE_URL}${DOWNLOAD_PATH}`,
@@ -461,10 +468,10 @@ export default function HorusArcadePage() {
         <meta name="application-name" content="Horus Arcade" />
         <meta name="theme-color" content="#0a0820" />
         <meta name="apple-itunes-app" content={`app-id=${IOS_APP_ID}`} />
-        <link rel="canonical" href={PAGE_URL} />
-        <link rel="alternate" hrefLang="en" href={PAGE_URL} />
-        <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar`} />
-        <link rel="alternate" hrefLang="x-default" href={PAGE_URL} />
+        <link rel="canonical" href={PAGE_URL} key="canonical" />
+        <link rel="alternate" hrefLang={ENGLISH_HREFLANG} href={LOCALIZED_URLS.english} key="alternate-en" />
+        <link rel="alternate" hrefLang={ARABIC_HREFLANG} href={LOCALIZED_URLS.arabic} key="alternate-ar-eg" />
+        <link rel="alternate" hrefLang={DEFAULT_HREFLANG} href={LOCALIZED_URLS.default} key="alternate-x-default" />
         <link rel="apple-touch-icon" href={`${IMG}/app-icon.jpg`} />
         {/* Plain-text fact sheet for LLM crawlers and answer engines. */}
         <link

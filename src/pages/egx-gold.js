@@ -22,6 +22,12 @@ import {
   IOS_STORE_URL,
 } from "../lib/dahabna-download.mjs";
 import { CONTACT_EMAIL } from "../lib/contact.mjs";
+import {
+  ARABIC_HREFLANG,
+  DEFAULT_HREFLANG,
+  ENGLISH_HREFLANG,
+  getLocalizedUrls,
+} from "../lib/project-seo.mjs";
 import { DAHABNA_URL, PORTFOLIO_URL } from "../lib/site-urls.mjs";
 
 // display:swap → text paints immediately in a fallback face, then swaps (no
@@ -65,6 +71,7 @@ const PRIVACY_POLICY_URL =
 const SUPPORT_EMAIL = CONTACT_EMAIL;
 
 const SITE_URL = DAHABNA_URL;
+const LOCALIZED_URLS = getLocalizedUrls(SITE_URL);
 const OG_IMAGE_URL = `${SITE_URL}/images/egx-gold/og-banner.jpg`;
 const APP_ICON_URL = `${SITE_URL}/images/egx-gold/app-icon.jpg`;
 const BRAND_ICON_URL = `${SITE_URL}/images/egx-gold/dahabna-icon-512.png`;
@@ -846,8 +853,8 @@ export default function EgxGoldPage({
   const storeCards = getStoreCards(copy);
 
   const canonicalUrl = isArabicPage
-    ? `${SITE_URL}/ar`
-    : `${SITE_URL}/`;
+    ? LOCALIZED_URLS.arabic
+    : LOCALIZED_URLS.english;
   const pageTitle = isArabicPage
     ? "دهبنا – سعر الذهب اليوم في مصر، عيار 21 و24"
     : "Dahabna – Live Gold Prices in Egypt, 21K & 24K";
@@ -994,7 +1001,7 @@ Instagram: ${INSTAGRAM_URL}`;
         screenshot: OG_IMAGE_URL,
         applicationCategory: "FinanceApplication",
         operatingSystem: "Android, iOS",
-        inLanguage: ["ar", "en"],
+        inLanguage: [ARABIC_HREFLANG, ENGLISH_HREFLANG],
         countriesSupported: "EG",
         downloadUrl: [IOS_URL, ANDROID_URL],
         installUrl: `${SITE_URL}${DOWNLOAD_PATH}`,
@@ -1048,7 +1055,7 @@ Instagram: ${INSTAGRAM_URL}`;
         url: `${SITE_URL}/`,
         name: "Dahabna",
         alternateName: "دهبنا",
-        inLanguage: ["en", "ar"],
+        inLanguage: [ENGLISH_HREFLANG, ARABIC_HREFLANG],
         publisher: { "@id": organizationId },
       },
       {
@@ -1057,7 +1064,7 @@ Instagram: ${INSTAGRAM_URL}`;
         url: canonicalUrl,
         name: pageTitle,
         description: pageDescription,
-        inLanguage: copy.lang,
+        inLanguage: isArabicPage ? ARABIC_HREFLANG : ENGLISH_HREFLANG,
         isPartOf: { "@id": `${SITE_URL}/#website` },
         about: { "@id": appId },
         mainEntity: { "@id": appId },
@@ -1068,7 +1075,7 @@ Instagram: ${INSTAGRAM_URL}`;
       {
         "@type": "FAQPage",
         "@id": `${canonicalUrl}#faq`,
-        inLanguage: copy.lang,
+        inLanguage: isArabicPage ? ARABIC_HREFLANG : ENGLISH_HREFLANG,
         mainEntity: faqItems.map((item) => ({
           "@type": "Question",
           name: item.question,
@@ -1110,13 +1117,24 @@ Instagram: ${INSTAGRAM_URL}`;
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={OG_IMAGE_URL} />
-        <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/`} />
-        <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar`} />
+        <link rel="canonical" href={canonicalUrl} key="canonical" />
         <link
           rel="alternate"
-          hrefLang="x-default"
-          href={`${SITE_URL}/`}
+          hrefLang={ENGLISH_HREFLANG}
+          href={LOCALIZED_URLS.english}
+          key="alternate-en"
+        />
+        <link
+          rel="alternate"
+          hrefLang={ARABIC_HREFLANG}
+          href={LOCALIZED_URLS.arabic}
+          key="alternate-ar-eg"
+        />
+        <link
+          rel="alternate"
+          hrefLang={DEFAULT_HREFLANG}
+          href={LOCALIZED_URLS.default}
+          key="alternate-x-default"
         />
         <script
           type="application/ld+json"

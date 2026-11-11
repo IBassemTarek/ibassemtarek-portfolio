@@ -7,6 +7,12 @@ import StoreBadges from "../../components/horus-arcade/StoreBadges";
 import { GAMES, SHELVES } from "../../components/horus-arcade/games";
 import { CONTACT_EMAIL } from "../../lib/contact.mjs";
 import {
+  ARABIC_HREFLANG,
+  DEFAULT_HREFLANG,
+  ENGLISH_HREFLANG,
+  getLocalizedUrls,
+} from "../../lib/project-seo.mjs";
+import {
   ANDROID_STORE_URL,
   DOWNLOAD_PATH,
   IOS_STORE_URL,
@@ -28,6 +34,7 @@ const tajawal = Tajawal({
 });
 
 const PAGE_URL = `${HORUS_ARCADE_URL}/ar`;
+const LOCALIZED_URLS = getLocalizedUrls(HORUS_ARCADE_URL);
 const TITLE = "هورس أركيد – 23 لعبة أركيد وألغاز مجانية";
 const DESCRIPTION =
   "هورس أركيد يجمع 23 لعبة أركيد وألغاز وذكاء وألعاب لوحية وكلمات في تطبيق مجاني للآيفون وأندرويد، ويعمل بدون إنترنت.";
@@ -99,7 +106,7 @@ export default function ArabicHorusArcadePage() {
         operatingSystem: "iOS, Android",
         gamePlatform: ["iOS", "Android"],
         playMode: ["SinglePlayer", "MultiPlayer"],
-        inLanguage: ["en", "ar"],
+        inLanguage: [ENGLISH_HREFLANG, ARABIC_HREFLANG],
         isAccessibleForFree: true,
         downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
         installUrl: `${HORUS_ARCADE_URL}/ar${DOWNLOAD_PATH}`,
@@ -118,7 +125,7 @@ export default function ArabicHorusArcadePage() {
         url: PAGE_URL,
         name: TITLE,
         description: DESCRIPTION,
-        inLanguage: "ar",
+        inLanguage: ARABIC_HREFLANG,
         isPartOf: { "@id": `${HORUS_ARCADE_URL}/#website` },
         about: { "@id": `${HORUS_ARCADE_URL}/#app` },
         mainEntity: { "@id": `${HORUS_ARCADE_URL}/#app` },
@@ -127,7 +134,7 @@ export default function ArabicHorusArcadePage() {
       {
         "@type": "FAQPage",
         "@id": `${PAGE_URL}#faq`,
-        inLanguage: "ar",
+        inLanguage: ARABIC_HREFLANG,
         mainEntity: FAQS.map(({ q, a }) => ({
           "@type": "Question",
           name: q,
@@ -147,10 +154,10 @@ export default function ArabicHorusArcadePage() {
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
         <meta name="theme-color" content="#08061d" />
-        <link rel="canonical" href={PAGE_URL} />
-        <link rel="alternate" hrefLang="en" href={`${HORUS_ARCADE_URL}/`} />
-        <link rel="alternate" hrefLang="ar" href={PAGE_URL} />
-        <link rel="alternate" hrefLang="x-default" href={`${HORUS_ARCADE_URL}/`} />
+        <link rel="canonical" href={PAGE_URL} key="canonical" />
+        <link rel="alternate" hrefLang={ENGLISH_HREFLANG} href={LOCALIZED_URLS.english} key="alternate-en" />
+        <link rel="alternate" hrefLang={ARABIC_HREFLANG} href={LOCALIZED_URLS.arabic} key="alternate-ar-eg" />
+        <link rel="alternate" hrefLang={DEFAULT_HREFLANG} href={LOCALIZED_URLS.default} key="alternate-x-default" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ar_EG" />
         <meta property="og:locale:alternate" content="en_US" />
@@ -191,7 +198,7 @@ export default function ArabicHorusArcadePage() {
           <div className="ha-ar-veil absolute inset-0 -z-20" />
           <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4">
             <Image src={`${IMG}/marquee.webp`} alt="Horus Arcade" width={1000} height={326} priority className="h-auto w-52 sm:w-40" />
-            <Link href={`${HORUS_ARCADE_URL}/`} hrefLang="en" className="rounded-full border border-white/25 bg-[#08061d]/70 px-4 py-2 text-sm font-bold text-white backdrop-blur hover:border-[#29e6ff]">
+            <Link href={`${HORUS_ARCADE_URL}/`} hrefLang={ENGLISH_HREFLANG} className="rounded-full border border-white/25 bg-[#08061d]/70 px-4 py-2 text-sm font-bold text-white backdrop-blur hover:border-[#29e6ff]">
               English
             </Link>
           </nav>
