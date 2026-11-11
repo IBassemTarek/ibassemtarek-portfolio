@@ -25,7 +25,11 @@ test("the portfolio sitemap contains only portfolio canonical URLs", () => {
 test("each app sitemap uses its own canonical subdomain", () => {
   const appSitemaps = [
     [dahabnaUrl, "public/sitemap-dahabna.xml", [`${dahabnaUrl}/`, `${dahabnaUrl}/ar`]],
-    [horusArcadeUrl, "public/sitemap-horus-arcade.xml", [`${horusArcadeUrl}/`]],
+    [
+      horusArcadeUrl,
+      "public/sitemap-horus-arcade.xml",
+      [`${horusArcadeUrl}/`, `${horusArcadeUrl}/ar`],
+    ],
   ];
 
   for (const [siteUrl, file, expected] of appSitemaps) {

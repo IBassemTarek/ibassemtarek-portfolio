@@ -27,9 +27,12 @@ Bassem's work spans backend development, mobile app development, full-stack web 
 - [Dahabna](https://dahabna.ibassemtarek.fyi/): English/default landing page for the Dahabna mobile app.
 - [دهبنا](https://dahabna.ibassemtarek.fyi/ar): Arabic-focused landing page for Dahabna.
 - [Download Dahabna](https://dahabna.ibassemtarek.fyi/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
+- [تحميل دهبنا](https://dahabna.ibassemtarek.fyi/ar/download): Localized Arabic install page. Not indexed.
 - Legacy paths `/egx-gold`, `/ar/egx-gold`, and `/دهبنا` redirect permanently to the matching canonical Dahabna page.
 - [Horus Arcade](https://horus-arcade.ibassemtarek.fyi/): Landing page for Horus Arcade, a free mobile game app with 23 arcade, puzzle, brain, classic board and word games.
+- [هورس أركيد](https://horus-arcade.ibassemtarek.fyi/ar): Genuine Arabic Horus Arcade landing page with the game catalogue, offline play, Senet-style games and same-phone multiplayer details.
 - [Download Horus Arcade](https://horus-arcade.ibassemtarek.fyi/download): Install link. Phones are redirected to the App Store or Google Play automatically; desktop browsers see both store buttons. Not indexed.
+- [تحميل هورس أركيد](https://horus-arcade.ibassemtarek.fyi/ar/download): Localized Arabic install page. Not indexed.
 - [Resume PDF](https://www.ibassemtarek.fyi/BassemTarekMahrousResume.pdf): Downloadable resume.
 - [XML Sitemap](https://www.ibassemtarek.fyi/sitemap.xml): Search-engine sitemap with image metadata and English/Arabic alternate links where real localized routes exist.
 - [Arabic LLM Guide](https://www.ibassemtarek.fyi/ar/llms.txt): Arabic machine-readable guide for Arabic-first agents.

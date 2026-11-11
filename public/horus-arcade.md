@@ -3,7 +3,9 @@
 > Horus Arcade is a free mobile game app for iPhone and Android with 23 quick games in one neon, ancient-Egypt-themed arcade hosted by Horus the falcon. It mixes arcade, puzzle, brain, classic board and word games, works offline, and has leaderboards, daily challenges, a computer rival called Seth and two-player modes.
 
 - Web page: https://horus-arcade.ibassemtarek.fyi/
+- Arabic page: https://horus-arcade.ibassemtarek.fyi/ar
 - Download (one link, sends phones to the right store): https://horus-arcade.ibassemtarek.fyi/download
+- Arabic download: https://horus-arcade.ibassemtarek.fyi/ar/download
 - App Store (iPhone): https://apps.apple.com/eg/app/horus-arcade/id6819313846
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.ibassemtarek.eyecon
 - Made by Bassem Tarek (https://www.ibassemtarek.fyi), published by Fanar, LLC

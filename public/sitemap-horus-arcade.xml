@@ -2,6 +2,7 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
 >
   <url>
@@ -9,6 +10,9 @@
     <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://horus-arcade.ibassemtarek.fyi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://horus-arcade.ibassemtarek.fyi/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://horus-arcade.ibassemtarek.fyi/" />
     <image:image>
       <image:loc>https://horus-arcade.ibassemtarek.fyi/images/horus-arcade/og-banner.jpg</image:loc>
       <image:title>Horus Arcade banner</image:title>
@@ -33,5 +37,25 @@
       <video:publication_date>2026-11-01</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+  </url>
+
+  <url>
+    <loc>https://horus-arcade.ibassemtarek.fyi/ar</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://horus-arcade.ibassemtarek.fyi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://horus-arcade.ibassemtarek.fyi/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://horus-arcade.ibassemtarek.fyi/" />
+    <image:image>
+      <image:loc>https://horus-arcade.ibassemtarek.fyi/images/horus-arcade/og-banner.jpg</image:loc>
+      <image:title>بانر هورس أركيد</image:title>
+      <image:caption>هورس أركيد يضم 23 لعبة أركيد وألغاز وذكاء وألعاب لوحية وكلمات مجانًا على الآيفون وأندرويد.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://horus-arcade.ibassemtarek.fyi/images/horus-arcade/app-icon.jpg</image:loc>
+      <image:title>أيقونة تطبيق هورس أركيد</image:title>
+      <image:caption>أيقونة تطبيق هورس أركيد للألعاب.</image:caption>
+    </image:image>
   </url>
 </urlset>

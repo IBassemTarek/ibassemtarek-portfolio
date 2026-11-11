@@ -1,3 +1,5 @@
-// Share the canonical download implementation so /ar/download on the Horus
-// Arcade subdomain has the same store-selection behavior as /download.
-export { default } from "../../horus-arcade/download";
+import HorusArcadeDownloadPage from "../../horus-arcade/download";
+
+export default function ArabicHorusArcadeDownloadPage() {
+  return <HorusArcadeDownloadPage locale="ar" />;
+}

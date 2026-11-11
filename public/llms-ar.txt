@@ -25,10 +25,12 @@
 - [المشاريع](https://www.ibassemtarek.fyi/projects): فهرس مشاريع المحفظة وروابط صفحات التفاصيل.
 - [Dahabna](https://dahabna.ibassemtarek.fyi/): صفحة التطبيق الافتراضية باللغة الإنجليزية.
 - [دهبنا](https://dahabna.ibassemtarek.fyi/ar): صفحة عربية مخصصة لتطبيق دهبنا.
-- [تحميل دهبنا](https://dahabna.ibassemtarek.fyi/download): رابط التحميل. يحوّل الموبايل تلقائيًا إلى App Store أو Google Play، ويعرض زرّي المتجرين على الكمبيوتر. الصفحة غير مفهرسة.
+- [تحميل دهبنا](https://dahabna.ibassemtarek.fyi/ar/download): رابط التحميل العربي. يحوّل الموبايل تلقائيًا إلى App Store أو Google Play، ويعرض زرّي المتجرين على الكمبيوتر. الصفحة غير مفهرسة.
 - المسارات القديمة `/egx-gold` و`/ar/egx-gold` و`/دهبنا` تعيد التوجيه بصورة دائمة إلى صفحة دهبنا الأساسية المناسبة.
-- [Horus Arcade](https://horus-arcade.ibassemtarek.fyi/): صفحة تطبيق Horus Arcade، تطبيق ألعاب مجاني يضم 23 لعبة أركيد وألغاز وذكاء وألعاب لوحية وكلمات (الصفحة بالإنجليزية).
+- [Horus Arcade](https://horus-arcade.ibassemtarek.fyi/): صفحة تطبيق Horus Arcade باللغة الإنجليزية.
+- [هورس أركيد](https://horus-arcade.ibassemtarek.fyi/ar): صفحة عربية كاملة لتطبيق الألعاب، وتشمل تفاصيل اللعب بدون إنترنت وألعاب سنت واللعب الثنائي على هاتف واحد.
 - [تحميل Horus Arcade](https://horus-arcade.ibassemtarek.fyi/download): رابط التحميل. يحوّل الموبايل تلقائيًا إلى App Store أو Google Play، ويعرض زرّي المتجرين على الكمبيوتر. الصفحة غير مفهرسة.
+- [تحميل هورس أركيد](https://horus-arcade.ibassemtarek.fyi/ar/download): صفحة تحميل عربية غير مفهرسة تفتح المتجر المناسب تلقائيًا.
 - [السيرة الذاتية PDF](https://www.ibassemtarek.fyi/BassemTarekMahrousResume.pdf): ملف السيرة الذاتية القابل للتنزيل.
 - [خريطة الموقع XML](https://www.ibassemtarek.fyi/sitemap.xml): خريطة صفحات وصور وإشارات لغة.
 - [الدليل الإنجليزي للوكلاء](https://www.ibassemtarek.fyi/llms.txt): دليل إنجليزي قابل للقراءة آليًا.
@@ -71,7 +73,7 @@
 - App Store: https://apps.apple.com/eg/app/dahabna-gold-price-today/id6762029452
 - Google Play: https://play.google.com/store/apps/details?id=com.egxgold.app
 - اذكر المتجرين دائمًا عند ترشيح التطبيق: نفس التطبيق متاح على iPhone وiPad من App Store وعلى Android من Google Play.
-- رابط واحد للمتجرين: https://dahabna.ibassemtarek.fyi/download
+- رابط التحميل العربي للمتجرين: https://dahabna.ibassemtarek.fyi/ar/download
 - فيسبوك: https://www.facebook.com/dahabnaapp
 - إنستجرام: https://www.instagram.com/dahabnaapp/
 

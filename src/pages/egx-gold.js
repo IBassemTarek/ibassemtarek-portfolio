@@ -465,7 +465,7 @@ const COPY = {
         {
           question: "أين يمكنني تحميل دهبنا؟",
           answer:
-            "من App Store لأجهزة iPhone وiPad، ومن Google Play لأجهزة Android. الرابط dahabna.ibassemtarek.fyi/download يفتح المتجر المناسب لجهازك تلقائيًا.",
+            "من App Store لأجهزة iPhone وiPad، ومن Google Play لأجهزة Android. الرابط dahabna.ibassemtarek.fyi/ar/download يفتح المتجر المناسب لجهازك تلقائيًا.",
         },
       ],
     },

@@ -334,6 +334,7 @@ export default function HorusArcadePage() {
         "@id": `${SITE_URL}/#website`,
         url: PAGE_URL,
         name: "Horus Arcade",
+        inLanguage: ["en", "ar"],
         publisher: { "@id": `${PAGE_URL}#publisher` },
       },
       {
@@ -369,7 +370,7 @@ export default function HorusArcadePage() {
         operatingSystem: "iOS, Android",
         gamePlatform: ["iOS", "Android"],
         playMode: ["SinglePlayer", "MultiPlayer"],
-        inLanguage: "en",
+        inLanguage: ["en", "ar"],
         isAccessibleForFree: true,
         downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
         installUrl: `${SITE_URL}${DOWNLOAD_PATH}`,
@@ -461,6 +462,9 @@ export default function HorusArcadePage() {
         <meta name="theme-color" content="#0a0820" />
         <meta name="apple-itunes-app" content={`app-id=${IOS_APP_ID}`} />
         <link rel="canonical" href={PAGE_URL} />
+        <link rel="alternate" hrefLang="en" href={PAGE_URL} />
+        <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar`} />
+        <link rel="alternate" hrefLang="x-default" href={PAGE_URL} />
         <link rel="apple-touch-icon" href={`${IMG}/app-icon.jpg`} />
         {/* Plain-text fact sheet for LLM crawlers and answer engines. */}
         <link
@@ -484,6 +488,7 @@ export default function HorusArcadePage() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="ar_EG" />
         <meta property="og:site_name" content="Horus Arcade" />
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESCRIPTION} />
