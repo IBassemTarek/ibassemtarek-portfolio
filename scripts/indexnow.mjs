@@ -5,13 +5,22 @@
 // The key is public by design: search engines verify ownership by fetching
 // https://<host>/<key>.txt, which lives in /public.
 
-export const SITE_URL = "https://www.ibassemtarek.fyi";
-export const SITE_URLS = [
-  SITE_URL,
-  "https://dahabna.ibassemtarek.fyi",
-  "https://horus-arcade.ibassemtarek.fyi",
+export const INDEXNOW_SITES = [
+  {
+    siteUrl: "https://www.ibassemtarek.fyi",
+    key: "1a0d8393b7fb494cbab91bc95ce2906e",
+  },
+  {
+    siteUrl: "https://dahabna.ibassemtarek.fyi",
+    key: "69c353d063d98ebf693f8d4d9416f662",
+  },
+  {
+    siteUrl: "https://horus-arcade.ibassemtarek.fyi",
+    key: "a288449ed4b2accd81a35e2beb8a1310",
+  },
 ];
-export const INDEXNOW_KEY = "1a0d8393b7fb494cbab91bc95ce2906e";
+export const SITE_URL = INDEXNOW_SITES[0].siteUrl;
+export const SITE_URLS = INDEXNOW_SITES.map(({ siteUrl }) => siteUrl);
 const ENDPOINT = "https://api.indexnow.org/indexnow";
 
 export function extractSitemapUrls(xml, host) {
@@ -23,7 +32,7 @@ export function extractSitemapUrls(xml, host) {
   return [...new Set(urls)].filter((url) => new URL(url).host === host);
 }
 
-export function buildPayload(urls, siteUrl = SITE_URL, key = INDEXNOW_KEY) {
+export function buildPayload(urls, { siteUrl, key } = INDEXNOW_SITES[0]) {
   return {
     host: new URL(siteUrl).host,
     key,
@@ -33,7 +42,8 @@ export function buildPayload(urls, siteUrl = SITE_URL, key = INDEXNOW_KEY) {
 }
 
 async function main() {
-  for (const siteUrl of SITE_URLS) {
+  for (const site of INDEXNOW_SITES) {
+    const { siteUrl, key } = site;
     const host = new URL(siteUrl).host;
     const sitemap = await fetch(`${siteUrl}/sitemap.xml`, {
       signal: AbortSignal.timeout(15000),
@@ -50,7 +60,7 @@ async function main() {
     const res = await fetch(ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json; charset=utf-8" },
-      body: JSON.stringify(buildPayload(urls, siteUrl)),
+      body: JSON.stringify(buildPayload(urls, site)),
       signal: AbortSignal.timeout(15000),
     });
 

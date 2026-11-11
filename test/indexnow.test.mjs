@@ -3,8 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
-  INDEXNOW_KEY,
-  SITE_URL,
+  INDEXNOW_SITES,
   SITE_URLS,
   buildPayload,
   extractSitemapUrls,
@@ -49,16 +48,20 @@ test("drops URLs on other hosts, which would fail the whole batch", () => {
 });
 
 test("payload points at the hosted key file", () => {
-  const payload = buildPayload([`${portfolioUrl}/projects`]);
-  assert.equal(payload.host, host);
-  assert.equal(payload.key, INDEXNOW_KEY);
-  assert.equal(payload.keyLocation, `${SITE_URL}/${INDEXNOW_KEY}.txt`);
-  assert.deepEqual(payload.urlList, [`${portfolioUrl}/projects`]);
+  for (const site of INDEXNOW_SITES) {
+    const url = `${site.siteUrl}/`;
+    const payload = buildPayload([url], site);
+    assert.equal(payload.host, new URL(site.siteUrl).host);
+    assert.equal(payload.key, site.key);
+    assert.equal(payload.keyLocation, `${site.siteUrl}/${site.key}.txt`);
+    assert.deepEqual(payload.urlList, [url]);
+  }
 });
 
-test("key file in /public contains exactly the key", () => {
-  assert.equal(
-    readFileSync(`public/${INDEXNOW_KEY}.txt`, "utf8"),
-    INDEXNOW_KEY
-  );
+test("each host has a distinct key file in /public", () => {
+  assert.equal(new Set(INDEXNOW_SITES.map(({ key }) => key)).size, 3);
+
+  for (const { key } of INDEXNOW_SITES) {
+    assert.equal(readFileSync(`public/${key}.txt`, "utf8").trim(), key);
+  }
 });
